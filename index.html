@@ -2,7 +2,7 @@
 <html lang="ja">
 <head>
 <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<meta name="description" content="愛知県小牧市の角屋。地域に寄り添う食事処の公式サイト。">
+<meta name="description" content="愛知県小牧市の食事処「角屋」。きしめん、丼もの、定食などのお料理と、店内の様子をご紹介します。">
 <title>角屋｜小牧の食事処</title>
 <link rel="stylesheet" href="style.css">
 <script defer src="script.js"></script>
@@ -10,47 +10,50 @@
 <body>
 <header class="header">
 <a class="logo" href="#top"><span>角</span>屋</a>
-<button class="menu-btn" aria-label="メニュー" aria-expanded="false">☰</button>
-<nav class="nav">
+<button class="menu-btn" aria-label="メニューを開く" aria-controls="main-nav" aria-expanded="false">☰</button>
+<nav id="main-nav" class="nav">
 <a href="#about">角屋について</a><a href="#menu">お品書き</a><a href="#shop">店舗案内</a><a href="#access">アクセス</a>
 </nav>
 </header>
 <main id="top">
 <section class="hero">
-<div class="hero-photo placeholder"><span>MAIN PHOTO<br><small>外観・料理写真を後から追加</small></span></div>
-<div class="hero-copy reveal"><p class="eyebrow">KADOYA · KOMAKI</p><h1>いつもの味を、<br>いつもの場所で。</h1><p>愛知県小牧市の食事処「角屋」。<br>朝から夜まで、ほっとする一皿を。</p><a class="button" href="#menu">お品書きを見る</a></div>
+<div class="hero-photo"><img src="images/IMG_6795.jpg" alt="角屋のきしめん" width="1536" height="1024" fetchpriority="high"></div>
+<div class="hero-copy reveal"><p class="eyebrow">KADOYA · KOMAKI</p><h1>いつもの味を、<br>いつもの場所で。</h1><p>愛知県小牧市の食事処「角屋」。<br>きしめんに、丼もの、定食。<br>今日は何を食べよう。</p><a class="button" href="#menu">お品書きを見る</a></div>
 </section>
 <section id="about" class="section about">
 <div class="section-title reveal"><p>ABOUT</p><h2>角屋について</h2></div>
 <div class="about-grid">
-<div class="placeholder photo-tall reveal"><span>SHOP PHOTO<br><small>店内写真</small></span></div>
-<div class="about-text reveal"><h3>地域の日常に、<br>ずっと寄り添う店。</h3><p>角屋は、小牧で長く親しまれてきた食事処です。気軽な朝のひとときから、しっかり食べたいお昼、家族で囲む夕食まで。</p><p>この文章は仮テキストです。創業の歴史や大切にしていることを伺って、角屋らしい言葉に仕上げます。</p></div>
+<div class="photo-tall reveal"><img src="images/IMG_3132.jpg" alt="木の格子で仕切られた角屋のテーブル席" loading="lazy" width="1536" height="1152"></div>
+<div class="about-text reveal"><h3>ひとりでも、みんなでも。<br>気軽に、角屋へ。</h3><p>つるりと食べたいきしめんも、しっかり食べたい定食も。その日の気分で選べるお料理をご用意しています。</p><p>木のぬくもりを感じる店内で、ひと息。おひとりでのお食事にも、ご家族やご友人とのひとときにもお立ち寄りください。</p></div>
 </div>
 </section>
 <section id="menu" class="section menu-section">
-<div class="section-title reveal"><p>MENU</p><h2>お品書き</h2><span>写真・価格は新メニュー完成後に差し替えできます</span></div>
+<div class="section-title reveal"><p>MENU</p><h2>お品書き</h2><span>角屋のお料理を、写真でご紹介。</span></div>
 <div class="cards">
-<article class="card reveal"><div class="placeholder card-photo"><span>PHOTO</span></div><p class="number">01</p><h3>モーニング</h3><p>一日のはじまりを、角屋で。</p></article>
-<article class="card reveal"><div class="placeholder card-photo"><span>PHOTO</span></div><p class="number">02</p><h3>お食事・定食</h3><p>昔ながらの味を、しっかりと。</p></article>
-<article class="card reveal"><div class="placeholder card-photo"><span>PHOTO</span></div><p class="number">03</p><h3>おすすめ</h3><p>角屋ならではの一皿をご紹介。</p></article>
-</div>
-<p class="note reveal">※ 掲載内容・価格は公開前に最新情報へ更新します。</p>
+<article class="card reveal"><a class="card-photo" href="images/IMG_6849.jpg" target="_blank" rel="noopener" aria-label="エビフライ定食の写真を拡大（新しいタブ）"><img src="images/IMG_6849.jpg" alt="エビフライ定食" loading="lazy" width="1404" height="990"></a><p class="number">01</p><h3>エビフライ定食</h3><p>エビフライを主役に、ごはんと麺を添えて。</p></article>
+<article class="card reveal"><a class="card-photo" href="images/IMG_6848.jpg" target="_blank" rel="noopener" aria-label="みそかつ定食の写真を拡大（新しいタブ）"><img src="images/IMG_6848.jpg" alt="みそかつ定食" loading="lazy" width="1404" height="993"></a><p class="number">02</p><h3>みそかつ定食</h3><p>みそだれをまとった、とんかつの一皿。</p></article>
+<article class="card reveal"><a class="card-photo" href="images/IMG_6850.jpg" target="_blank" rel="noopener" aria-label="天ぷら定食の写真を拡大（新しいタブ）"><img src="images/IMG_6850.jpg" alt="天ぷら定食" loading="lazy" width="1403" height="989"></a><p class="number">03</p><h3>天ぷら定食</h3><p>海老と野菜の天ぷらを盛り合わせ。</p></article>
+<article class="card reveal"><a class="card-photo" href="images/IMG_6851.jpg" target="_blank" rel="noopener" aria-label="唐揚げ定食の写真を拡大（新しいタブ）"><img src="images/IMG_6851.jpg" alt="唐揚げ定食" loading="lazy" width="1405" height="991"></a><p class="number">04</p><h3>唐揚げ定食</h3><p>ごはんと一緒に楽しむ、唐揚げの定食。</p></article>
+<article class="card reveal"><a class="card-photo" href="images/IMG_6643.jpg" target="_blank" rel="noopener" aria-label="かつ丼の写真を拡大（新しいタブ）"><img src="images/IMG_6643.jpg" alt="かつ丼" loading="lazy" width="1536" height="1024"></a><p class="number">05</p><h3>かつ丼</h3><p>卵でとじたかつを、ごはんにのせて。</p></article>
+<article class="card reveal"><a class="card-photo" href="images/IMG_6721.jpg" target="_blank" rel="noopener" aria-label="きしめんの写真を拡大（新しいタブ）"><img src="images/IMG_6721.jpg" alt="きしめん" loading="lazy" width="1536" height="1024"></a><p class="number">06</p><h3>きしめん</h3><p>幅広の麺を、だしと一緒に。</p></article>
+</div><p class="note reveal">写真は一例です。価格・提供状況は店舗へお問い合わせください。</p>
 </section>
 <section class="feature">
-<div class="placeholder feature-photo"><span>FEATURE PHOTO<br><small>看板メニューの写真</small></span></div>
-<div class="feature-copy reveal"><p>OUR SPECIALTY</p><h2>角屋の味を、<br>これからも。</h2><p>看板メニューのこだわりや、角屋ならではの魅力をここで紹介します。</p></div>
+<div class="feature-photo"><img src="images/IMG_6770.jpg" alt="海老と野菜の天ぷらをのせた天丼" loading="lazy" width="1536" height="1024"></div>
+<div class="feature-copy reveal"><p>OUR SPECIALTY</p><h2>今日は、<br>どの一皿にしよう。</h2><p>麺も、ごはんも、揚げものも。<br>お腹と相談しながら、お気に入りの一皿を。</p></div>
 </section>
 <section id="shop" class="section shop">
 <div class="section-title reveal"><p>INFORMATION</p><h2>店舗案内</h2></div>
+<div class="shop-gallery reveal"><figure><img src="images/IMG_3122.jpg" alt="角屋の建物と入口" loading="lazy" width="1536" height="1152"><figcaption>「角屋」の看板が目印です。</figcaption></figure><figure><img src="images/IMG_3149.jpg" alt="角屋のテーブル席と木の格子" loading="lazy" width="1536" height="1152"><figcaption>木のぬくもりを感じるテーブル席。</figcaption></figure><figure><img src="images/IMG_3147.jpg" alt="窓から光が入る角屋の店内" loading="lazy" width="1536" height="1152"><figcaption>店内の様子。</figcaption></figure></div>
 <div class="info reveal">
-<dl><div><dt>店名</dt><dd>角屋</dd></div><div><dt>運営</dt><dd>有限会社角屋</dd></div><div><dt>住所</dt><dd>〒485-0003 愛知県小牧市久保一色1038-1</dd></div><div><dt>電話</dt><dd><a href="tel:0568722127">0568-72-2127</a></dd></div><div><dt>営業時間</dt><dd>公開前に最新情報を掲載</dd></div><div><dt>定休日</dt><dd>公開前に最新情報を掲載</dd></div></dl>
+<dl><div><dt>店名</dt><dd>角屋</dd></div><div><dt>運営</dt><dd>有限会社角屋</dd></div><div><dt>住所</dt><dd>〒485-0003 愛知県小牧市久保一色1038-1</dd></div><div><dt>電話</dt><dd><a href="tel:0568722127">0568-72-2127</a></dd></div><div><dt>営業時間</dt><dd>お電話でお問い合わせください</dd></div><div><dt>定休日</dt><dd>お電話でお問い合わせください</dd></div></dl>
 </div>
 </section>
 <section id="access" class="section access">
-<div class="section-title reveal"><p>ACCESS & SNS</p><h2>角屋へどうぞ。</h2></div>
+<div class="section-title reveal"><p>ACCESS</p><h2>角屋へどうぞ。</h2></div>
 <div class="access-links reveal">
 <a class="big-link" href="https://www.google.com/maps/search/?api=1&query=%E8%A7%92%E5%B1%8B+%E5%B0%8F%E7%89%A7%E5%B8%82%E4%B9%85%E4%BF%9D%E4%B8%80%E8%89%B21038-1" target="_blank" rel="noopener">Google Maps <span>↗</span></a>
-<a class="big-link disabled" href="#" aria-disabled="true">Instagram <span>URL追加予定 ↗</span></a>
+<a class="big-link" href="tel:0568722127">電話で問い合わせる <span>0568-72-2127</span></a>
 </div>
 </section>
 </main>
