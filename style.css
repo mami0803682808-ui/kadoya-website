@@ -199,3 +199,22 @@ svg.vertical-mark{display:block;width:min(260px,70vw);height:100%;max-height:650
  .social-icon svg{width:52px!important;height:52px!important}
  .social-icons a{font-size:12px!important;gap:9px!important}
 }
+
+/* Kadoya craft / commitment */
+.commitment{background:#111;color:#f5f1e8}
+.commitment .section-title p,.commitment .section-title span{color:rgba(245,241,232,.66)}
+.commitment .section-title h2{color:#f5f1e8}
+.commitment-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));max-width:1100px;margin:48px auto 0;border-top:1px solid rgba(245,241,232,.22)}
+.commitment-grid article{padding:38px 34px 42px;border-bottom:1px solid rgba(245,241,232,.22)}
+.commitment-grid article:nth-child(odd){border-right:1px solid rgba(245,241,232,.22)}
+.commitment-no{font-size:11px;letter-spacing:.18em;opacity:.52;margin:0 0 22px}
+.commitment-grid h3{font-size:clamp(24px,3vw,34px);font-weight:500;margin:0 0 16px}
+.commitment-grid article>p:last-child{font-size:14px;line-height:2;color:rgba(245,241,232,.82);margin:0}
+@media(max-width:760px){
+ .commitment-grid{grid-template-columns:1fr;margin-top:32px}
+ .commitment-grid article{padding:28px 4px 30px}
+ .commitment-grid article:nth-child(odd){border-right:0}
+ .commitment-grid h3{font-size:25px;margin-bottom:10px}
+ .commitment-grid article>p:last-child{font-size:13px;line-height:1.9}
+ .commitment-no{margin-bottom:12px}
+}
