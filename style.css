@@ -47,3 +47,36 @@ svg.vertical-mark{display:block;width:min(260px,70vw);height:100%;max-height:650
 /* Compact, readable media credits. */
 .media-section{padding-top:64px;padding-bottom:64px}.media-section .section-title{margin-bottom:26px}.media-section .section-title h2{font-size:28px}.media-history li{padding:16px 0;gap:22px;grid-template-columns:160px 1fr}.media-history h3{font-size:16px;line-height:1.7;margin-bottom:4px}.media-history p{font-size:13px;line-height:1.8}.media-history time{font-size:12px;padding-top:3px}
 @media(max-width:760px){.media-section{padding-top:48px;padding-bottom:48px}.media-section .section-title h2{font-size:25px}.media-history li{grid-template-columns:1fr;gap:4px;padding:13px 0}.media-history h3{font-size:15px}.media-history p{font-size:12px}}
+
+/* 2026-09 refresh — photo-first, practical, less template-like */
+.menu-btn{display:flex;align-items:center;gap:10px;background:none;border:0;font:inherit;letter-spacing:.08em}
+.menu-btn span{font-size:12px;font-weight:600}.menu-btn b{font-size:22px;font-weight:400}
+.opening-new{height:auto!important;background:#111!important}
+.opening-new .opening-stage{position:relative!important;top:auto!important;height:min(88svh,900px)!important;min-height:650px;background:#111}
+.opening-new .opening-photo{opacity:1!important;object-fit:cover!important;object-position:center 48%!important}
+.opening-shade{position:absolute;inset:0;z-index:1;background:linear-gradient(90deg,rgba(10,10,8,.72) 0%,rgba(10,10,8,.32) 48%,rgba(10,10,8,.08) 75%),linear-gradient(0deg,rgba(10,10,8,.55),transparent 45%)}
+.opening-copy{position:absolute;z-index:2;left:8vw;bottom:10vh;color:#f5f0e6;max-width:680px}
+.opening-copy .opening-since{font-size:13px;letter-spacing:.2em;margin:0 0 18px;color:#e1d0a8}
+.opening-copy h1{font-family:"Noto Serif JP",serif;font-weight:500;font-size:clamp(38px,5vw,72px);line-height:1.45;letter-spacing:.08em;margin:0}
+.opening-history{margin:20px 0 28px;font-family:"Noto Serif JP",serif;font-size:18px;letter-spacing:.12em}
+.opening-history strong{font-family:Didot,"Bodoni 72","Times New Roman",serif;font-size:48px;font-weight:400;line-height:1}
+.opening-actions{display:flex;gap:10px;flex-wrap:wrap}.hero-action{border:1px solid rgba(255,255,255,.65);padding:15px 22px;color:#fff;font-size:13px;letter-spacing:.05em}.hero-action.primary{background:#f3eee3;color:#171814;border-color:#f3eee3}
+.quick-intro{padding-top:72px!important;padding-bottom:72px!important}
+.quick-intro h2{font-size:clamp(30px,4vw,52px)!important}
+.latest-info{max-width:720px;margin:0 0 55px;padding:32px 0;border-top:1px solid #aaa18f;border-bottom:1px solid #aaa18f}.latest-info h3{font-family:"Noto Serif JP",serif;font-size:26px;margin:8px 0 10px}.latest-info p{line-height:1.9}.latest-info a{text-decoration:underline;text-underline-offset:5px}
+.info small{color:#777}
+.mobile-dock{display:none}
+@media(max-width:760px){
+ .menu-btn{display:flex}.menu-btn span{display:inline}
+ .opening-new .opening-stage{height:78svh!important;min-height:590px}
+ .opening-new .opening-photo{object-position:center!important}
+ .opening-shade{background:linear-gradient(0deg,rgba(8,9,7,.78) 0%,rgba(8,9,7,.18) 65%,rgba(8,9,7,.08) 100%)}
+ .opening-copy{left:7vw;right:7vw;bottom:8vh}
+ .opening-copy h1{font-size:clamp(32px,10vw,48px);line-height:1.45}
+ .opening-history{margin:14px 0 22px}.opening-history strong{font-size:42px}
+ .opening-actions{display:grid;grid-template-columns:1fr 1fr}.hero-action{text-align:center;padding:14px 8px}
+ .quick-intro{text-align:left!important;padding-top:54px!important;padding-bottom:60px!important}
+ .mobile-dock{display:grid;grid-template-columns:repeat(3,1fr);position:fixed;z-index:50;left:12px;right:12px;bottom:max(12px,env(safe-area-inset-bottom));background:rgba(24,25,21,.94);backdrop-filter:blur(12px);border:1px solid rgba(255,255,255,.14);box-shadow:0 8px 30px rgba(0,0,0,.22)}
+ .mobile-dock a{color:#f5f0e6;text-align:center;padding:14px 4px;font-size:12px;border-right:1px solid rgba(255,255,255,.12)}.mobile-dock a:last-child{border-right:0}
+ footer{padding-bottom:100px}
+}
