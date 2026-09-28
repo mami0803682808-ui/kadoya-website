@@ -10,3 +10,32 @@ nav.querySelectorAll('a').forEach(link => link.addEventListener('click', () => s
 document.addEventListener('keydown', event => {
  if (event.key === 'Escape' && nav.classList.contains('open')) { setMenu(false); button.focus(); }
 });
+
+const opening = document.querySelector('.opening');
+const header = document.querySelector('.header');
+const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)');
+const clamp = value => Math.max(0, Math.min(1, value));
+const smooth = value => { const t = clamp(value); return t * t * (3 - 2 * t); };
+let framePending = false;
+function updateOpening() {
+ framePending = false;
+ if (!opening) return;
+ if (reduceMotion.matches) { header.classList.remove('over-opening'); return; }
+ const stage = opening.querySelector('.opening-stage');
+ const progress = clamp(-opening.getBoundingClientRect().top / Math.max(1, opening.offsetHeight - stage.offsetHeight));
+ opening.style.setProperty('--wipe', (140 - smooth(progress / .85) * 180) + '%');
+ opening.style.setProperty('--photo-opacity', smooth((progress - .03) / .52));
+ opening.style.setProperty('--mark-opacity', 1 - smooth(progress / .63));
+ opening.style.setProperty('--mark-scale', 1 + progress * .06);
+ opening.style.setProperty('--mark-blur', (progress * 5) + 'px');
+ opening.style.setProperty('--cue-opacity', 1 - clamp(progress * 6));
+ const cue = opening.querySelector('.scroll-cue');
+ cue.style.visibility = progress > .2 ? 'hidden' : 'visible';
+ header.classList.toggle('over-opening', opening.getBoundingClientRect().bottom > stage.offsetHeight * .35);
+}
+function scheduleOpening() { if (!framePending) { framePending = true; requestAnimationFrame(updateOpening); } }
+addEventListener('scroll', scheduleOpening, { passive: true });
+addEventListener('resize', scheduleOpening);
+addEventListener('pageshow', scheduleOpening);
+reduceMotion.addEventListener('change', scheduleOpening);
+updateOpening();
