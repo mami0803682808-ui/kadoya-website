@@ -20,6 +20,10 @@ let framePending = false;
 function updateOpening() {
  framePending = false;
  if (!opening) return;
+ if (opening.classList.contains('opening-new')) {
+  header.classList.toggle('over-opening', opening.getBoundingClientRect().bottom > header.offsetHeight);
+  return;
+ }
  if (reduceMotion.matches) { header.classList.remove('over-opening'); return; }
  const stage = opening.querySelector('.opening-stage');
  const progress = clamp(-opening.getBoundingClientRect().top / Math.max(1, opening.offsetHeight - stage.offsetHeight));
@@ -31,7 +35,7 @@ function updateOpening() {
  opening.style.setProperty('--mark-blur', (progress * 5) + 'px');
  opening.style.setProperty('--cue-opacity', 1 - clamp(progress * 6));
  const cue = opening.querySelector('.scroll-cue');
- cue.style.visibility = progress > .2 ? 'hidden' : 'visible';
+ if (cue) cue.style.visibility = progress > .2 ? 'hidden' : 'visible';
  header.classList.toggle('over-opening', opening.getBoundingClientRect().bottom > stage.offsetHeight * .35);
 }
 function scheduleOpening() { if (!framePending) { framePending = true; requestAnimationFrame(updateOpening); } }
