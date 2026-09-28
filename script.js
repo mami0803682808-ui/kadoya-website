@@ -25,6 +25,7 @@ function updateOpening() {
  const progress = clamp(-opening.getBoundingClientRect().top / Math.max(1, opening.offsetHeight - stage.offsetHeight));
  opening.style.setProperty('--wipe', (140 - smooth(progress / .85) * 180) + '%');
  opening.style.setProperty('--photo-opacity', smooth((progress - .03) / .52));
+ opening.style.setProperty('--photo-scale', 1.035 - smooth(progress) * .035);
  opening.style.setProperty('--mark-opacity', 1 - smooth(progress / .63));
  opening.style.setProperty('--mark-scale', 1 + progress * .06);
  opening.style.setProperty('--mark-blur', (progress * 5) + 'px');
@@ -56,3 +57,36 @@ function updateAnniversary() {
 updateAnniversary();
 addEventListener('pageshow', updateAnniversary);
 document.addEventListener('visibilitychange', () => { if (!document.hidden) updateAnniversary(); });
+
+/* Reveal only below-the-fold content, once. Content remains readable without JS. */
+const motionItems = [...document.querySelectorAll('.welcome h2, .section-title, .about-grid > *, .cards > .card, .miso-showcase > *, .morning-set, .shop-gallery figure, .feature-copy')];
+let revealObserver;
+function configureReveals() {
+ if (revealObserver) revealObserver.disconnect();
+ motionItems.forEach(element => element.classList.remove('motion-pending', 'motion-revealed'));
+ if (reduceMotion.matches || !('IntersectionObserver' in window)) return;
+ revealObserver = new IntersectionObserver(entries => {
+  entries.forEach(entry => {
+   if (!entry.isIntersecting) return;
+   entry.target.classList.remove('motion-pending');
+   entry.target.classList.add('motion-revealed');
+   revealObserver.unobserve(entry.target);
+  });
+ }, { threshold: 0, rootMargin: '0px 0px -24px 0px' });
+ motionItems.forEach(element => {
+  const rect = element.getBoundingClientRect();
+  if (rect.top < window.innerHeight) return;
+  const siblings = [...element.parentElement.children];
+  const stagger = element.matches('.card, .morning-set, .shop-gallery figure') && window.innerWidth > 760;
+  element.style.setProperty('--reveal-delay', stagger ? ((siblings.indexOf(element) % 3) * 90) + 'ms' : '0ms');
+  element.classList.add('motion-pending');
+  revealObserver.observe(element);
+ });
+}
+document.addEventListener('focusin', event => {
+ const item = event.target.closest('.motion-pending');
+ if (item) { item.classList.remove('motion-pending'); revealObserver?.unobserve(item); }
+});
+reduceMotion.addEventListener('change', configureReveals);
+addEventListener('pageshow', configureReveals);
+configureReveals();
