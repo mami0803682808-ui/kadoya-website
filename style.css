@@ -115,3 +115,17 @@ svg.vertical-mark{display:block;width:min(260px,70vw);height:100%;max-height:650
 .opening-copy{animation:kadoya-years-in .85s cubic-bezier(.16,1,.3,1) 1s both}
 }
 @media(prefers-reduced-motion:reduce){.motion-pending,.motion-revealed{opacity:1;transform:none}.arrival-signature{display:none}}
+
+/* Keep the authentic signature until the visitor scrolls; dissolve softly into the photo. */
+.opening-new.scroll-ready{height:185vh!important;height:185svh!important;--signature-opacity:1;--signature-wipe:135%;--signature-y:0px;--copy-opacity:0;--cue-opacity:1}
+.opening-new.scroll-ready .opening-stage{position:sticky!important;top:0!important;height:100vh!important;height:100svh!important;min-height:0}
+.scroll-ready .arrival-signature{display:flex;position:absolute;inset:0;z-index:4;align-items:center;justify-content:center;background:radial-gradient(ellipse at center,#23251f,#0c0e0b);pointer-events:none;animation:none;opacity:var(--signature-opacity);visibility:visible;-webkit-mask-image:linear-gradient(to bottom,#000 calc(var(--signature-wipe) - 30%),transparent calc(var(--signature-wipe) + 30%));mask-image:linear-gradient(to bottom,#000 calc(var(--signature-wipe) - 30%),transparent calc(var(--signature-wipe) + 30%))}
+.scroll-ready .arrival-mark{animation:none;transform:translateY(var(--signature-y));padding:30px}
+.scroll-ready .arrival-mark svg.vertical-mark{width:77px;height:231px;max-height:231px}
+.scroll-ready .opening-copy{animation:none;opacity:var(--copy-opacity);bottom:12vh}
+.scroll-ready .opening-photo{animation:none;transform:none}
+.signature-cue{display:none}
+.scroll-ready .signature-cue{display:flex;z-index:5;bottom:105px;pointer-events:none}
+.scroll-ready .opening-actions{margin-top:28px}
+@media(prefers-reduced-motion:no-preference){.scroll-ready .arrival-mark svg{animation:kadoya-mark-in .55s ease both}}
+@media(max-width:760px){.scroll-ready .opening-copy{bottom:120px}.scroll-ready .arrival-mark svg.vertical-mark{width:70px;height:210px}}

@@ -20,7 +20,19 @@ let framePending = false;
 function updateOpening() {
  framePending = false;
  if (!opening) return;
- if (opening.classList.contains('opening-new')) {
+ if (opening.classList.contains('scroll-signature')) {
+  opening.classList.add('scroll-ready');
+  const stage = opening.querySelector('.opening-stage');
+  const progress = clamp(-opening.getBoundingClientRect().top / Math.max(1, opening.offsetHeight - stage.offsetHeight));
+  const fade = smooth(progress / .85);
+  opening.style.setProperty('--signature-opacity', 1 - fade);
+  opening.style.setProperty('--signature-wipe', (135 - fade * 170) + '%');
+  opening.style.setProperty('--signature-y', reduceMotion.matches ? '0px' : (-progress * 14) + 'px');
+  opening.style.setProperty('--copy-opacity', smooth((progress - .48) / .42));
+  opening.style.setProperty('--cue-opacity', 1 - smooth(progress / .2));
+  const copy = opening.querySelector('.opening-copy');
+  copy.inert = progress < .52;
+  copy.style.visibility = progress < .48 ? 'hidden' : 'visible';
   header.classList.toggle('over-opening', opening.getBoundingClientRect().bottom > header.offsetHeight);
   return;
  }
