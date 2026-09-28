@@ -106,3 +106,6 @@ document.addEventListener('focusin', event => {
 reduceMotion.addEventListener('change', configureReveals);
 addEventListener('pageshow', configureReveals);
 configureReveals();
+
+// Do not use artwork cropped from a composite image. Keep the craft section clean until each illustration is a standalone asset.
+document.querySelectorAll('.craft-art').forEach(element => element.remove());
