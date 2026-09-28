@@ -48,6 +48,7 @@ function foundingAnniversary(date = new Date()) {
  return year - 1973 - (month < 3 || (month === 3 && day < 3) ? 1 : 0);
 }
 function updateAnniversary() {
+ document.querySelectorAll('[data-founding-years]').forEach(element => { element.textContent = foundingAnniversary(); });
  document.querySelectorAll('[data-anniversary]').forEach(element => {
   element.textContent = `創業${foundingAnniversary()}周年`;
  });
