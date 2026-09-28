@@ -218,3 +218,27 @@ svg.vertical-mark{display:block;width:min(260px,70vw);height:100%;max-height:650
  .commitment-grid article>p:last-child{font-size:13px;line-height:1.9}
  .commitment-no{margin-bottom:12px}
 }
+
+/* Consistent photo hover for regular dishes, sides and morning sets. */
+@media (hover:hover) and (prefers-reduced-motion:no-preference){
+  .card-photo img,
+  .dish-photo-link img,
+  .morning-set-photo.original-morning-photo img{
+    transition:transform .65s cubic-bezier(.2,.7,.2,1);
+  }
+  .card-photo:hover img,
+  .card-photo:focus-visible img,
+  .dish-photo-link:hover img,
+  .dish-photo-link:focus-visible img,
+  .morning-set-photo.original-morning-photo:hover img,
+  .morning-set-photo.original-morning-photo:focus-visible img{
+    transform:scale(1.045);
+  }
+}
+@media (prefers-reduced-motion:reduce){
+  .card-photo:hover img,
+  .dish-photo-link:hover img,
+  .morning-set-photo.original-morning-photo:hover img{
+    transform:none;
+  }
+}
