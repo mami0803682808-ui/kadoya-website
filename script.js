@@ -39,3 +39,19 @@ addEventListener('resize', scheduleOpening);
 addEventListener('pageshow', scheduleOpening);
 reduceMotion.addEventListener('change', scheduleOpening);
 updateOpening();
+
+// Anniversary turns over on March 3 in Japan, independent of the visitor's timezone.
+function foundingAnniversary(date = new Date()) {
+ const parts = new Intl.DateTimeFormat('en-US', { timeZone: 'Asia/Tokyo', year: 'numeric', month: 'numeric', day: 'numeric' }).formatToParts(date);
+ const values = Object.fromEntries(parts.map(part => [part.type, part.value]));
+ const year = Number(values.year), month = Number(values.month), day = Number(values.day);
+ return year - 1973 - (month < 3 || (month === 3 && day < 3) ? 1 : 0);
+}
+function updateAnniversary() {
+ document.querySelectorAll('[data-anniversary]').forEach(element => {
+  element.textContent = `創業${foundingAnniversary()}周年`;
+ });
+}
+updateAnniversary();
+addEventListener('pageshow', updateAnniversary);
+document.addEventListener('visibilitychange', () => { if (!document.hidden) updateAnniversary(); });
