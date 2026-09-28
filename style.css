@@ -285,3 +285,37 @@ svg.vertical-mark{display:block;width:min(260px,70vw);height:100%;max-height:650
  .craft-art-rice{background-position:-288px 0}
  .craft-art-oil{background-position:-432px 0}
 }
+
+/* 2026-09 refinement: illustrations should sit naturally on the page, not look like square crops. */
+.craft-art{
+  width:180px!important;
+  height:132px!important;
+  margin:0 0 14px!important;
+  background-size:700px auto!important;
+  background-position-y:-235px!important;
+  background-color:transparent!important;
+  -webkit-mask-image:radial-gradient(ellipse 78% 72% at 50% 52%,#000 48%,rgba(0,0,0,.82) 66%,transparent 100%);
+  mask-image:radial-gradient(ellipse 78% 72% at 50% 52%,#000 48%,rgba(0,0,0,.82) 66%,transparent 100%);
+  filter:sepia(.28) saturate(.72) contrast(1.12)!important;
+  mix-blend-mode:multiply;
+}
+.craft-art-noodle{background-position-x:-4px!important}
+.craft-art-miso{background-position-x:-180px!important}
+.craft-art-rice{background-position-x:-355px!important}
+.craft-art-oil{background-position-x:-529px!important}
+
+/* Keep every major section title on the same visual scale. */
+.section-title h2{
+  font-size:clamp(32px,4vw,46px)!important;
+  line-height:1.35!important;
+  font-weight:500!important;
+  letter-spacing:.035em!important;
+}
+@media(max-width:760px){
+ .section-title h2{font-size:32px!important;line-height:1.4!important}
+ .craft-art{width:160px!important;height:118px!important;background-size:700px auto!important;background-position-y:-238px!important}
+ .craft-art-noodle{background-position-x:-4px!important}
+ .craft-art-miso{background-position-x:-180px!important}
+ .craft-art-rice{background-position-x:-355px!important}
+ .craft-art-oil{background-position-x:-529px!important}
+}
