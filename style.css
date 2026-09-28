@@ -34,3 +34,7 @@ img{display:block;width:100%;height:100%;object-fit:cover}figure{margin:0}.hero-
 
 .morning-set-photo{position:relative;overflow:hidden;width:100%;background:#e4dccb;margin-bottom:22px}.morning-set-photo img{position:absolute;max-width:none!important;height:auto!important;display:block;object-fit:initial!important}.miso-showcase{display:grid;grid-template-columns:1fr 1fr;gap:5vw;align-items:center;margin:65px auto 30px;max-width:1000px}.miso-showcase>a{display:block}.miso-showcase img{display:block;width:100%;height:auto;max-height:600px;object-fit:contain}.miso-showcase h3{font-family:"Noto Serif JP",serif;font-size:clamp(24px,3vw,36px);line-height:1.6}.miso-showcase .button{display:inline-block}.miso-caption{font-size:12px;color:#746854}#miso-menu{scroll-margin-top:90px}
 @media(max-width:760px){.miso-showcase{grid-template-columns:1fr;gap:20px}.morning-set-photo{max-width:420px;margin-left:auto;margin-right:auto}#miso-menu{scroll-margin-top:75px}}
+
+/* Reuse the exact header crest and lettering, arranged vertically without redrawing. */
+svg.vertical-mark{display:block;width:min(260px,70vw);height:100%;max-height:650px;background:none;-webkit-mask:none;mask:none;overflow:visible}
+@media(max-width:760px){svg.vertical-mark{width:min(230px,70vw);max-height:620px}}

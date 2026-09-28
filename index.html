@@ -4,7 +4,7 @@
 <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
 <meta name="description" content="愛知県小牧市の食事処「角屋」。きしめん、丼もの、定食などのお料理と、店内の様子をご紹介します。">
 <title>角屋｜小牧の食事処</title>
-<link rel="preload" as="image" href="images/kadoya-vertical.png">
+<link rel="preload" as="image" href="images/kadoya-logo.png">
 <link rel="stylesheet" href="style.css">
 <script defer src="script.js"></script>
 </head>
@@ -21,7 +21,16 @@
 <div class="opening-stage">
 <img class="opening-photo" src="images/kadoya-hands.jpg" alt="両手で差し出す、角屋のきしめん" width="1118" height="1407" fetchpriority="high">
 <div class="opening-veil" aria-hidden="true"></div>
-<div class="opening-brand"><h1 class="sr-only">角屋｜小牧の食事処</h1><div class="vertical-mark" role="img" aria-label="角屋の縦書きロゴ"></div></div>
+<div class="opening-brand"><h1 class="sr-only">角屋｜小牧の食事処</h1><svg class="vertical-mark" viewBox="0 0 720 2160" role="img" aria-label="角屋の家紋と縦書きロゴ" xmlns="http://www.w3.org/2000/svg">
+<defs>
+<linearGradient id="opening-gold" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#d7c08c"/><stop offset=".45" stop-color="#b3975f"/><stop offset=".63" stop-color="#e1cd9a"/><stop offset="1" stop-color="#a3864c"/></linearGradient>
+<clipPath id="opening-crest-clip"><circle cx="360" cy="305" r="305"/></clipPath>
+<mask id="opening-authentic-logo" maskUnits="userSpaceOnUse" x="0" y="0" width="720" height="2160" style="mask-type:alpha">
+<g clip-path="url(#opening-crest-clip)"><svg x="55" y="0" width="610" height="610" viewBox="95 95 565 565"><image href="images/kadoya-logo.png" width="2086" height="754"/></svg></g>
+<svg x="35" y="680" width="650" height="710" viewBox="620 35 625 680"><image href="images/kadoya-logo.png" width="2086" height="754"/></svg>
+<svg x="0" y="1440" width="720" height="690" viewBox="1300 35 720 680"><image href="images/kadoya-logo.png" width="2086" height="754"/></svg>
+</mask>
+</defs><rect width="720" height="2160" fill="url(#opening-gold)" mask="url(#opening-authentic-logo)"/></svg></div>
 <a class="scroll-cue" href="#welcome"><span>SCROLL</span><i aria-hidden="true"></i></a>
 </div>
 </section>
