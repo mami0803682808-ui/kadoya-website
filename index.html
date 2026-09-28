@@ -11,31 +11,33 @@
 <body>
 <header class="header">
 <a class="logo" href="#top" aria-label="角屋 トップへ"><img class="brand-logo" src="images/kadoya-logo.png" alt="角屋" width="2086" height="754"></a>
-<button class="menu-btn" aria-label="メニューを開く" aria-controls="main-nav" aria-expanded="false">☰</button>
+<button class="menu-btn" aria-label="メニューを開く" aria-controls="main-nav" aria-expanded="false"><span>メニュー</span><b aria-hidden="true">☰</b></button>
 <nav id="main-nav" class="nav">
-<a href="#about">角屋について</a><a href="#menu">お品書き</a><a href="#reservation">ご予約</a><a href="#recruit">スタッフ募集</a><a href="#shop">店舗案内</a><a href="#access">アクセス</a>
+<a href="#menu">お品書き</a><a href="#shop">店舗案内</a><a href="#access">アクセス</a><a href="#about">角屋について</a><a href="#media">メディア紹介</a><a href="#reservation">ご予約</a><a href="#recruit">スタッフ募集</a>
 </nav>
 </header>
 <main id="top">
-<section class="opening" aria-label="角屋のご紹介">
-<div class="opening-stage">
-<img class="opening-photo" src="images/kadoya-hands.jpg" alt="両手で差し出す、角屋のきしめん" width="1118" height="1407" fetchpriority="high">
-<div class="opening-veil" aria-hidden="true"></div>
-<div class="opening-brand"><h1 class="sr-only">角屋｜小牧の食事処</h1><div class="opening-years"><p class="opening-since">小牧で、1973年から。</p><p class="opening-age">創業<span data-founding-years>53</span>年</p></div><svg class="vertical-mark" viewBox="0 0 720 2160" role="img" aria-label="角屋の家紋と縦書きロゴ" xmlns="http://www.w3.org/2000/svg">
-<defs>
-<linearGradient id="opening-gold" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#d7c08c"/><stop offset=".45" stop-color="#b3975f"/><stop offset=".63" stop-color="#e1cd9a"/><stop offset="1" stop-color="#a3864c"/></linearGradient>
-<clipPath id="opening-crest-clip"><circle cx="360" cy="305" r="305"/></clipPath>
-<clipPath id="opening-kaku-clip"><path d="M670 35H1245V715H620V620H670Z"/></clipPath>
-<mask id="opening-authentic-logo" maskUnits="userSpaceOnUse" x="0" y="0" width="720" height="2160" style="mask-type:alpha">
-<g clip-path="url(#opening-crest-clip)"><svg x="55" y="0" width="610" height="610" viewBox="95 95 565 565"><image href="images/kadoya-logo.png" width="2086" height="754"/></svg></g>
-<svg x="35" y="680" width="650" height="710" viewBox="620 35 625 680"><image href="images/kadoya-logo.png" width="2086" height="754" clip-path="url(#opening-kaku-clip)"/></svg>
-<svg x="0" y="1440" width="720" height="690" viewBox="1300 35 720 680"><image href="images/kadoya-logo.png" width="2086" height="754"/></svg>
-</mask>
-</defs><rect width="720" height="2160" fill="url(#opening-gold)" mask="url(#opening-authentic-logo)"/></svg></div>
-<a class="scroll-cue" href="#welcome"><span>SCROLL</span><i aria-hidden="true"></i></a>
-</div>
+<section class="opening opening-new" aria-label="角屋のご紹介">
+  <div class="opening-stage">
+    <img class="opening-photo" src="images/kadoya-hands.jpg" alt="角屋の料理を両手で差し出す様子" width="1118" height="1407" fetchpriority="high">
+    <div class="opening-shade" aria-hidden="true"></div>
+    <div class="opening-copy">
+      <p class="opening-since">小牧で、1973年から。</p>
+      <h1>守り続けた味を、<br>これからも。</h1>
+      <p class="opening-history">創業 <strong data-founding-years>53</strong> 年</p>
+      <div class="opening-actions">
+        <a class="hero-action primary" href="#menu">お品書きを見る</a>
+        <a class="hero-action" href="https://maps.app.goo.gl/wDF8YGE7gGq9uSZx5?g_st=ic" target="_blank" rel="noopener">Google Maps</a>
+      </div>
+    </div>
+  </div>
 </section>
-<section id="welcome" class="welcome section"><p class="eyebrow">KADOYA · KOMAKI</p><h2>いつもの味を、<br>いつもの場所で。</h2><p>愛知県小牧市の食事処「角屋」。<br>自家製麺のきしめんに、丼もの、定食。<br>今日は何を食べよう。</p><a class="button" href="#menu">お品書きを見る</a></section>
+<section id="welcome" class="welcome section quick-intro">
+  <p class="eyebrow">KADOYA · KOMAKI</p>
+  <h2>自家製きしめんと、<br>いつもの食事。</h2>
+  <p>モーニングから、丼もの、定食、味噌煮込みまで。<br>角屋のお品書きをご覧ください。</p>
+  <a class="button" href="#menu">お品書きへ</a>
+</section>
 <section id="about" class="section about">
 <div class="section-title reveal"><p>ABOUT</p><h2>角屋について</h2></div>
 <div class="about-grid">
@@ -68,7 +70,7 @@
 <div class="section-title reveal"><p>INFORMATION</p><h2>店舗案内</h2></div>
 <div class="shop-gallery reveal"><figure><img src="images/IMG_3122.jpg" alt="角屋の建物と入口" loading="lazy" width="1536" height="1152"><figcaption>「角屋」の看板が目印です。</figcaption></figure><figure><img src="images/IMG_3149.jpg" alt="角屋のテーブル席と黒竹のしつらえ" loading="lazy" width="1536" height="1152"><figcaption>黒竹をあしらったテーブル席。</figcaption></figure><figure><img src="images/IMG_3147.jpg" alt="窓から光が入る角屋の店内" loading="lazy" width="1536" height="1152"><figcaption>店内の様子。</figcaption></figure></div>
 <div class="info reveal">
-<dl><div><dt>店名</dt><dd>角屋</dd></div><div><dt>運営</dt><dd>有限会社角屋</dd></div><div><dt>創業</dt><dd>1973年3月3日 <span class="inline-anniversary" data-anniversary></span></dd></div><div><dt>リニューアル</dt><dd>2025年8月11日<br>店舗改装・喫茶「樹輪」と統合</dd></div><div><dt>ご予約</dt><dd><a href="#reservation">お電話で承ります。ご予約時間のご案内はこちら →</a></dd></div><div><dt>住所</dt><dd>〒485-0003 愛知県小牧市久保一色1038-1</dd></div><div><dt>電話</dt><dd><a href="tel:0568722127">0568-72-2127</a></dd></div><div><dt>営業時間</dt><dd>モーニング 7:30〜10:30（ご注文・お席のご利用とも10:30まで）<br>昼 11:00〜14:00（L.O. 13:30）<br>夜 17:00〜20:30（L.O. 20:00）</dd></div><div><dt>定休日</dt><dd>水曜日</dd></div></dl>
+<dl><div><dt>店名</dt><dd>角屋</dd></div><div><dt>運営</dt><dd>有限会社角屋</dd></div><div><dt>創業</dt><dd>1973年3月3日 <span class="inline-anniversary" data-anniversary></span></dd></div><div><dt>リニューアル</dt><dd>2025年8月11日<br>店舗改装・喫茶「樹輪」と統合</dd></div><div><dt>ご予約</dt><dd><a href="#reservation">お電話で承ります。ご予約時間のご案内はこちら →</a></dd></div><div><dt>住所</dt><dd>〒485-0003 愛知県小牧市久保一色1038-1</dd></div><div><dt>電話</dt><dd><a href="tel:0568722127">0568-72-2127</a></dd></div><div><dt>営業時間</dt><dd>モーニング 7:30〜10:30（ご注文・お席のご利用とも10:30まで）<br>昼 11:00〜14:00（L.O. 13:30）<br>夜 17:00〜20:30（L.O. 20:00）</dd></div><div><dt>定休日</dt><dd>水曜日</dd></div><div><dt>駐車場</dt><dd>あり <small>※台数は確認後に掲載します</small></dd></div><div><dt>店内</dt><dd>全席禁煙</dd></div><div><dt>お支払い</dt><dd>利用可能な決済方法は確認後に掲載します</dd></div><div><dt>席数</dt><dd>確認後に掲載します</dd></div></dl>
 </div>
 </section>
 <section id="reservation" class="section reservation-section">
@@ -80,14 +82,20 @@
 <div class="recruit-layout"><div><h3>新しくなった角屋で、<br>一緒に働きませんか。</h3><p>接客や料理が好きな方、大歓迎。未経験の方も活躍中です。美味しいまかない付きでお迎えします。</p><dl class="recruit-details"><div><dt>仕事内容</dt><dd>接客・調理補助</dd></div><div><dt>勤務</dt><dd>定休日の水曜日以外<br>勤務時間帯はご相談ください。</dd></div><div><dt>待遇</dt><dd>まかない付き</dd></div><div><dt>募集条件の詳細</dt><dd>給与など、詳しい条件はお問い合わせください。</dd></div></dl></div><div class="recruit-contact"><p>ご応募・お問い合わせ</p><a href="tel:0568722127" class="contact-button">電話で応募する<span>0568-72-2127</span></a><a href="https://www.instagram.com/komaki_kadoya/" target="_blank" rel="noopener" class="contact-button">Instagramから応募する<span>@komaki_kadoya ↗</span></a><p>InstagramのプロフィールからDMをお送りください。</p></div></div>
 </section>
 <section id="access" class="section access">
-<div class="section-title reveal"><p>ACCESS & SNS</p><h2>角屋へどうぞ。</h2></div>
+<div class="section-title reveal"><p>ACCESS &amp; NEWS</p><h2>角屋へどうぞ。</h2></div>
+<div class="latest-info reveal"><p class="eyebrow">LATEST INFORMATION</p><h3>最新情報はInstagramで</h3><p>イベントのお知らせや臨時営業など、最新情報は公式Instagramでお知らせしています。</p><a href="https://www.instagram.com/komaki_kadoya/" target="_blank" rel="noopener">Instagramを見る →</a></div>
 <div class="access-links reveal">
-<a class="big-link" href="https://www.google.com/maps/search/?api=1&query=%E8%A7%92%E5%B1%8B+%E5%B0%8F%E7%89%A7%E5%B8%82%E4%B9%85%E4%BF%9D%E4%B8%80%E8%89%B21038-1" target="_blank" rel="noopener">Google Maps <span>↗</span></a>
+<a class="big-link" href="https://maps.app.goo.gl/wDF8YGE7gGq9uSZx5?g_st=ic" target="_blank" rel="noopener">Google Maps <span>↗</span></a>
 <a class="big-link" href="https://www.instagram.com/komaki_kadoya/" target="_blank" rel="noopener">Instagram <span>@komaki_kadoya ↗</span></a>
 <a class="big-link" href="https://lin.ee/NQG2va6" target="_blank" rel="noopener">LINE公式アカウント <span>友だち追加 ↗</span></a>
 <a class="big-link" href="tel:0568722127">電話で問い合わせる <span>0568-72-2127</span></a>
 </div>
 </section>
 </main>
+<nav class="mobile-dock" aria-label="クイックメニュー">
+  <a href="#menu">お品書き</a>
+  <a href="#shop">店舗情報</a>
+  <a href="https://maps.app.goo.gl/wDF8YGE7gGq9uSZx5?g_st=ic" target="_blank" rel="noopener">地図 ↗</a>
+</nav>
 <footer><div class="footer-logo"><img class="brand-logo" src="images/kadoya-logo.png" alt="角屋" width="2086" height="754" loading="lazy"></div><p>愛知県小牧市久保一色1038-1</p><p class="copyright">© KADOYA. All Rights Reserved.</p></footer>
 </body></html>
