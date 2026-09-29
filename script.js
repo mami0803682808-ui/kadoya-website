@@ -11,6 +11,14 @@ document.addEventListener('keydown', event => {
  if (event.key === 'Escape' && nav.classList.contains('open')) { setMenu(false); button.focus(); }
 });
 
+/* Always open the site from the very top instead of restoring a menu anchor/scroll position. */
+if ('scrollRestoration' in history) history.scrollRestoration = 'manual';
+function resetInitialView() {
+ if (location.hash) history.replaceState(null, '', location.pathname + location.search);
+ requestAnimationFrame(() => window.scrollTo({ top: 0, left: 0, behavior: 'auto' }));
+}
+addEventListener('pageshow', resetInitialView);
+
 const opening = document.querySelector('.opening');
 const header = document.querySelector('.header');
 const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)');
@@ -86,7 +94,7 @@ function placeFriedGyozaWithSideDishes() {
   if (link) {
    link.classList.remove('card-photo');
    link.classList.add('dish-photo-link');
-   link.setAttribute('aria-label', '揚げ餃子の写真を拡大（新しいタブ）');
+   link.setAttribute('aria-label', '揚げ餃子の写真');
   }
   const heading = gyozaCard.querySelector('h3');
   if (heading) {
@@ -154,6 +162,21 @@ function simplifyMenuCards() {
  });
 }
 simplifyMenuCards();
+
+/* Photos are display-only: remove navigation/zoom behavior from every image link. */
+function disableImageLinks() {
+ document.querySelectorAll('a').forEach(link => {
+  if (!link.querySelector('img')) return;
+  link.removeAttribute('href');
+  link.removeAttribute('target');
+  link.removeAttribute('rel');
+  link.removeAttribute('aria-label');
+  link.removeAttribute('tabindex');
+  link.style.cursor = 'default';
+  link.addEventListener('click', event => event.preventDefault());
+ });
+}
+disableImageLinks();
 
 /* Reveal only below-the-fold content, once. Content remains readable without JS. */
 const motionItems = [...document.querySelectorAll('.welcome h2, .section-title, .about-grid > *, .cards > .card, .miso-showcase > *, .morning-set, .shop-gallery figure, .feature-copy')];
