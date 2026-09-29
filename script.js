@@ -127,6 +127,21 @@ fixMatsutakeDobinPhoto();
 const autumnMenuTitle = document.querySelector('#autumn-menu-title');
 if (autumnMenuTitle) autumnMenuTitle.textContent = '秋季限定';
 
+/* Add the serving period to the two matsutake dishes. */
+function addMatsutakeServingPeriod() {
+ const targets = new Set(['松茸土瓶蒸し', '松茸土瓶蒸しときのこ天ぷら御膳']);
+ document.querySelectorAll('#autumn-menu .card').forEach(card => {
+  const heading = card.querySelector('h3');
+  if (!heading || !targets.has(heading.textContent.trim())) return;
+  if (card.querySelector('.matsutake-period')) return;
+  const note = document.createElement('p');
+  note.className = 'menu-note matsutake-period';
+  note.textContent = '10月〜11月下旬まで';
+  heading.insertAdjacentElement('afterend', note);
+ });
+}
+addMatsutakeServingPeriod();
+
 /* Reveal only below-the-fold content, once. Content remains readable without JS. */
 const motionItems = [...document.querySelectorAll('.welcome h2, .section-title, .about-grid > *, .cards > .card, .miso-showcase > *, .morning-set, .shop-gallery figure, .feature-copy')];
 let revealObserver;
