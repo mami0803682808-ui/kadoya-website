@@ -445,3 +445,11 @@ svg.vertical-mark{display:block;width:min(260px,70vw);height:100%;max-height:650
 .kadoya-film video{display:block;width:100%;height:auto;aspect-ratio:512/910;object-fit:contain;background:#171713;border:1px solid rgba(148,123,79,.3);border-radius:4px}
 .kadoya-film figcaption{margin-top:14px;font-size:14px;letter-spacing:.12em;line-height:1.8}
 @media(max-width:600px){.kadoya-film{width:min(100%,300px);margin:32px auto}}
+
+/* Menu category tabs */
+.menu-tabs{position:sticky;top:0;z-index:20;display:flex;justify-content:center;gap:8px;margin:22px auto 34px;padding:10px 14px;max-width:720px;overflow-x:auto;scrollbar-width:none;background:rgba(250,248,242,.94);backdrop-filter:blur(12px)}
+.menu-tabs::-webkit-scrollbar{display:none}
+.menu-tab{appearance:none;border:1px solid rgba(38,37,31,.22);background:transparent;color:inherit;border-radius:999px;padding:10px 22px;white-space:nowrap;font:inherit;font-size:13px;letter-spacing:.08em;cursor:pointer}
+.menu-tab.is-active{background:#292821;color:#fff;border-color:#292821}
+.menu-tab-panel[hidden]{display:none!important}
+@media(max-width:760px){.menu-tabs{justify-content:flex-start;margin-left:calc(50% - 50vw);margin-right:calc(50% - 50vw);padding-left:20px;padding-right:30px}.menu-tab{padding:9px 18px}}
