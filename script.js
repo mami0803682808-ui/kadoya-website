@@ -108,6 +108,21 @@ function placeFriedGyozaWithSideDishes() {
 }
 placeFriedGyozaWithSideDishes();
 
+/* Make the Matsutake Dobinmushi photo render reliably from Drive. */
+function fixMatsutakeDobinPhoto() {
+ const card = [...document.querySelectorAll('#autumn-menu .card')].find(card => card.querySelector('h3')?.textContent.trim() === '松茸土瓶蒸し');
+ if (!card) return;
+ const imageUrl = 'https://lh3.googleusercontent.com/d/1mXZBnZlctLMy47ozYQSJkh985lFnYxjn=w1600';
+ const img = card.querySelector('img');
+ const link = card.querySelector('a');
+ if (img) {
+  img.src = imageUrl;
+  img.alt = '松茸土瓶蒸し';
+ }
+ if (link) link.href = imageUrl;
+}
+fixMatsutakeDobinPhoto();
+
 /* Reveal only below-the-fold content, once. Content remains readable without JS. */
 const motionItems = [...document.querySelectorAll('.welcome h2, .section-title, .about-grid > *, .cards > .card, .miso-showcase > *, .morning-set, .shop-gallery figure, .feature-copy')];
 let revealObserver;
