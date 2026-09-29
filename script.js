@@ -163,6 +163,42 @@ function simplifyMenuCards() {
 }
 simplifyMenuCards();
 
+/* Mobile craft section: force a clean one-column layout and prevent vertical text overlap. */
+const craftMobileFix = document.createElement('style');
+craftMobileFix.textContent = `
+@media (max-width: 760px) {
+  .commitment-editorial .commitment-grid article {
+    display: block !important;
+    padding: 40px 0 !important;
+  }
+  .commitment-editorial .commitment-no { display: none !important; }
+  .commitment-editorial .craft-word {
+    writing-mode: horizontal-tb !important;
+    font-size: 50px !important;
+    line-height: 1 !important;
+    margin: 0 0 22px !important;
+    justify-self: auto !important;
+  }
+  .commitment-editorial .craft-copy {
+    max-width: none !important;
+    width: 100% !important;
+  }
+  .commitment-editorial .craft-copy h3 {
+    font-size: 22px !important;
+    line-height: 1.7 !important;
+    margin: 0 0 14px !important;
+  }
+  .commitment-editorial .craft-copy p {
+    font-size: 14px !important;
+    line-height: 2 !important;
+    letter-spacing: .02em !important;
+    overflow-wrap: normal !important;
+    word-break: normal !important;
+  }
+}
+`;
+document.head.appendChild(craftMobileFix);
+
 /* Photos are display-only: remove navigation/zoom behavior from every image link. */
 function disableImageLinks() {
  document.querySelectorAll('a').forEach(link => {
