@@ -259,3 +259,19 @@ configureReveals();
 
 // Do not use artwork cropped from a composite image. Keep the craft section clean until each illustration is a standalone asset.
 document.querySelectorAll('.craft-art').forEach(element => element.remove());
+
+
+// Morning menu: stagger cards into view as the section enters the viewport.
+(() => {
+  const cards = [...document.querySelectorAll('.morning-sets .morning-set')];
+  if (!cards.length || window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
+      if (!entry.isIntersecting) return;
+      const index = cards.indexOf(entry.target);
+      window.setTimeout(() => entry.target.classList.add('morning-in'), Math.max(0,index) * 115);
+      observer.unobserve(entry.target);
+    });
+  }, { threshold: .16, rootMargin: '0px 0px -8% 0px' });
+  cards.forEach(card => observer.observe(card));
+})();
