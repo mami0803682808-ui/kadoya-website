@@ -142,6 +142,19 @@ function addMatsutakeServingPeriod() {
 }
 addMatsutakeServingPeriod();
 
+/* Keep menu cards clean: remove item numbers and descriptive copy, but preserve prices and serving-period notes. */
+function simplifyMenuCards() {
+ document.querySelectorAll('.cards .card > .number, .commitment-no').forEach(element => element.remove());
+ document.querySelectorAll('.cards .card').forEach(card => {
+  [...card.children].forEach(child => {
+   if (child.tagName !== 'P') return;
+   if (child.classList.contains('dish-price') || child.classList.contains('menu-note')) return;
+   child.remove();
+  });
+ });
+}
+simplifyMenuCards();
+
 /* Reveal only below-the-fold content, once. Content remains readable without JS. */
 const motionItems = [...document.querySelectorAll('.welcome h2, .section-title, .about-grid > *, .cards > .card, .miso-showcase > *, .morning-set, .shop-gallery figure, .feature-copy')];
 let revealObserver;
