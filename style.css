@@ -382,3 +382,19 @@ svg.vertical-mark{display:block;width:min(260px,70vw);height:100%;max-height:650
  .mobile-dock a:active{opacity:.55}
  footer{padding-bottom:105px!important}
 }
+
+/* Year-end soba feature */
+.yearend-feature{overflow:hidden}
+.yearend-gallery{display:grid;grid-template-columns:1.35fr .85fr .85fr;grid-template-rows:240px 240px;gap:12px;max-width:1120px;margin:34px auto 0}
+.yearend-gallery figure{margin:0;overflow:hidden;background:#eee}
+.yearend-gallery figure:first-child{grid-row:1/3}
+.yearend-gallery img{width:100%;height:100%;display:block;object-fit:cover;transition:transform .7s cubic-bezier(.2,.7,.2,1)}
+.yearend-gallery figure:hover img{transform:scale(1.035)}
+.yearend-gallery figure:nth-child(4){grid-column:2/4}
+.yearend-note{max-width:1120px;margin:18px auto 0;font-size:13px;letter-spacing:.08em;opacity:.72}
+@media(max-width:760px){
+ .yearend-gallery{grid-template-columns:1fr 1fr;grid-template-rows:280px 150px 150px;gap:7px;margin-top:24px}
+ .yearend-gallery figure:first-child{grid-column:1/3;grid-row:auto}
+ .yearend-gallery figure:nth-child(4){grid-column:auto}
+ .yearend-note{font-size:12px;line-height:1.8;margin-top:14px}
+}
