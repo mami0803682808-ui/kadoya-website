@@ -342,3 +342,33 @@ svg.vertical-mark{display:block;width:min(260px,70vw);height:100%;max-height:650
  .craft-art-rice{background-position-x:-270px!important}
  .craft-art-oil{background-position-x:-405px!important}
 }
+
+
+/* 2026-09 editorial craft story — material-first, Japanese restaurant aesthetic */
+.commitment-editorial{background:#f2eee4!important;color:#272721!important;padding-top:clamp(90px,12vw,150px)!important;padding-bottom:clamp(100px,13vw,170px)!important;overflow:hidden}
+.craft-intro{max-width:1100px;margin:0 auto clamp(62px,9vw,110px);position:relative}
+.craft-kicker{font-size:10px;letter-spacing:.28em;color:#8a382c;margin:0 0 24px}
+.craft-intro h2{font-family:"Noto Serif JP",serif;font-weight:500;font-size:clamp(46px,7vw,86px);line-height:1.22;letter-spacing:.05em;margin:0;color:#292923}
+.craft-lead{font-family:"Noto Serif JP",serif;font-size:clamp(15px,1.8vw,19px);line-height:2.25;letter-spacing:.08em;margin:34px 0 0;color:#56544d}
+.commitment-editorial .commitment-grid{display:block;max-width:1100px;margin:0 auto;border-top:1px solid rgba(44,43,38,.28)}
+.commitment-editorial .commitment-grid article{display:grid;grid-template-columns:60px minmax(180px,.72fr) minmax(300px,1fr);gap:clamp(22px,5vw,70px);align-items:center;padding:clamp(52px,7vw,88px) 0;border:0;border-bottom:1px solid rgba(44,43,38,.28)!important;position:relative}
+.commitment-editorial .commitment-no{align-self:start;font-size:10px;letter-spacing:.18em;color:#9b4135;opacity:1;margin:9px 0 0}
+.craft-word{font-family:"Noto Serif JP",serif;font-size:clamp(72px,10vw,132px);line-height:1;font-weight:500;letter-spacing:.04em;color:#34342e;writing-mode:vertical-rl;justify-self:center;opacity:.95}
+.craft-copy{max-width:520px}
+.commitment-editorial .craft-copy h3{font-family:"Noto Serif JP",serif;font-size:clamp(25px,3vw,38px);font-weight:500;line-height:1.65;letter-spacing:.06em;margin:0 0 22px;color:#292923}
+.commitment-editorial .craft-copy p{font-size:14px!important;line-height:2.15!important;letter-spacing:.035em;color:#5c5a52!important;margin:0!important}
+.craft-closing{font-family:"Noto Serif JP",serif;text-align:center;font-size:clamp(20px,2.8vw,32px);line-height:2.05;letter-spacing:.1em;margin:clamp(78px,10vw,125px) auto 0;color:#34342e}
+@media(max-width:760px){
+ .commitment-editorial{padding-left:7vw!important;padding-right:7vw!important}
+ .craft-intro{margin-bottom:62px}
+ .craft-kicker{margin-bottom:18px}
+ .craft-intro h2{font-size:46px;line-height:1.28}
+ .craft-lead{font-size:14px;line-height:2.15;margin-top:28px}
+ .commitment-editorial .commitment-grid{margin-top:0}
+ .commitment-editorial .commitment-grid article{grid-template-columns:32px 72px 1fr;gap:15px;padding:48px 0}
+ .commitment-editorial .commitment-no{font-size:9px;margin-top:6px}
+ .craft-word{font-size:58px;justify-self:start}
+ .commitment-editorial .craft-copy h3{font-size:21px;line-height:1.65;margin-bottom:15px}
+ .commitment-editorial .craft-copy p{font-size:12.5px!important;line-height:2!important}
+ .craft-closing{font-size:20px;line-height:2;margin-top:72px}
+}
