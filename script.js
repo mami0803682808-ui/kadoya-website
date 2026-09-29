@@ -74,6 +74,40 @@ updateAnniversary();
 addEventListener('pageshow', updateAnniversary);
 document.addEventListener('visibilitychange', () => { if (!document.hidden) updateAnniversary(); });
 
+/* Move fried gyoza out of the autumn feature and into the regular side-dish section. */
+function placeFriedGyozaWithSideDishes() {
+ const autumnCards = [...document.querySelectorAll('#autumn-menu .card')];
+ const gyozaCard = autumnCards.find(card => card.querySelector('h3')?.textContent.trim() === '揚げ餃子');
+ const sideGrid = document.querySelector('.side-dish-grid');
+ if (gyozaCard && sideGrid) {
+  gyozaCard.classList.remove('card', 'reveal');
+  gyozaCard.classList.add('dish-photo-item');
+  const link = gyozaCard.querySelector('a');
+  if (link) {
+   link.classList.remove('card-photo');
+   link.classList.add('dish-photo-link');
+   link.setAttribute('aria-label', '揚げ餃子の写真を拡大（新しいタブ）');
+  }
+  const heading = gyozaCard.querySelector('h3');
+  if (heading) {
+   const h4 = document.createElement('h4');
+   h4.textContent = heading.textContent;
+   heading.replaceWith(h4);
+  }
+  sideGrid.appendChild(gyozaCard);
+ }
+
+ const sideMenu = [...document.querySelectorAll('.menu-group')].find(group => group.querySelector('summary')?.textContent.trim() === '一品料理・ご飯');
+ const sideList = sideMenu?.querySelector('.menu-list');
+ const alreadyListed = sideList && [...sideList.querySelectorAll('dt')].some(dt => dt.textContent.trim() === '揚げ餃子');
+ if (sideList && !alreadyListed) {
+  const row = document.createElement('div');
+  row.innerHTML = '<dt>揚げ餃子</dt><dd>480円</dd>';
+  sideList.appendChild(row);
+ }
+}
+placeFriedGyozaWithSideDishes();
+
 /* Reveal only below-the-fold content, once. Content remains readable without JS. */
 const motionItems = [...document.querySelectorAll('.welcome h2, .section-title, .about-grid > *, .cards > .card, .miso-showcase > *, .morning-set, .shop-gallery figure, .feature-copy')];
 let revealObserver;
