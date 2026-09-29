@@ -104,7 +104,6 @@ function placeFriedGyozaWithSideDishes() {
   }
   sideGrid.appendChild(gyozaCard);
  }
-
  const sideMenu = [...document.querySelectorAll('.menu-group')].find(group => group.querySelector('summary')?.textContent.trim() === '一品料理・ご飯');
  const sideList = sideMenu?.querySelector('.menu-list');
  const alreadyListed = sideList && [...sideList.querySelectorAll('dt')].some(dt => dt.textContent.trim() === '揚げ餃子');
@@ -162,6 +161,17 @@ function simplifyMenuCards() {
  });
 }
 simplifyMenuCards();
+
+/* Expand the noodle craftsmanship story. */
+function updateNoodleCraftCopy() {
+ const noodleArticle = [...document.querySelectorAll('.commitment-grid article')].find(article => article.querySelector('.craft-word')?.textContent.trim() === '麺');
+ if (!noodleArticle) return;
+ const heading = noodleArticle.querySelector('.craft-copy h3');
+ const body = noodleArticle.querySelector('.craft-copy p');
+ if (heading) heading.innerHTML = '毎日、角屋で打つ。<br>「麺だけでもうまい」一杯へ。';
+ if (body) body.textContent = '小麦粉は香川から直送し、中でも一番粉を使用。毎日、角屋で麺を仕込んでいます。目指すのは、だしに頼らず「麺だけでもうまい」と思えるきしめん。配合を独自にブレンドし、つるっとした喉ごしだけでなく、もちもちとした食感にも仕上げています。';
+}
+updateNoodleCraftCopy();
 
 /* Mobile craft section: force a clean one-column layout and prevent vertical text overlap. */
 const craftMobileFix = document.createElement('style');
