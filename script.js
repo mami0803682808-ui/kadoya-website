@@ -123,6 +123,10 @@ function fixMatsutakeDobinPhoto() {
 }
 fixMatsutakeDobinPhoto();
 
+/* Keep seasonal menu naming consistent. */
+const autumnMenuTitle = document.querySelector('#autumn-menu-title');
+if (autumnMenuTitle) autumnMenuTitle.textContent = '秋季限定';
+
 /* Reveal only below-the-fold content, once. Content remains readable without JS. */
 const motionItems = [...document.querySelectorAll('.welcome h2, .section-title, .about-grid > *, .cards > .card, .miso-showcase > *, .morning-set, .shop-gallery figure, .feature-copy')];
 let revealObserver;
