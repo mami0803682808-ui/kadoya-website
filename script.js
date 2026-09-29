@@ -277,26 +277,46 @@ document.querySelectorAll('.craft-art').forEach(element => element.remove());
 })();
 
 
-// Menu tabs: group the existing menu into four compact views without duplicating content.
+// Menu tabs: show only the selected category.
 (() => {
- const menu=document.querySelector('#menu'); if(!menu) return;
- const tabs=[...menu.querySelectorAll('[data-menu-tab]')]; if(!tabs.length) return;
+ const menu=document.querySelector('#menu');
+ if(!menu) return;
+ const tabs=[...menu.querySelectorAll('[data-menu-tab]')];
  const autumn=menu.querySelector('#autumn-menu');
  const heading=menu.querySelector('#regular-menu');
  const photoCards=heading?.nextElementSibling;
  const miso=menu.querySelector('[aria-labelledby="miso-photo-title"]');
  const sidePhotos=menu.querySelector('[aria-labelledby="side-photo-title"]');
  const cats=menu.querySelector('.menu-categories');
- const groups=cats?[...cats.querySelectorAll(':scope > .menu-group')]:[];
- const panel=(key,nodes)=>{const p=document.createElement('div');p.className='menu-tab-panel';p.dataset.menuPanel=key;nodes.filter(Boolean).forEach(n=>p.appendChild(n));cats?.parentNode.insertBefore(p,cats);return p};
- const by=s=>groups.filter(g=>s.includes((g.querySelector('summary')?.textContent||'').trim()));
- const set=panel('set',[heading,photoCards,...by(['定食'])]);
- const noodle=panel('noodle',[miso,...by(['味噌煮込みきしめん','きしめん','丼もの・お子様メニュー','ミニ丼セット'])]);
- const side=panel('side',[sidePhotos,...by(['一品料理・ご飯','お飲み物・デザート'])]);
- const season=panel('season',[autumn,...by(['夏季限定','年越し蕎麦'])]);
- cats?.remove();
- const panels=[set,noodle,side,season];
- const show=key=>{tabs.forEach(b=>{const on=b.dataset.menuTab===key;b.classList.toggle('is-active',on);b.setAttribute('aria-selected',String(on))});panels.forEach(p=>p.hidden=p.dataset.menuPanel!==key)};
- tabs.forEach(b=>b.addEventListener('click',()=>show(b.dataset.menuTab)));
- show('set');
+ if(!tabs.length || !cats) return;
+
+ const groups=[...cats.children].filter(el=>el.classList.contains('menu-group'));
+ const take=(names)=>groups.filter(g=>names.includes((g.querySelector('summary')?.textContent||'').trim()));
+ const anchor=cats;
+ const make=(key,nodes)=>{
+   const p=document.createElement('div');
+   p.className='menu-tab-panel';
+   p.dataset.menuPanel=key;
+   nodes.filter(Boolean).forEach(n=>p.appendChild(n));
+   anchor.parentNode.insertBefore(p,anchor);
+   return p;
+ };
+ const panels=[
+   make('season',[autumn,...take(['夏季限定','年越し蕎麦'])]),
+   make('set',[heading,photoCards,...take(['定食'])]),
+   make('noodle',[miso,...take(['味噌煮込みきしめん','きしめん','丼もの・お子様メニュー','ミニ丼セット'])]),
+   make('side',[sidePhotos,...take(['一品料理・ご飯','お飲み物・デザート'])])
+ ];
+ anchor.remove();
+
+ function show(key){
+   tabs.forEach(btn=>{
+     const active=btn.dataset.menuTab===key;
+     btn.classList.toggle('is-active',active);
+     btn.setAttribute('aria-selected',active?'true':'false');
+   });
+   panels.forEach(p=>{ p.hidden=p.dataset.menuPanel!==key; });
+ }
+ tabs.forEach(btn=>btn.addEventListener('click',()=>show(btn.dataset.menuTab)));
+ show('season');
 })();
