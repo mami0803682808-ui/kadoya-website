@@ -1160,3 +1160,9 @@ body .opening-new,body:not(.desktop-rail-ready) .opening-new,body.desktop-rail-r
   .tempura-feature-grid{grid-template-columns:repeat(3,minmax(0,1fr));gap:18px}
   .tempura-feature a{max-height:180px}
 }
+
+/* One continuous kishimen grid, with consistent photo frames and prices. */
+#menu .kishimen-extra-photos .card-photo{display:block!important;width:100%!important;height:auto!important;aspect-ratio:auto!important;flex:none!important}
+#menu .kishimen-extra-photos .card img{aspect-ratio:3/2!important}
+#menu .kishimen-extra-photos .dish-price{display:block!important;visibility:visible!important;opacity:1!important;margin:0!important;font-size:12px!important;line-height:1.5!important}
+@media(min-width:761px){#menu .kishimen-extra-photos .dish-price{font-size:14px!important}}
