@@ -1101,3 +1101,7 @@ body .opening-new,body:not(.desktop-rail-ready) .opening-new,body.desktop-rail-r
   #tenzaru-kishimen-photo img,
   .nested-menu-photo .card img[alt="きしめん"]{width:100%!important;aspect-ratio:4/3!important;object-fit:cover!important;}
 }
+
+/* Daily fish set: match the other set-meal cards while preserving the full landscape photo */
+#fish-set-photo{min-width:0!important}
+#fish-set-photo img{display:block!important;width:100%!important;aspect-ratio:4/3!important;height:auto!important;object-fit:contain!important;object-position:center!important}
