@@ -747,3 +747,8 @@ html.opening-copy-visible .mobile-dock{opacity:1!important;visibility:visible!im
 
 /* Desktop already exposes the full navigation, so the hamburger/menu trigger is mobile-only. */
 @media(min-width:761px){.menu-btn{display:none!important}.header .nav{display:flex!important}}
+
+
+/* Keep the top navigation hidden during the opening logo; reveal it with the quick shortcuts. */
+html:not(.opening-copy-visible) .header{opacity:0!important;visibility:hidden!important;pointer-events:none!important;transform:translateY(-12px)!important}
+html.opening-copy-visible .header{opacity:1!important;visibility:visible!important;pointer-events:auto!important;transform:translateY(0)!important;transition:opacity .45s ease,transform .45s ease,visibility .45s ease!important}
