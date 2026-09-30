@@ -956,3 +956,19 @@ html.opening-copy-visible .header,html.opening-copy-visible .mobile-dock{opacity
     transform:translateX(0)!important;
   }
 }
+
+
+/* Desktop opening: hide the ENTIRE left rail (logo + shortcuts) until opening completes. */
+@media(min-width:761px){
+  body:not(.desktop-rail-ready) .header,
+  body:not(.desktop-rail-ready) .mobile-dock{
+    opacity:0!important;
+    visibility:hidden!important;
+    pointer-events:none!important;
+  }
+  body.desktop-rail-ready .header,
+  body.desktop-rail-ready .mobile-dock{
+    opacity:1!important;
+    visibility:visible!important;
+  }
+}
