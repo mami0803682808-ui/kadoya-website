@@ -743,3 +743,7 @@ html.opening-copy-visible .mobile-dock{opacity:1!important;visibility:visible!im
 .commitment-editorial .craft-copy{max-width:none!important;width:100%!important}
 .commitment-editorial .craft-copy p{max-width:68ch!important}
 }
+
+
+/* Desktop already exposes the full navigation, so the hamburger/menu trigger is mobile-only. */
+@media(min-width:761px){.menu-btn{display:none!important}.header .nav{display:flex!important}}
