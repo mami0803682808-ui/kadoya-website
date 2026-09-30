@@ -1132,3 +1132,11 @@ body .opening-new,body:not(.desktop-rail-ready) .opening-new,body.desktop-rail-r
  #menu .nested-menu-photo .card{min-width:0!important;width:auto!important;max-width:none!important}
  #menu .nested-menu-photo .card img{display:block!important;width:100%!important;height:auto!important;aspect-ratio:4/3!important;object-fit:cover!important;max-height:180px!important}
 }
+
+/* Seasonal menu safeguards: keep autumn visible and summer cards compact */
+#autumn-menu{display:block!important;visibility:visible!important;opacity:1!important}
+.summer-photo-grid{display:grid!important;grid-template-columns:repeat(2,minmax(0,1fr))!important;gap:14px!important;max-width:900px!important;margin:18px auto 26px!important}
+.summer-photo-grid .card{min-width:0!important;width:auto!important;max-width:none!important}
+.summer-photo-grid .card img{display:block!important;width:100%!important;height:auto!important;aspect-ratio:4/3!important;object-fit:cover!important;max-height:none!important}
+@media(min-width:761px){.summer-photo-grid{grid-template-columns:repeat(3,minmax(0,1fr))!important;gap:18px!important}.summer-photo-grid .card img{max-height:180px!important}}
+@media(max-width:760px){.summer-photo-grid{grid-template-columns:repeat(2,minmax(0,1fr))!important;gap:10px!important}}
