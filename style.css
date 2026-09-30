@@ -733,3 +733,13 @@ svg.vertical-mark{display:block;width:min(260px,70vw);height:100%;max-height:650
 html:not(.opening-copy-visible) .mobile-dock{opacity:0!important;visibility:hidden!important;pointer-events:none!important;transform:translate(-50%,14px)!important}
 html.opening-copy-visible .mobile-dock{opacity:1!important;visibility:visible!important;pointer-events:auto!important;transform:translate(-50%,0)!important;transition:opacity .45s ease,transform .45s ease,visibility .45s ease!important}
 }
+
+
+/* Desktop commitment section: use the available viewport width instead of clustering left. */
+@media(min-width:761px){
+.commitment-editorial{padding-left:clamp(36px,5vw,96px)!important;padding-right:clamp(36px,5vw,96px)!important}
+.commitment-editorial .commitment-grid{width:100%!important;max-width:1440px!important;margin-left:auto!important;margin-right:auto!important}
+.commitment-editorial .commitment-grid article{grid-template-columns:60px minmax(260px,.8fr) minmax(420px,1.35fr)!important;gap:clamp(36px,5vw,88px)!important;width:100%!important}
+.commitment-editorial .craft-copy{max-width:none!important;width:100%!important}
+.commitment-editorial .craft-copy p{max-width:68ch!important}
+}
