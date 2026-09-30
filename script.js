@@ -41,6 +41,40 @@
       grid.appendChild(card);
     }
 
+    // Add photos for Oyakodon, Tekkadon and Negitorodon using the existing donburi card layout.
+    if (kidsGroup) {
+      let grid = kidsGroup.querySelector('.nested-menu-photo.cards, .float-photo-grid.cards');
+      if (!grid) {
+        grid = document.createElement('div');
+        grid.className = 'nested-menu-photo cards float-photo-grid';
+        kidsGroup.querySelector('.menu-list')?.before(grid);
+      }
+
+      const donburi = [
+        { name: '親子丼', price: '1,000円', image: 'images/oyakodon.jpg', key: 'oyakodon' },
+        { name: '鉄火丼', price: '1,040円', image: 'images/tekkadon.jpg', key: 'tekkadon' },
+        { name: 'ネギトロ丼', price: '1,040円', image: 'images/negitorodon.jpg', key: 'negitorodon' }
+      ];
+
+      donburi.forEach(({ name, price, image, key }) => {
+        if (grid.querySelector(`[data-donburi-photo="${key}"]`) || [...grid.querySelectorAll('h3')].some(title => title.textContent.trim() === name)) return;
+        const card = document.createElement('article');
+        card.className = 'card';
+        card.dataset.donburiPhoto = key;
+        card.innerHTML = `
+          <img src="${image}" alt="${name}" loading="lazy" decoding="async" width="360" height="240">
+          <h3>${name}</h3>
+          <p class="dish-price">${price}</p>`;
+        grid.appendChild(card);
+      });
+
+      const photoNames = new Set(donburi.map(item => item.name));
+      kidsGroup.querySelectorAll('.menu-list > div').forEach(row => {
+        const name = row.querySelector('dt')?.textContent.trim();
+        if (photoNames.has(name)) row.remove();
+      });
+    }
+
     // Add the single large fried shrimp to the existing side-dish photo grid so its image, label and price match nearby items.
     const sideGrid = menu.querySelector('.side-dish-grid');
     if (sideGrid && !sideGrid.querySelector('[data-oebi-single-photo]')) {
