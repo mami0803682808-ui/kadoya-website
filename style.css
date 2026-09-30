@@ -811,3 +811,18 @@ html.opening-copy-visible .header{opacity:1!important;visibility:visible!importa
 .scroll-ready .opening-copy h1,.opening-new.scroll-ready .opening-copy h1{display:flex!important;flex-direction:row!important;justify-content:center!important;align-items:baseline!important;gap:.18em!important;white-space:nowrap!important;font-size:clamp(34px,4.2vw,64px)!important;line-height:1.2!important}
 .scroll-ready .opening-copy h1 .hero-line,.opening-new.scroll-ready .opening-copy h1 .hero-line{display:inline!important;white-space:nowrap!important;margin:0!important}
 }
+
+
+/* Desktop craft section: center the actual content block across the viewport. */
+@media(min-width:761px){
+.commitment-editorial{padding-left:clamp(48px,7vw,140px)!important;padding-right:clamp(48px,7vw,140px)!important}
+.commitment-editorial .craft-intro{max-width:1180px!important;margin:0 auto clamp(70px,8vw,110px)!important;text-align:center!important}
+.commitment-editorial .craft-intro h2{margin-left:auto!important;margin-right:auto!important}
+.commitment-editorial .craft-lead{max-width:760px!important;margin-left:auto!important;margin-right:auto!important}
+.commitment-editorial .commitment-grid{max-width:1180px!important;margin:0 auto!important}
+.commitment-editorial .commitment-grid article{grid-template-columns:minmax(110px,.28fr) minmax(150px,.38fr) minmax(0,1.34fr)!important;gap:clamp(28px,4vw,64px)!important;padding-left:clamp(24px,3vw,48px)!important;padding-right:clamp(24px,3vw,48px)!important}
+.commitment-editorial .commitment-no{justify-self:end!important}
+.commitment-editorial .craft-word{justify-self:center!important}
+.commitment-editorial .craft-copy{justify-self:stretch!important;max-width:none!important}
+.commitment-editorial .craft-copy h3{max-width:none!important;width:100%!important}
+}
