@@ -1112,3 +1112,7 @@ body .opening-new,body:not(.desktop-rail-ready) .opening-new,body.desktop-rail-r
 /* Tempura photos: keep the dishes centered with matching visual margins */
 .tempura-feature a{aspect-ratio:4/3;overflow:hidden;background:#eee9df}
 .tempura-feature img{height:100%!important;object-fit:cover!important;object-position:center center!important}
+
+/* Keep the full tempura dishes visible with equal photo margins */
+.tempura-feature a{aspect-ratio:4/3!important;display:flex!important;align-items:center!important;justify-content:center!important;background:#eee9df!important;overflow:hidden!important}
+.tempura-feature img{width:100%!important;height:100%!important;object-fit:contain!important;object-position:center center!important}
