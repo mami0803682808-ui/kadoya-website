@@ -346,3 +346,10 @@ document.querySelectorAll('.craft-art').forEach(element => element.remove());
 
 // Accordion menus always start closed.
 document.querySelectorAll('#menu details.menu-group').forEach(item=>item.open=false);
+
+/* Header logo: return to the opening screen. */
+document.querySelector('.header .logo')?.addEventListener('click', event => {
+  event.preventDefault();
+  if (location.hash) history.replaceState(null, '', location.pathname + location.search);
+  window.scrollTo({ top: 0, left: 0, behavior: 'smooth' });
+});
