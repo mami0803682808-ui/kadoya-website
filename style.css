@@ -636,3 +636,8 @@ svg.vertical-mark{display:block;width:min(260px,70vw);height:100%;max-height:650
 @media(max-width:760px){
  .matsutake-gozen-name{font-size:clamp(15px,4.25vw,20px)!important;line-height:1.45!important;letter-spacing:0!important;white-space:nowrap!important}
 }
+
+
+/* Tanuki quick-nav icon: same visual size as the other dock icons. */
+.mobile-dock .dock-icon-tanuki{width:24px!important;height:24px!important}
+.mobile-dock .dock-icon-tanuki svg{width:24px!important;height:24px!important;transform:none!important}
