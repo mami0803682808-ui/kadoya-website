@@ -1,0 +1,37 @@
+name: One-time dedupe hiyamugi
+on:
+  push:
+    paths:
+      - '.github/workflows/one-time-dedupe-hiyamugi.yml'
+permissions:
+  contents: write
+jobs:
+  fix:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Remove duplicate hiyamugi photo card
+        run: |
+          python3 - <<'PY'
+          from pathlib import Path
+          import re
+          p=Path('index.html')
+          s=p.read_text(encoding='utf-8')
+          # Find article cards that contain 冷麦 and keep only the first photo-card occurrence.
+          pat=re.compile(r'<article\b[^>]*class="[^"]*card[^"]*"[^>]*>.*?</article>', re.S)
+          matches=[m for m in pat.finditer(s) if '冷麦' in m.group(0) and '<img ' in m.group(0)]
+          if len(matches)>1:
+              # remove from the end so offsets remain valid
+              for m in reversed(matches[1:]):
+                  s=s[:m.start()]+s[m.end():]
+          p.write_text(s,encoding='utf-8')
+          print('hiyamugi photo cards before:', len(matches))
+          PY
+      - name: Commit and clean up
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git rm .github/workflows/one-time-dedupe-hiyamugi.yml
+          git add index.html
+          git commit -m "Remove duplicate hiyamugi photo card" || exit 0
+          git push
