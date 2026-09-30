@@ -285,7 +285,6 @@ document.querySelectorAll('.craft-art').forEach(element => element.remove());
  const autumn=menu.querySelector('#autumn-menu');
  const heading=menu.querySelector('#regular-menu');
  const photoCards=heading?.nextElementSibling;
- const miso=menu.querySelector('[aria-labelledby="miso-photo-title"]');
  const sidePhotos=menu.querySelector('[aria-labelledby="side-photo-title"]');
  const morning=document.querySelector('#morning-menu');
  const cats=menu.querySelector('.menu-categories');
@@ -305,7 +304,7 @@ document.querySelectorAll('.craft-art').forEach(element => element.remove());
  const panels=[
    make('season',[autumn,...take(['夏季限定','年越し蕎麦'])]),
    make('set',[heading,photoCards,...take(['定食'])]),
-   make('noodle',[miso,...take(['味噌煮込みきしめん','きしめん','丼もの・お子様メニュー','ミニ丼セット'])]),
+   make('noodle',[...take(['味噌煮込みきしめん','きしめん','丼もの・お子様メニュー','ミニ丼セット'])]),
    make('side',[sidePhotos,...take(['一品料理・ご飯','お飲み物・デザート'])]),
    make('morning',[morning])
  ];
