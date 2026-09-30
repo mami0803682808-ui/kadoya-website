@@ -1,0 +1,95 @@
+name: One-time menu cleanup
+on:
+  push:
+    paths:
+      - '.github/workflows/one-time-menu-cleanup.yml'
+permissions:
+  contents: write
+jobs:
+  cleanup:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Remove duplicate menu rows and resize drink photos
+        run: |
+          python3 - <<'PY'
+          from pathlib import Path
+          import re
+
+          p = Path('index.html')
+          s = p.read_text(encoding='utf-8')
+
+          # Remove text-list duplicates for items that already have photo cards in the drink/dessert section.
+          names = [
+              'コーラフローズン レモンサワークーリッ酒〈お酒〉',
+              'オレンジフローズン グレフルサワークーリッ酒〈お酒〉',
+              '杏仁バニラクーリッ酒〈お酒〉',
+              'コーラフロート',
+              'メロンフロート',
+              '自家製赤しそフロート',
+              'コーヒーフロート',
+              'リッチ抹茶フラッペ',
+          ]
+          for name in names:
+              s = re.sub(r'<div><dt>' + re.escape(name) + r'</dt><dd>[^<]*</dd></div>', '', s)
+
+          # Also remove exact text-list duplicates in menu groups where a photo card uses the exact same item name.
+          def clean_group(m):
+              block = m.group(0)
+              headings = set(re.findall(r'<h[34][^>]*>(.*?)</h[34]>', block, flags=re.S))
+              clean = set()
+              for h in headings:
+                  t = re.sub(r'<[^>]+>', '', h)
+                  t = re.sub(r'\s+', ' ', t).strip()
+                  if t:
+                      clean.add(t)
+              for name in clean:
+                  block = re.sub(r'<div><dt>' + re.escape(name) + r'</dt><dd>[^<]*</dd></div>', '', block)
+              return block
+          s = re.sub(r'<details(?:\s[^>]*)?class="menu-group"[^>]*>.*?</details>', clean_group, s, flags=re.S)
+
+          p.write_text(s, encoding='utf-8')
+
+          css = Path('style.css')
+          c = css.read_text(encoding='utf-8')
+          c += r'''
+
+/* Drink photo cards: compact sizing so they don't dominate the menu. */
+.float-photo-grid{
+  max-width:860px!important;
+  margin-left:auto!important;
+  margin-right:auto!important;
+  grid-template-columns:repeat(3,minmax(0,1fr))!important;
+  gap:18px!important;
+}
+.float-photo-grid .card img{
+  height:170px!important;
+  object-fit:cover!important;
+}
+.float-photo-grid .card h3{
+  font-size:17px!important;
+  line-height:1.55!important;
+}
+.float-photo-grid .dish-price{
+  font-size:18px!important;
+}
+@media(max-width:760px){
+  .float-photo-grid{
+    grid-template-columns:repeat(2,minmax(0,1fr))!important;
+    gap:14px!important;
+  }
+  .float-photo-grid .card img{height:120px!important}
+  .float-photo-grid .card h3{font-size:14px!important}
+  .float-photo-grid .dish-price{font-size:16px!important}
+}
+'''
+          css.write_text(c, encoding='utf-8')
+          PY
+      - name: Commit cleanup and remove workflow
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git rm .github/workflows/one-time-menu-cleanup.yml
+          git add index.html style.css
+          git commit -m "Clean duplicate menu rows and compact drink photos"
+          git push
