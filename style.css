@@ -1105,3 +1105,6 @@ body .opening-new,body:not(.desktop-rail-ready) .opening-new,body.desktop-rail-r
 /* Daily fish set: match the other set-meal cards while preserving the full landscape photo */
 #fish-set-photo{min-width:0!important}
 #fish-set-photo img{display:block!important;width:100%!important;aspect-ratio:4/3!important;height:auto!important;object-fit:contain!important;object-position:center!important}
+
+/* Tempura seasonal menu cards */
+.tempura-feature-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px;margin:22px 0 28px}.tempura-feature{min-width:0}.tempura-feature a{display:block}.tempura-feature img{display:block;width:100%;aspect-ratio:4/3;object-fit:cover}.tempura-feature-info{display:flex;justify-content:space-between;gap:10px;align-items:flex-start;margin-top:8px}.tempura-feature-info h3{font-size:14px;line-height:1.45;margin:0;font-weight:500}.tempura-feature-info h3 small{font-size:.82em;font-weight:400}.tempura-feature-info p{font-size:14px;margin:0;color:var(--accent,#7b3f2b);white-space:nowrap}@media(max-width:760px){.tempura-feature-grid{gap:10px}.tempura-feature-info h3,.tempura-feature-info p{font-size:12px}}
