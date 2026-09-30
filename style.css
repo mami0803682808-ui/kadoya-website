@@ -1140,3 +1140,11 @@ body .opening-new,body:not(.desktop-rail-ready) .opening-new,body.desktop-rail-r
 .summer-photo-grid .card img{display:block!important;width:100%!important;height:auto!important;aspect-ratio:4/3!important;object-fit:cover!important;max-height:none!important}
 @media(min-width:761px){.summer-photo-grid{grid-template-columns:repeat(3,minmax(0,1fr))!important;gap:18px!important}.summer-photo-grid .card img{max-height:180px!important}}
 @media(max-width:760px){.summer-photo-grid{grid-template-columns:repeat(2,minmax(0,1fr))!important;gap:10px!important}}
+
+/* Final kishimen sizing: compact cards and always-visible labels */
+.kishimen-extra-photos,.kishimen-single-photo{display:grid!important;grid-template-columns:repeat(2,minmax(0,1fr))!important;gap:10px!important;margin:16px 0 22px!important}
+.kishimen-extra-photos .card,.kishimen-single-photo .card{display:flex!important;flex-direction:column!important;min-width:0!important;width:auto!important;max-width:none!important;overflow:visible!important;height:auto!important}
+.kishimen-extra-photos .card img,.kishimen-single-photo .card img{display:block!important;width:100%!important;height:auto!important;aspect-ratio:4/3!important;object-fit:cover!important;max-height:none!important}
+.kishimen-extra-photos .card h3,.kishimen-single-photo .card h3{display:block!important;position:static!important;visibility:visible!important;opacity:1!important;height:auto!important;margin:7px 0 2px!important;padding:0!important;font-size:12px!important;line-height:1.4!important;color:inherit!important;transform:none!important}
+.kishimen-single-photo .dish-price{display:block!important;visibility:visible!important;opacity:1!important;margin:0!important;font-size:12px!important}
+@media(min-width:761px){.kishimen-extra-photos,.kishimen-single-photo{grid-template-columns:repeat(3,minmax(0,1fr))!important;gap:18px!important;max-width:900px!important;margin:18px auto 26px!important}.kishimen-extra-photos .card img,.kishimen-single-photo .card img{max-height:180px!important}.kishimen-extra-photos .card h3,.kishimen-single-photo .card h3,.kishimen-single-photo .dish-price{font-size:14px!important}}
