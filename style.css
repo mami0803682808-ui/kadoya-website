@@ -938,3 +938,21 @@ html.opening-copy-visible .header,html.opening-copy-visible .mobile-dock{opacity
   .mobile-dock{left:0!important}
   main,footer{width:100%!important;max-width:none!important}
 }
+
+
+/* Desktop opening: shortcuts must stay hidden until the full opening sequence has ended. */
+@media(min-width:761px){
+  .mobile-dock{
+    opacity:0!important;
+    visibility:hidden!important;
+    pointer-events:none!important;
+    transform:translateX(-12px)!important;
+    transition:opacity .35s ease,transform .35s ease,visibility .35s ease!important;
+  }
+  .mobile-dock.dock-visible{
+    opacity:1!important;
+    visibility:visible!important;
+    pointer-events:auto!important;
+    transform:translateX(0)!important;
+  }
+}
