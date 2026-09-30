@@ -826,3 +826,27 @@ html.opening-copy-visible .header{opacity:1!important;visibility:visible!importa
 .commitment-editorial .craft-copy{justify-self:stretch!important;max-width:none!important}
 .commitment-editorial .craft-copy h3{max-width:none!important;width:100%!important}
 }
+
+
+/* One unified fixed navigation, inspired by the vertical side menu reference. */
+@media(min-width:761px){
+.header{background:transparent!important;border:0!important;box-shadow:none!important;pointer-events:none!important}
+.header .logo{pointer-events:auto!important}
+.header .nav{display:none!important}
+.mobile-dock{left:18px!important;right:auto!important;top:50%!important;bottom:auto!important;transform:translateY(-50%)!important;width:auto!important;grid-template-columns:1fr!important;padding:18px 11px!important;border-radius:0!important;background:rgba(250,248,242,.96)!important;box-shadow:0 8px 28px rgba(20,20,16,.10)!important;gap:0!important}
+.mobile-dock a{writing-mode:vertical-rl!important;text-orientation:upright!important;flex-direction:row!important;min-height:104px!important;width:42px!important;padding:10px 4px!important;font-size:12px!important;letter-spacing:.12em!important;border-bottom:1px solid rgba(38,37,31,.13)!important;gap:8px!important}
+.mobile-dock a:last-child{border-bottom:0!important}
+.mobile-dock .dock-icon{display:none!important}
+html:not(.opening-copy-visible) .mobile-dock{transform:translate(-14px,-50%)!important}
+html.opening-copy-visible .mobile-dock{transform:translate(0,-50%)!important}
+}
+@media(max-width:760px){
+.header .nav{display:none!important}
+.mobile-dock{left:10px!important;right:auto!important;top:50%!important;bottom:auto!important;transform:translateY(-50%)!important;width:auto!important;grid-template-columns:1fr!important;padding:10px 5px!important;border-radius:0 10px 10px 0!important;background:rgba(250,248,242,.96)!important;box-shadow:0 6px 20px rgba(20,20,16,.10)!important}
+.mobile-dock a{writing-mode:vertical-rl!important;text-orientation:upright!important;flex-direction:row!important;width:34px!important;min-height:82px!important;padding:7px 2px!important;font-size:10px!important;letter-spacing:.08em!important;border-bottom:1px solid rgba(38,37,31,.12)!important;gap:0!important}
+.mobile-dock a:last-child{border-bottom:0!important}
+.mobile-dock .dock-icon{display:none!important}
+.mobile-dock.dock-visible{transform:translateY(-50%)!important}
+html:not(.opening-copy-visible) .mobile-dock{transform:translate(-12px,-50%)!important}
+html.opening-copy-visible .mobile-dock.dock-visible{transform:translate(0,-50%)!important}
+}
