@@ -921,3 +921,11 @@ html.opening-copy-visible .header,html.opening-copy-visible .mobile-dock{opacity
 .header .nav.open{display:flex!important}
 .header{overflow:visible!important}
 }
+
+
+/* Desktop left rail: widen the white background band, not the shortcut text. */
+@media(min-width:761px){
+.header{width:224px!important}
+.mobile-dock{width:224px!important;left:0!important}
+.mobile-dock a{font-size:11px!important;line-height:1.25!important;letter-spacing:.1em!important}
+}
