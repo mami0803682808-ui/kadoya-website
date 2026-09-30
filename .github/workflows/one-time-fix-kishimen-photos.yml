@@ -1,0 +1,33 @@
+name: One-time fix kishimen photos
+on:
+  push:
+    paths:
+      - '.github/workflows/one-time-fix-kishimen-photos.yml'
+permissions:
+  contents: write
+jobs:
+  fix:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Download actual kishimen photos
+        run: |
+          set -e
+          curl -L --fail --retry 3 'https://lh3.googleusercontent.com/d/1IdCQ9SdQmLnLPcfD6SgbrEf77DKm3Drt=w1600' -o images/niku-kishimen.jpg
+          curl -L --fail --retry 3 'https://lh3.googleusercontent.com/d/1r7NS6bBkzGPhM9fqh_zSQWHt4WSQy_ZH=w1600' -o images/ume-oroshi-kishimen.jpg
+          file images/niku-kishimen.jpg images/ume-oroshi-kishimen.jpg
+          python3 - <<'PY'
+          from pathlib import Path
+          for p in [Path('images/niku-kishimen.jpg'), Path('images/ume-oroshi-kishimen.jpg')]:
+              b=p.read_bytes()
+              if not b.startswith(b'\xff\xd8\xff'):
+                  raise SystemExit(f'{p} is not a JPEG')
+          PY
+      - name: Commit real photos
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git rm .github/workflows/one-time-fix-kishimen-photos.yml
+          git add images/niku-kishimen.jpg images/ume-oroshi-kishimen.jpg
+          git commit -m 'Fix meat and ume-oroshi kishimen photos'
+          git push
