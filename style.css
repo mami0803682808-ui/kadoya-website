@@ -978,3 +978,13 @@ html.opening-copy-visible .header,html.opening-copy-visible .mobile-dock{opacity
 
 /* Desktop opening must use the full viewport; reserve rail space only after it appears. */
 @media(min-width:761px){body:not(.desktop-rail-ready){padding-left:0!important}body:not(.desktop-rail-ready) .opening-new{width:100vw!important;margin-left:0!important}body.desktop-rail-ready{padding-left:224px!important}}
+
+/* Desktop side shortcut readability/alignment */
+@media(min-width:761px){
+  .desktop-rail nav,
+  .side-rail nav,
+  .pc-rail nav{align-items:center!important;text-align:center!important}
+  .desktop-rail nav a,
+  .side-rail nav a,
+  .pc-rail nav a{font-size:14px!important;line-height:1.5!important;text-align:center!important;justify-content:center!important}
+}
