@@ -32,3 +32,5 @@ jobs:
           git add index.html
           git commit -m "Remove sashimi teishoku from menu"
           git push
+
+# Trigger after workflow is present on the default branch.
