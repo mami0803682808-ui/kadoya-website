@@ -762,3 +762,16 @@ html.opening-copy-visible .header{opacity:1!important;visibility:visible!importa
 .opening-copy h1 .hero-line{display:inline!important;writing-mode:horizontal-tb!important;white-space:nowrap!important}
 .opening-copy h1 .hero-line+ .hero-line{margin-left:.15em!important}
 }
+
+
+/* Desktop commitment: centered, full-width editorial layout with room for long headings. */
+@media(min-width:761px){
+.commitment-editorial{padding-left:clamp(40px,6vw,120px)!important;padding-right:clamp(40px,6vw,120px)!important}
+.commitment-editorial .craft-intro{width:100%!important;max-width:1440px!important;margin-left:auto!important;margin-right:auto!important;text-align:center!important}
+.commitment-editorial .craft-lead{margin-left:auto!important;margin-right:auto!important}
+.commitment-editorial .commitment-grid{width:100%!important;max-width:1440px!important;margin-left:auto!important;margin-right:auto!important}
+.commitment-editorial .commitment-grid article{grid-template-columns:54px minmax(170px,.42fr) minmax(0,1.58fr)!important;gap:clamp(28px,4vw,72px)!important}
+.commitment-editorial .craft-copy{width:100%!important;max-width:none!important}
+.commitment-editorial .craft-copy h3{width:100%!important;max-width:none!important;font-size:clamp(25px,2.6vw,38px)!important;letter-spacing:.035em!important}
+.commitment-editorial .craft-copy p{max-width:82ch!important}
+}
