@@ -171,7 +171,7 @@ function updateNoodleCraftCopy() {
  const heading = noodleArticle.querySelector('.craft-copy h3');
  const body = noodleArticle.querySelector('.craft-copy p');
  if (heading) heading.innerHTML = '毎日、角屋で打つ。<br>「麺だけでもうまい」一杯へ。';
- if (body) body.textContent = '小麦粉は香川から直送し、中でも一番粉を使用。毎日、角屋で麺を仕込んでいます。目指すのは、だしに頼らず「麺だけでもうまい」と思えるきしめん。配合を独自にブレンドし、つるっとした喉ごしだけでなく、もちもちとした食感にも仕上げています。';
+ if (body) body.textContent = '小麦粉は香川から直送。素材選びから配合までこだわり、毎日、角屋で麺を仕込んでいます。目指すのは、だしに頼らず「麺だけでもうまい」と思えるきしめん。独自の工夫で、つるっとした喉ごしだけでなく、もちもちとした食感にも仕上げています。';
 }
 updateNoodleCraftCopy();
 
