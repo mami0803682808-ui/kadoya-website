@@ -681,3 +681,12 @@ svg.vertical-mark{display:block;width:min(260px,70vw);height:100%;max-height:650
 /* Exact opening crest only: no adjacent Kadoya lettering may enter the dock icon. */
 .mobile-dock .dock-icon-kamon{width:24px!important;height:24px!important;display:block!important;overflow:hidden!important;border-radius:50%!important}
 .mobile-dock .dock-kamon-svg{display:block!important;width:24px!important;height:24px!important;overflow:hidden!important}
+
+
+/* Float photos: compact 2-column gallery with readable labels. */
+.float-photo-grid{display:grid!important;grid-template-columns:repeat(2,minmax(0,1fr))!important;gap:14px!important;margin:18px 0 28px!important;max-width:100%!important}
+.float-photo-grid .card{display:flex!important;flex-direction:column!important;min-width:0!important;overflow:visible!important;height:auto!important}
+.float-photo-grid .card img{display:block!important;width:100%!important;height:auto!important;aspect-ratio:4/3!important;object-fit:cover!important}
+.float-photo-grid .card h3{font-size:14px!important;line-height:1.35!important;margin:8px 0 2px!important;white-space:normal!important}
+.float-photo-grid .card .dish-price{font-size:14px!important;margin:0!important}
+@media(max-width:760px){.float-photo-grid{grid-template-columns:repeat(2,minmax(0,1fr))!important;gap:10px!important}.float-photo-grid .card h3,.float-photo-grid .card .dish-price{font-size:12px!important}}
