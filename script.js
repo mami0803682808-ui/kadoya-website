@@ -38,7 +38,7 @@ function updateOpening() {
   opening.style.setProperty('--signature-y', reduceMotion.matches ? '0px' : (-progress * 14) + 'px');
   const copyOpacity = smooth((progress - .80) / .16);
   opening.style.setProperty('--copy-opacity', copyOpacity);
-  document.documentElement.classList.toggle('opening-copy-visible', copyOpacity > .08);
+  document.documentElement.classList.toggle('opening-copy-visible', copyOpacity >= .995);
   opening.style.setProperty('--cue-opacity', 1 - smooth(progress / .2));
   const copy = opening.querySelector('.opening-copy');
   copy.inert = progress < .70;
