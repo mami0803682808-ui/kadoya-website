@@ -487,3 +487,42 @@ svg.vertical-mark{display:block;width:min(260px,70vw);height:100%;max-height:650
  .menu-tabs{overflow-x:auto!important;grid-template-columns:repeat(5,minmax(78px,1fr))!important}
  .menu-tab{min-width:78px!important}
 }
+
+/* Mobile menu tabs — clear rectangular buttons */
+@media(max-width:760px){
+ .menu-tabs{
+   position:sticky!important;
+   top:0;
+   z-index:20;
+   display:grid!important;
+   grid-template-columns:repeat(2,minmax(0,1fr))!important;
+   gap:8px!important;
+   width:100%!important;
+   margin:24px 0 38px!important;
+   padding:10px!important;
+   overflow:visible!important;
+   border:0!important;
+   background:rgba(250,248,242,.96)!important;
+ }
+ .menu-tab{
+   min-width:0!important;
+   min-height:52px;
+   display:flex;
+   align-items:center;
+   justify-content:center;
+   padding:12px 8px!important;
+   border:1px solid rgba(72,64,54,.28)!important;
+   border-radius:2px!important;
+   background:#f7f4ed!important;
+   color:#4f4a42!important;
+   font-size:13px!important;
+   letter-spacing:.08em!important;
+ }
+ .menu-tab+.menu-tab:before,.menu-tab:after{display:none!important}
+ .menu-tab.is-active{
+   background:#8b3028!important;
+   border-color:#8b3028!important;
+   color:#fff!important;
+ }
+ .menu-tab[data-menu-tab="morning"]{grid-column:1/-1}
+}
