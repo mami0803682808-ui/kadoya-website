@@ -804,3 +804,10 @@ html.opening-copy-visible .header{opacity:1!important;visibility:visible!importa
 .scroll-ready .opening-copy h1 .hero-line{display:inline!important;white-space:nowrap!important}
 .scroll-ready .opening-copy h1 .hero-line + .hero-line{margin-left:.18em!important}
 }
+
+
+/* Desktop hero headline: always one horizontal line. */
+@media(min-width:761px){
+.scroll-ready .opening-copy h1,.opening-new.scroll-ready .opening-copy h1{display:flex!important;flex-direction:row!important;justify-content:center!important;align-items:baseline!important;gap:.18em!important;white-space:nowrap!important;font-size:clamp(34px,4.2vw,64px)!important;line-height:1.2!important}
+.scroll-ready .opening-copy h1 .hero-line,.opening-new.scroll-ready .opening-copy h1 .hero-line{display:inline!important;white-space:nowrap!important;margin:0!important}
+}
