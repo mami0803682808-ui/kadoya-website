@@ -752,3 +752,13 @@ html.opening-copy-visible .mobile-dock{opacity:1!important;visibility:visible!im
 /* Keep the top navigation hidden during the opening logo; reveal it with the quick shortcuts. */
 html:not(.opening-copy-visible) .header{opacity:0!important;visibility:hidden!important;pointer-events:none!important;transform:translateY(-12px)!important}
 html.opening-copy-visible .header{opacity:1!important;visibility:visible!important;pointer-events:auto!important;transform:translateY(0)!important;transition:opacity .45s ease,transform .45s ease,visibility .45s ease!important}
+
+
+/* Mobile hero copy: horizontal placement over the dark shirt area, matching the requested reference. */
+@media(max-width:760px){
+.opening-copy{top:31svh!important;left:50%!important;right:auto!important;bottom:auto!important;transform:translateX(-50%)!important;width:86%!important;display:block!important;text-align:center!important}
+.opening-copy .opening-since{writing-mode:horizontal-tb!important;text-orientation:mixed!important;margin:0 0 10px!important;font-size:10px!important;line-height:1.4!important;letter-spacing:.14em!important;white-space:nowrap!important}
+.opening-copy h1{writing-mode:horizontal-tb!important;text-orientation:mixed!important;display:block!important;margin:0!important;font-size:clamp(27px,7.7vw,36px)!important;line-height:1.35!important;letter-spacing:.01em!important;white-space:nowrap!important}
+.opening-copy h1 .hero-line{display:inline!important;writing-mode:horizontal-tb!important;white-space:nowrap!important}
+.opening-copy h1 .hero-line+ .hero-line{margin-left:.15em!important}
+}
