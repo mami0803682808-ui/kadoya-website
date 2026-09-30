@@ -786,3 +786,11 @@ html.opening-copy-visible .header{opacity:1!important;visibility:visible!importa
 .summer-photo-grid{display:grid!important;visibility:visible!important;opacity:1!important}
 .summer-photo-grid .card{display:block!important;opacity:1!important;visibility:visible!important;transform:none!important}
 .summer-photo-grid .card img{display:block!important;width:100%!important;height:auto!important;aspect-ratio:4/3!important;object-fit:cover!important;opacity:1!important;visibility:visible!important;min-height:120px!important;background:#eee9df!important}
+
+
+/* Desktop hero copy: centered near the top of the photo. */
+@media(min-width:761px){
+.opening-copy{top:15vh!important;bottom:auto!important;left:50%!important;right:auto!important;transform:translateX(-50%)!important;width:min(900px,88vw)!important;text-align:center!important}
+.opening-copy .opening-since{margin-left:auto!important;margin-right:auto!important}
+.opening-copy h1{width:100%!important;text-align:center!important}
+}
