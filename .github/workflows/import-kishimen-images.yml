@@ -1,0 +1,46 @@
+name: Import kishimen images locally
+on:
+  push:
+    paths:
+      - '.github/workflows/import-kishimen-images.yml'
+permissions:
+  contents: write
+jobs:
+  import-images:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Download kishimen images
+        run: |
+          mkdir -p images
+          curl -L --fail --retry 3 'https://drive.google.com/uc?export=download&id=1IdCQ9SdQmLnLPcfD6SgbrEf77DKm3Drt' -o images/meat-kishimen.jpg
+          curl -L --fail --retry 3 'https://drive.google.com/uc?export=download&id=1r7NS6bBkzGPhM9fqh_zSQWHt4WSQy_ZH' -o images/ume-oroshi-kishimen.jpg
+          file images/meat-kishimen.jpg images/ume-oroshi-kishimen.jpg
+      - name: Point menu to local images
+        run: |
+          python3 - <<'PY'
+          from pathlib import Path
+          p = Path('index.html')
+          s = p.read_text(encoding='utf-8')
+          meat_urls = [
+              'https://drive.google.com/uc?export=view&id=1IdCQ9SdQmLnLPcfD6SgbrEf77DKm3Drt',
+              'https://drive.google.com/thumbnail?id=1IdCQ9SdQmLnLPcfD6SgbrEf77DKm3Drt&sz=w1600',
+          ]
+          ume_urls = [
+              'https://drive.google.com/uc?export=view&id=1r7NS6bBkzGPhM9fqh_zSQWHt4WSQy_ZH',
+              'https://drive.google.com/thumbnail?id=1r7NS6bBkzGPhM9fqh_zSQWHt4WSQy_ZH&sz=w1600',
+          ]
+          for u in meat_urls:
+              s = s.replace(u, 'images/meat-kishimen.jpg')
+          for u in ume_urls:
+              s = s.replace(u, 'images/ume-oroshi-kishimen.jpg')
+          p.write_text(s, encoding='utf-8')
+          PY
+      - name: Commit fixed local images
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add images/meat-kishimen.jpg images/ume-oroshi-kishimen.jpg index.html
+          git rm .github/workflows/import-kishimen-images.yml
+          git commit -m 'Store kishimen photos locally and fix display'
+          git push
