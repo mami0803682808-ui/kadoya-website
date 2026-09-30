@@ -311,15 +311,25 @@ document.querySelectorAll('.craft-art').forEach(element => element.remove());
  ];
  anchor.remove();
 
- function show(key){
+ function show(key, scrollToPanel=false){
    tabs.forEach(btn=>{
      const active=btn.dataset.menuTab===key;
      btn.classList.toggle('is-active',active);
      btn.setAttribute('aria-selected',active?'true':'false');
    });
-   panels.forEach(p=>{ p.hidden=p.dataset.menuPanel!==key; });
+   let activePanel=null;
+   panels.forEach(p=>{ const active=p.dataset.menuPanel===key; p.hidden=!active; if(active) activePanel=p; });
+   if(key==='set') activePanel?.querySelector('details.menu-group')?.setAttribute('open','');
+   if(scrollToPanel && activePanel){
+     requestAnimationFrame(()=>{
+       const tabsBar=menu.querySelector('.menu-tabs');
+       const offset=(tabsBar?.offsetHeight||0)+18;
+       const y=activePanel.getBoundingClientRect().top+window.scrollY-offset;
+       window.scrollTo({top:y,behavior:'smooth'});
+     });
+   }
  }
- tabs.forEach(btn=>btn.addEventListener('click',()=>show(btn.dataset.menuTab)));
+ tabs.forEach(btn=>btn.addEventListener('click',()=>show(btn.dataset.menuTab,true)));
  show('season');
 })();
 
