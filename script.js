@@ -366,11 +366,11 @@ document.querySelector('.header .logo')?.addEventListener('click', event => {
       siteHeader.classList.remove('header-hidden');
       siteHeader.classList.add('header-visible');
     } else if (delta < -4) {
-      siteHeader.classList.add('header-hidden');
-      siteHeader.classList.remove('header-visible');
-    } else if (delta > 4) {
       siteHeader.classList.remove('header-hidden');
       siteHeader.classList.add('header-visible');
+    } else if (delta > 4) {
+      siteHeader.classList.add('header-hidden');
+      siteHeader.classList.remove('header-visible');
     }
     lastY = y;
   };
