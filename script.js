@@ -320,3 +320,26 @@ document.querySelectorAll('.craft-art').forEach(element => element.remove());
  tabs.forEach(btn=>btn.addEventListener('click',()=>show(btn.dataset.menuTab)));
  show('season');
 })();
+
+
+// Cinematic opening + delayed mobile shortcut dock.
+(() => {
+ const opening=document.querySelector('.opening-new');
+ const dock=document.querySelector('.mobile-dock');
+ if(!opening) return;
+ const reduced=window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+ const reveal=()=>document.body.classList.add('opening-ready');
+ if(reduced) reveal(); else window.setTimeout(reveal,420);
+
+ if(!dock) return;
+ const updateDock=()=>{
+   // The opening section contains both the logo stage and the 53-year image/copy.
+   // Keep shortcuts hidden until the visitor has passed that entire sequence.
+   const threshold=opening.offsetTop + opening.offsetHeight - Math.min(100,window.innerHeight*.08);
+   dock.classList.toggle('dock-visible',window.scrollY + window.innerHeight >= threshold);
+ };
+ updateDock();
+ addEventListener('scroll',updateDock,{passive:true});
+ addEventListener('resize',updateDock,{passive:true});
+ addEventListener('pageshow',updateDock);
+})();
