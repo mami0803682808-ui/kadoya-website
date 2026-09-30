@@ -1057,3 +1057,10 @@ html.opening-copy-visible .header,html.opening-copy-visible .mobile-dock{opacity
     text-align:center!important;
   }
 }
+
+/* Compact year-end photo, framed around the bowl. */
+#toshikoshi .yearend-gallery{max-width:460px!important;margin:24px auto 0}
+#toshikoshi .yearend-gallery figure{position:relative;aspect-ratio:3/2}
+#toshikoshi .yearend-gallery img{position:absolute;display:block;width:140%!important;max-width:none!important;height:auto!important;aspect-ratio:auto!important;margin:0!important;left:-20%;bottom:-8%;transform:none;transform-origin:50% 85%}
+#toshikoshi .yearend-gallery figure:hover img{transform:scale(1.025)}
+#toshikoshi summary .coming-soon-badge{display:inline-block;margin-left:14px;padding:3px 10px;border:1px solid currentColor;border-radius:2px;font:500 11px/1.5 sans-serif;letter-spacing:.08em;color:#8a6a37;vertical-align:middle;white-space:nowrap}

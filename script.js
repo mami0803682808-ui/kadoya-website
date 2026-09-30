@@ -292,7 +292,7 @@ document.querySelectorAll('.craft-art').forEach(element => element.remove());
  if(!tabs.length || !cats) return;
 
  const groups=[...cats.children].filter(el=>el.classList.contains('menu-group'));
- const take=(names)=>groups.filter(g=>names.includes((g.querySelector('summary')?.textContent||'').trim()));
+ const take=(names)=>groups.filter(g=>names.includes((g.querySelector('summary')?.dataset.menuLabel||g.querySelector('summary')?.textContent||'').trim()));
  const anchor=cats;
  const make=(key,nodes)=>{
    const p=document.createElement('div');
