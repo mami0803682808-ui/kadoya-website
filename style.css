@@ -690,3 +690,12 @@ svg.vertical-mark{display:block;width:min(260px,70vw);height:100%;max-height:650
 .float-photo-grid .card h3{font-size:14px!important;line-height:1.35!important;margin:8px 0 2px!important;white-space:normal!important}
 .float-photo-grid .card .dish-price{font-size:14px!important;margin:0!important}
 @media(max-width:760px){.float-photo-grid{grid-template-columns:repeat(2,minmax(0,1fr))!important;gap:10px!important}.float-photo-grid .card h3,.float-photo-grid .card .dish-price{font-size:12px!important}}
+
+
+/* Summer seasonal photo menu */
+.summer-photo-grid{display:grid!important;grid-template-columns:repeat(2,minmax(0,1fr))!important;gap:14px!important;margin:18px 0 26px!important}
+.summer-photo-grid .card{min-width:0!important}
+.summer-photo-grid .card img{display:block!important;width:100%!important;aspect-ratio:4/3!important;object-fit:cover!important}
+.summer-photo-grid .card h3{font-size:14px!important;line-height:1.35!important;margin:8px 0 2px!important}
+.summer-photo-grid .dish-price{font-size:14px!important;margin:0!important}
+@media(max-width:760px){.summer-photo-grid{gap:10px!important}.summer-photo-grid .card h3,.summer-photo-grid .dish-price{font-size:12px!important}}
