@@ -1,0 +1,32 @@
+name: One-time remove hiyamugi text duplicate
+on:
+  push:
+    paths:
+      - '.github/workflows/one-time-remove-hiyamugi-text-duplicate.yml'
+permissions:
+  contents: write
+jobs:
+  fix:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Remove duplicate hiyamugi text row
+        run: |
+          python3 - <<'PY'
+          from pathlib import Path
+          p=Path('index.html')
+          s=p.read_text(encoding='utf-8')
+          old='<div><dt>夏野菜の天ぷらと冷麦のセット</dt><dd>1,550円</dd></div>'
+          if old not in s:
+              raise SystemExit('target not found')
+          s=s.replace(old,'',1)
+          p.write_text(s,encoding='utf-8')
+          PY
+      - name: Commit and clean up
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git rm .github/workflows/one-time-remove-hiyamugi-text-duplicate.yml
+          git add index.html
+          git commit -m "Remove duplicate hiyamugi menu text"
+          git push
