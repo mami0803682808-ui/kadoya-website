@@ -480,3 +480,10 @@ svg.vertical-mark{display:block;width:min(260px,70vw);height:100%;max-height:650
 }
 .mobile-dock{opacity:0!important;visibility:hidden!important;pointer-events:none!important;transform:translateY(18px);transition:opacity .4s ease,transform .45s cubic-bezier(.22,1,.36,1),visibility 0s linear .45s!important}
 .mobile-dock.dock-visible{opacity:1!important;visibility:visible!important;pointer-events:auto!important;transform:translateY(0);transition-delay:0s!important}
+
+/* Five menu tabs including Morning */
+.menu-tabs{grid-template-columns:repeat(5,1fr)!important}
+@media(max-width:760px){
+ .menu-tabs{overflow-x:auto!important;grid-template-columns:repeat(5,minmax(78px,1fr))!important}
+ .menu-tab{min-width:78px!important}
+}
