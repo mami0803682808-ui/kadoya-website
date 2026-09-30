@@ -601,3 +601,13 @@ svg.vertical-mark{display:block;width:min(260px,70vw);height:100%;max-height:650
   .mobile-dock a{min-width:0!important;padding-left:0!important;padding-right:0!important;font-size:10px!important}
   .mobile-dock .dock-icon{width:24px!important;height:24px!important}
 }
+
+
+/* Mini-don choices: keep each option on its own line, especially on mobile. */
+.mini-don-choice{align-items:flex-start!important}
+.mini-don-choice dd{display:flex!important;flex-direction:column!important;align-items:flex-end!important;gap:7px!important;white-space:normal!important;line-height:1.5!important}
+@media(max-width:760px){
+ .mini-don-choice{display:grid!important;grid-template-columns:minmax(0,1fr) minmax(0,1fr)!important;gap:18px!important}
+ .mini-don-choice dd{min-width:0!important;text-align:right!important}
+ .mini-don-choice dd span{display:block!important;width:100%!important}
+}
