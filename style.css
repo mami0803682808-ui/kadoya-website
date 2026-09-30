@@ -1125,3 +1125,10 @@ body .opening-new,body:not(.desktop-rail-ready) .opening-new,body.desktop-rail-r
 /* Kishimen gallery: restore product names below photos */
 .kishimen-extra-photos .card h3{display:block!important;visibility:visible!important;opacity:1!important;height:auto!important;margin:8px 0 0!important;font-size:14px!important;line-height:1.45!important;color:inherit!important}
 @media(max-width:760px){.kishimen-extra-photos .card h3{font-size:12px!important}}
+
+/* Kishimen section: keep standalone photos the same compact size as the gallery */
+@media(min-width:761px){
+ #menu .nested-menu-photo{max-width:900px!important;margin:18px auto 26px!important;display:grid!important;grid-template-columns:repeat(3,minmax(0,1fr))!important;gap:18px!important}
+ #menu .nested-menu-photo .card{min-width:0!important;width:auto!important;max-width:none!important}
+ #menu .nested-menu-photo .card img{display:block!important;width:100%!important;height:auto!important;aspect-ratio:4/3!important;object-fit:cover!important;max-height:180px!important}
+}
