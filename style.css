@@ -888,3 +888,13 @@ footer{padding-bottom:105px!important}
 html:not(.opening-copy-visible) .header,html:not(.opening-copy-visible) .mobile-dock{opacity:0!important;visibility:hidden!important;pointer-events:none!important;transform:translateX(-12px)!important}
 html.opening-copy-visible .header,html.opening-copy-visible .mobile-dock{opacity:1!important;visibility:visible!important;pointer-events:auto!important;transform:none!important;transition:opacity .45s ease,transform .45s ease,visibility .45s ease!important}
 }
+
+
+/* Desktop header uses the same authentic vertical mark as the opening, in the current dark color. */
+.header-vertical-mark{display:none}
+@media(min-width:761px){
+.header .desktop-vertical-logo{width:66px!important;height:180px!important;overflow:visible!important;color:#1f1f1a!important;margin:0 auto!important}
+.header .header-vertical-mark{display:block!important;width:60px!important;height:180px!important}
+.header .mobile-brand-logo{display:none!important}
+}
+@media(max-width:760px){.header .header-vertical-mark{display:none!important}.header .mobile-brand-logo{display:block!important}}
