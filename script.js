@@ -337,8 +337,9 @@ document.querySelectorAll('.craft-art').forEach(element => element.remove());
  const updateDock=()=>{
    // The opening section contains both the logo stage and the 53-year image/copy.
    // Keep shortcuts hidden until the visitor has passed that entire sequence.
-   const threshold=opening.offsetTop + opening.offsetHeight - Math.min(100,window.innerHeight*.08);
-   const ready = window.scrollY + window.innerHeight >= threshold;
+   const threshold=opening.offsetTop + opening.offsetHeight;
+   // Show the desktop rail only after the entire opening (including the 53-year scene) has fully passed.
+   const ready = window.scrollY >= threshold;
    dock.classList.toggle('dock-visible',ready);
    document.body.classList.toggle('desktop-rail-ready',ready);
  };
