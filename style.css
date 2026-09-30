@@ -453,3 +453,14 @@ svg.vertical-mark{display:block;width:min(260px,70vw);height:100%;max-height:650
 .menu-tab.is-active{background:#292821;color:#fff;border-color:#292821}
 .menu-tab-panel[hidden]{display:none!important}
 @media(max-width:760px){.menu-tabs{justify-content:flex-start;margin-left:calc(50% - 50vw);margin-right:calc(50% - 50vw);padding-left:20px;padding-right:30px}.menu-tab{padding:9px 18px}}
+
+/* Refined Kadoya menu tabs */
+.menu-tax-note{display:block;margin-top:14px;font-size:12px;letter-spacing:.08em;color:#6d695f}
+.menu-tabs{position:sticky!important;top:0;z-index:20;display:grid!important;grid-template-columns:repeat(4,1fr);gap:0!important;max-width:760px!important;margin:26px auto 42px!important;padding:0!important;background:rgba(250,248,242,.96)!important;border-top:1px solid rgba(54,48,40,.22);border-bottom:1px solid rgba(54,48,40,.22);backdrop-filter:blur(14px)}
+.menu-tab{position:relative;border:0!important;border-radius:0!important;background:transparent!important;color:#59554d!important;padding:17px 8px 15px!important;font-size:13px!important;letter-spacing:.12em!important}
+.menu-tab+.menu-tab:before{content:"";position:absolute;left:0;top:28%;height:44%;width:1px;background:rgba(54,48,40,.14)}
+.menu-tab:after{content:"";position:absolute;left:28%;right:28%;bottom:-1px;height:2px;background:transparent;transform:scaleX(.3);transition:.28s ease}
+.menu-tab.is-active{color:#8b3028!important;font-weight:600}
+.menu-tab.is-active:after{background:#8b3028;transform:scaleX(1)}
+@media(max-width:760px){.menu-tabs{margin-left:0!important;margin-right:0!important;width:100%!important;overflow:visible!important}.menu-tab{padding:15px 4px 14px!important;font-size:12px!important;letter-spacing:.06em!important}}
+.shop-gallery-scroll figcaption{display:none!important}
