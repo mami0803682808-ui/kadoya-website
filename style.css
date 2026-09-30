@@ -1148,3 +1148,6 @@ body .opening-new,body:not(.desktop-rail-ready) .opening-new,body.desktop-rail-r
 .kishimen-extra-photos .card h3,.kishimen-single-photo .card h3{display:block!important;position:static!important;visibility:visible!important;opacity:1!important;height:auto!important;margin:7px 0 2px!important;padding:0!important;font-size:12px!important;line-height:1.4!important;color:inherit!important;transform:none!important}
 .kishimen-single-photo .dish-price{display:block!important;visibility:visible!important;opacity:1!important;margin:0!important;font-size:12px!important}
 @media(min-width:761px){.kishimen-extra-photos,.kishimen-single-photo{grid-template-columns:repeat(3,minmax(0,1fr))!important;gap:18px!important;max-width:900px!important;margin:18px auto 26px!important}.kishimen-extra-photos .card img,.kishimen-single-photo .card img{max-height:180px!important}.kishimen-extra-photos .card h3,.kishimen-single-photo .card h3,.kishimen-single-photo .dish-price{font-size:14px!important}}
+
+/* Keep summer menu captions aligned even when source images have different aspect ratios. */
+.summer-photo-grid .card img{width:100%!important;aspect-ratio:3/2!important;object-fit:cover!important;display:block!important}
