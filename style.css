@@ -1080,3 +1080,8 @@ html.opening-copy-visible .header,html.opening-copy-visible .mobile-dock{opacity
   #commitment .craft-copy h3{font-size:clamp(23px,2.5vw,36px)!important;word-break:normal!important;overflow-wrap:anywhere!important}
   #commitment .craft-copy p{max-width:68ch!important}
 }
+
+/* Keep the page canvas within the viewport; only galleries scroll sideways. */
+html,body{overflow-x:clip}
+body .opening-new,body:not(.desktop-rail-ready) .opening-new,body.desktop-rail-ready .opening-new{width:100%!important;max-width:100%!important;margin-left:0!important;margin-right:0!important}
+.shop-gallery-scroll{box-sizing:border-box!important;width:100%!important;max-width:100%!important;min-width:0!important;margin-left:0!important;margin-right:0!important;padding-left:0!important;padding-right:0!important;overscroll-behavior-x:contain}
