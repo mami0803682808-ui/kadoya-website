@@ -898,3 +898,10 @@ html.opening-copy-visible .header,html.opening-copy-visible .mobile-dock{opacity
 .header .mobile-brand-logo{display:none!important}
 }
 @media(max-width:760px){.header .header-vertical-mark{display:none!important}.header .mobile-brand-logo{display:block!important}}
+
+
+/* Desktop rail: place shortcut labels lower and remove separators. */
+@media(min-width:761px){
+.mobile-dock{top:340px!important;padding-top:10px!important}
+.mobile-dock a,.mobile-dock a:first-child{border:0!important;border-left:0!important;border-right:0!important;border-top:0!important;border-bottom:0!important}
+}
