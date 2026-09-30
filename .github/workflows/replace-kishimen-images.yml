@@ -1,0 +1,26 @@
+name: Replace kishimen images with real JPEGs
+on:
+  push:
+    paths:
+      - '.github/workflows/replace-kishimen-images.yml'
+permissions:
+  contents: write
+jobs:
+  replace-images:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Download real JPEGs
+        run: |
+          curl -L --fail --retry 3 'https://sdmntprjapaneast.oaiusercontent.com/files/00000000-5a7c-8209-8f12-152928a97e20/raw?se=2026-09-30T16%3A03%3A05Z&sp=r&sv=2026-02-06&sr=b&scid=e4255fe5-0292-597f-8129-4f8ac8c42f9d&skoid=b1bca990-dcac-4c31-8ca1-ac563cf24c54&sktid=a48cca56-e6da-484e-a814-9c849652bcb3&skt=2026-09-29T23%3A03%3A44Z&ske=2026-09-30T23%3A03%3A44Z&sks=b&skv=2026-02-06&sig=Ue58wMI2Sz3FHzEPRk/lzi5ZfymqoKdAZMdb52tE9Go%3D' -o images/meat-kishimen.jpg
+          curl -L --fail --retry 3 'https://sdmntprjapaneast.oaiusercontent.com/files/00000000-d5b4-8209-a85d-f433a3d9c5f1/raw?se=2026-09-30T16%3A03%3A09Z&sp=r&sv=2026-02-06&sr=b&scid=2751f6a8-9eaf-5abd-bc2b-fa64561c0735&skoid=b1bca990-dcac-4c31-8ca1-ac563cf24c54&sktid=a48cca56-e6da-484e-a814-9c849652bcb3&skt=2026-09-30T05%3A38%3A44Z&ske=2026-10-01T05%3A38%3A44Z&sks=b&skv=2026-02-06&sig=vPn%2BNuk9Il0xk8FxnB8h4JlBvAWEgkOvPRBd2xa62Sg%3D' -o images/ume-oroshi-kishimen.jpg
+          test "$(head -c 2 images/meat-kishimen.jpg | xxd -p)" = "ffd8"
+          test "$(head -c 2 images/ume-oroshi-kishimen.jpg | xxd -p)" = "ffd8"
+      - name: Commit real images
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add images/meat-kishimen.jpg images/ume-oroshi-kishimen.jpg
+          git rm .github/workflows/replace-kishimen-images.yml
+          git commit -m 'Replace broken kishimen image files with real JPEGs'
+          git push
