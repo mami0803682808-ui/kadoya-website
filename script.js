@@ -338,7 +338,9 @@ document.querySelectorAll('.craft-art').forEach(element => element.remove());
    // The opening section contains both the logo stage and the 53-year image/copy.
    // Keep shortcuts hidden until the visitor has passed that entire sequence.
    const threshold=opening.offsetTop + opening.offsetHeight - Math.min(100,window.innerHeight*.08);
-   dock.classList.toggle('dock-visible',window.scrollY + window.innerHeight >= threshold);
+   const ready = window.scrollY + window.innerHeight >= threshold;
+   dock.classList.toggle('dock-visible',ready);
+   document.body.classList.toggle('desktop-rail-ready',ready);
  };
  updateDock();
  addEventListener('scroll',updateDock,{passive:true});
