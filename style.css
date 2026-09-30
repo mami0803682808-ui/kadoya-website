@@ -775,3 +775,8 @@ html.opening-copy-visible .header{opacity:1!important;visibility:visible!importa
 .commitment-editorial .craft-copy h3{width:100%!important;max-width:none!important;font-size:clamp(25px,2.6vw,38px)!important;letter-spacing:.035em!important}
 .commitment-editorial .craft-copy p{max-width:82ch!important}
 }
+
+
+/* Float gallery: keep cards visible inside the collapsed drink accordion and use Drive thumbnails. */
+.float-photo-grid .card{opacity:1!important;visibility:visible!important;transform:none!important}
+.float-photo-grid .card img{min-height:120px!important;background:#eee9df!important}
