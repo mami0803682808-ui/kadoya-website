@@ -1,4 +1,4 @@
-name: One-time fish photo size fix
+name: One-time fish duplicate cleanup
 on:
   push:
     paths:
@@ -10,44 +10,22 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-      - name: Match fish set photo size
+      - name: Remove duplicate fish menu row
         run: |
-          cat >> style.css <<'CSS'
-
-/* Match the daily fish set photo/card size to the other set-meal cards. */
-@media(min-width:761px){
-  .menu-tab-panel[data-menu-panel="set"] details.menu-group .nested-menu-photo:first-of-type{
-    width:calc((100% - 52px)/3)!important;
-    max-width:none!important;
-    margin:0 0 48px!important;
-  }
-  .menu-tab-panel[data-menu-panel="set"] details.menu-group .nested-menu-photo:first-of-type .card{
-    width:100%!important;
-  }
-  .menu-tab-panel[data-menu-panel="set"] details.menu-group .nested-menu-photo:first-of-type img{
-    width:100%!important;
-    aspect-ratio:4/3!important;
-    height:auto!important;
-    object-fit:cover!important;
-  }
-}
-@media(max-width:760px){
-  .menu-tab-panel[data-menu-panel="set"] details.menu-group .nested-menu-photo:first-of-type{
-    width:100%!important;
-    margin-bottom:36px!important;
-  }
-  .menu-tab-panel[data-menu-panel="set"] details.menu-group .nested-menu-photo:first-of-type img{
-    aspect-ratio:4/3!important;
-    height:auto!important;
-    object-fit:cover!important;
-  }
-}
-CSS
-      - name: Commit fix and remove workflow
+          python3 - <<'PY'
+          from pathlib import Path
+          p=Path('index.html')
+          s=p.read_text(encoding='utf-8')
+          old='<dl class="menu-list"><div><dt>本日のお魚定食（赤だし付）</dt><dd>1,890円</dd></div></dl>'
+          if old in s:
+              s=s.replace(old,'',1)
+          p.write_text(s,encoding='utf-8')
+          PY
+      - name: Commit cleanup and remove workflow
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git rm .github/workflows/one-time-fish-photo-size.yml
-          git add style.css
-          git commit -m "Match fish set photo size to other set meals"
+          git add index.html
+          git commit -m "Remove duplicate daily fish set row"
           git push
