@@ -641,3 +641,9 @@ svg.vertical-mark{display:block;width:min(260px,70vw);height:100%;max-height:650
 /* Tanuki quick-nav icon: same visual size as the other dock icons. */
 .mobile-dock .dock-icon-tanuki{width:24px!important;height:24px!important}
 .mobile-dock .dock-icon-tanuki svg{width:24px!important;height:24px!important;transform:none!important}
+
+
+/* Fit long cheese-katsu curry kishimen name on one line on mobile. */
+@media(max-width:760px){
+ .cheese-katsu-name{font-size:clamp(15px,4.15vw,19px)!important;line-height:1.4!important;letter-spacing:-.02em!important;white-space:nowrap!important}
+}
