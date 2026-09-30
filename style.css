@@ -1064,3 +1064,19 @@ html.opening-copy-visible .header,html.opening-copy-visible .mobile-dock{opacity
 #toshikoshi .yearend-gallery img{position:absolute;display:block;width:140%!important;max-width:none!important;height:auto!important;aspect-ratio:auto!important;margin:0!important;left:-20%;bottom:-8%;transform:none;transform-origin:50% 85%}
 #toshikoshi .yearend-gallery figure:hover img{transform:scale(1.025)}
 #toshikoshi summary .coming-soon-badge{display:inline-block;margin-left:14px;padding:3px 10px;border:1px solid currentColor;border-radius:2px;font:500 11px/1.5 sans-serif;letter-spacing:.08em;color:#8a6a37;vertical-align:middle;white-space:nowrap}
+
+/* Reserve the fixed rail outside the content, without shifting the opening. */
+@media(min-width:761px){
+  main > :not(.opening-new),body > footer{
+    box-sizing:border-box!important;
+    margin-left:224px!important;margin-right:0!important;
+    width:calc(100% - 224px)!important;max-width:none!important;
+  }
+  #commitment{padding-left:clamp(28px,4vw,72px)!important;padding-right:clamp(28px,4vw,72px)!important}
+  #commitment .craft-intro,#commitment .commitment-grid{width:100%!important;max-width:980px!important;margin-left:auto!important;margin-right:auto!important}
+  #commitment .commitment-grid article{grid-template-columns:minmax(90px,.27fr) minmax(0,1fr)!important;gap:clamp(24px,4vw,64px)!important;width:100%!important;padding-left:0!important;padding-right:0!important}
+  #commitment .craft-word{justify-self:center!important;font-size:clamp(64px,7vw,112px)!important}
+  #commitment .craft-copy{min-width:0!important;width:100%!important;max-width:none!important}
+  #commitment .craft-copy h3{font-size:clamp(23px,2.5vw,36px)!important;word-break:normal!important;overflow-wrap:anywhere!important}
+  #commitment .craft-copy p{max-width:68ch!important}
+}
