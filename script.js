@@ -353,3 +353,27 @@ document.querySelector('.header .logo')?.addEventListener('click', event => {
   if (location.hash) history.replaceState(null, '', location.pathname + location.search);
   window.scrollTo({ top: 0, left: 0, behavior: 'smooth' });
 });
+
+/* Mobile-style auto-hiding header: upward page movement hides it; downward page movement shows it. */
+(() => {
+  const siteHeader = document.querySelector('.header');
+  if (!siteHeader) return;
+  let lastY = window.scrollY;
+  const updateHeaderDirection = () => {
+    const y = Math.max(0, window.scrollY);
+    const delta = y - lastY;
+    if (y <= 8) {
+      siteHeader.classList.remove('header-hidden');
+      siteHeader.classList.add('header-visible');
+    } else if (delta < -4) {
+      siteHeader.classList.add('header-hidden');
+      siteHeader.classList.remove('header-visible');
+    } else if (delta > 4) {
+      siteHeader.classList.remove('header-hidden');
+      siteHeader.classList.add('header-visible');
+    }
+    lastY = y;
+  };
+  addEventListener('scroll', updateHeaderDirection, { passive: true });
+  updateHeaderDirection();
+})();
