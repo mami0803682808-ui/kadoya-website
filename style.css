@@ -905,3 +905,10 @@ html.opening-copy-visible .header,html.opening-copy-visible .mobile-dock{opacity
 .mobile-dock{top:340px!important;padding-top:10px!important}
 .mobile-dock a,.mobile-dock a:first-child{border:0!important;border-left:0!important;border-right:0!important;border-top:0!important;border-bottom:0!important}
 }
+
+
+/* Desktop rail shortcuts: wider and positioned slightly below viewport center. */
+@media(min-width:761px){
+.mobile-dock{top:58vh!important;width:112px!important;padding-left:4px!important;padding-right:4px!important}
+.mobile-dock a{font-size:22px!important;line-height:1.35!important;letter-spacing:.08em!important;padding-left:3px!important;padding-right:3px!important}
+}
