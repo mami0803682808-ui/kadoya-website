@@ -988,3 +988,22 @@ html.opening-copy-visible .header,html.opening-copy-visible .mobile-dock{opacity
   .side-rail nav a,
   .pc-rail nav a{font-size:14px!important;line-height:1.5!important;text-align:center!important;justify-content:center!important}
 }
+
+/* Smooth desktop side-rail entrance */
+@media(min-width:761px){
+  .desktop-rail,.side-rail,.pc-rail{
+    transition:opacity .85s ease, transform .85s cubic-bezier(.22,.61,.36,1), visibility .85s ease!important;
+  }
+  .desktop-rail:not(.rail-visible),.side-rail:not(.rail-visible),.pc-rail:not(.rail-visible){
+    opacity:0!important;
+    transform:translateX(-14px)!important;
+    visibility:hidden!important;
+    pointer-events:none!important;
+  }
+  .desktop-rail.rail-visible,.side-rail.rail-visible,.pc-rail.rail-visible{
+    opacity:1!important;
+    transform:translateX(0)!important;
+    visibility:visible!important;
+    pointer-events:auto!important;
+  }
+}
