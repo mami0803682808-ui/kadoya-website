@@ -794,3 +794,13 @@ html.opening-copy-visible .header{opacity:1!important;visibility:visible!importa
 .opening-copy .opening-since{margin-left:auto!important;margin-right:auto!important}
 .opening-copy h1{width:100%!important;text-align:center!important}
 }
+
+
+/* Desktop hero: override the scroll-signature positioning too. */
+@media(min-width:761px){
+.scroll-ready .opening-copy,.opening-new.scroll-ready .opening-copy{top:14vh!important;bottom:auto!important;left:50%!important;right:auto!important;transform:translateX(-50%)!important;width:min(1000px,90vw)!important;text-align:center!important;display:block!important}
+.scroll-ready .opening-copy .opening-since{width:100%!important;text-align:center!important;margin:0 0 14px!important}
+.scroll-ready .opening-copy h1{width:100%!important;text-align:center!important;margin:0!important;white-space:nowrap!important}
+.scroll-ready .opening-copy h1 .hero-line{display:inline!important;white-space:nowrap!important}
+.scroll-ready .opening-copy h1 .hero-line + .hero-line{margin-left:.18em!important}
+}
