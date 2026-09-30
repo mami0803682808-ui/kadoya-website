@@ -1151,3 +1151,12 @@ body .opening-new,body:not(.desktop-rail-ready) .opening-new,body.desktop-rail-r
 
 /* Keep summer menu captions aligned even when source images have different aspect ratios. */
 .summer-photo-grid .card img{width:100%!important;aspect-ratio:3/2!important;object-fit:cover!important;display:block!important}
+
+/* Match tempura cards to the adjacent seasonal menu and show each entire photo. */
+.tempura-feature-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:10px;max-width:900px;margin:18px auto 26px}
+.tempura-feature a{position:relative;display:block!important;width:100%;height:auto;aspect-ratio:3/2!important;max-height:none}
+.tempura-feature img{position:absolute;inset:0;display:block;width:100%!important;height:100%!important;min-height:0!important;max-height:none!important;aspect-ratio:auto!important;object-fit:contain!important;object-position:center!important;transform:none!important}
+@media(min-width:761px){
+  .tempura-feature-grid{grid-template-columns:repeat(3,minmax(0,1fr));gap:18px}
+  .tempura-feature a{max-height:180px}
+}
