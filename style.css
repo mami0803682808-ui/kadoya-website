@@ -912,3 +912,12 @@ html.opening-copy-visible .header,html.opening-copy-visible .mobile-dock{opacity
 .mobile-dock{top:58vh!important;width:112px!important;padding-left:4px!important;padding-right:4px!important}
 .mobile-dock a{font-size:22px!important;line-height:1.35!important;letter-spacing:.08em!important;padding-left:3px!important;padding-right:3px!important}
 }
+
+
+/* Mobile: restore the top-right hamburger and its expandable navigation. */
+@media(max-width:760px){
+.header .menu-btn{display:flex!important;align-items:center!important;gap:10px!important;position:relative!important;z-index:102!important;pointer-events:auto!important}
+.header .nav{display:none!important;position:absolute!important;top:100%!important;left:0!important;right:0!important;width:100%!important;background:var(--paper)!important;padding:24px 7vw!important;flex-direction:column!important;gap:16px!important;z-index:101!important;color:var(--ink)!important}
+.header .nav.open{display:flex!important}
+.header{overflow:visible!important}
+}
