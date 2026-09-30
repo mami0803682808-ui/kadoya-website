@@ -1166,3 +1166,19 @@ body .opening-new,body:not(.desktop-rail-ready) .opening-new,body.desktop-rail-r
 #menu .kishimen-extra-photos .card img{aspect-ratio:3/2!important}
 #menu .kishimen-extra-photos .dish-price{display:block!important;visibility:visible!important;opacity:1!important;margin:0!important;font-size:12px!important;line-height:1.5!important}
 @media(min-width:761px){#menu .kishimen-extra-photos .dish-price{font-size:14px!important}}
+
+/* Summer captions: linked photos must not reserve a taller empty frame. */
+#menu .summer-photo-grid .card-photo{
+  display:block!important;
+  width:100%!important;
+  height:auto!important;
+  min-height:0!important;
+  max-height:none!important;
+  aspect-ratio:auto!important;
+  margin:0!important;
+  padding:0!important;
+}
+#menu .summer-photo-grid .card h3{
+  margin:8px 0 2px!important;
+  padding:0!important;
+}
