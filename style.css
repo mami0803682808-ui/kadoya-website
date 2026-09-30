@@ -850,3 +850,13 @@ html.opening-copy-visible .mobile-dock{transform:translate(0,-50%)!important}
 html:not(.opening-copy-visible) .mobile-dock{transform:translate(-12px,-50%)!important}
 html.opening-copy-visible .mobile-dock.dock-visible{transform:translate(0,-50%)!important}
 }
+
+
+/* Desktop commitment: use horizontal space and prevent the copy becoming a narrow vertical column. */
+@media(min-width:761px){
+.commitment-editorial .commitment-grid{width:min(1500px,calc(100vw - 180px))!important;max-width:none!important;margin-left:auto!important;margin-right:auto!important}
+.commitment-editorial .commitment-grid article{display:grid!important;grid-template-columns:140px minmax(220px,300px) minmax(620px,1fr)!important;column-gap:clamp(42px,5vw,96px)!important;align-items:center!important;width:100%!important;padding-left:0!important;padding-right:0!important}
+.commitment-editorial .craft-copy{width:100%!important;max-width:none!important;justify-self:stretch!important}
+.commitment-editorial .craft-copy h3{width:100%!important;max-width:none!important;white-space:normal!important;word-break:keep-all!important;overflow-wrap:normal!important;line-height:1.55!important}
+.commitment-editorial .craft-copy p{width:100%!important;max-width:900px!important;word-break:normal!important;overflow-wrap:break-word!important;line-height:2!important}
+}
