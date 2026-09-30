@@ -1085,3 +1085,19 @@ html.opening-copy-visible .header,html.opening-copy-visible .mobile-dock{opacity
 html,body{overflow-x:clip}
 body .opening-new,body:not(.desktop-rail-ready) .opening-new,body.desktop-rail-ready .opening-new{width:100%!important;max-width:100%!important;margin-left:0!important;margin-right:0!important}
 .shop-gallery-scroll{box-sizing:border-box!important;width:100%!important;max-width:100%!important;min-width:0!important;margin-left:0!important;margin-right:0!important;padding-left:0!important;padding-right:0!important;overscroll-behavior-x:contain}
+
+/* 2026-09-30 menu polish */
+.side-dish-grid .dish-photo-item h3,
+.side-dish-grid .dish-photo-item h4{font-family:inherit!important;font-size:inherit!important;font-weight:600!important;letter-spacing:.02em!important;}
+@media(min-width:761px){
+  .float-photo-grid{grid-template-columns:repeat(3,minmax(0,1fr))!important;gap:18px!important;max-width:900px!important;margin-left:auto!important;margin-right:auto!important;}
+  .float-photo-grid .card img{width:100%!important;aspect-ratio:4/3!important;object-fit:cover!important;max-height:180px!important;}
+  .nested-set-photos.cards{grid-template-columns:repeat(3,minmax(0,1fr))!important;}
+  .nested-set-photos.cards .card img{width:100%!important;aspect-ratio:4/3!important;object-fit:cover!important;}
+  .kishimen-extra-photos{grid-template-columns:repeat(3,minmax(0,1fr))!important;gap:18px!important;}
+  .kishimen-extra-photos .card img{width:100%!important;aspect-ratio:4/3!important;object-fit:cover!important;}
+  #tenzaru-kishimen-photo,
+  #tenzaru-kishimen-photo + *{max-width:none!important;}
+  #tenzaru-kishimen-photo img,
+  .nested-menu-photo .card img[alt="きしめん"]{width:100%!important;aspect-ratio:4/3!important;object-fit:cover!important;}
+}
