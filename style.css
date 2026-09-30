@@ -929,3 +929,12 @@ html.opening-copy-visible .header,html.opening-copy-visible .mobile-dock{opacity
 .mobile-dock{width:224px!important;left:0!important}
 .mobile-dock a{font-size:11px!important;line-height:1.25!important;letter-spacing:.1em!important}
 }
+
+
+/* Desktop: keep the fixed shortcut rail separate from the website canvas. */
+@media(min-width:761px){
+  body{padding-left:224px!important}
+  .header{left:0!important}
+  .mobile-dock{left:0!important}
+  main,footer{width:100%!important;max-width:none!important}
+}
