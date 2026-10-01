@@ -1477,3 +1477,15 @@ body .opening-new,body:not(.desktop-rail-ready) .opening-new,body.desktop-rail-r
     object-position:center!important;
   }
 }
+
+/* 2026-10-01 mobile: all side-dish photos use 4:3 */
+@media(max-width:760px){
+  #menu .side-dish-grid .dish-photo-item img{
+    display:block!important;
+    width:100%!important;
+    height:auto!important;
+    aspect-ratio:4/3!important;
+    object-fit:cover!important;
+    object-position:center!important;
+  }
+}
