@@ -21,14 +21,12 @@
       return (summary?.textContent || '').trim().includes(label);
     });
 
-    // Rename the seasonal menu heading from autumn-only to autumn/winter.
     const autumnMenu = menu.querySelector('#autumn-menu');
     const autumnSummary = autumnMenu?.querySelector('summary');
     if (autumnSummary && autumnSummary.textContent.trim() === '秋季限定') {
       autumnSummary.textContent = '秋冬限定';
     }
 
-    // Match the summer tempura item typography and price styling to the other menu cards.
     const summerGroup = findGroup('夏季限定');
     if (summerGroup) {
       summerGroup.querySelectorAll('.tempura-feature').forEach(item => {
@@ -302,12 +300,7 @@
         if (!title) return;
         const name = normalizeMenuName(title.textContent);
         if (!name) return;
-
-        if (seenCards.has(name)) {
-          card.remove();
-          return;
-        }
-
+        if (seenCards.has(name)) { card.remove(); return; }
         seenCards.add(name);
         if (card.querySelector('img')) photoNames.add(name);
       });
@@ -316,15 +309,52 @@
       group.querySelectorAll('.menu-list > div').forEach(row => {
         const name = normalizeMenuName(row.querySelector('dt')?.textContent || '');
         if (!name) return;
-
-        if (photoNames.has(name) || seenRows.has(name)) {
-          row.remove();
-          return;
-        }
-
+        if (photoNames.has(name) || seenRows.has(name)) { row.remove(); return; }
         seenRows.add(name);
       });
     });
+
+    // Make horizontally scrollable shop photos obvious with left/right controls.
+    const gallery = document.querySelector('#shop .shop-gallery-scroll');
+    if (gallery && !gallery.parentElement?.querySelector('.shop-gallery-arrows')) {
+      const wrap = document.createElement('div');
+      wrap.className = 'shop-gallery-arrow-wrap';
+      gallery.parentNode.insertBefore(wrap, gallery);
+      wrap.appendChild(gallery);
+
+      const controls = document.createElement('div');
+      controls.className = 'shop-gallery-arrows';
+      controls.innerHTML = `
+        <button type="button" class="shop-gallery-arrow shop-gallery-prev" aria-label="前の写真を見る">◀</button>
+        <button type="button" class="shop-gallery-arrow shop-gallery-next" aria-label="次の写真を見る">▶</button>`;
+      wrap.appendChild(controls);
+
+      const prev = controls.querySelector('.shop-gallery-prev');
+      const next = controls.querySelector('.shop-gallery-next');
+      const amount = () => Math.max(gallery.clientWidth * 0.78, 260);
+      prev.addEventListener('click', () => gallery.scrollBy({ left: -amount(), behavior: 'smooth' }));
+      next.addEventListener('click', () => gallery.scrollBy({ left: amount(), behavior: 'smooth' }));
+
+      const updateArrows = () => {
+        const max = Math.max(0, gallery.scrollWidth - gallery.clientWidth);
+        prev.disabled = gallery.scrollLeft <= 4;
+        next.disabled = gallery.scrollLeft >= max - 4;
+      };
+      gallery.addEventListener('scroll', updateArrows, { passive: true });
+      window.addEventListener('resize', updateArrows);
+      requestAnimationFrame(updateArrows);
+
+      const style = document.createElement('style');
+      style.id = 'shop-gallery-arrow-style';
+      style.textContent = `
+        .shop-gallery-arrow-wrap{position:relative}
+        .shop-gallery-arrows{position:absolute;inset:0;pointer-events:none;display:flex;align-items:center;justify-content:space-between;padding:0 8px;z-index:4}
+        .shop-gallery-arrow{pointer-events:auto;width:42px;height:42px;border:0;border-radius:50%;background:rgba(244,240,230,.92);color:#26251f;box-shadow:0 2px 12px rgba(0,0,0,.18);font-size:18px;line-height:1;display:grid;place-items:center;cursor:pointer;backdrop-filter:blur(6px)}
+        .shop-gallery-arrow:disabled{opacity:.28;cursor:default}
+        @media(max-width:760px){.shop-gallery-arrows{padding:0 5px}.shop-gallery-arrow{width:38px;height:38px;font-size:16px}}
+      `;
+      document.head.appendChild(style);
+    }
   };
 
   core.onerror = () => console.error('script-base.js could not be loaded');
