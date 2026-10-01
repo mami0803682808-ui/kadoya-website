@@ -522,3 +522,33 @@
   const cleanUrl = url.pathname + (url.search ? url.search : '') + url.hash;
   window.history.replaceState({}, document.title, cleanUrl);
 })();
+
+
+/* Mobile header: hide while scrolling down, reveal while scrolling up. */
+(() => {
+  const header = document.querySelector('.header');
+  if (!header) return;
+  const mq = window.matchMedia('(max-width: 760px)');
+  let lastY = Math.max(0, window.scrollY);
+  let ticking = false;
+  const update = () => {
+    ticking = false;
+    if (!mq.matches) {
+      header.classList.remove('mobile-header-hidden');
+      lastY = Math.max(0, window.scrollY);
+      return;
+    }
+    const y = Math.max(0, window.scrollY);
+    const delta = y - lastY;
+    const menuOpen = document.querySelector('.nav')?.classList.contains('open');
+    if (menuOpen || y < 24 || delta < -4) header.classList.remove('mobile-header-hidden');
+    else if (delta > 4 && y > header.offsetHeight) header.classList.add('mobile-header-hidden');
+    lastY = y;
+  };
+  window.addEventListener('scroll', () => {
+    if (!ticking) { ticking = true; requestAnimationFrame(update); }
+  }, { passive: true });
+  window.addEventListener('resize', update);
+  mq.addEventListener?.('change', update);
+  update();
+})();
