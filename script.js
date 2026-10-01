@@ -225,6 +225,162 @@
       });
     });
 
+    if (!document.querySelector('#desktop-menu-unify-style')) {
+      const style = document.createElement('style');
+      style.id = 'desktop-menu-unify-style';
+      style.textContent = `
+        @media (min-width: 761px) {
+          #menu .cards,
+          #menu .dish-photo-grid,
+          #menu .nested-set-photos,
+          #menu .nested-menu-photo,
+          #menu .float-photo-grid,
+          #menu .summer-photo-grid,
+          #menu .side-dish-grid {
+            display: grid !important;
+            grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
+            gap: 26px !important;
+            row-gap: 48px !important;
+            align-items: start !important;
+          }
+
+          #menu .card,
+          #menu .dish-photo-item,
+          #menu .menu-photo-fix-card {
+            min-width: 0 !important;
+            width: 100% !important;
+            display: flex !important;
+            flex-direction: column !important;
+            align-items: stretch !important;
+          }
+
+          #menu .card > .card-photo,
+          #menu .card > .menu-photo-fix-image,
+          #menu .card > img,
+          #menu .dish-photo-item > .dish-photo-link,
+          #menu .dish-photo-item > .card-photo,
+          #menu .dish-photo-item > img {
+            display: block !important;
+            width: 100% !important;
+            height: auto !important;
+            aspect-ratio: 4 / 3 !important;
+            overflow: hidden !important;
+            margin: 0 0 14px !important;
+            padding: 0 !important;
+            background: transparent !important;
+          }
+
+          #menu .card > .card-photo img,
+          #menu .card > .menu-photo-fix-image img,
+          #menu .card > img,
+          #menu .dish-photo-item > .dish-photo-link img,
+          #menu .dish-photo-item > .card-photo img,
+          #menu .dish-photo-item > img {
+            display: block !important;
+            width: 100% !important;
+            height: 100% !important;
+            aspect-ratio: 4 / 3 !important;
+            object-fit: cover !important;
+            object-position: center !important;
+            margin: 0 !important;
+            padding: 0 !important;
+          }
+
+          #menu .card h3,
+          #menu .card h4,
+          #menu .dish-photo-item h3,
+          #menu .dish-photo-item h4,
+          #menu .menu-photo-fix-card h3,
+          #menu .menu-photo-fix-card h4 {
+            position: static !important;
+            display: block !important;
+            width: 100% !important;
+            min-height: 3.05em !important;
+            margin: 0 0 8px !important;
+            padding: 0 !important;
+            font-family: "Noto Serif JP", serif !important;
+            font-size: 23px !important;
+            font-weight: 600 !important;
+            line-height: 1.45 !important;
+            letter-spacing: 0 !important;
+            text-align: left !important;
+            transform: none !important;
+          }
+
+          #menu .card .dish-price,
+          #menu .dish-photo-item .dish-price,
+          #menu .menu-photo-fix-card .dish-price {
+            position: static !important;
+            display: block !important;
+            width: 100% !important;
+            margin: 10px 0 0 !important;
+            padding: 0 !important;
+            font-family: "Zen Kaku Gothic New", sans-serif !important;
+            font-size: 22px !important;
+            font-weight: 600 !important;
+            line-height: 1.2 !important;
+            color: #6f3d24 !important;
+            text-align: left !important;
+            white-space: normal !important;
+            transform: none !important;
+          }
+
+          #menu .card .menu-note,
+          #menu .dish-photo-item .menu-note,
+          #menu .menu-photo-fix-card .menu-note {
+            width: 100% !important;
+            margin: 0 0 8px !important;
+          }
+
+          #morning-menu .morning-sets {
+            display: grid !important;
+            grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
+            gap: 26px !important;
+            align-items: start !important;
+          }
+          #morning-menu .morning-set {
+            min-width: 0 !important;
+            width: 100% !important;
+          }
+          #morning-menu .morning-set-photo {
+            display: block !important;
+            width: 100% !important;
+            height: auto !important;
+            aspect-ratio: 4 / 3 !important;
+            overflow: hidden !important;
+            margin: 0 0 14px !important;
+          }
+          #morning-menu .morning-set-photo img {
+            display: block !important;
+            width: 100% !important;
+            height: 100% !important;
+            object-fit: cover !important;
+            object-position: center !important;
+          }
+          #morning-menu .morning-set h3 {
+            min-height: 1.5em !important;
+            margin: 0 0 8px !important;
+            font-family: "Noto Serif JP", serif !important;
+            font-size: 23px !important;
+            font-weight: 600 !important;
+            line-height: 1.45 !important;
+            letter-spacing: 0 !important;
+            text-align: left !important;
+          }
+          #morning-menu .morning-set .set-price {
+            margin: 10px 0 0 !important;
+            font-family: "Zen Kaku Gothic New", sans-serif !important;
+            font-size: 22px !important;
+            font-weight: 600 !important;
+            line-height: 1.2 !important;
+            color: #6f3d24 !important;
+            text-align: left !important;
+          }
+        }
+      `;
+      document.head.appendChild(style);
+    }
+
     const gallery = document.querySelector('#shop .shop-gallery-scroll');
     if (gallery && !gallery.parentElement?.querySelector('.shop-gallery-arrows')) {
       const wrap = document.createElement('div');
