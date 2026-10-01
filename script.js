@@ -466,8 +466,12 @@
       const style = document.createElement('style');
       style.id = 'side-dish-crop-fix';
       style.textContent = `
-        #menu img[alt="揚げ出し豆腐"] { object-position: center 28% !important; }
-        #menu img[alt="大きな茶碗蒸し"] { object-position: center 22% !important; }
+        #menu img[alt="揚げ出し豆腐"],
+        #menu img[alt="大きな茶碗蒸し"] {
+          object-fit: contain !important;
+          object-position: center center !important;
+          background: #1b1814 !important;
+        }
       `;
       document.head.appendChild(style);
     }
