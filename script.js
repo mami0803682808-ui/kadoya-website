@@ -211,6 +211,15 @@
         if (photoNames.has(name)) row.remove();
       });
     }
+
+    const fishCard = menu.querySelector('#fish-set-photo');
+    if (fishCard && !fishCard.querySelector('[data-fish-instagram-note]')) {
+      const note = document.createElement('p');
+      note.className = 'menu-note';
+      note.dataset.fishInstagramNote = '';
+      note.innerHTML = '内容は日によって異なります。最新の内容は<a href="https://www.instagram.com/komaki_kadoya/" target="_blank" rel="noopener">公式Instagramのストーリー</a>をご確認ください。';
+      fishCard.appendChild(note);
+    }
   };
 
   core.onerror = () => console.error('script-base.js could not be loaded');
