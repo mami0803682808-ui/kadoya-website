@@ -13,55 +13,27 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-      - name: Fix desktop hours scroll target
+      - name: Apply desktop hours anchor fix
         shell: bash
         run: |
           python3 - <<'PY'
           from pathlib import Path
           p = Path('script.js')
           s = p.read_text(encoding='utf-8')
-          old = """    const hoursTarget = document.querySelector('#hours');
-    const hoursDockLink = document.querySelector('.mobile-dock a[href=\"#hours\"]');
-    if (hoursTarget) {
-      hoursTarget.style.scrollMarginTop = '120px';
-    }
-    if (hoursTarget && hoursDockLink) {
-      hoursDockLink.addEventListener('click', event => {
-        event.preventDefault();
-        const header = document.querySelector('.header');
-        const headerHeight = header?.getBoundingClientRect().height || 92;
-        const targetTop = hoursTarget.getBoundingClientRect().top + window.scrollY - headerHeight - 16;
-        history.replaceState(null, '', '#hours');
-        window.scrollTo({ top: Math.max(0, targetTop), behavior: 'smooth' });
-      });
-    }
-"""
-          new = """    const hoursTarget = document.querySelector('#hours');
-    const hoursDockLink = document.querySelector('.mobile-dock a[href=\"#hours\"]');
-    if (hoursTarget) {
-      hoursTarget.style.scrollMarginTop = window.matchMedia('(min-width: 761px)').matches ? '24px' : '88px';
-    }
-    if (hoursTarget && hoursDockLink) {
-      hoursDockLink.addEventListener('click', event => {
-        event.preventDefault();
-        const isDesktop = window.matchMedia('(min-width: 761px)').matches;
-        const header = document.querySelector('.header');
-        const headerOffset = isDesktop ? 24 : (header?.getBoundingClientRect().height || 64) + 16;
-        const targetTop = hoursTarget.getBoundingClientRect().top + window.scrollY - headerOffset;
-        history.replaceState(null, '', '#hours');
-        window.scrollTo({ top: Math.max(0, targetTop), behavior: 'smooth' });
-      });
-    }
-"""
-          if old not in s:
-              raise SystemExit('hours anchor block not found; aborting without changes')
-          p.write_text(s.replace(old, new, 1), encoding='utf-8')
+          a = "        const headerHeight = header?.getBoundingClientRect().height || 92;"
+          b = "        const isDesktop = window.matchMedia('(min-width: 761px)').matches;\n        const headerOffset = isDesktop ? 24 : (header?.getBoundingClientRect().height || 64) + 16;"
+          c = "        const targetTop = hoursTarget.getBoundingClientRect().top + window.scrollY - headerHeight - 16;"
+          d = "        const targetTop = hoursTarget.getBoundingClientRect().top + window.scrollY - headerOffset;"
+          if a not in s or c not in s:
+              raise SystemExit('desktop hours anchor source lines not found')
+          s = s.replace(a, b, 1).replace(c, d, 1)
+          p.write_text(s, encoding='utf-8')
 
-          index = Path('index.html')
-          h = index.read_text(encoding='utf-8')
-          import re
-          h = re.sub(r'<script defer src="script\.js(?:\?v=[^"]+)?"></script>', '<script defer src="script.js?v=20261001-2201"></script>', h, count=1)
-          index.write_text(h, encoding='utf-8')
+          h = Path('index.html')
+          t = h.read_text(encoding='utf-8')
+          t = t.replace('<script defer src="script.js"></script>', '<script defer src="script.js?v=20261001-2210"></script>', 1)
+          t = t.replace('<script defer src="script.js?v=20261001-2201"></script>', '<script defer src="script.js?v=20261001-2210"></script>', 1)
+          h.write_text(t, encoding='utf-8')
           PY
       - name: Commit fix
         shell: bash
