@@ -1,0 +1,53 @@
+name: Fix autumn card photo alignment
+
+on:
+  push:
+    paths:
+      - '.github/workflows/fix-autumn-card-photo-alignment.yml'
+
+permissions:
+  contents: write
+
+jobs:
+  fix:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Normalize autumn mobile card image heights and title positions
+        run: |
+          cat >> style.css <<'EOF'
+
+/* 2026-10-01 mobile autumn cards: equal photo frames and title alignment */
+@media(max-width:760px){
+  #autumn-menu .cards > .card > img{
+    display:block!important;
+    width:100%!important;
+    height:auto!important;
+    aspect-ratio:4/3!important;
+    object-fit:cover!important;
+    object-position:center!important;
+    margin:0!important;
+  }
+  #autumn-menu .cards > .card > h3{
+    margin:8px 0 0!important;
+    padding:0!important;
+    min-height:0!important;
+    align-items:initial!important;
+  }
+}
+EOF
+          python3 - <<'PY'
+          from pathlib import Path
+          p=Path('index.html')
+          s=p.read_text()
+          import re
+          s=re.sub(r'style\.css\?v=[^"\']+', 'style.css?v=20261001-2046', s, count=1)
+          p.write_text(s)
+          PY
+      - name: Commit fix
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add style.css index.html
+          git diff --cached --quiet || git commit -m "Align autumn mobile card photos and titles"
+          git push
