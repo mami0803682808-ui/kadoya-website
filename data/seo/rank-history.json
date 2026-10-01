@@ -1,1 +1,18 @@
-[]
+[
+  {
+    "measuredAt": "2026-10-01T19:35:00+09:00",
+    "source": "websearch",
+    "siteUrl": "https://komaki-kadoya.com/",
+    "days": null,
+    "results": [
+      {
+        "keyword": "角屋 小牧",
+        "targetPath": "/",
+        "rank": null,
+        "impressions": null,
+        "clicks": null,
+        "note": "WebSearch概算。検索結果では小牧ナビ、Yahoo!マップ、食べログ等の店舗情報ページを確認したが、公式サイトの正確な順位は確定できず。GSC接続後はGSCを正とする。"
+      }
+    ]
+  }
+]
