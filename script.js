@@ -21,6 +21,54 @@
       return (summary?.textContent || '').trim().includes(label);
     });
 
+    // Rename the seasonal menu heading from autumn-only to autumn/winter.
+    const autumnMenu = menu.querySelector('#autumn-menu');
+    const autumnSummary = autumnMenu?.querySelector('summary');
+    if (autumnSummary && autumnSummary.textContent.trim() === '秋季限定') {
+      autumnSummary.textContent = '秋冬限定';
+    }
+
+    // Match the summer tempura item typography and price styling to the other menu cards.
+    const summerGroup = findGroup('夏季限定');
+    if (summerGroup) {
+      summerGroup.querySelectorAll('.tempura-feature').forEach(item => {
+        const title = item.querySelector('.tempura-feature-info h3');
+        const price = item.querySelector('.tempura-feature-info p');
+        if (title) title.classList.add('summer-tempura-title-fix');
+        if (price) price.classList.add('dish-price', 'summer-tempura-price-fix');
+      });
+
+      if (!document.querySelector('#summer-tempura-style-fix')) {
+        const style = document.createElement('style');
+        style.id = 'summer-tempura-style-fix';
+        style.textContent = `
+          #menu .tempura-feature-info .summer-tempura-title-fix {
+            font-family: "Noto Serif JP", serif !important;
+            font-weight: 500 !important;
+            letter-spacing: 0 !important;
+            line-height: 1.5 !important;
+            margin: 8px 0 2px !important;
+          }
+          #menu .tempura-feature-info .summer-tempura-price-fix {
+            font-size: 22px !important;
+            font-weight: 600 !important;
+            color: #6f3d24 !important;
+            line-height: 1.5 !important;
+            margin: 12px 0 !important;
+          }
+          @media (max-width: 760px) {
+            #menu .tempura-feature-info .summer-tempura-title-fix {
+              font-size: 19px !important;
+            }
+            #menu .tempura-feature-info .summer-tempura-price-fix {
+              font-size: 22px !important;
+            }
+          }
+        `;
+        document.head.appendChild(style);
+      }
+    }
+
     const donGroup = findGroup('丼もの・お子様メニュー');
     if (donGroup) {
       let grid = donGroup.querySelector('.nested-menu-photo.cards, .float-photo-grid.cards');
