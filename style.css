@@ -1218,3 +1218,11 @@ body .opening-new,body:not(.desktop-rail-ready) .opening-new,body.desktop-rail-r
     line-height:1.45!important;
   }
 }
+
+
+/* Chawanmushi: keep the yellow steamed-egg surface visible in the card crop. */
+#menu img[alt="大きな茶碗蒸し"]{
+  object-fit:cover!important;
+  object-position:center 68%!important;
+  background:transparent!important;
+}
