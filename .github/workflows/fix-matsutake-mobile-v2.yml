@@ -1,0 +1,34 @@
+name: Fix Matsutake mobile title v2
+on:
+  push:
+    paths:
+      - '.github/workflows/fix-matsutake-mobile-v2.yml'
+permissions:
+  contents: write
+jobs:
+  fix:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Fix mobile Matsutake title
+        run: |
+          python3 - <<'PY'
+          from pathlib import Path
+          import re
+          p=Path('index.html')
+          s=p.read_text()
+          s=re.sub(r'<h3 class="matsutake-gozen-name">\s*<span class="matsutake-line">松茸土瓶蒸しと</span>\s*<span class="matsutake-line">きのこの天ぷら御膳</span>\s*</h3>', '<h3 class="matsutake-gozen-name">松茸土瓶蒸しときのこの天ぷら御膳</h3>', s)
+          s=re.sub(r'style\.css\?v=[^"\']+', 'style.css?v=20261001-2041', s)
+          p.write_text(s)
+          css=Path('style.css')
+          c=css.read_text()
+          c += r'''\n\n/* 2026-10-01 20:41 definitive Matsutake mobile wrapping fix */\n@media(max-width:760px){\n  #menu #autumn-menu .card .matsutake-gozen-name{\n    display:block!important;\n    width:100%!important;\n    max-width:100%!important;\n    min-width:0!important;\n    height:auto!important;\n    min-height:0!important;\n    margin:10px 0 0!important;\n    padding:0!important;\n    font-size:14px!important;\n    line-height:1.55!important;\n    letter-spacing:0!important;\n    white-space:normal!important;\n    word-break:normal!important;\n    overflow-wrap:break-word!important;\n    overflow:visible!important;\n    text-align:left!important;\n  }\n  #menu #autumn-menu .card .matsutake-gozen-name .matsutake-line{\n    display:inline!important;\n    width:auto!important;\n    white-space:normal!important;\n  }\n}\n'''
+          css.write_text(c)
+          PY
+      - name: Commit
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add index.html style.css
+          git diff --cached --quiet || git commit -m "Fix Matsutake mobile title wrapping"
+          git push
