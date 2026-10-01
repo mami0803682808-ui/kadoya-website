@@ -1326,3 +1326,20 @@ body .opening-new,body:not(.desktop-rail-ready) .opening-new,body.desktop-rail-r
     font-size:12px!important;
   }
 }
+
+
+/* 2026-10-01 keep long autumn dish title clear of adjacent card */
+#menu .matsutake-gozen-name{
+  white-space:normal!important;
+  overflow-wrap:anywhere!important;
+  word-break:normal!important;
+  line-height:1.45!important;
+  min-height:2.9em!important;
+}
+@media(max-width:760px){
+  #menu .matsutake-gozen-name{
+    font-size:15px!important;
+    line-height:1.45!important;
+    min-height:2.9em!important;
+  }
+}
