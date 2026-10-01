@@ -1267,3 +1267,27 @@ body .opening-new,body:not(.desktop-rail-ready) .opening-new,body.desktop-rail-r
 .scroll-ready .arrival-mark{width:auto!important;height:auto!important;background:none!important;padding:30px!important}
 .opening-vertical-logo{display:block!important;width:70px!important;height:auto!important;max-height:210px!important;object-fit:contain!important;opacity:1!important}
 @media(min-width:761px){.opening-vertical-logo{width:77px!important;max-height:231px!important}}
+
+
+/* Restore compact gold opening mark (2026-10-01) */
+.scroll-ready .arrival-mark svg.vertical-mark,
+.arrival-mark svg.vertical-mark{
+  width:70px !important;
+  height:210px !important;
+  max-height:210px !important;
+}
+.scroll-ready .arrival-mark{
+  padding:0 !important;
+  transform:translateY(var(--signature-y));
+}
+.scroll-ready .signature-cue{
+  bottom:105px;
+}
+@media (min-width:761px){
+  .scroll-ready .arrival-mark svg.vertical-mark,
+  .arrival-mark svg.vertical-mark{
+    width:77px !important;
+    height:231px !important;
+    max-height:231px !important;
+  }
+}
