@@ -1203,3 +1203,18 @@ body .opening-new,body:not(.desktop-rail-ready) .opening-new,body.desktop-rail-r
     pointer-events:none;
   }
 }
+
+
+/* Mobile: allow the long cheese-katsu curry menu name to wrap fully. */
+@media (max-width:760px){
+  #autumn-menu .cheese-katsu-name{
+    white-space:normal!important;
+    overflow:visible!important;
+    text-overflow:clip!important;
+    overflow-wrap:anywhere!important;
+    word-break:normal!important;
+    min-height:0!important;
+    height:auto!important;
+    line-height:1.45!important;
+  }
+}
