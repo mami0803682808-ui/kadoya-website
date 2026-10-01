@@ -1309,3 +1309,12 @@ body .opening-new,body:not(.desktop-rail-ready) .opening-new,body.desktop-rail-r
   mask-size:contain!important;
 }
 @media(min-width:761px){.opening-gold-logo{width:77px!important;height:231px!important}}
+
+
+/* Direct image fallback for iOS Safari opening mark. */
+.opening-gold-logo-img{
+ display:block!important;width:70px!important;height:210px!important;max-width:none!important;max-height:none!important;
+ object-fit:contain!important;opacity:1!important;visibility:visible!important;
+ filter:sepia(.35) saturate(.85) brightness(1.12)!important;
+}
+@media(min-width:761px){.opening-gold-logo-img{width:77px!important;height:231px!important}}
