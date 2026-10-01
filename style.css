@@ -1250,3 +1250,17 @@ body .opening-new,body:not(.desktop-rail-ready) .opening-new,body.desktop-rail-r
     max-height:210px!important;
   }
 }
+
+
+/* 2026-10-01 mobile commitment layout fix: prevent narrow vertical text columns */
+@media(max-width:760px){
+  #commitment.commitment-editorial{padding-left:7vw!important;padding-right:7vw!important;overflow:hidden!important}
+  #commitment .craft-intro{width:100%!important;max-width:none!important;margin-left:0!important;margin-right:0!important}
+  #commitment .commitment-grid{width:100%!important;max-width:none!important;margin-left:0!important;margin-right:0!important}
+  #commitment .commitment-grid article{display:grid!important;grid-template-columns:48px minmax(0,1fr)!important;grid-template-areas:"no word" "copy copy"!important;column-gap:18px!important;row-gap:18px!important;align-items:start!important;width:100%!important;padding:42px 0!important}
+  #commitment .commitment-no{grid-area:no!important;margin:6px 0 0!important}
+  #commitment .craft-word{grid-area:word!important;writing-mode:horizontal-tb!important;text-orientation:mixed!important;justify-self:start!important;font-size:58px!important;line-height:1!important}
+  #commitment .craft-copy{grid-area:copy!important;width:100%!important;max-width:none!important;min-width:0!important}
+  #commitment .craft-copy h3{width:100%!important;max-width:none!important;font-size:21px!important;line-height:1.65!important;letter-spacing:.04em!important;white-space:normal!important;word-break:normal!important;overflow-wrap:break-word!important;margin:0 0 15px!important}
+  #commitment .craft-copy p{width:100%!important;max-width:none!important;font-size:13px!important;line-height:2!important;letter-spacing:.025em!important;word-break:normal!important;overflow-wrap:break-word!important}
+}
