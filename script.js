@@ -7,6 +7,11 @@
     const menu = document.querySelector('#menu');
     if (!menu) return;
 
+    const beerBrands = menu.querySelector('.beer-brands');
+    if (beerBrands) {
+      beerBrands.textContent = 'アサヒスーパードライ・キリンラガー・キリンクラシックラガー・サッポロラガー';
+    }
+
     const tanagata = menu.querySelector('img[alt="田縣たぬききしめん"]');
     if (tanagata) {
       tanagata.src = 'images/menu-tanagata-tanuki-new.jpg';
