@@ -1465,3 +1465,15 @@ body .opening-new,body:not(.desktop-rail-ready) .opening-new,body.desktop-rail-r
     aspect-ratio:3/2!important;
   }
 }
+
+/* 2026-10-01 mobile: force identical side-dish image box height */
+@media(max-width:760px){
+  #menu .side-dish-grid .dish-photo-item img{
+    display:block!important;
+    width:100%!important;
+    height:145px!important;
+    aspect-ratio:auto!important;
+    object-fit:cover!important;
+    object-position:center!important;
+  }
+}
