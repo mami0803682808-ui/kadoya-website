@@ -101,7 +101,7 @@
       card.className = 'card';
       card.dataset.kinokoTempuraAutumn = '';
       card.innerHTML = `
-        <img src="images/kinoko-tempura.jpg?v=20261001-season" alt="きのこの天ぷら" loading="lazy" decoding="async">
+        <span class="card-photo kinoko-tempura-photo"><img src="images/kinoko-tempura.jpg?v=20261001-season" alt="きのこの天ぷら" loading="lazy" decoding="async"></span>
         <h3>きのこの天ぷら</h3>
         <p class="menu-note">舞茸・椎茸・えのき茸</p>
         <p class="dish-price">680円</p>`;
@@ -117,14 +117,25 @@
           margin:0!important;
           transform:none!important;
         }
-        #autumn-menu .cards > .card > img {
+        #autumn-menu .cards > .card > img,
+        #autumn-menu .cards > .card > .card-photo {
           display:block!important;
           width:100%!important;
           height:auto!important;
           aspect-ratio:4/3!important;
           object-fit:cover!important;
           object-position:center!important;
+          overflow:hidden!important;
           margin:0 0 14px!important;
+          padding:0!important;
+        }
+        #autumn-menu .cards > .card > .card-photo > img {
+          display:block!important;
+          width:100%!important;
+          height:100%!important;
+          object-fit:cover!important;
+          object-position:center!important;
+          margin:0!important;
           padding:0!important;
         }
         #autumn-menu .cards > .card > h3 {
@@ -133,7 +144,8 @@
           transform:none!important;
         }
         @media(max-width:760px){
-          #autumn-menu .cards > .card > img {margin-bottom:10px!important;}
+          #autumn-menu .cards > .card > img,
+          #autumn-menu .cards > .card > .card-photo {margin-bottom:10px!important;}
           #autumn-menu .cards > .card > h3 {margin:0 0 6px!important;}
         }
       `;
