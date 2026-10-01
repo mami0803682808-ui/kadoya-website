@@ -13,36 +13,22 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-      - name: Prevent menu photos opening as standalone images
+      - name: Disable menu image clicks
+        shell: bash
         run: |
-          python - <<'PY'
-          from pathlib import Path
-          p = Path('script.js')
-          s = p.read_text(encoding='utf-8')
-          marker = '/* Prevent menu photos from opening standalone image pages. */'
-          if marker not in s:
-              s += r'''
+          cat >> style.css <<'EOF'
 
-/* Prevent menu photos from opening standalone image pages. */
-document.addEventListener('click', (event) => {
-  const link = event.target.closest('#menu a');
-  if (!link || !link.querySelector('img')) return;
-  const href = (link.getAttribute('href') || '').toLowerCase();
-  if (/\.(?:jpe?g|png|webp|gif|avif)(?:[?#].*)?$/.test(href) || href.includes('drive.google.com/')) {
-    event.preventDefault();
-  }
-});
-'''
-              p.write_text(s, encoding='utf-8')
-          PY
+/* Menu photos are display-only; tapping them must not open standalone image pages. */
+#menu a.card-photo,
+#menu a.card-photo * {
+  pointer-events: none !important;
+}
+EOF
       - name: Commit change
+        shell: bash
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add script.js
-          if git diff --cached --quiet; then
-            echo "No changes needed"
-          else
-            git commit -m "Disable menu image click-through"
-            git push
-          fi
+          git add style.css
+          git commit -m "Disable menu photo click-through"
+          git push
