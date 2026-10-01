@@ -1,0 +1,50 @@
+name: Fix tofu dote photo size
+on:
+  push:
+    paths:
+      - '.github/workflows/fix-tofu-dote-photo-size.yml'
+jobs:
+  fix:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@v4
+      - name: Normalize tofu dote photo frame
+        shell: bash
+        run: |
+          cat >> style.css <<'EOF'
+
+/* 2026-10-01: match 豆腐どてかつ串 photo size to other side-dish cards */
+#menu .side-dish-grid img[alt="豆腐どてかつ串"],
+#menu .side-dish-grid img[alt="豆腐どて串カツ"],
+#menu .side-dish-grid img[alt*="豆腐どて"]{
+  display:block!important;
+  width:100%!important;
+  height:100%!important;
+  aspect-ratio:auto!important;
+  object-fit:cover!important;
+  object-position:center!important;
+}
+#menu .side-dish-grid a:has(img[alt*="豆腐どて"]){
+  display:block!important;
+  width:100%!important;
+  aspect-ratio:3/2!important;
+  overflow:hidden!important;
+}
+EOF
+          python - <<'PY'
+          from pathlib import Path
+          p=Path('index.html')
+          s=p.read_text()
+          import re
+          s=re.sub(r'style\.css\?v=[^"\']+', 'style.css?v=20261001-2043', s, count=1)
+          p.write_text(s)
+          PY
+      - name: Commit changes
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add style.css index.html
+          git commit -m "Normalize tofu dote photo size" || exit 0
+          git push
