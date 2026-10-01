@@ -17,15 +17,17 @@ jobs:
         with:
           fetch-depth: 0
 
+      - name: Install image tools
+        shell: bash
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y imagemagick
+
       - name: Create favicon from Kadoya crest and update HTML
         shell: bash
         run: |
           set -e
-          if command -v magick >/dev/null 2>&1; then
-            magick images/kadoya-logo.png -crop 565x565+95+95 +repage -resize 512x512 favicon.png
-          else
-            convert images/kadoya-logo.png -crop 565x565+95+95 +repage -resize 512x512 favicon.png
-          fi
+          convert images/kadoya-logo.png -crop 565x565+95+95 +repage -resize 512x512 favicon.png
           python3 - <<'PY'
           from pathlib import Path
           p = Path('index.html')
