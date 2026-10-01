@@ -34,55 +34,27 @@
 
     const summerGroup = findGroup('夏季限定');
     if (summerGroup) {
-      summerGroup.querySelectorAll('.tempura-feature').forEach(item => {
-        const title = item.querySelector('.tempura-feature-info h3');
-        const price = item.querySelector('.tempura-feature-info p');
-        if (title) title.classList.add('summer-tempura-title-fix');
-        if (price) price.classList.add('dish-price', 'summer-tempura-price-fix');
+      [...summerGroup.querySelectorAll('.tempura-feature')].forEach(item => {
+        const name = item.querySelector('h3')?.textContent.replace(/\s+/g, '') || '';
+        if (name.includes('国産とり天') || name.includes('とり天') || name.includes('きのこの天ぷら')) item.remove();
       });
+      const tempuraGrid = summerGroup.querySelector('.tempura-feature-grid');
+      if (tempuraGrid && !tempuraGrid.querySelector('.tempura-feature')) tempuraGrid.remove();
+    }
 
-      if (!document.querySelector('#summer-tempura-style-fix')) {
-        const style = document.createElement('style');
-        style.id = 'summer-tempura-style-fix';
-        style.textContent = `
-          #menu .tempura-feature-info {
-            display: block !important;
-            margin-top: 0 !important;
-          }
-          #menu .tempura-feature-info .summer-tempura-title-fix {
-            font-family: "Noto Serif JP", serif !important;
-            font-size: 23px !important;
-            font-weight: 600 !important;
-            letter-spacing: 0 !important;
-            line-height: 1.45 !important;
-            margin: 4px 0 0 !important;
-          }
-          #menu .tempura-feature-info .summer-tempura-title-fix small {
-            font-family: "Noto Serif JP", serif !important;
-            font-size: 13px !important;
-            font-weight: 400 !important;
-            line-height: 1.6 !important;
-          }
-          #menu .tempura-feature-info .summer-tempura-price-fix {
-            display: block !important;
-            position: static !important;
-            width: auto !important;
-            text-align: left !important;
-            white-space: normal !important;
-            font-family: "Zen Kaku Gothic New", sans-serif !important;
-            font-size: 22px !important;
-            font-weight: 600 !important;
-            color: #6f3d24 !important;
-            line-height: 1.2 !important;
-            margin: 12px 0 0 !important;
-          }
-          @media (max-width: 760px) {
-            #menu .tempura-feature-info .summer-tempura-title-fix { font-size: 23px !important; }
-            #menu .tempura-feature-info .summer-tempura-price-fix { font-size: 22px !important; }
-          }
-        `;
-        document.head.appendChild(style);
-      }
+    const autumnCards = autumnMenu?.querySelector('.cards');
+    if (autumnCards && !autumnCards.querySelector('[data-kinoko-tempura-autumn]')) {
+      const card = document.createElement('article');
+      card.className = 'card reveal';
+      card.dataset.kinokoTempuraAutumn = '';
+      card.innerHTML = `
+        <a class="card-photo" href="images/kinoko-tempura.jpg" target="_blank" rel="noopener">
+          <img src="images/kinoko-tempura.jpg?v=20261001-season" alt="きのこの天ぷら" loading="lazy" decoding="async">
+        </a>
+        <h3>きのこの天ぷら</h3>
+        <p class="menu-note">舞茸・椎茸・えのき茸</p>
+        <p class="dish-price">680円</p>`;
+      autumnCards.appendChild(card);
     }
 
     const donGroup = findGroup('丼もの・お子様メニュー');
@@ -93,13 +65,11 @@
         grid.className = 'nested-menu-photo cards float-photo-grid';
         donGroup.querySelector('.menu-list')?.before(grid);
       }
-
       const targets = new Set(['親子丼', '鉄火丼', 'ネギトロ丼', '牛どて丼', 'お子様きしめん']);
       [...grid.querySelectorAll('article')].forEach(card => {
         const name = card.querySelector('h3, h4')?.textContent.trim();
         if (targets.has(name) || card.hasAttribute('data-menu-photo-fix')) card.remove();
       });
-
       const items = [
         { name: '親子丼', price: '1,000円', image: '親子丼.jpeg', key: 'oyakodon' },
         { name: '鉄火丼', price: '1,040円', image: '鉄火丼.jpeg', key: 'tekkadon' },
@@ -107,7 +77,6 @@
         { name: '牛どて丼', price: '1,000円', image: 'どて丼.jpeg', key: 'dotedon' },
         { name: 'お子様きしめん', price: '650円', image: 'お子様きしめん.jpeg', key: 'kids-kishimen' }
       ];
-
       items.forEach(({ name, price, image, key }) => {
         const card = document.createElement('article');
         card.className = 'card menu-photo-fix-card';
@@ -120,60 +89,23 @@
           <p class="dish-price">${price}</p>`;
         grid.appendChild(card);
       });
-
       donGroup.querySelectorAll('.menu-list > div').forEach(row => {
         const name = row.querySelector('dt')?.textContent.trim();
         if (targets.has(name)) row.remove();
       });
-
       if (!document.querySelector('#menu-photo-fix-style')) {
         const style = document.createElement('style');
         style.id = 'menu-photo-fix-style';
         style.textContent = `
           #menu .menu-photo-fix-card { min-width: 0 !important; overflow: visible !important; }
-          #menu .menu-photo-fix-card .menu-photo-fix-image {
-            display: block !important;
-            width: 100% !important;
-            aspect-ratio: 3 / 2 !important;
-            overflow: hidden !important;
-            margin: 0 0 16px !important;
-            background: transparent !important;
-          }
-          #menu .menu-photo-fix-card .menu-photo-fix-image img {
-            display: block !important;
-            width: 100% !important;
-            height: 100% !important;
-            object-fit: cover !important;
-            object-position: center !important;
-            max-width: none !important;
-            margin: 0 !important;
-          }
-          #menu [data-menu-photo-fix="kids-kishimen"] .menu-photo-fix-image img {
-            transform: scale(1.24) !important;
-            transform-origin: center center !important;
-          }
-          #menu .menu-photo-fix-card h3,
-          #menu .menu-photo-fix-card .dish-price,
-          #menu .menu-photo-fix-card .menu-note {
-            position: static !important;
-            display: block !important;
-            padding: 0 !important;
-            height: auto !important;
-            min-height: 0 !important;
-            transform: none !important;
-          }
-          #menu .menu-photo-fix-card h3 { margin: 0 0 8px !important; line-height: 1.35 !important; }
-          #menu .menu-photo-fix-card .menu-note { margin: 0 0 8px !important; line-height: 1.5 !important; }
-          #menu .menu-photo-fix-card .dish-price { margin: 0 !important; line-height: 1.2 !important; }
-          @media (max-width: 760px) {
-            #menu .menu-photo-fix-card {
-              display: block !important;
-              width: 100% !important;
-              margin: 0 0 34px !important;
-              padding: 0 !important;
-            }
-            #menu .menu-photo-fix-card .menu-photo-fix-image { margin-bottom: 14px !important; }
-          }
+          #menu .menu-photo-fix-card .menu-photo-fix-image {display:block!important;width:100%!important;aspect-ratio:3/2!important;overflow:hidden!important;margin:0 0 16px!important;background:transparent!important;}
+          #menu .menu-photo-fix-card .menu-photo-fix-image img {display:block!important;width:100%!important;height:100%!important;object-fit:cover!important;object-position:center!important;max-width:none!important;margin:0!important;}
+          #menu [data-menu-photo-fix="kids-kishimen"] .menu-photo-fix-image img {transform:scale(1.24)!important;transform-origin:center center!important;}
+          #menu .menu-photo-fix-card h3,#menu .menu-photo-fix-card .dish-price,#menu .menu-photo-fix-card .menu-note {position:static!important;display:block!important;padding:0!important;height:auto!important;min-height:0!important;transform:none!important;}
+          #menu .menu-photo-fix-card h3 {margin:0 0 8px!important;line-height:1.35!important;}
+          #menu .menu-photo-fix-card .menu-note {margin:0 0 8px!important;line-height:1.5!important;}
+          #menu .menu-photo-fix-card .dish-price {margin:0!important;line-height:1.2!important;}
+          @media(max-width:760px){#menu .menu-photo-fix-card{display:block!important;width:100%!important;margin:0 0 34px!important;padding:0!important}#menu .menu-photo-fix-card .menu-photo-fix-image{margin-bottom:14px!important}}
         `;
         document.head.appendChild(style);
       }
@@ -190,24 +122,17 @@
         grid.className = 'nested-menu-photo cards float-photo-grid';
         kishimenGroup.querySelector('.menu-list')?.before(grid);
       }
-
       [...grid.querySelectorAll('article')].forEach(card => {
         const name = card.querySelector('h3, h4')?.textContent.trim();
         if (name === '海老おろしきしめん' || card.hasAttribute('data-ebi-oroshi-photo')) card.remove();
       });
-
       const card = document.createElement('article');
       card.className = 'card menu-photo-fix-card';
       card.dataset.ebiOroshiPhoto = '';
       card.innerHTML = `
-        <span class="card-photo menu-photo-fix-image">
-          <img src="最新版_えびおろしきしめん.jpeg?v=20261001-4" alt="海老おろしきしめん" loading="lazy" decoding="async" width="1536" height="1024">
-        </span>
-        <h3>海老おろしきしめん</h3>
-        <p class="menu-note">冷・季節限定</p>
-        <p class="dish-price">1,500円</p>`;
+        <span class="card-photo menu-photo-fix-image"><img src="最新版_えびおろしきしめん.jpeg?v=20261001-4" alt="海老おろしきしめん" loading="lazy" decoding="async" width="1536" height="1024"></span>
+        <h3>海老おろしきしめん</h3><p class="menu-note">冷・季節限定</p><p class="dish-price">1,500円</p>`;
       grid.prepend(card);
-
       kishimenGroup.querySelectorAll('.menu-list > div').forEach(row => {
         const name = row.querySelector('dt')?.textContent.trim() || '';
         if (name.startsWith('海老おろしきしめん')) row.remove();
@@ -218,6 +143,7 @@
     const sideGrid = sideGroup?.querySelector('.side-dish-grid');
     if (sideGrid) {
       const sideItems = [
+        { name: 'とり天（3個）', price: '530円', image: 'images/toriten.jpg', key: 'toriten' },
         { name: 'ちくわ磯辺揚げ', price: '480円', image: 'IMG_7539.jpeg', key: 'isobe' },
         { name: 'イカ焼き', price: '800円', image: 'IMG_7542.jpeg', key: 'ikayaki' },
         { name: '焼きナス', price: '480円', image: 'IMG_7551.jpeg', key: 'nasu' },
@@ -231,69 +157,39 @@
         { name: '塩焼き鳥（2本）', price: '480円', image: 'IMG_7571.jpeg', key: 'yakitori' },
         { name: 'カツとじ鍋', price: '900円', image: 'IMG_7575.jpeg', key: 'katsutoji' }
       ];
-
       sideItems.forEach(({ name, price, image, key }) => {
         const existing = [...sideGrid.querySelectorAll('article')].find(card => {
           const title = card.querySelector('h3, h4')?.textContent.trim();
           return title === name || card.dataset.sidePhoto === key;
         });
         if (existing) existing.remove();
-
         const item = document.createElement('article');
         item.className = 'dish-photo-item';
         item.dataset.sidePhoto = key;
-        item.innerHTML = `
-          <span class="dish-photo-link">
-            <img src="${image}?v=20261001-side-3" alt="${name}" loading="lazy" decoding="async" width="1536" height="1024">
-          </span>
-          <h4>${name}</h4>
-          <p class="dish-price">${price}</p>`;
+        item.innerHTML = `<span class="dish-photo-link"><img src="${image}?v=20261001-side-4" alt="${name}" loading="lazy" decoding="async" width="1536" height="1024"></span><h4>${name}</h4><p class="dish-price">${price}</p>`;
         sideGrid.appendChild(item);
       });
-
       if (!sideGrid.querySelector('[data-oebi-single-photo]')) {
         const item = document.createElement('article');
         item.className = 'dish-photo-item';
         item.dataset.oebiSinglePhoto = '';
-        item.innerHTML = `
-          <span class="dish-photo-link portrait">
-            <img src="images/menu-oebi-single.jpg" alt="大エビフライ（一本）" loading="lazy" decoding="async" width="360" height="240">
-          </span>
-          <h4>大エビフライ（一本）</h4>
-          <p class="dish-price">880円</p>`;
+        item.innerHTML = `<span class="dish-photo-link portrait"><img src="images/menu-oebi-single.jpg" alt="大エビフライ（一本）" loading="lazy" decoding="async" width="360" height="240"></span><h4>大エビフライ（一本）</h4><p class="dish-price">880円</p>`;
         sideGrid.appendChild(item);
       }
-
+      sideGroup.querySelectorAll('.menu-list > div').forEach(row => {
+        const text = row.querySelector('dt')?.textContent.replace(/\s+/g, '') || '';
+        if (text.startsWith('とり天')) row.remove();
+      });
       if (!document.querySelector('#side-dish-title-font-fix')) {
         const style = document.createElement('style');
         style.id = 'side-dish-title-font-fix';
-        style.textContent = `
-          #menu .side-dish-grid .dish-photo-item h3,
-          #menu .side-dish-grid .dish-photo-item h4 {
-            font-family: "Noto Serif JP", serif !important;
-            font-weight: 500 !important;
-            letter-spacing: 0 !important;
-          }
-        `;
+        style.textContent = `#menu .side-dish-grid .dish-photo-item h3,#menu .side-dish-grid .dish-photo-item h4{font-family:"Noto Serif JP",serif!important;font-weight:500!important;letter-spacing:0!important;}`;
         document.head.appendChild(style);
       }
-
-      const normalizeSideName = (value = '') => value
-        .normalize('NFKC')
-        .replace(/〈[^〉]*〉/g, '')
-        .replace(/\s+/g, '')
-        .replace(/磯部/g, '磯辺')
-        .trim();
-
-      const photoNames = new Set(
-        [...sideGrid.querySelectorAll('article h3, article h4')]
-          .map(el => normalizeSideName(el.textContent))
-          .filter(Boolean)
-      );
-
+      const normalizeSideName = (value = '') => value.normalize('NFKC').replace(/〈[^〉]*〉/g, '').replace(/\s+/g, '').replace(/磯部/g, '磯辺').trim();
+      const photoNames = new Set([...sideGrid.querySelectorAll('article h3, article h4')].map(el => normalizeSideName(el.textContent)).filter(Boolean));
       sideGroup.querySelectorAll('.menu-list > div').forEach(row => {
-        const dt = row.querySelector('dt');
-        const name = normalizeSideName(dt?.textContent || '');
+        const name = normalizeSideName(row.querySelector('dt')?.textContent || '');
         if (photoNames.has(name)) row.remove();
       });
     }
@@ -307,17 +203,10 @@
       fishCard.appendChild(note);
     }
 
-    const normalizeMenuName = (value = '') => value
-      .normalize('NFKC')
-      .replace(/〈[^〉]*〉/g, '')
-      .replace(/[\u3000\s]+/g, '')
-      .replace(/磯部/g, '磯辺')
-      .trim();
-
+    const normalizeMenuName = (value = '') => value.normalize('NFKC').replace(/〈[^〉]*〉/g, '').replace(/[\u3000\s]+/g, '').replace(/磯部/g, '磯辺').trim();
     menu.querySelectorAll('details.menu-group').forEach(group => {
       const seenCards = new Set();
       const photoNames = new Set();
-
       [...group.querySelectorAll('article')].forEach(card => {
         const title = card.querySelector('h3, h4');
         if (!title) return;
@@ -327,7 +216,6 @@
         seenCards.add(name);
         if (card.querySelector('img')) photoNames.add(name);
       });
-
       const seenRows = new Set();
       group.querySelectorAll('.menu-list > div').forEach(row => {
         const name = normalizeMenuName(row.querySelector('dt')?.textContent || '');
@@ -343,20 +231,15 @@
       wrap.className = 'shop-gallery-arrow-wrap';
       gallery.parentNode.insertBefore(wrap, gallery);
       wrap.appendChild(gallery);
-
       const controls = document.createElement('div');
       controls.className = 'shop-gallery-arrows';
-      controls.innerHTML = `
-        <button type="button" class="shop-gallery-arrow shop-gallery-prev" aria-label="前の写真を見る">◀</button>
-        <button type="button" class="shop-gallery-arrow shop-gallery-next" aria-label="次の写真を見る">▶</button>`;
+      controls.innerHTML = `<button type="button" class="shop-gallery-arrow shop-gallery-prev" aria-label="前の写真を見る">◀</button><button type="button" class="shop-gallery-arrow shop-gallery-next" aria-label="次の写真を見る">▶</button>`;
       wrap.appendChild(controls);
-
       const prev = controls.querySelector('.shop-gallery-prev');
       const next = controls.querySelector('.shop-gallery-next');
       const amount = () => Math.max(gallery.clientWidth * 0.78, 260);
       prev.addEventListener('click', () => gallery.scrollBy({ left: -amount(), behavior: 'smooth' }));
       next.addEventListener('click', () => gallery.scrollBy({ left: amount(), behavior: 'smooth' }));
-
       const updateArrows = () => {
         const max = Math.max(0, gallery.scrollWidth - gallery.clientWidth);
         prev.disabled = gallery.scrollLeft <= 4;
@@ -365,16 +248,9 @@
       gallery.addEventListener('scroll', updateArrows, { passive: true });
       window.addEventListener('resize', updateArrows);
       requestAnimationFrame(updateArrows);
-
       const style = document.createElement('style');
       style.id = 'shop-gallery-arrow-style';
-      style.textContent = `
-        .shop-gallery-arrow-wrap{position:relative}
-        .shop-gallery-arrows{position:absolute;inset:0;pointer-events:none;display:flex;align-items:center;justify-content:space-between;padding:0 8px;z-index:4}
-        .shop-gallery-arrow{pointer-events:auto;width:42px;height:42px;border:0;border-radius:50%;background:rgba(244,240,230,.92);color:#26251f;box-shadow:0 2px 12px rgba(0,0,0,.18);font-size:18px;line-height:1;display:grid;place-items:center;cursor:pointer;backdrop-filter:blur(6px)}
-        .shop-gallery-arrow:disabled{opacity:.28;cursor:default}
-        @media(max-width:760px){.shop-gallery-arrows{padding:0 5px}.shop-gallery-arrow{width:38px;height:38px;font-size:16px}}
-      `;
+      style.textContent = `.shop-gallery-arrow-wrap{position:relative}.shop-gallery-arrows{position:absolute;inset:0;pointer-events:none;display:flex;align-items:center;justify-content:space-between;padding:0 8px;z-index:4}.shop-gallery-arrow{pointer-events:auto;width:42px;height:42px;border:0;border-radius:50%;background:rgba(244,240,230,.92);color:#26251f;box-shadow:0 2px 12px rgba(0,0,0,.18);font-size:18px;line-height:1;display:grid;place-items:center;cursor:pointer;backdrop-filter:blur(6px)}.shop-gallery-arrow:disabled{opacity:.28;cursor:default}@media(max-width:760px){.shop-gallery-arrows{padding:0 5px}.shop-gallery-arrow{width:38px;height:38px;font-size:16px}}`;
       document.head.appendChild(style);
     }
   };
