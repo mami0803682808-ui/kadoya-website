@@ -1,0 +1,74 @@
+name: Fix desktop hours anchor
+
+on:
+  push:
+    paths:
+      - '.github/workflows/fix-desktop-hours-anchor.yml'
+
+permissions:
+  contents: write
+
+jobs:
+  fix:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Fix desktop hours scroll target
+        shell: bash
+        run: |
+          python3 - <<'PY'
+          from pathlib import Path
+          p = Path('script.js')
+          s = p.read_text(encoding='utf-8')
+          old = """    const hoursTarget = document.querySelector('#hours');
+    const hoursDockLink = document.querySelector('.mobile-dock a[href=\"#hours\"]');
+    if (hoursTarget) {
+      hoursTarget.style.scrollMarginTop = '120px';
+    }
+    if (hoursTarget && hoursDockLink) {
+      hoursDockLink.addEventListener('click', event => {
+        event.preventDefault();
+        const header = document.querySelector('.header');
+        const headerHeight = header?.getBoundingClientRect().height || 92;
+        const targetTop = hoursTarget.getBoundingClientRect().top + window.scrollY - headerHeight - 16;
+        history.replaceState(null, '', '#hours');
+        window.scrollTo({ top: Math.max(0, targetTop), behavior: 'smooth' });
+      });
+    }
+"""
+          new = """    const hoursTarget = document.querySelector('#hours');
+    const hoursDockLink = document.querySelector('.mobile-dock a[href=\"#hours\"]');
+    if (hoursTarget) {
+      hoursTarget.style.scrollMarginTop = window.matchMedia('(min-width: 761px)').matches ? '24px' : '88px';
+    }
+    if (hoursTarget && hoursDockLink) {
+      hoursDockLink.addEventListener('click', event => {
+        event.preventDefault();
+        const isDesktop = window.matchMedia('(min-width: 761px)').matches;
+        const header = document.querySelector('.header');
+        const headerOffset = isDesktop ? 24 : (header?.getBoundingClientRect().height || 64) + 16;
+        const targetTop = hoursTarget.getBoundingClientRect().top + window.scrollY - headerOffset;
+        history.replaceState(null, '', '#hours');
+        window.scrollTo({ top: Math.max(0, targetTop), behavior: 'smooth' });
+      });
+    }
+"""
+          if old not in s:
+              raise SystemExit('hours anchor block not found; aborting without changes')
+          p.write_text(s.replace(old, new, 1), encoding='utf-8')
+
+          index = Path('index.html')
+          h = index.read_text(encoding='utf-8')
+          import re
+          h = re.sub(r'<script defer src="script\.js(?:\?v=[^"]+)?"></script>', '<script defer src="script.js?v=20261001-2201"></script>', h, count=1)
+          index.write_text(h, encoding='utf-8')
+          PY
+      - name: Commit fix
+        shell: bash
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add script.js index.html
+          git diff --cached --quiet && exit 0
+          git commit -m "Fix desktop hours navigation target"
+          git push
