@@ -1226,3 +1226,15 @@ body .opening-new,body:not(.desktop-rail-ready) .opening-new,body.desktop-rail-r
   object-position:center 68%!important;
   background:transparent!important;
 }
+
+
+/* Opening logo reliability: Safari can fail to render the nested SVG image mask. */
+.scroll-ready .arrival-mark{
+  width:70px!important;
+  height:210px!important;
+  background:url("images/kadoya-logo.png") center/contain no-repeat!important;
+}
+.scroll-ready .arrival-mark svg.vertical-mark{opacity:0!important}
+@media(min-width:761px){
+  .scroll-ready .arrival-mark{width:77px!important;height:231px!important}
+}
