@@ -32,3 +32,5 @@ jobs:
           git add index.html
           git commit -m "Refine about section welcome copy"
           git push
+
+# retrigger
