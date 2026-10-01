@@ -263,10 +263,10 @@ configureReveals();
 document.querySelectorAll('.craft-art').forEach(element => element.remove());
 
 
-// Morning menu: stagger cards into view as the section enters the viewport.
+// Morning menu: keep the existing mobile scroll reveal. Desktop is handled when the Morning tab opens.
 (() => {
   const cards = [...document.querySelectorAll('.morning-sets .morning-set')];
-  if (!cards.length || window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+  if (!cards.length || window.innerWidth > 760 || window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
   const observer = new IntersectionObserver((entries) => {
     entries.forEach((entry) => {
       if (!entry.isIntersecting) return;
@@ -320,6 +320,19 @@ document.querySelectorAll('.craft-art').forEach(element => element.remove());
    let activePanel=null;
    panels.forEach(p=>{ const active=p.dataset.menuPanel===key; p.hidden=!active; if(active) activePanel=p; });
    if(key==='set') activePanel?.querySelector('details.menu-group')?.setAttribute('open','');
+   if(key==='morning' && activePanel && window.innerWidth > 760 && !reduceMotion.matches){
+     const cards=[...activePanel.querySelectorAll('.morning-set')];
+     cards.forEach(card=>{
+       card.classList.remove('morning-in','motion-pending','motion-revealed');
+       card.style.transitionDelay='0ms';
+     });
+     requestAnimationFrame(()=>requestAnimationFrame(()=>{
+       cards.forEach((card,index)=>{
+         card.style.transitionDelay=`${index * 115}ms`;
+         card.classList.add('morning-in');
+       });
+     }));
+   }
    if(scrollToPanel && activePanel){
      requestAnimationFrame(()=>{
        const tabsBar=menu.querySelector('.menu-tabs');
