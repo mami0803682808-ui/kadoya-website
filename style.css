@@ -124,6 +124,32 @@
 /* Do not crop the daily fish photo unnaturally; frame stays identical. */
 #fish-set-photo img{object-fit:contain!important;background:#eee9df!important}
 
+/* Store gallery: arrow taps and swipes settle cleanly on one photo. */
+#shop .shop-gallery-scroll{
+  overflow-x:auto!important;
+  overflow-y:hidden!important;
+  scroll-behavior:smooth!important;
+  scroll-snap-type:x mandatory!important;
+  -webkit-overflow-scrolling:touch!important;
+  touch-action:pan-x!important;
+}
+#shop .shop-gallery-scroll>figure{
+  scroll-snap-align:start!important;
+  scroll-snap-stop:always!important;
+}
+#shop .shop-gallery-arrow-wrap{
+  position:relative!important;
+}
+#shop .shop-gallery-arrows{
+  z-index:20!important;
+  pointer-events:none!important;
+}
+#shop .shop-gallery-arrow{
+  pointer-events:auto!important;
+  touch-action:manipulation!important;
+  -webkit-tap-highlight-color:transparent!important;
+}
+
 /* Mobile: same 2-column rhythm used across every product gallery. */
 @media(max-width:760px){
   #menu .cards,
