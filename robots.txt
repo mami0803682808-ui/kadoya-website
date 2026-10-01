@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://komaki-kadoya.com/sitemap.xml
