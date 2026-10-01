@@ -1,0 +1,34 @@
+name: Remove duplicate miso menu entries
+on:
+  push:
+    paths:
+      - '.github/workflows/remove-miso-duplicates.yml'
+permissions:
+  contents: write
+jobs:
+  fix:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Remove duplicated text-list entries already shown as photo cards
+        run: |
+          python - <<'PY'
+          from pathlib import Path
+          p=Path('index.html')
+          s=p.read_text(encoding='utf-8')
+          for old in [
+            '<div><dt>味噌煮込みきしめん</dt><dd>1,150円</dd></div>',
+            '<div><dt>デラックス味噌煮込みきしめん（えび天・お餅入り）</dt><dd>1,550円</dd></div>',
+            '<div><dt>えび天入り味噌煮込みきしめん</dt><dd>1,400円</dd></div>',
+          ]:
+            s=s.replace(old,'')
+          p.write_text(s,encoding='utf-8')
+          PY
+      - name: Commit fix
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add index.html
+          git diff --cached --quiet && exit 0
+          git commit -m 'Remove duplicate miso nikomi menu entries'
+          git push
