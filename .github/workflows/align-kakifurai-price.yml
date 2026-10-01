@@ -1,0 +1,53 @@
+name: Align kakifurai price
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - '.github/workflows/align-kakifurai-price.yml'
+
+permissions:
+  contents: write
+
+jobs:
+  fix:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Align kakifurai card price
+        run: |
+          cat >> style.css <<'EOF'
+
+/* 2026-10-01: align Kakifurai set-meal price with neighboring cards on mobile */
+@media(max-width:760px){
+  #kakifurai-teishoku-photo{
+    display:flex!important;
+    flex-direction:column!important;
+  }
+  #kakifurai-teishoku-photo .card-photo{order:0!important}
+  #kakifurai-teishoku-photo h3{order:1!important}
+  #kakifurai-teishoku-photo .dish-price{
+    order:2!important;
+    margin-top:0!important;
+    margin-bottom:0!important;
+  }
+  #kakifurai-teishoku-photo .menu-note{
+    order:3!important;
+    margin-top:10px!important;
+  }
+}
+EOF
+          python - <<'PY'
+from pathlib import Path
+p=Path('index.html')
+s=p.read_text()
+s=s.replace('style.css?v=20261001-1520','style.css?v=20261001-2105')
+p.write_text(s)
+PY
+      - name: Commit
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add style.css index.html
+          git commit -m 'Align kakifurai set meal price on mobile' || exit 0
+          git push
