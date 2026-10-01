@@ -44,24 +44,23 @@
         style.textContent = `
           #menu .tempura-feature-info .summer-tempura-title-fix {
             font-family: "Noto Serif JP", serif !important;
+            font-size: 14px !important;
             font-weight: 500 !important;
             letter-spacing: 0 !important;
-            line-height: 1.5 !important;
+            line-height: 1.35 !important;
             margin: 8px 0 2px !important;
           }
           #menu .tempura-feature-info .summer-tempura-price-fix {
-            font-size: 22px !important;
+            font-size: 14px !important;
             font-weight: 600 !important;
             color: #6f3d24 !important;
-            line-height: 1.5 !important;
-            margin: 12px 0 !important;
+            line-height: 1.35 !important;
+            margin: 0 !important;
           }
           @media (max-width: 760px) {
-            #menu .tempura-feature-info .summer-tempura-title-fix {
-              font-size: 19px !important;
-            }
+            #menu .tempura-feature-info .summer-tempura-title-fix,
             #menu .tempura-feature-info .summer-tempura-price-fix {
-              font-size: 22px !important;
+              font-size: 12px !important;
             }
           }
         `;
