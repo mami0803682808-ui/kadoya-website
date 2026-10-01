@@ -134,6 +134,10 @@
             max-width: none !important;
             margin: 0 !important;
           }
+          #menu [data-menu-photo-fix="kids-kishimen"] .menu-photo-fix-image img {
+            transform: scale(1.24) !important;
+            transform-origin: center center !important;
+          }
           #menu .menu-photo-fix-card h3,
           #menu .menu-photo-fix-card .dish-price,
           #menu .menu-photo-fix-card .menu-note {
@@ -319,7 +323,6 @@
       });
     });
 
-    // Make horizontally scrollable shop photos obvious with left/right controls.
     const gallery = document.querySelector('#shop .shop-gallery-scroll');
     if (gallery && !gallery.parentElement?.querySelector('.shop-gallery-arrows')) {
       const wrap = document.createElement('div');
