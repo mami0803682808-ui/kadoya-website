@@ -1,0 +1,34 @@
+name: Update about copy
+
+on:
+  push:
+    paths:
+      - '.github/workflows/update-about-copy.yml'
+
+permissions:
+  contents: write
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Update requested sentence
+        run: |
+          python - <<'PY'
+          from pathlib import Path
+          p = Path('index.html')
+          s = p.read_text(encoding='utf-8')
+          old = '黒竹をあしらった、落ち着きのある店内。カウンター席で気軽にひとりごはんも、お座敷でご家族やご友人との食事も。普段使いから、みんなで囲む食卓まで、思い思いにお過ごしいただけます。'
+          new = '黒竹をあしらった、落ち着きのある店内。カウンター席で気軽にひとりごはんも、お座敷でご家族やご友人との食事も。心もお腹も満たされる時間をお過ごしいただけるよう、皆さまをお迎えする準備を整えております。どうぞゆっくりおくつろぎください。'
+          if old not in s:
+              raise SystemExit('Target sentence not found')
+          p.write_text(s.replace(old, new, 1), encoding='utf-8')
+          PY
+      - name: Commit change
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add index.html
+          git commit -m "Refine about section welcome copy"
+          git push
