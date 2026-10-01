@@ -1409,3 +1409,18 @@ body .opening-new,body:not(.desktop-rail-ready) .opening-new,body.desktop-rail-r
     white-space:nowrap!important;
   }
 }
+
+
+/* 2026-10-01 mobile: align Matsutake Dobinmushi / mushroom tempura titles */
+@media(max-width:760px){
+  #menu [data-menu-panel="season"] .card h3,
+  #menu [data-menu-panel="season"] .card h4{
+    margin-top:10px!important;
+    margin-bottom:0!important;
+    padding:0!important;
+    min-height:2.9em!important;
+    display:flex!important;
+    align-items:flex-start!important;
+    line-height:1.45!important;
+  }
+}
