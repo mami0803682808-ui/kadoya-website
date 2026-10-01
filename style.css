@@ -1318,3 +1318,16 @@ body .opening-new,body:not(.desktop-rail-ready) .opening-new,body.desktop-rail-r
  filter:sepia(.35) saturate(.85) brightness(1.12)!important;
 }
 @media(min-width:761px){.opening-gold-logo-img{width:77px!important;height:231px!important}}
+
+
+/* Emergency iPhone opening fix: never let the intro trap the page. */
+@media(max-width:760px){
+  .opening-new.scroll-ready{height:155svh!important;}
+  .opening-new.scroll-ready .opening-stage{position:sticky!important;top:0!important;height:100svh!important;}
+  .scroll-ready .arrival-signature{
+    -webkit-mask-image:none!important;
+    mask-image:none!important;
+    opacity:var(--signature-opacity,1)!important;
+  }
+  .opening-gold-logo-img{display:block!important;opacity:1!important;visibility:visible!important;}
+}
