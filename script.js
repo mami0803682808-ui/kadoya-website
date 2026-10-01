@@ -509,19 +509,3 @@
   core.onerror = () => console.error('script-base.js could not be loaded');
   document.head.appendChild(core);
 })();
-
-/* Clean tracking parameters from the visible URL. */
-(() => {
-  const url = new URL(window.location.href);
-  const removable = [...url.searchParams.keys()].filter((key) =>
-    key.toLowerCase().startsWith('utm_') ||
-    ['gclid', 'fbclid', 'msclkid'].includes(key.toLowerCase())
-  );
-  if (!removable.length) return;
-  removable.forEach((key) => url.searchParams.delete(key));
-  const cleanUrl = url.pathname + (url.search ? url.search : '') + url.hash;
-  window.history.replaceState({}, document.title, cleanUrl);
-})();
-
-
-/* Mobile header behavior is handled by script-base.js. */
