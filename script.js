@@ -155,7 +155,9 @@
         { name: '焼きナス', price: '480円', image: 'IMG_7551.jpeg', key: 'nasu' },
         { name: 'フライドポテト', price: '480円', image: 'IMG_7553.jpeg', key: 'potato' },
         { name: '牛すじどて煮', price: '530円', image: 'IMG_7555.jpeg', key: 'doteni' },
-        { name: 'もずく酢', price: '350円', image: 'IMG_7568.jpeg', key: 'mozuku' }
+        { name: 'もずく酢', price: '350円', image: 'IMG_7568.jpeg', key: 'mozuku' },
+        { name: '梅くらげ', price: '350円', image: 'IMG_7530.jpeg', key: 'umekurage' },
+        { name: '枝豆', price: '380円', image: 'IMG_7565.jpeg', key: 'edamame' }
       ];
 
       sideItems.forEach(({ name, price, image, key }) => {
@@ -170,7 +172,7 @@
         item.dataset.sidePhoto = key;
         item.innerHTML = `
           <span class="dish-photo-link">
-            <img src="${image}?v=20261001-side-1" alt="${name}" loading="lazy" decoding="async" width="1536" height="1024">
+            <img src="${image}?v=20261001-side-2" alt="${name}" loading="lazy" decoding="async" width="1536" height="1024">
           </span>
           <h4>${name}</h4>
           <p class="dish-price">${price}</p>`;
