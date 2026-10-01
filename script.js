@@ -7,6 +7,22 @@
     const menu = document.querySelector('#menu');
     if (!menu) return;
 
+    const hoursTarget = document.querySelector('#hours');
+    const hoursDockLink = document.querySelector('.mobile-dock a[href="#hours"]');
+    if (hoursTarget) {
+      hoursTarget.style.scrollMarginTop = '120px';
+    }
+    if (hoursTarget && hoursDockLink) {
+      hoursDockLink.addEventListener('click', event => {
+        event.preventDefault();
+        const header = document.querySelector('.header');
+        const headerHeight = header?.getBoundingClientRect().height || 92;
+        const targetTop = hoursTarget.getBoundingClientRect().top + window.scrollY - headerHeight - 16;
+        history.replaceState(null, '', '#hours');
+        window.scrollTo({ top: Math.max(0, targetTop), behavior: 'smooth' });
+      });
+    }
+
     const beerBrands = menu.querySelector('.beer-brands');
     if (beerBrands) {
       beerBrands.textContent = 'アサヒスーパードライ・キリンラガー・キリンクラシックラガー・サッポロラガー';
