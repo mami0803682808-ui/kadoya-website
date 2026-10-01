@@ -1238,3 +1238,20 @@ body .opening-new,body:not(.desktop-rail-ready) .opening-new,body.desktop-rail-r
 @media(min-width:761px){
   .scroll-ready .arrival-mark{width:77px!important;height:231px!important}
 }
+
+
+/* FINAL mobile smart-header override: direction classes must beat opening visibility rules. */
+@media (max-width:760px){
+  .header.header-hidden{
+    transform:translateY(-110%)!important;
+    opacity:0!important;
+    visibility:hidden!important;
+    pointer-events:none!important;
+  }
+  .header.header-visible{
+    transform:translateY(0)!important;
+    opacity:1!important;
+    visibility:visible!important;
+    pointer-events:auto!important;
+  }
+}
