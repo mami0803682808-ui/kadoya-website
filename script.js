@@ -109,6 +109,12 @@
         <p class="dish-price">680円</p>`;
       autumnCards.appendChild(card);
     }
+    if (!document.querySelector('#kinoko-tempura-desktop-align')) {
+      const style = document.createElement('style');
+      style.id = 'kinoko-tempura-desktop-align';
+      style.textContent = `@media (min-width:761px){#autumn-menu [data-kinoko-tempura-autumn]{transform:translateY(-8px)!important;}}`;
+      document.head.appendChild(style);
+    }
 
     const donGroup = findGroup('丼もの・お子様メニュー');
     if (donGroup) {
