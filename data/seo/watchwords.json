@@ -1,0 +1,26 @@
+[
+  {
+    "keyword": "角屋 小牧",
+    "targetPath": "/",
+    "priority": "high",
+    "status": "active"
+  },
+  {
+    "keyword": "小牧 きしめん",
+    "targetPath": "/",
+    "priority": "high",
+    "status": "active"
+  },
+  {
+    "keyword": "小牧 定食",
+    "targetPath": "/",
+    "priority": "medium",
+    "status": "active"
+  },
+  {
+    "keyword": "小牧 モーニング",
+    "targetPath": "/",
+    "priority": "medium",
+    "status": "active"
+  }
+]
