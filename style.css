@@ -1310,3 +1310,19 @@ body .opening-new,body:not(.desktop-rail-ready) .opening-new,body.desktop-rail-r
     white-space:normal!important;
   }
 }
+
+
+/* 2026-10-01 menu photo-card price typography */
+#menu .card .dish-price,
+#menu .dish-photo-item .dish-price,
+#menu .morning-set-card .dish-price{
+  font-size:13px!important;
+  line-height:1.5!important;
+}
+@media(max-width:760px){
+  #menu .card .dish-price,
+  #menu .dish-photo-item .dish-price,
+  #menu .morning-set-card .dish-price{
+    font-size:12px!important;
+  }
+}
