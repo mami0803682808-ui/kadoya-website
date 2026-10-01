@@ -36,13 +36,13 @@ function updateOpening() {
   opening.style.setProperty('--signature-opacity', 1 - fade);
   opening.style.setProperty('--signature-wipe', (135 - fade * 170) + '%');
   opening.style.setProperty('--signature-y', reduceMotion.matches ? '0px' : (-progress * 14) + 'px');
-  const copyOpacity = smooth((progress - .80) / .16);
+  const copyOpacity = smooth((progress - .38) / .22);
   opening.style.setProperty('--copy-opacity', copyOpacity);
   document.documentElement.classList.toggle('opening-copy-visible', copyOpacity >= .995);
   opening.style.setProperty('--cue-opacity', 1 - smooth(progress / .2));
   const copy = opening.querySelector('.opening-copy');
-  copy.inert = progress < .70;
-  copy.style.visibility = progress < .64 ? 'hidden' : 'visible';
+  copy.inert = progress < .32;
+  copy.style.visibility = progress < .28 ? 'hidden' : 'visible';
   header.classList.toggle('over-opening', opening.getBoundingClientRect().bottom > header.offsetHeight);
   return;
  }
