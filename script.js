@@ -45,26 +45,40 @@
         const style = document.createElement('style');
         style.id = 'summer-tempura-style-fix';
         style.textContent = `
+          #menu .tempura-feature-info {
+            display: block !important;
+            margin-top: 0 !important;
+          }
           #menu .tempura-feature-info .summer-tempura-title-fix {
             font-family: "Noto Serif JP", serif !important;
-            font-size: 14px !important;
-            font-weight: 500 !important;
+            font-size: 23px !important;
+            font-weight: 600 !important;
             letter-spacing: 0 !important;
-            line-height: 1.35 !important;
-            margin: 8px 0 2px !important;
+            line-height: 1.45 !important;
+            margin: 4px 0 0 !important;
+          }
+          #menu .tempura-feature-info .summer-tempura-title-fix small {
+            font-family: "Noto Serif JP", serif !important;
+            font-size: 13px !important;
+            font-weight: 400 !important;
+            line-height: 1.6 !important;
           }
           #menu .tempura-feature-info .summer-tempura-price-fix {
-            font-size: 14px !important;
+            display: block !important;
+            position: static !important;
+            width: auto !important;
+            text-align: left !important;
+            white-space: normal !important;
+            font-family: "Zen Kaku Gothic New", sans-serif !important;
+            font-size: 22px !important;
             font-weight: 600 !important;
             color: #6f3d24 !important;
-            line-height: 1.35 !important;
-            margin: 0 !important;
+            line-height: 1.2 !important;
+            margin: 12px 0 0 !important;
           }
           @media (max-width: 760px) {
-            #menu .tempura-feature-info .summer-tempura-title-fix,
-            #menu .tempura-feature-info .summer-tempura-price-fix {
-              font-size: 12px !important;
-            }
+            #menu .tempura-feature-info .summer-tempura-title-fix { font-size: 23px !important; }
+            #menu .tempura-feature-info .summer-tempura-price-fix { font-size: 22px !important; }
           }
         `;
         document.head.appendChild(style);
