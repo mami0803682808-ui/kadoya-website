@@ -27,12 +27,12 @@ jobs:
         shell: bash
         run: |
           set -e
-          convert images/kadoya-logo.png -crop 565x565+95+95 +repage -resize 512x512 favicon.png
+          convert images/kadoya-logo.png -crop 565x565+95+95 +repage -resize 512x512 -channel RGB -fill '#D6B25E' -colorize 100% -background '#111111' -alpha background -flatten favicon.png
           python3 - <<'PY'
           from pathlib import Path
           p = Path('index.html')
           s = p.read_text(encoding='utf-8')
-          tag = '<link rel="icon" type="image/png" href="favicon.png?v=20261001">'
+          tag = '<link rel="icon" type="image/png" href="favicon.png?v=20261001-gold">'
           if 'rel="icon"' not in s:
               s = s.replace('<title>角屋｜小牧の和食麺処</title>', '<title>角屋｜小牧の和食麺処</title>\n' + tag, 1)
           p.write_text(s, encoding='utf-8')
