@@ -1424,3 +1424,29 @@ body .opening-new,body:not(.desktop-rail-ready) .opening-new,body.desktop-rail-r
     line-height:1.45!important;
   }
 }
+
+/* 2026-10-01 20:37 definitive mobile Matsutake title visibility fix */
+@media(max-width:760px){
+  #autumn-menu .matsutake-gozen-name{
+    display:block!important;
+    width:100%!important;
+    max-width:100%!important;
+    min-width:0!important;
+    height:auto!important;
+    min-height:3.1em!important;
+    overflow:visible!important;
+    white-space:normal!important;
+    font-size:14px!important;
+    line-height:1.5!important;
+    margin:8px 0!important;
+  }
+  #autumn-menu .matsutake-gozen-name .matsutake-line{
+    display:block!important;
+    width:100%!important;
+    max-width:100%!important;
+    white-space:normal!important;
+    overflow:visible!important;
+    overflow-wrap:anywhere!important;
+    word-break:normal!important;
+  }
+}
