@@ -1451,3 +1451,17 @@ body .opening-new,body:not(.desktop-rail-ready) .opening-new,body.desktop-rail-r
   }
 }
 \n\n/* 2026-10-01 20:41 definitive Matsutake mobile wrapping fix */\n@media(max-width:760px){\n  #menu #autumn-menu .card .matsutake-gozen-name{\n    display:block!important;\n    width:100%!important;\n    max-width:100%!important;\n    min-width:0!important;\n    height:auto!important;\n    min-height:0!important;\n    margin:10px 0 0!important;\n    padding:0!important;\n    font-size:14px!important;\n    line-height:1.55!important;\n    letter-spacing:0!important;\n    white-space:normal!important;\n    word-break:normal!important;\n    overflow-wrap:break-word!important;\n    overflow:visible!important;\n    text-align:left!important;\n  }\n  #menu #autumn-menu .card .matsutake-gozen-name .matsutake-line{\n    display:inline!important;\n    width:auto!important;\n    white-space:normal!important;\n  }\n}\n
+
+/* 2026-10-01: keep tofu dote katsu photo aligned with side-dish cards */
+#menu .side-dish-grid .dish-photo-item img[src*="IMG_7839"]{
+  width:100%!important;
+  aspect-ratio:3/2!important;
+  height:auto!important;
+  object-fit:cover!important;
+  object-position:center!important;
+}
+@media(max-width:760px){
+  #menu .side-dish-grid .dish-photo-item img[src*="IMG_7839"]{
+    aspect-ratio:3/2!important;
+  }
+}
