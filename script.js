@@ -98,7 +98,7 @@
     const autumnCards = autumnMenu?.querySelector('.cards');
     if (autumnCards && !autumnCards.querySelector('[data-kinoko-tempura-autumn]')) {
       const card = document.createElement('article');
-      card.className = 'card reveal';
+      card.className = 'card';
       card.dataset.kinokoTempuraAutumn = '';
       card.innerHTML = `
         <a class="card-photo" href="images/kinoko-tempura.jpg" target="_blank" rel="noopener">
@@ -112,7 +112,42 @@
     if (!document.querySelector('#kinoko-tempura-align')) {
       const style = document.createElement('style');
       style.id = 'kinoko-tempura-align';
-      style.textContent = `#autumn-menu [data-kinoko-tempura-autumn]{position:relative!important;transform:translateY(-8px)!important;}`;
+      style.textContent = `
+        #autumn-menu [data-kinoko-tempura-autumn] {
+          position:static!important;
+          transform:none!important;
+          margin:0!important;
+          padding:0!important;
+        }
+        #autumn-menu [data-kinoko-tempura-autumn] > .card-photo {
+          display:block!important;
+          width:100%!important;
+          aspect-ratio:4/3!important;
+          overflow:hidden!important;
+          margin:0 0 14px!important;
+          padding:0!important;
+        }
+        #autumn-menu [data-kinoko-tempura-autumn] > .card-photo img {
+          display:block!important;
+          width:100%!important;
+          height:100%!important;
+          aspect-ratio:4/3!important;
+          object-fit:cover!important;
+          object-position:center!important;
+          margin:0!important;
+          padding:0!important;
+        }
+        #autumn-menu [data-kinoko-tempura-autumn] > h3 {
+          position:static!important;
+          margin:0 0 8px!important;
+          padding:0!important;
+          transform:none!important;
+        }
+        @media(max-width:760px){
+          #autumn-menu [data-kinoko-tempura-autumn] > .card-photo {margin-bottom:10px!important;}
+          #autumn-menu [data-kinoko-tempura-autumn] > h3 {margin:0 0 6px!important;}
+        }
+      `;
       document.head.appendChild(style);
     }
 
