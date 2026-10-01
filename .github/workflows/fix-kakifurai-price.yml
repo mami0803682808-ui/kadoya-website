@@ -1,0 +1,32 @@
+name: Fix kakifurai price
+on:
+  push:
+    paths:
+      - '.github/workflows/fix-kakifurai-price.yml'
+jobs:
+  fix:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@v4
+      - name: Add price to kakifurai set card
+        run: |
+          python - <<'PY'
+          from pathlib import Path
+          p=Path('index.html')
+          s=p.read_text()
+          old='<h3>カキフライ定食</h3><p class="menu-note">10月〜4月限定</p></article>'
+          new='<h3>カキフライ定食</h3><p class="menu-note">10月〜4月限定</p><p class="dish-price">1,890円</p></article>'
+          if old not in s:
+              raise SystemExit('target not found')
+          s=s.replace(old,new,1)
+          p.write_text(s)
+          PY
+      - name: Commit
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add index.html
+          git commit -m 'Add kakifurai set price' || exit 0
+          git push
