@@ -243,7 +243,6 @@
             row-gap: 48px !important;
             align-items: start !important;
           }
-
           #menu .card,
           #menu .dish-photo-item,
           #menu .menu-photo-fix-card {
@@ -253,7 +252,6 @@
             flex-direction: column !important;
             align-items: stretch !important;
           }
-
           #menu .card > .card-photo,
           #menu .card > .menu-photo-fix-image,
           #menu .card > img,
@@ -269,7 +267,6 @@
             padding: 0 !important;
             background: transparent !important;
           }
-
           #menu .card > .card-photo img,
           #menu .card > .menu-photo-fix-image img,
           #menu .card > img,
@@ -285,7 +282,6 @@
             margin: 0 !important;
             padding: 0 !important;
           }
-
           #menu .card h3,
           #menu .card h4,
           #menu .dish-photo-item h3,
@@ -306,7 +302,6 @@
             text-align: left !important;
             transform: none !important;
           }
-
           #menu .card .dish-price,
           #menu .dish-photo-item .dish-price,
           #menu .menu-photo-fix-card .dish-price {
@@ -324,24 +319,19 @@
             white-space: normal !important;
             transform: none !important;
           }
-
           #menu .card .menu-note,
           #menu .dish-photo-item .menu-note,
           #menu .menu-photo-fix-card .menu-note {
             width: 100% !important;
             margin: 0 0 8px !important;
           }
-
           #morning-menu .morning-sets {
             display: grid !important;
             grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
             gap: 26px !important;
             align-items: start !important;
           }
-          #morning-menu .morning-set {
-            min-width: 0 !important;
-            width: 100% !important;
-          }
+          #morning-menu .morning-set { min-width: 0 !important; width: 100% !important; }
           #morning-menu .morning-set-photo {
             display: block !important;
             width: 100% !important;
@@ -375,6 +365,97 @@
             line-height: 1.2 !important;
             color: #6f3d24 !important;
             text-align: left !important;
+          }
+        }
+      `;
+      document.head.appendChild(style);
+    }
+
+    if (!document.querySelector('#mobile-menu-unify-style')) {
+      const style = document.createElement('style');
+      style.id = 'mobile-menu-unify-style';
+      style.textContent = `
+        @media (max-width: 760px) {
+          #menu .cards,
+          #menu .dish-photo-grid,
+          #menu .nested-set-photos,
+          #menu .nested-menu-photo,
+          #menu .float-photo-grid,
+          #menu .summer-photo-grid,
+          #menu .side-dish-grid {
+            display: grid !important;
+            grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+            gap: 14px !important;
+            row-gap: 28px !important;
+            align-items: start !important;
+          }
+          #menu .card,
+          #menu .dish-photo-item,
+          #menu .menu-photo-fix-card {
+            min-width: 0 !important;
+            width: 100% !important;
+            margin: 0 !important;
+            display: flex !important;
+            flex-direction: column !important;
+            align-items: stretch !important;
+          }
+          #menu .card > .card-photo,
+          #menu .card > .menu-photo-fix-image,
+          #menu .card > img,
+          #menu .dish-photo-item > .dish-photo-link,
+          #menu .dish-photo-item > .card-photo,
+          #menu .dish-photo-item > img {
+            display: block !important;
+            width: 100% !important;
+            height: auto !important;
+            aspect-ratio: 4 / 3 !important;
+            overflow: hidden !important;
+            margin: 0 0 10px !important;
+            padding: 0 !important;
+            background: transparent !important;
+          }
+          #menu .card > .card-photo img,
+          #menu .card > .menu-photo-fix-image img,
+          #menu .card > img,
+          #menu .dish-photo-item > .dish-photo-link img,
+          #menu .dish-photo-item > .card-photo img,
+          #menu .dish-photo-item > img {
+            display: block !important;
+            width: 100% !important;
+            height: 100% !important;
+            aspect-ratio: 4 / 3 !important;
+            object-fit: cover !important;
+            margin: 0 !important;
+            padding: 0 !important;
+          }
+          #menu .card h3,
+          #menu .card h4,
+          #menu .dish-photo-item h3,
+          #menu .dish-photo-item h4,
+          #menu .menu-photo-fix-card h3,
+          #menu .menu-photo-fix-card h4 {
+            min-height: 2.8em !important;
+            margin: 0 0 6px !important;
+            font-size: 16px !important;
+            line-height: 1.4 !important;
+            text-align: left !important;
+          }
+          #menu .card .dish-price,
+          #menu .dish-photo-item .dish-price,
+          #menu .menu-photo-fix-card .dish-price {
+            margin: 6px 0 0 !important;
+            font-size: 16px !important;
+            line-height: 1.2 !important;
+            text-align: left !important;
+          }
+          #menu .card .menu-note,
+          #menu .dish-photo-item .menu-note,
+          #menu .menu-photo-fix-card .menu-note {
+            width: 100% !important;
+            margin: 0 0 6px !important;
+            padding: 10px 12px !important;
+            font-size: 11px !important;
+            line-height: 1.6 !important;
           }
         }
       `;
