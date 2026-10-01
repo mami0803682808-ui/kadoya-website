@@ -7,7 +7,6 @@
     const menu = document.querySelector('#menu');
     if (!menu) return;
 
-    // Replace the existing Tanagata Tanuki Kishimen photo while preserving its current card, title and price styling.
     const tanagata = menu.querySelector('img[alt="田縣たぬききしめん"]');
     if (tanagata) {
       tanagata.src = 'images/menu-tanagata-tanuki-new.jpg';
@@ -22,7 +21,6 @@
       return (summary?.textContent || '').trim().includes(label);
     });
 
-    // Rebuild the donburi/kids photo cards using the newest uploaded photos.
     const donGroup = findGroup('丼もの・お子様メニュー');
     if (donGroup) {
       let grid = donGroup.querySelector('.nested-menu-photo.cards, .float-photo-grid.cards');
@@ -33,7 +31,6 @@
       }
 
       const targets = new Set(['親子丼', '鉄火丼', 'ネギトロ丼', '牛どて丼', 'お子様きしめん']);
-
       [...grid.querySelectorAll('article')].forEach(card => {
         const name = card.querySelector('h3, h4')?.textContent.trim();
         if (targets.has(name) || card.hasAttribute('data-menu-photo-fix')) card.remove();
@@ -53,7 +50,7 @@
         card.dataset.menuPhotoFix = key;
         card.innerHTML = `
           <span class="card-photo menu-photo-fix-image">
-            <img src="${image}?v=20261001-3" alt="${name}" loading="lazy" decoding="async" width="1536" height="1024">
+            <img src="${image}?v=20261001-4" alt="${name}" loading="lazy" decoding="async" width="1536" height="1024">
           </span>
           <h3>${name}</h3>
           <p class="dish-price">${price}</p>`;
@@ -114,7 +111,6 @@
       }
     }
 
-    // Add the newly uploaded Ebi Oroshi Kishimen photo to the kishimen section.
     const kishimenGroup = [...menu.querySelectorAll('details.menu-group')].find(group => {
       const summary = group.querySelector('summary');
       return (summary?.textContent || '').trim() === 'きしめん';
@@ -137,7 +133,7 @@
       card.dataset.ebiOroshiPhoto = '';
       card.innerHTML = `
         <span class="card-photo menu-photo-fix-image">
-          <img src="最新版_えびおろしきしめん.jpeg?v=20261001-3" alt="海老おろしきしめん" loading="lazy" decoding="async" width="1536" height="1024">
+          <img src="最新版_えびおろしきしめん.jpeg?v=20261001-4" alt="海老おろしきしめん" loading="lazy" decoding="async" width="1536" height="1024">
         </span>
         <h3>海老おろしきしめん</h3>
         <p class="menu-note">冷・季節限定</p>
@@ -150,19 +146,68 @@
       });
     }
 
-    // Add the single large fried shrimp to the existing side-dish photo grid so its image, label and price match nearby items.
-    const sideGrid = menu.querySelector('.side-dish-grid');
-    if (sideGrid && !sideGrid.querySelector('[data-oebi-single-photo]')) {
-      const item = document.createElement('article');
-      item.className = 'dish-photo-item';
-      item.dataset.oebiSinglePhoto = '';
-      item.innerHTML = `
-        <span class="dish-photo-link portrait">
-          <img src="images/menu-oebi-single.jpg" alt="大エビフライ（一本）" loading="lazy" decoding="async" width="360" height="240">
-        </span>
-        <h4>大エビフライ（一本）</h4>
-        <p class="dish-price">880円</p>`;
-      sideGrid.appendChild(item);
+    const sideGroup = findGroup('一品料理・ご飯');
+    const sideGrid = sideGroup?.querySelector('.side-dish-grid');
+    if (sideGrid) {
+      const sideItems = [
+        { name: 'ちくわ磯辺揚げ', price: '480円', image: 'IMG_7539.jpeg', key: 'isobe' },
+        { name: 'イカ焼き', price: '800円', image: 'IMG_7542.jpeg', key: 'ikayaki' },
+        { name: '焼きナス', price: '480円', image: 'IMG_7551.jpeg', key: 'nasu' },
+        { name: 'フライドポテト', price: '480円', image: 'IMG_7553.jpeg', key: 'potato' },
+        { name: '牛すじどて煮', price: '530円', image: 'IMG_7555.jpeg', key: 'doteni' },
+        { name: 'もずく酢', price: '350円', image: 'IMG_7568.jpeg', key: 'mozuku' }
+      ];
+
+      sideItems.forEach(({ name, price, image, key }) => {
+        const existing = [...sideGrid.querySelectorAll('article')].find(card => {
+          const title = card.querySelector('h3, h4')?.textContent.trim();
+          return title === name || card.dataset.sidePhoto === key;
+        });
+        if (existing) existing.remove();
+
+        const item = document.createElement('article');
+        item.className = 'dish-photo-item';
+        item.dataset.sidePhoto = key;
+        item.innerHTML = `
+          <span class="dish-photo-link">
+            <img src="${image}?v=20261001-side-1" alt="${name}" loading="lazy" decoding="async" width="1536" height="1024">
+          </span>
+          <h4>${name}</h4>
+          <p class="dish-price">${price}</p>`;
+        sideGrid.appendChild(item);
+      });
+
+      if (!sideGrid.querySelector('[data-oebi-single-photo]')) {
+        const item = document.createElement('article');
+        item.className = 'dish-photo-item';
+        item.dataset.oebiSinglePhoto = '';
+        item.innerHTML = `
+          <span class="dish-photo-link portrait">
+            <img src="images/menu-oebi-single.jpg" alt="大エビフライ（一本）" loading="lazy" decoding="async" width="360" height="240">
+          </span>
+          <h4>大エビフライ（一本）</h4>
+          <p class="dish-price">880円</p>`;
+        sideGrid.appendChild(item);
+      }
+
+      const normalizeSideName = (value = '') => value
+        .normalize('NFKC')
+        .replace(/〈[^〉]*〉/g, '')
+        .replace(/\s+/g, '')
+        .replace(/磯部/g, '磯辺')
+        .trim();
+
+      const photoNames = new Set(
+        [...sideGrid.querySelectorAll('article h3, article h4')]
+          .map(el => normalizeSideName(el.textContent))
+          .filter(Boolean)
+      );
+
+      sideGroup.querySelectorAll('.menu-list > div').forEach(row => {
+        const dt = row.querySelector('dt');
+        const name = normalizeSideName(dt?.textContent || '');
+        if (photoNames.has(name)) row.remove();
+      });
     }
   };
 
