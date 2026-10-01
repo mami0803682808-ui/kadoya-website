@@ -143,7 +143,7 @@
     const sideGrid = sideGroup?.querySelector('.side-dish-grid');
     if (sideGrid) {
       const sideItems = [
-        { name: 'とり天（3個）', price: '530円', image: 'images/toriten.jpg', key: 'toriten' },
+        { name: '国産とり天（3個）', price: '530円', image: 'images/toriten.jpg', key: 'toriten' },
         { name: 'ちくわ磯辺揚げ', price: '480円', image: 'IMG_7539.jpeg', key: 'isobe' },
         { name: 'イカ焼き', price: '800円', image: 'IMG_7542.jpeg', key: 'ikayaki' },
         { name: '焼きナス', price: '480円', image: 'IMG_7551.jpeg', key: 'nasu' },
