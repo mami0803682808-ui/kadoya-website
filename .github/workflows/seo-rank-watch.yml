@@ -1,0 +1,48 @@
+name: SEO Rank Watch
+
+on:
+  workflow_dispatch:
+    inputs:
+      days:
+        description: "GSC lookback days"
+        required: false
+        default: "28"
+  schedule:
+    - cron: "15 22 * * *" # 07:15 JST daily
+
+permissions:
+  contents: write
+
+jobs:
+  measure:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+
+      - name: Fetch GSC ranks
+        env:
+          GSC_CLIENT_EMAIL: ${{ secrets.GSC_CLIENT_EMAIL }}
+          GSC_PRIVATE_KEY: ${{ secrets.GSC_PRIVATE_KEY }}
+          GSC_SITE_URL: ${{ secrets.GSC_SITE_URL }}
+        run: |
+          DAYS="${{ github.event.inputs.days || '28' }}"
+          node .claude/skills/seo-rank-watch/scripts/fetch_gsc_ranks.mjs \
+            --repo "$GITHUB_WORKSPACE" --days "$DAYS" --append
+
+      - name: Commit rank history
+        run: |
+          if git diff --quiet -- data/seo/rank-history.json; then
+            echo "No rank-history change"
+            exit 0
+          fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add data/seo/rank-history.json
+          git commit -m "chore(seo): append GSC rank snapshot"
+          git push
