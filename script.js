@@ -381,6 +381,16 @@
       document.head.appendChild(style);
     }
 
+    if (!document.querySelector('#side-dish-crop-fix')) {
+      const style = document.createElement('style');
+      style.id = 'side-dish-crop-fix';
+      style.textContent = `
+        #menu img[alt="揚げ出し豆腐"] { object-position: center 28% !important; }
+        #menu img[alt="大きな茶碗蒸し"] { object-position: center 22% !important; }
+      `;
+      document.head.appendChild(style);
+    }
+
     const gallery = document.querySelector('#shop .shop-gallery-scroll');
     if (gallery && !gallery.parentElement?.querySelector('.shop-gallery-arrows')) {
       const wrap = document.createElement('div');
