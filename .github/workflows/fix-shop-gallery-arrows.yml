@@ -1,0 +1,94 @@
+name: Fix shop gallery arrow scrolling
+on:
+  push:
+    paths:
+      - '.github/workflows/fix-shop-gallery-arrows.yml'
+
+jobs:
+  fix:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@v4
+      - name: Make shop gallery arrows move one photo at a time
+        shell: bash
+        run: |
+          python - <<'PY'
+          from pathlib import Path
+          import re
+
+          p = Path('script.js')
+          s = p.read_text()
+
+          old = """      const prev = controls.querySelector('.shop-gallery-prev');
+      const next = controls.querySelector('.shop-gallery-next');
+      const amount = () => Math.max(gallery.clientWidth * 0.78, 260);
+      prev.addEventListener('click', () => gallery.scrollBy({ left: -amount(), behavior: 'smooth' }));
+      next.addEventListener('click', () => gallery.scrollBy({ left: amount(), behavior: 'smooth' }));
+      const updateArrows = () => {
+        const max = Math.max(0, gallery.scrollWidth - gallery.clientWidth);
+        prev.disabled = gallery.scrollLeft <= 4;
+        next.disabled = gallery.scrollLeft >= max - 4;
+      };
+"""
+
+          new = """      const prev = controls.querySelector('.shop-gallery-prev');
+      const next = controls.querySelector('.shop-gallery-next');
+      const figures = () => [...gallery.querySelectorAll('figure')];
+      const positions = () => {
+        const galleryRect = gallery.getBoundingClientRect();
+        return figures().map(figure => figure.getBoundingClientRect().left - galleryRect.left + gallery.scrollLeft);
+      };
+      const nearestIndex = () => {
+        const xs = positions();
+        if (!xs.length) return 0;
+        return xs.reduce((best, x, index) =>
+          Math.abs(x - gallery.scrollLeft) < Math.abs(xs[best] - gallery.scrollLeft) ? index : best, 0);
+      };
+      const scrollToIndex = index => {
+        const xs = positions();
+        if (!xs.length) return;
+        const target = Math.max(0, Math.min(index, xs.length - 1));
+        gallery.scrollTo({ left: xs[target], behavior: 'smooth' });
+      };
+      prev.addEventListener('click', event => {
+        event.preventDefault();
+        scrollToIndex(nearestIndex() - 1);
+      });
+      next.addEventListener('click', event => {
+        event.preventDefault();
+        scrollToIndex(nearestIndex() + 1);
+      });
+      const updateArrows = () => {
+        const index = nearestIndex();
+        const last = Math.max(0, figures().length - 1);
+        prev.disabled = index <= 0 && gallery.scrollLeft <= 4;
+        next.disabled = index >= last || gallery.scrollLeft >= gallery.scrollWidth - gallery.clientWidth - 4;
+      };
+"""
+
+          if old not in s:
+              raise SystemExit('Expected shop gallery arrow block was not found; refusing to make an unsafe edit.')
+          s = s.replace(old, new, 1)
+
+          old_style = ".shop-gallery-arrow-wrap{position:relative}.shop-gallery-arrows{position:absolute;"
+          new_style = ".shop-gallery-arrow-wrap{position:relative}.shop-gallery-scroll{scroll-snap-type:x mandatory;scroll-behavior:smooth}.shop-gallery-scroll>figure{scroll-snap-align:start;scroll-snap-stop:always}.shop-gallery-arrows{position:absolute;"
+          if old_style not in s:
+              raise SystemExit('Expected shop gallery style block was not found; refusing to make an unsafe edit.')
+          s = s.replace(old_style, new_style, 1)
+          p.write_text(s)
+
+          index = Path('index.html')
+          html = index.read_text()
+          html = re.sub(r'script\.js\?v=[^"\']+', 'script.js?v=20261002-0005', html, count=1)
+          index.write_text(html)
+          PY
+
+      - name: Commit changes
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add script.js index.html
+          git commit -m "Fix shop gallery arrow scrolling" || exit 0
+          git push
