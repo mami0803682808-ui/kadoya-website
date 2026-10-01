@@ -1291,3 +1291,21 @@ body .opening-new,body:not(.desktop-rail-ready) .opening-new,body.desktop-rail-r
     max-height:231px !important;
   }
 }
+
+
+/* iPhone Safari: use the proven logo asset as a CSS mask, avoiding nested SVG masks. */
+.opening-gold-logo{
+  display:block!important;
+  width:70px!important;
+  height:210px!important;
+  background:linear-gradient(135deg,#d7c08c 5%,#b3975f 45%,#e1cd9a 63%,#a3864c 100%)!important;
+  -webkit-mask-image:url('images/kadoya-vertical.png')!important;
+  -webkit-mask-repeat:no-repeat!important;
+  -webkit-mask-position:center!important;
+  -webkit-mask-size:contain!important;
+  mask-image:url('images/kadoya-vertical.png')!important;
+  mask-repeat:no-repeat!important;
+  mask-position:center!important;
+  mask-size:contain!important;
+}
+@media(min-width:761px){.opening-gold-logo{width:77px!important;height:231px!important}}
