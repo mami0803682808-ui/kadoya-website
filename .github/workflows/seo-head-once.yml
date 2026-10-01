@@ -1,0 +1,59 @@
+name: SEO head metadata once
+
+on:
+  push:
+    paths:
+      - '.github/workflows/seo-head-once.yml'
+
+permissions:
+  contents: write
+
+jobs:
+  seo:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - name: Update SEO metadata only
+        shell: bash
+        run: |
+          set -euo pipefail
+          python3 - <<'PY'
+          from pathlib import Path
+          p = Path('index.html')
+          s = p.read_text(encoding='utf-8')
+          old = '''<meta name="description" content="愛知県小牧市の食事処「角屋」。きしめん、丼もの、定食などのお料理と、店内の様子をご紹介します。">
+<title>角屋｜小牧の和食麺処</title>'''
+          new = '''<meta name="description" content="愛知県小牧市の食事処「角屋」。自家製麺のきしめん、味噌煮込みきしめん、定食、丼もの、モーニングをご用意しています。田県神社前駅から徒歩1分。">
+<meta name="robots" content="index,follow,max-image-preview:large">
+<link rel="canonical" href="https://komaki-kadoya.com/">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="ja_JP">
+<meta property="og:site_name" content="角屋">
+<meta property="og:title" content="角屋｜小牧市のきしめん・定食・モーニング">
+<meta property="og:description" content="愛知県小牧市の食事処「角屋」。自家製麺のきしめん、味噌煮込みきしめん、定食、丼もの、モーニングをご用意しています。田県神社前駅から徒歩1分。">
+<meta property="og:url" content="https://komaki-kadoya.com/">
+<meta property="og:image" content="https://komaki-kadoya.com/images/kadoya-hands.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="角屋｜小牧市のきしめん・定食・モーニング">
+<meta name="twitter:description" content="愛知県小牧市の食事処「角屋」。自家製麺のきしめん、味噌煮込みきしめん、定食、丼もの、モーニングをご用意しています。">
+<meta name="twitter:image" content="https://komaki-kadoya.com/images/kadoya-hands.jpg">
+<title>角屋｜小牧市のきしめん・定食・モーニング</title>'''
+          if old not in s:
+              raise SystemExit('Expected head block not found; refusing to modify anything')
+          s2 = s.replace(old, new, 1)
+          if s2.count('<title>') != 1 or s2.count('rel="canonical"') != 1:
+              raise SystemExit('SEO validation failed')
+          p.write_text(s2, encoding='utf-8')
+          PY
+      - name: Commit SEO metadata
+        shell: bash
+        run: |
+          set -e
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add index.html
+          git diff --cached --quiet && exit 0
+          git commit -m "Add non-visual SEO metadata"
+          git push
