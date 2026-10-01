@@ -1,0 +1,48 @@
+name: Disable menu image links
+
+on:
+  push:
+    paths:
+      - '.github/workflows/disable-image-clicks.yml'
+
+permissions:
+  contents: write
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Prevent menu photos opening as standalone images
+        run: |
+          python - <<'PY'
+          from pathlib import Path
+          p = Path('script.js')
+          s = p.read_text(encoding='utf-8')
+          marker = '/* Prevent menu photos from opening standalone image pages. */'
+          if marker not in s:
+              s += r'''
+
+/* Prevent menu photos from opening standalone image pages. */
+document.addEventListener('click', (event) => {
+  const link = event.target.closest('#menu a');
+  if (!link || !link.querySelector('img')) return;
+  const href = (link.getAttribute('href') || '').toLowerCase();
+  if (/\.(?:jpe?g|png|webp|gif|avif)(?:[?#].*)?$/.test(href) || href.includes('drive.google.com/')) {
+    event.preventDefault();
+  }
+});
+'''
+              p.write_text(s, encoding='utf-8')
+          PY
+      - name: Commit change
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add script.js
+          if git diff --cached --quiet; then
+            echo "No changes needed"
+          else
+            git commit -m "Disable menu image click-through"
+            git push
+          fi
