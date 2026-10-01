@@ -1190,3 +1190,16 @@ body .opening-new,body:not(.desktop-rail-ready) .opening-new,body.desktop-rail-r
 #menu .side-dish-grid .dish-photo-item h3,#menu .side-dish-grid .dish-photo-item h4{font-size:14px!important;line-height:1.5!important;margin:8px 0 2px!important;padding:0!important;font-weight:600!important}
 #menu .side-dish-grid .dish-price{font-size:14px!important;line-height:1.5!important;margin:0!important}
 @media(max-width:760px){#menu .side-dish-grid .dish-photo-item h3,#menu .side-dish-grid .dish-photo-item h4,#menu .side-dish-grid .dish-price{font-size:12px!important}}
+
+
+/* Mobile smart header: visible on upward scroll, hidden on downward scroll. */
+@media (max-width:760px){
+  .header{
+    transition:transform .28s ease!important;
+    will-change:transform;
+  }
+  .header.mobile-header-hidden{
+    transform:translateY(-105%)!important;
+    pointer-events:none;
+  }
+}
