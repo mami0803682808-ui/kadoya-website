@@ -1,0 +1,72 @@
+name: Fix tofu dote and gyoza photo ratio
+
+on:
+  push:
+    paths:
+      - '.github/workflows/fix-toufudote-gyoza-photo-ratio.yml'
+
+permissions:
+  contents: write
+
+jobs:
+  fix:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Force matching 4 by 3 photo frames
+        run: |
+          cat >> style.css <<'EOF'
+
+/* 2026-10-01: match tofu-dote-katsu and fried gyoza photo height to other menu cards */
+#menu img[alt="揚げ餃子"],
+#menu img[alt*="豆腐どて"],
+#menu img[alt*="豆腐 どて"] {
+  display:block!important;
+  width:100%!important;
+  height:auto!important;
+  aspect-ratio:4/3!important;
+  object-fit:cover!important;
+  object-position:center!important;
+  max-height:none!important;
+  margin:0!important;
+  padding:0!important;
+}
+@media(max-width:760px){
+  #menu .dish-photo-item:has(img[alt*="豆腐どて"]) > .dish-photo-link,
+  #menu .dish-photo-item:has(img[alt*="豆腐 どて"]) > .dish-photo-link {
+    display:block!important;
+    width:100%!important;
+    height:auto!important;
+    aspect-ratio:4/3!important;
+    overflow:hidden!important;
+  }
+  #menu .dish-photo-item:has(img[alt*="豆腐どて"]) > .dish-photo-link img,
+  #menu .dish-photo-item:has(img[alt*="豆腐 どて"]) > .dish-photo-link img {
+    width:100%!important;
+    height:100%!important;
+    aspect-ratio:auto!important;
+    object-fit:cover!important;
+  }
+  #autumn-menu .card:has(img[alt="揚げ餃子"]) > img {
+    width:100%!important;
+    height:auto!important;
+    aspect-ratio:4/3!important;
+    object-fit:cover!important;
+  }
+}
+EOF
+          python3 - <<'PY'
+          from pathlib import Path
+          import re
+          p=Path('index.html')
+          s=p.read_text()
+          s=re.sub(r'style\.css\?v=[^"\']+', 'style.css?v=20261001-2112', s, count=1)
+          p.write_text(s)
+          PY
+      - name: Commit fix
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add style.css index.html
+          git diff --cached --quiet || git commit -m "Normalize tofu dote and fried gyoza photo ratio"
+          git push
