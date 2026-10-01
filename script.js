@@ -220,6 +220,48 @@
       note.innerHTML = '内容は日によって異なります。最新の内容は<a href="https://www.instagram.com/komaki_kadoya/" target="_blank" rel="noopener">公式Instagramのストーリー</a>をご確認ください。';
       fishCard.appendChild(note);
     }
+
+    // Clean up duplicates inside each menu accordion only.
+    // Photo cards are kept in preference to text-only rows, and the first remaining item is kept.
+    const normalizeMenuName = (value = '') => value
+      .normalize('NFKC')
+      .replace(/〈[^〉]*〉/g, '')
+      .replace(/[\u3000\s]+/g, '')
+      .replace(/磯部/g, '磯辺')
+      .trim();
+
+    menu.querySelectorAll('details.menu-group').forEach(group => {
+      const seenCards = new Set();
+      const photoNames = new Set();
+
+      [...group.querySelectorAll('article')].forEach(card => {
+        const title = card.querySelector('h3, h4');
+        if (!title) return;
+        const name = normalizeMenuName(title.textContent);
+        if (!name) return;
+
+        if (seenCards.has(name)) {
+          card.remove();
+          return;
+        }
+
+        seenCards.add(name);
+        if (card.querySelector('img')) photoNames.add(name);
+      });
+
+      const seenRows = new Set();
+      group.querySelectorAll('.menu-list > div').forEach(row => {
+        const name = normalizeMenuName(row.querySelector('dt')?.textContent || '');
+        if (!name) return;
+
+        if (photoNames.has(name) || seenRows.has(name)) {
+          row.remove();
+          return;
+        }
+
+        seenRows.add(name);
+      });
+    });
   };
 
   core.onerror = () => console.error('script-base.js could not be loaded');
