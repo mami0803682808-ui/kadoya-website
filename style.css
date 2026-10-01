@@ -1366,3 +1366,19 @@ body .opening-new,body:not(.desktop-rail-ready) .opening-new,body.desktop-rail-r
     margin-top:8px!important;
   }
 }
+
+
+/* 2026-10-01 mobile: keep Matsutake dobinmushi & mushroom tempura gozen title inside its card */
+@media(max-width:760px){
+  #menu .matsutake-gozen-name{
+    display:block!important;
+    width:100%!important;
+    max-width:100%!important;
+    min-width:0!important;
+    white-space:normal!important;
+    overflow-wrap:break-word!important;
+    word-break:keep-all!important;
+    line-height:1.5!important;
+    min-height:3em!important;
+  }
+}
