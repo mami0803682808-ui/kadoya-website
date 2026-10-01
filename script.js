@@ -101,54 +101,47 @@
       card.className = 'card';
       card.dataset.kinokoTempuraAutumn = '';
       card.innerHTML = `
-        <a class="card-photo" href="images/kinoko-tempura.jpg" target="_blank" rel="noopener">
-          <img src="images/kinoko-tempura.jpg?v=20261001-season" alt="きのこの天ぷら" loading="lazy" decoding="async">
-        </a>
+        <img src="images/kinoko-tempura.jpg?v=20261001-season" alt="きのこの天ぷら" loading="lazy" decoding="async">
         <h3>きのこの天ぷら</h3>
         <p class="menu-note">舞茸・椎茸・えのき茸</p>
         <p class="dish-price">680円</p>`;
       autumnCards.appendChild(card);
     }
-    if (!document.querySelector('#kinoko-tempura-align')) {
+    if (autumnCards && !document.querySelector('#autumn-card-align-fix')) {
       const style = document.createElement('style');
-      style.id = 'kinoko-tempura-align';
+      style.id = 'autumn-card-align-fix';
       style.textContent = `
-        #autumn-menu [data-kinoko-tempura-autumn] {
-          position:static!important;
-          transform:none!important;
+        #autumn-menu .cards { align-items:start!important; }
+        #autumn-menu .cards > .card {
+          align-self:start!important;
           margin:0!important;
-          padding:0!important;
+          transform:none!important;
         }
-        #autumn-menu [data-kinoko-tempura-autumn] > .card-photo {
+        #autumn-menu .cards > .card > img {
           display:block!important;
           width:100%!important;
-          aspect-ratio:4/3!important;
-          overflow:hidden!important;
-          margin:0 0 14px!important;
-          padding:0!important;
-        }
-        #autumn-menu [data-kinoko-tempura-autumn] > .card-photo img {
-          display:block!important;
-          width:100%!important;
-          height:100%!important;
+          height:auto!important;
           aspect-ratio:4/3!important;
           object-fit:cover!important;
           object-position:center!important;
-          margin:0!important;
+          margin:0 0 14px!important;
           padding:0!important;
         }
-        #autumn-menu [data-kinoko-tempura-autumn] > h3 {
-          position:static!important;
+        #autumn-menu .cards > .card > h3 {
           margin:0 0 8px!important;
           padding:0!important;
           transform:none!important;
         }
         @media(max-width:760px){
-          #autumn-menu [data-kinoko-tempura-autumn] > .card-photo {margin-bottom:10px!important;}
-          #autumn-menu [data-kinoko-tempura-autumn] > h3 {margin:0 0 6px!important;}
+          #autumn-menu .cards > .card > img {margin-bottom:10px!important;}
+          #autumn-menu .cards > .card > h3 {margin:0 0 6px!important;}
         }
       `;
       document.head.appendChild(style);
+      autumnCards.querySelectorAll('.card').forEach(card => {
+        card.classList.remove('motion-pending');
+        card.style.removeProperty('--reveal-delay');
+      });
     }
 
     const donGroup = findGroup('丼もの・お子様メニュー');
