@@ -157,7 +157,11 @@
         { name: '牛すじどて煮', price: '530円', image: 'IMG_7555.jpeg', key: 'doteni' },
         { name: 'もずく酢', price: '350円', image: 'IMG_7568.jpeg', key: 'mozuku' },
         { name: '梅くらげ', price: '350円', image: 'IMG_7530.jpeg', key: 'umekurage' },
-        { name: '枝豆', price: '380円', image: 'IMG_7565.jpeg', key: 'edamame' }
+        { name: '枝豆', price: '380円', image: 'IMG_7565.jpeg', key: 'edamame' },
+        { name: 'まぐろ山かけ', price: '680円', image: 'IMG_7534.jpeg', key: 'maguro-yamakake' },
+        { name: '焼きそば', price: '900円', image: 'IMG_7559.jpeg', key: 'yakisoba' },
+        { name: '塩焼き鳥（2本）', price: '480円', image: 'IMG_7571.jpeg', key: 'yakitori' },
+        { name: 'カツとじ鍋', price: '900円', image: 'IMG_7575.jpeg', key: 'katsutoji' }
       ];
 
       sideItems.forEach(({ name, price, image, key }) => {
@@ -172,7 +176,7 @@
         item.dataset.sidePhoto = key;
         item.innerHTML = `
           <span class="dish-photo-link">
-            <img src="${image}?v=20261001-side-2" alt="${name}" loading="lazy" decoding="async" width="1536" height="1024">
+            <img src="${image}?v=20261001-side-3" alt="${name}" loading="lazy" decoding="async" width="1536" height="1024">
           </span>
           <h4>${name}</h4>
           <p class="dish-price">${price}</p>`;
@@ -190,6 +194,20 @@
           <h4>大エビフライ（一本）</h4>
           <p class="dish-price">880円</p>`;
         sideGrid.appendChild(item);
+      }
+
+      if (!document.querySelector('#side-dish-title-font-fix')) {
+        const style = document.createElement('style');
+        style.id = 'side-dish-title-font-fix';
+        style.textContent = `
+          #menu .side-dish-grid .dish-photo-item h3,
+          #menu .side-dish-grid .dish-photo-item h4 {
+            font-family: "Noto Serif JP", serif !important;
+            font-weight: 500 !important;
+            letter-spacing: 0 !important;
+          }
+        `;
+        document.head.appendChild(style);
       }
 
       const normalizeSideName = (value = '') => value
@@ -221,8 +239,6 @@
       fishCard.appendChild(note);
     }
 
-    // Clean up duplicates inside each menu accordion only.
-    // Photo cards are kept in preference to text-only rows, and the first remaining item is kept.
     const normalizeMenuName = (value = '') => value
       .normalize('NFKC')
       .replace(/〈[^〉]*〉/g, '')
