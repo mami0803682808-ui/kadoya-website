@@ -1331,3 +1331,21 @@ body .opening-new,body:not(.desktop-rail-ready) .opening-new,body.desktop-rail-r
   }
   .opening-gold-logo-img{display:block!important;opacity:1!important;visibility:visible!important;}
 }
+
+
+/* Restore the second opening scene on mobile: photo + 53-year copy. */
+@media(max-width:760px){
+ .opening-new.scroll-ready .opening-copy{
+   display:block!important;
+   opacity:var(--copy-opacity,0)!important;
+   visibility:visible!important;
+   z-index:3!important;
+ }
+ .opening-new.scroll-ready .opening-photo{
+   display:block!important;
+   opacity:1!important;
+   visibility:visible!important;
+   z-index:0!important;
+ }
+ .opening-new.scroll-ready .opening-shade{display:block!important;z-index:1!important}
+}
