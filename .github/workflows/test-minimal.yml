@@ -1,0 +1,10 @@
+name: Test minimal
+on:
+  push:
+    paths:
+      - .github/workflows/test-minimal.yml
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - run: echo ok
