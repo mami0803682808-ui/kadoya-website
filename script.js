@@ -203,6 +203,25 @@
       fishCard.appendChild(note);
     }
 
+    const misoGroup = menu.querySelector('#miso-menu');
+    if (misoGroup) {
+      const normalizeMisoName = (value = '') => value
+        .normalize('NFKC')
+        .replace(/[（(][^）)]*[）)]/g, '')
+        .replace(/海老/g, 'えび')
+        .replace(/[\u3000\s]+/g, '')
+        .trim();
+      const photoMisoNames = new Set([
+        '味噌煮込みきしめん',
+        '海老天入り味噌煮込みきしめん',
+        'デラックス味噌煮込みきしめん'
+      ].map(normalizeMisoName));
+      misoGroup.querySelectorAll('.menu-list > div').forEach(row => {
+        const name = normalizeMisoName(row.querySelector('dt')?.textContent || '');
+        if (photoMisoNames.has(name)) row.remove();
+      });
+    }
+
     const normalizeMenuName = (value = '') => value.normalize('NFKC').replace(/〈[^〉]*〉/g, '').replace(/[\u3000\s]+/g, '').replace(/磯部/g, '磯辺').trim();
     menu.querySelectorAll('details.menu-group').forEach(group => {
       const seenCards = new Set();
