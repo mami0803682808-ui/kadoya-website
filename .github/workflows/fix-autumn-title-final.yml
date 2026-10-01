@@ -1,0 +1,53 @@
+name: Fix autumn title final
+
+on:
+  push:
+    paths:
+      - '.github/workflows/fix-autumn-title-final.yml'
+
+permissions:
+  contents: write
+
+jobs:
+  fix:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - name: Force safe mobile title wrapping and bust CSS cache
+        shell: bash
+        run: |
+          set -e
+          python3 - <<'PY'
+          from pathlib import Path
+
+          html = Path('index.html')
+          s = html.read_text(encoding='utf-8')
+          old = '<h3 class="matsutake-gozen-name">松茸土瓶蒸しときのこの天ぷら御膳</h3>'
+          new = '<h3 class="matsutake-gozen-name"><span class="matsutake-line">松茸土瓶蒸しと</span><span class="matsutake-line">きのこの天ぷら御膳</span></h3>'
+          if old in s:
+              s = s.replace(old, new, 1)
+          elif new not in s:
+              raise SystemExit('Matsutake title target not found')
+          s = s.replace('href="style.css"', 'href="style.css?v=20261001-1520"', 1)
+          s = s.replace('href="style.css?v=20261001-1520"', 'href="style.css?v=20261001-1520"', 1)
+          html.write_text(s, encoding='utf-8')
+
+          css = Path('style.css')
+          c = css.read_text(encoding='utf-8')
+          marker = '/* FINAL mobile Matsutake title split */'
+          if marker not in c:
+              c += '''\n\n/* FINAL mobile Matsutake title split */\n.matsutake-gozen-name .matsutake-line{display:inline}\n@media(max-width:760px){\n  #autumn-menu .cards{grid-template-columns:repeat(2,minmax(0,1fr))!important}\n  #autumn-menu .card{min-width:0!important;width:100%!important;overflow:hidden!important}\n  #autumn-menu .matsutake-gozen-name{\n    display:block!important;\n    width:100%!important;\n    max-width:100%!important;\n    min-width:0!important;\n    margin:8px 0!important;\n    font-size:14px!important;\n    line-height:1.45!important;\n    letter-spacing:0!important;\n    white-space:normal!important;\n    overflow:hidden!important;\n    text-align:left!important;\n  }\n  #autumn-menu .matsutake-gozen-name .matsutake-line{\n    display:block!important;\n    width:100%!important;\n    white-space:nowrap!important;\n  }\n}\n'''
+          css.write_text(c, encoding='utf-8')
+          PY
+      - name: Commit
+        shell: bash
+        run: |
+          set -e
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add index.html style.css
+          if git diff --cached --quiet; then exit 0; fi
+          git commit -m "Force mobile Matsutake title onto two lines"
+          git push
