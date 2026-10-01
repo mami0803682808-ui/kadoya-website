@@ -1343,3 +1343,4 @@ body .opening-new,body:not(.desktop-rail-ready) .opening-new,body.desktop-rail-r
     min-height:2.9em!important;
   }
 }
+#menu a.card-photo,#menu a.card-photo *{pointer-events:none!important}
