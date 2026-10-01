@@ -1190,3 +1190,63 @@ body .opening-new,body:not(.desktop-rail-ready) .opening-new,body.desktop-rail-r
 #menu .side-dish-grid .dish-photo-item h3,#menu .side-dish-grid .dish-photo-item h4{font-size:14px!important;line-height:1.5!important;margin:8px 0 2px!important;padding:0!important;font-weight:600!important}
 #menu .side-dish-grid .dish-price{font-size:14px!important;line-height:1.5!important;margin:0!important}
 @media(max-width:760px){#menu .side-dish-grid .dish-photo-item h3,#menu .side-dish-grid .dish-photo-item h4,#menu .side-dish-grid .dish-price{font-size:12px!important}}
+
+
+/* Emergency mobile layout stabilization — 2026-10-01 */
+@media(max-width:760px){
+  .commitment-editorial{
+    padding-left:24px!important;
+    padding-right:24px!important;
+  }
+  .commitment-editorial .craft-intro{
+    width:100%!important;
+    max-width:560px!important;
+    margin-left:auto!important;
+    margin-right:auto!important;
+    text-align:center!important;
+  }
+  .commitment-editorial .craft-lead{
+    margin-left:auto!important;
+    margin-right:auto!important;
+  }
+  .commitment-editorial .commitment-grid{
+    width:100%!important;
+    max-width:560px!important;
+    margin-left:auto!important;
+    margin-right:auto!important;
+  }
+  .commitment-editorial .commitment-grid article{
+    grid-template-columns:32px 72px minmax(0,1fr)!important;
+    gap:15px!important;
+    width:100%!important;
+    padding-left:0!important;
+    padding-right:0!important;
+  }
+  .commitment-editorial .craft-copy{
+    min-width:0!important;
+    width:100%!important;
+  }
+  .commitment-editorial .craft-copy h3,
+  .commitment-editorial .craft-copy p{
+    word-break:normal!important;
+    overflow-wrap:break-word!important;
+  }
+  .commitment-editorial .craft-copy h3{font-size:21px!important;}
+  .commitment-editorial .craft-copy p{font-size:12.5px!important;}
+}
+
+/* Opening mark: avoid Safari nested-SVG mask failure while preserving the authentic gold composition. */
+.scroll-ready .arrival-mark svg.vertical-mark{
+  opacity:1!important;
+  display:block!important;
+  width:77px!important;
+  height:231px!important;
+  max-height:231px!important;
+}
+@media(max-width:760px){
+  .scroll-ready .arrival-mark svg.vertical-mark{
+    width:70px!important;
+    height:210px!important;
+    max-height:210px!important;
+  }
+}
