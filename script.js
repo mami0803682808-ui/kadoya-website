@@ -40,6 +40,43 @@
       });
       const tempuraGrid = summerGroup.querySelector('.tempura-feature-grid');
       if (tempuraGrid && !tempuraGrid.querySelector('.tempura-feature')) tempuraGrid.remove();
+
+      if (!document.querySelector('#summer-title-align-style')) {
+        const style = document.createElement('style');
+        style.id = 'summer-title-align-style';
+        style.textContent = `
+          #menu .summer-photo-grid .card {
+            display:flex!important;
+            flex-direction:column!important;
+            align-items:stretch!important;
+          }
+          #menu .summer-photo-grid .card > img,
+          #menu .summer-photo-grid .card > .card-photo {
+            display:block!important;
+            width:100%!important;
+            height:auto!important;
+            aspect-ratio:4/3!important;
+            margin:0 0 14px!important;
+            padding:0!important;
+            overflow:hidden!important;
+          }
+          #menu .summer-photo-grid .card > img,
+          #menu .summer-photo-grid .card > .card-photo img {
+            display:block!important;
+            width:100%!important;
+            height:100%!important;
+            aspect-ratio:4/3!important;
+            object-fit:cover!important;
+            object-position:center!important;
+            margin:0!important;
+            padding:0!important;
+          }
+          #menu .summer-photo-grid .card h3 {
+            margin-top:0!important;
+          }
+        `;
+        document.head.appendChild(style);
+      }
     }
 
     const autumnCards = autumnMenu?.querySelector('.cards');
