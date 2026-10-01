@@ -16,8 +16,9 @@
       hoursDockLink.addEventListener('click', event => {
         event.preventDefault();
         const header = document.querySelector('.header');
-        const headerHeight = header?.getBoundingClientRect().height || 92;
-        const targetTop = hoursTarget.getBoundingClientRect().top + window.scrollY - headerHeight - 16;
+        const isDesktop = window.matchMedia('(min-width: 761px)').matches;
+        const headerOffset = isDesktop ? 24 : (header?.getBoundingClientRect().height || 64) + 16;
+        const targetTop = hoursTarget.getBoundingClientRect().top + window.scrollY - headerOffset;
         history.replaceState(null, '', '#hours');
         window.scrollTo({ top: Math.max(0, targetTop), behavior: 'smooth' });
       });
