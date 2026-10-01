@@ -13,8 +13,11 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
       - name: Update requested sentence
         run: |
+          git pull --rebase origin main
           python - <<'PY'
           from pathlib import Path
           p = Path('index.html')
@@ -31,6 +34,7 @@ jobs:
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git add index.html
           git commit -m "Refine about section welcome copy"
+          git pull --rebase origin main
           git push
 
-# retrigger
+# retrigger 2
