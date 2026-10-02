@@ -607,9 +607,35 @@
       wrap.appendChild(controls);
       const prev = controls.querySelector('.shop-gallery-prev');
       const next = controls.querySelector('.shop-gallery-next');
-      const amount = () => Math.max(gallery.clientWidth * 0.78, 260);
-      prev.addEventListener('click', () => gallery.scrollBy({ left: -amount(), behavior: 'smooth' }));
-      next.addEventListener('click', () => gallery.scrollBy({ left: amount(), behavior: 'smooth' }));
+      const getItems = () => [...gallery.querySelectorAll('figure')];
+      const getItemLeft = (item) => {
+        const galleryRect = gallery.getBoundingClientRect();
+        const itemRect = item.getBoundingClientRect();
+        return gallery.scrollLeft + (itemRect.left - galleryRect.left);
+      };
+      const getCurrentIndex = () => {
+        const items = getItems();
+        if (!items.length) return -1;
+        const current = gallery.scrollLeft;
+        let nearest = 0;
+        let distance = Infinity;
+        items.forEach((item, index) => {
+          const diff = Math.abs(getItemLeft(item) - current);
+          if (diff < distance) {
+            distance = diff;
+            nearest = index;
+          }
+        });
+        return nearest;
+      };
+      const scrollToItem = (index) => {
+        const items = getItems();
+        if (!items.length) return;
+        const safeIndex = Math.max(0, Math.min(index, items.length - 1));
+        gallery.scrollTo({ left: getItemLeft(items[safeIndex]), behavior: 'smooth' });
+      };
+      prev.addEventListener('click', () => scrollToItem(getCurrentIndex() - 1));
+      next.addEventListener('click', () => scrollToItem(getCurrentIndex() + 1));
       const updateArrows = () => {
         const max = Math.max(0, gallery.scrollWidth - gallery.clientWidth);
         prev.disabled = gallery.scrollLeft <= 4;
