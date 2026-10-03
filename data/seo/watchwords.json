@@ -22,5 +22,29 @@
     "targetPath": "/",
     "priority": "medium",
     "status": "active"
+  },
+  {
+    "keyword": "小牧 味噌煮込み",
+    "targetPath": "/",
+    "priority": "high",
+    "status": "active"
+  },
+  {
+    "keyword": "小牧 味噌煮込みきしめん",
+    "targetPath": "/",
+    "priority": "high",
+    "status": "active"
+  },
+  {
+    "keyword": "小牧 味噌カツ",
+    "targetPath": "/",
+    "priority": "high",
+    "status": "active"
+  },
+  {
+    "keyword": "小牧 田楽",
+    "targetPath": "/",
+    "priority": "high",
+    "status": "active"
   }
 ]
