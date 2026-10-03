@@ -27,7 +27,7 @@ jobs:
         shell: bash
         run: |
           set -e
-          convert images/kadoya-logo.png -crop 565x565+95+95 +repage -resize 512x512 -channel RGB -fill '#D6B25E' -colorize 100% -background '#111111' -alpha background -flatten favicon.png
+          convert images/kadoya-logo.png -crop 565x565+95+95 +repage -resize 512x512 -channel RGB -fill '#D6B25E' -colorize 100% \( -size 512x512 xc:none -fill white -draw "circle 256,256 256,12" \) -compose DstIn -composite -background '#111111' -alpha background -flatten favicon.png
           python3 - <<'PY'
           from pathlib import Path
           p = Path('index.html')
