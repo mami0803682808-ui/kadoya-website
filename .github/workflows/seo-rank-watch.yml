@@ -25,17 +25,33 @@ jobs:
         with:
           node-version: "20"
 
-      - name: Fetch GSC ranks
+      - name: Check GSC credentials
+        id: gsc
+        shell: bash
         env:
           GSC_CLIENT_EMAIL: ${{ secrets.GSC_CLIENT_EMAIL }}
           GSC_PRIVATE_KEY: ${{ secrets.GSC_PRIVATE_KEY }}
-          GSC_SITE_URL: ${{ secrets.GSC_SITE_URL }}
+        run: |
+          if [ -z "$GSC_CLIENT_EMAIL" ] || [ -z "$GSC_PRIVATE_KEY" ]; then
+            echo "ready=false" >> "$GITHUB_OUTPUT"
+            echo "Google Search Console credentials are not configured yet. Skipping rank fetch without failing the workflow."
+          else
+            echo "ready=true" >> "$GITHUB_OUTPUT"
+          fi
+
+      - name: Fetch GSC ranks
+        if: steps.gsc.outputs.ready == 'true'
+        env:
+          GSC_CLIENT_EMAIL: ${{ secrets.GSC_CLIENT_EMAIL }}
+          GSC_PRIVATE_KEY: ${{ secrets.GSC_PRIVATE_KEY }}
+          GSC_SITE_URL: "https://komaki-kadoya.com/"
         run: |
           DAYS="${{ github.event.inputs.days || '28' }}"
           node .claude/skills/seo-rank-watch/scripts/fetch_gsc_ranks.mjs \
             --repo "$GITHUB_WORKSPACE" --days "$DAYS" --append
 
       - name: Commit rank history
+        if: steps.gsc.outputs.ready == 'true'
         run: |
           if git diff --quiet -- data/seo/rank-history.json; then
             echo "No rank-history change"
