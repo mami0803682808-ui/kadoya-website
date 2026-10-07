@@ -38,9 +38,9 @@ jobs:
         run: |
           if [ -z "$GSC_CLIENT_EMAIL" ] || [ -z "$GSC_PRIVATE_KEY" ]; then
             echo "ready=false" >> "$GITHUB_OUTPUT"
-            echo "Google Search Console credentials are not configured yet. Skipping rank fetch without failing the workflow."
+            echo "::error::Google Search Console credentials are missing. Configure GSC_CLIENT_EMAIL and GSC_PRIVATE_KEY in repository Actions secrets."
             echo "### 順位取得は未実行" >> "$GITHUB_STEP_SUMMARY"
-            echo "GSC_CLIENT_EMAIL または GSC_PRIVATE_KEY が未設定です。認証設定後に手動実行してください。" >> "$GITHUB_STEP_SUMMARY"
+            echo "GSC_CLIENT_EMAIL または GSC_PRIVATE_KEY が未設定です。GitHub Actions Secrets を設定してください。" >> "$GITHUB_STEP_SUMMARY"\n            exit 1
           else
             echo "ready=true" >> "$GITHUB_OUTPUT"
           fi
@@ -50,7 +50,7 @@ jobs:
         env:
           GSC_CLIENT_EMAIL: ${{ secrets.GSC_CLIENT_EMAIL }}
           GSC_PRIVATE_KEY: ${{ secrets.GSC_PRIVATE_KEY }}
-          GSC_SITE_URL: "https://komaki-kadoya.com/"
+          GSC_SITE_URL: "sc-domain:komaki-kadoya.com"
         run: |
           DAYS="${{ github.event.inputs.days || '28' }}"
           node .claude/skills/seo-rank-watch/scripts/fetch_gsc_ranks.mjs \
