@@ -40,7 +40,8 @@ jobs:
             echo "ready=false" >> "$GITHUB_OUTPUT"
             echo "::error::Google Search Console credentials are missing. Configure GSC_CLIENT_EMAIL and GSC_PRIVATE_KEY in repository Actions secrets."
             echo "### 順位取得は未実行" >> "$GITHUB_STEP_SUMMARY"
-            echo "GSC_CLIENT_EMAIL または GSC_PRIVATE_KEY が未設定です。GitHub Actions Secrets を設定してください。" >> "$GITHUB_STEP_SUMMARY"\n            exit 1
+            echo "GSC_CLIENT_EMAIL または GSC_PRIVATE_KEY が未設定です。GitHub Actions Secrets を設定してください。" >> "$GITHUB_STEP_SUMMARY"
+            exit 1
           else
             echo "ready=true" >> "$GITHUB_OUTPUT"
           fi
