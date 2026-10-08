@@ -23,7 +23,7 @@ function usage() {
 
 Required environment variables:
   GSC_CLIENT_EMAIL   Service account client email
-  GSC_PRIVATE_KEY    Service account private key (\\n escaped is OK)
+  GSC_PRIVATE_KEY    Service account private key or full service-account JSON
   GSC_SITE_URL       Search Console property, e.g. sc-domain:komaki-kadoya.com
 
 Notes:
@@ -42,6 +42,44 @@ function writeJson(file, value) {
 
 function base64url(input) {
   return Buffer.from(input).toString('base64url');
+}
+
+function parsePrivateKey(raw, clientEmail) {
+  let value = String(raw || '').trim();
+  // Accept the downloaded service-account JSON or its quoted private_key value.
+  try {
+    const parsed = JSON.parse(value);
+    if (typeof parsed === 'string') value = parsed;
+    else if (parsed && typeof parsed.private_key === 'string') {
+      if (parsed.client_email && parsed.client_email !== clientEmail) {
+        throw new Error('GSC credential email mismatch: use the client_email from the same service-account JSON.');
+      }
+      value = parsed.private_key;
+    }
+  } catch (err) {
+    if (err.message.startsWith('GSC credential email mismatch:')) throw err;
+    // A copied JSON property line is also supported by the PEM extraction below.
+  }
+  value = value.replace(/\\+r\\+n/g, '\n').replace(/\\+n/g, '\n').replace(/\r/g, '\n');
+  const match = value.match(/-----BEGIN (RSA PRIVATE KEY|PRIVATE KEY)-----([\s\S]*?)-----END \1-----/);
+  if (!match) {
+    throw new Error('GSC_PRIVATE_KEY has no complete PEM key. Replace the secret with the complete service-account JSON or private_key value; do not send it in chat.');
+  }
+  const body = match[2].replace(/\s/g, '');
+  if (!/^[A-Za-z0-9+/]+={0,2}$/.test(body)) {
+    throw new Error('GSC_PRIVATE_KEY contains invalid key characters. Replace it from the original service-account JSON.');
+  }
+  const pem = `-----BEGIN ${match[1]}-----\n${body.match(/.{1,64}/g).join('\n')}\n-----END ${match[1]}-----\n`;
+  let key;
+  try {
+    key = crypto.createPrivateKey(pem);
+  } catch {
+    throw new Error('GSC_PRIVATE_KEY cannot be decoded after format normalization. The key may be incomplete or damaged; replace it from the original service-account JSON.');
+  }
+  if (key.asymmetricKeyType !== 'rsa') {
+    throw new Error('GSC_PRIVATE_KEY must be an RSA service-account private key.');
+  }
+  return key;
 }
 
 async function getAccessToken(clientEmail, privateKey) {
@@ -119,11 +157,13 @@ async function main() {
   if (!fs.existsSync(historyFile)) throw new Error(`Missing ${historyFile}`);
 
   const clientEmail = process.env.GSC_CLIENT_EMAIL;
-  const privateKey = (process.env.GSC_PRIVATE_KEY || '').replace(/\\n/g, '\n');
+  const privateKeyInput = process.env.GSC_PRIVATE_KEY || '';
   const siteUrl = args.site || process.env.GSC_SITE_URL;
-  if (!clientEmail || !privateKey || !siteUrl) {
+  if (!clientEmail || !privateKeyInput || !siteUrl) {
     throw new Error('Set GSC_CLIENT_EMAIL, GSC_PRIVATE_KEY and GSC_SITE_URL (or pass --site).');
   }
+
+  const privateKey = parsePrivateKey(privateKeyInput, clientEmail);
 
   const end = new Date();
   end.setUTCDate(end.getUTCDate() - 1); // GSC daily data can lag; use yesterday as the end date.
