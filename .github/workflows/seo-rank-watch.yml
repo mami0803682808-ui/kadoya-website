@@ -5,6 +5,7 @@ on:
     branches: [main]
     paths:
       - '.github/workflows/seo-rank-watch.yml'
+      - '.claude/skills/seo-rank-watch/scripts/fetch_gsc_ranks.mjs'
   workflow_dispatch:
     inputs:
       days:
