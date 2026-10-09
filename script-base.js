@@ -303,7 +303,7 @@ document.querySelectorAll('.craft-art').forEach(element => element.remove());
    return p;
  };
  const panels=[
-   make('season',[autumn,...take(['夏季限定','年越し蕎麦'])]),
+   make('season',[autumn,...take(['夏季限定','年越し蕎麦','お正月'])]),
    make('set',[heading,photoCards,...take(['定食'])]),
    make('noodle',[...take(['味噌煮込みきしめん','きしめん','丼もの・お子様メニュー','ミニ丼セット'])]),
    make('side',[...take(['一品料理・ご飯','お飲み物・デザート'])]),

@@ -1,6 +1,6 @@
 (() => {
   const core = document.createElement('script');
-  core.src = 'script-base.js';
+  core.src = 'script-base.js?v=20261009-oshogatsu';
   core.async = false;
 
   core.onload = () => {
