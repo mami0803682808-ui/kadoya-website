@@ -177,3 +177,6 @@
     font-size:12px!important;
   }
 }
+
+/* Share the existing year-end badge styling with the New Year menu. */
+#oshogatsu summary .coming-soon-badge{display:inline-block;margin-left:14px;padding:3px 10px;border:1px solid currentColor;border-radius:2px;font:500 11px/1.5 sans-serif;letter-spacing:.08em;color:#8a6a37;vertical-align:middle;white-space:nowrap}
