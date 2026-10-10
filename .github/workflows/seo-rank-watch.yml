@@ -18,7 +18,7 @@ on:
 permissions:
   contents: write
 concurrency:
-  group: seo-data
+  group: seo-gsc-data
   cancel-in-progress: false
 jobs:
   measure:
