@@ -1,6 +1,6 @@
 import fs from 'node:fs';
 import path from 'node:path';
-import {connect,collectPeriod,pacificDate,shift} from './gsc.mjs';
+import {connect,collectPeriod,pacificDate,shift,metrics} from './gsc.mjs';
 const get=name=>{const i=process.argv.indexOf(name);return i<0 ? undefined:process.argv[i+1];};
 const repo=path.resolve(get('--repo')||process.cwd()), days=Number(get('--days')||28);
 if(process.argv.includes('--help')) {console.log('Usage: collect.mjs [--repo PATH] [--days 1–90] [--append] [--monthly] [--site PROPERTY]');process.exit(0);}
@@ -25,6 +25,20 @@ try {
     const baselineEnd=shift(previousStart,-1), baselineStart=baselineEnd.slice(0,7)+'-01';
     if(endDate<previousEnd) throw new Error('Previous month is not finalized yet. Monthly report was not updated.');
     const periods={source:'gsc',siteUrl:api.site,measuredAt:new Date().toISOString(),current:await collectPeriod(api,watchwords,previousStart,previousEnd),baseline:await collectPeriod(api,watchwords,baselineStart,baselineEnd)};
+    // Compare exact 28-day windows around each change, even when the change was mid-month.
+    periods.actionWindows=[];
+    for(const entry of read('improvement-log.json')) for(const action of entry.actions||[]) {
+      const actionDate=action.date?.slice(0,10); if(!actionDate) continue;
+      const currentStart=actionDate, currentEnd=shift(actionDate,27);
+      const key=`${entry.keyword}\t${entry.targetPath}\t${action.commit||action.date}`;
+      if(currentEnd>endDate) {periods.actionWindows.push({key,status:'awaiting_final_data'});continue;}
+      const queryFilter={dimension:'query',operator:'equals',expression:entry.keyword};
+      const pageFilter={dimension:'page',operator:'equals',expression:new URL(entry.targetPath,'https://komaki-kadoya.com').href};
+      const measure=async(startDate,endDate)=>({startDate,endDate,
+        ...metrics(await api.query({startDate,endDate,dimensionFilterGroups:[{filters:[queryFilter,pageFilter]}]})),
+        siteMetrics:metrics(await api.query({startDate,endDate,dimensionFilterGroups:[{filters:[queryFilter]}]}))});
+      periods.actionWindows.push({key,status:'ready',baseline:await measure(shift(actionDate,-28),shift(actionDate,-1)),current:await measure(currentStart,currentEnd)});
+    }
     write(`monthly-input/${previousStart.slice(0,7)}.json`,periods);
   }
   console.log(`GSC success: ${current.startDate}–${endDate}; ${current.results.filter(r=>r.status==='measured').length}/${watchwords.length} target queries measured.`);

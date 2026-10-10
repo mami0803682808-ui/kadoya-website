@@ -29,6 +29,16 @@ export function analyze(input,log=[]) {
   for(const entry of log) for(const action of entry.actions||[]) {
     const date=action.date?.slice(0,10); if(!date) continue;
     const reviewAt=shift(date,28);
+    const window=input.actionWindows?.find(w=>w.key===`${entry.keyword}\t${entry.targetPath}\t${action.commit||action.date}`);
+    if(window) {
+      effects.push({keyword:entry.keyword,targetPath:entry.targetPath,actionDate:date,done:action.done,reviewAt,
+        status:window.status!=='ready'?'awaiting_final_data':delta(window.baseline,window.current)?'measured':'insufficient_data',
+        baseline:window.baseline||null,current:window.current||null,
+        change:window.status==='ready'?delta(window.baseline,window.current):null,
+        siteChange:window.status==='ready'?delta(window.baseline.siteMetrics,window.current.siteMetrics):null,
+        note:'施策前28日と施策後28日を比較。新設ページは前データなしとなるため、検索語のサイト全体変化も別記録。因果効果とは断定しない。'});
+      continue;
+    }
     const result=period=>period.results.find(r=>r.keyword===entry.keyword&&r.targetPath===entry.targetPath);
     // Only compare full pre-change and post-change periods; never compare an overlapping month.
     const comparable=baseline.endDate<date&&current.startDate>=date&&current.endDate>=reviewAt;

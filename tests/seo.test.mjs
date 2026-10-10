@@ -36,3 +36,9 @@ test('OAuth failure does not disclose response body',async()=>{
   const {privateKey}=crypto.generateKeyPairSync('rsa',{modulusLength:2048});
   await assert.rejects(()=>connect({GSC_CLIENT_EMAIL:'test',GSC_PRIVATE_KEY:privateKey.export({type:'pkcs8',format:'pem'})},async()=>({ok:false,status:401,text:async()=> 'secret text'})),error=>!error.message.includes('secret text')&&error.message.includes('401'));
 });
+test('mid-month changes use exact pre/post windows rather than waiting forever for calendar alignment',()=>{
+  const row={keyword:'test',targetPath:'/',rank:5,impressions:100,clicks:5,ctr:0.05,status:'measured'};
+  const input={current:{startDate:'2026-11-01',endDate:'2026-11-30',totals:row,results:[row],discovery:[]},baseline:{startDate:'2026-10-01',endDate:'2026-10-31',totals:row,results:[row],discovery:[]},actionWindows:[{key:'test\t/\tabc',status:'ready',baseline:{...row,rank:8,siteMetrics:row},current:{...row,siteMetrics:row}}]};
+  const r=analyze(input,[{keyword:'test',targetPath:'/',actions:[{date:'2026-10-11',commit:'abc',done:'change'}]}]);
+  assert.equal(r.effects[0].status,'measured');assert.equal(r.effects[0].change.rank,-3);
+});
