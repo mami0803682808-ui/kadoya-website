@@ -24,6 +24,17 @@
         "baseline": null,
         "done": "feat(seo): add intent pages, finalized GSC reporting and monthly performance review",
         "needs": "検索意図別の料理案内・表示性能の改善。効果は確定GSCデータで観察する。"
+      },
+      {
+        "date": "2026-10-11T00:35:34+09:00",
+        "commit": "b178903a24e571fe0d4ae9001dfb6cce0ef784e2",
+        "files": [
+          "menu-pages.css"
+        ],
+        "rankAtAction": null,
+        "baseline": null,
+        "done": "fix(menu): keep the original logo visible on dark intent pages",
+        "needs": "検索意図別の料理案内・表示性能の改善。効果は確定GSCデータで観察する。"
       }
     ]
   },
@@ -44,6 +55,17 @@
         "rankAtAction": null,
         "baseline": null,
         "done": "feat(seo): add intent pages, finalized GSC reporting and monthly performance review",
+        "needs": "検索意図別の料理案内・表示性能の改善。効果は確定GSCデータで観察する。"
+      },
+      {
+        "date": "2026-10-11T00:35:34+09:00",
+        "commit": "b178903a24e571fe0d4ae9001dfb6cce0ef784e2",
+        "files": [
+          "menu-pages.css"
+        ],
+        "rankAtAction": null,
+        "baseline": null,
+        "done": "fix(menu): keep the original logo visible on dark intent pages",
         "needs": "検索意図別の料理案内・表示性能の改善。効果は確定GSCデータで観察する。"
       }
     ],
@@ -68,6 +90,17 @@
         "baseline": null,
         "done": "feat(seo): add intent pages, finalized GSC reporting and monthly performance review",
         "needs": "検索意図別の料理案内・表示性能の改善。効果は確定GSCデータで観察する。"
+      },
+      {
+        "date": "2026-10-11T00:35:34+09:00",
+        "commit": "b178903a24e571fe0d4ae9001dfb6cce0ef784e2",
+        "files": [
+          "menu-pages.css"
+        ],
+        "rankAtAction": null,
+        "baseline": null,
+        "done": "fix(menu): keep the original logo visible on dark intent pages",
+        "needs": "検索意図別の料理案内・表示性能の改善。効果は確定GSCデータで観察する。"
       }
     ],
     "status": "observing",
@@ -90,6 +123,17 @@
         "rankAtAction": null,
         "baseline": null,
         "done": "feat(seo): add intent pages, finalized GSC reporting and monthly performance review",
+        "needs": "検索意図別の料理案内・表示性能の改善。効果は確定GSCデータで観察する。"
+      },
+      {
+        "date": "2026-10-11T00:35:34+09:00",
+        "commit": "b178903a24e571fe0d4ae9001dfb6cce0ef784e2",
+        "files": [
+          "menu-pages.css"
+        ],
+        "rankAtAction": null,
+        "baseline": null,
+        "done": "fix(menu): keep the original logo visible on dark intent pages",
         "needs": "検索意図別の料理案内・表示性能の改善。効果は確定GSCデータで観察する。"
       }
     ],
@@ -114,6 +158,17 @@
         "baseline": null,
         "done": "feat(seo): add intent pages, finalized GSC reporting and monthly performance review",
         "needs": "検索意図別の料理案内・表示性能の改善。効果は確定GSCデータで観察する。"
+      },
+      {
+        "date": "2026-10-11T00:35:34+09:00",
+        "commit": "b178903a24e571fe0d4ae9001dfb6cce0ef784e2",
+        "files": [
+          "menu-pages.css"
+        ],
+        "rankAtAction": null,
+        "baseline": null,
+        "done": "fix(menu): keep the original logo visible on dark intent pages",
+        "needs": "検索意図別の料理案内・表示性能の改善。効果は確定GSCデータで観察する。"
       }
     ],
     "status": "observing",
@@ -136,6 +191,17 @@
         "rankAtAction": null,
         "baseline": null,
         "done": "feat(seo): add intent pages, finalized GSC reporting and monthly performance review",
+        "needs": "検索意図別の料理案内・表示性能の改善。効果は確定GSCデータで観察する。"
+      },
+      {
+        "date": "2026-10-11T00:35:34+09:00",
+        "commit": "b178903a24e571fe0d4ae9001dfb6cce0ef784e2",
+        "files": [
+          "menu-pages.css"
+        ],
+        "rankAtAction": null,
+        "baseline": null,
+        "done": "fix(menu): keep the original logo visible on dark intent pages",
         "needs": "検索意図別の料理案内・表示性能の改善。効果は確定GSCデータで観察する。"
       }
     ],
@@ -160,6 +226,17 @@
         "baseline": null,
         "done": "feat(seo): add intent pages, finalized GSC reporting and monthly performance review",
         "needs": "検索意図別の料理案内・表示性能の改善。効果は確定GSCデータで観察する。"
+      },
+      {
+        "date": "2026-10-11T00:35:34+09:00",
+        "commit": "b178903a24e571fe0d4ae9001dfb6cce0ef784e2",
+        "files": [
+          "menu-pages.css"
+        ],
+        "rankAtAction": null,
+        "baseline": null,
+        "done": "fix(menu): keep the original logo visible on dark intent pages",
+        "needs": "検索意図別の料理案内・表示性能の改善。効果は確定GSCデータで観察する。"
       }
     ],
     "status": "observing",
@@ -182,6 +259,17 @@
         "rankAtAction": null,
         "baseline": null,
         "done": "feat(seo): add intent pages, finalized GSC reporting and monthly performance review",
+        "needs": "検索意図別の料理案内・表示性能の改善。効果は確定GSCデータで観察する。"
+      },
+      {
+        "date": "2026-10-11T00:35:34+09:00",
+        "commit": "b178903a24e571fe0d4ae9001dfb6cce0ef784e2",
+        "files": [
+          "menu-pages.css"
+        ],
+        "rankAtAction": null,
+        "baseline": null,
+        "done": "fix(menu): keep the original logo visible on dark intent pages",
         "needs": "検索意図別の料理案内・表示性能の改善。効果は確定GSCデータで観察する。"
       }
     ],
