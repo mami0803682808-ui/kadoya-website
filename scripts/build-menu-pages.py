@@ -1,9 +1,10 @@
 #!/usr/bin/env python3
 """Generate static intent pages from the current homepage, keeping prices and shop facts in sync."""
-import re, json, html
+import re, json, html, hashlib
 from pathlib import Path
 ROOT=Path(__file__).resolve().parents[1]
 s=(ROOT/'index.html').read_text()
+css_version=hashlib.sha256((ROOT/'menu-pages.css').read_bytes()).hexdigest()[:12]
 plain=lambda value:html.unescape(re.sub('<[^>]+>',' ',value)).strip()
 articles={}
 for article in re.findall(r'<article\b.*?</article>',s,re.S):
@@ -42,7 +43,7 @@ for slug,title,headline,intro,names,note in pages:
 <title>{title}｜角屋・田県神社前駅から徒歩1分</title><meta name="description" content="{html.escape(desc,quote=True)}">
 <link rel="canonical" href="https://komaki-kadoya.com/{slug}/"><meta name="robots" content="index,follow,max-image-preview:large">
 <meta property="og:type" content="website"><meta property="og:locale" content="ja_JP"><meta property="og:title" content="{title}｜角屋"><meta property="og:description" content="{html.escape(desc,quote=True)}"><meta property="og:url" content="https://komaki-kadoya.com/{slug}/"><meta property="og:image" content="https://komaki-kadoya.com{photo}"><meta name="twitter:card" content="summary_large_image">
-<link rel="icon" href="/favicon.png"><link rel="stylesheet" href="/menu-pages.css?v=20261011">
+<link rel="icon" href="/favicon.png"><link rel="stylesheet" href="/menu-pages.css?v={css_version}">
 <script type="application/ld+json">{json.dumps(schema,ensure_ascii=False)}</script></head>
 <body><header><a href="/" aria-label="角屋 トップへ"><img src="/images/kadoya-logo.png" alt="角屋" width="2086" height="754"></a><a class="phone" href="tel:0568722127">電話で予約</a></header>
 <main><nav class="breadcrumb" aria-label="パンくず"><a href="/">角屋</a><span>／</span><span>{title}</span></nav>
