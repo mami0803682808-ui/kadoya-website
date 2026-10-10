@@ -1,7 +1,7 @@
 {
   "measurement": "Referenced local asset bytes; not LCP or transfer bytes. Hidden and lazy assets may not load on first view.",
-  "totalReferencedBytes": 71019996,
-  "imageBytes": 57915215,
+  "totalReferencedBytes": 71278372,
+  "imageBytes": 58173591,
   "videoBytes": 13104781,
   "over500KB": [
     {
@@ -152,7 +152,7 @@
     "images/optimized/tendon-1200.webp": 70990,
     "images/miso-katsudon.jpg": 457494,
     "images/optimized/miso-katsudon-640.webp": 37110,
-    "images/optimized/miso-katsudon-1200.webp": 0,
+    "images/optimized/miso-katsudon-1200.webp": 83862,
     "images/menu-08-mini-hirekatsu.jpg": 152667,
     "images/menu-12-mini-misohire.jpg": 164299,
     "images/menu-09-mini-tendon.jpg": 156678,
@@ -205,7 +205,7 @@
     "images/kinoko-tempura.jpg": 310003,
     "images/IMG_6279.jpeg": 2896183,
     "images/optimized/IMG_6279-640.webp": 28564,
-    "images/optimized/IMG_6279-1200.webp": 0,
+    "images/optimized/IMG_6279-1200.webp": 77430,
     "images/morning-a.jpg": 632582,
     "images/optimized/morning-a-640.webp": 51682,
     "images/optimized/morning-a-1200.webp": 141264,
@@ -224,7 +224,7 @@
     "images/IMG_3122.jpg": 346092,
     "images/shop-zashiki.jpg": 511764,
     "images/optimized/shop-zashiki-640.webp": 37332,
-    "images/optimized/shop-zashiki-1200.webp": 0,
+    "images/optimized/shop-zashiki-1200.webp": 97084,
     "images/shop-table.jpg": 460656,
     "images/optimized/shop-table-640.webp": 25740,
     "images/optimized/shop-table-1200.webp": 74332,

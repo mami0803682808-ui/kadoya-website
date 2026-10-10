@@ -3,14 +3,189 @@
     "keyword": "角屋 小牧",
     "targetPath": "/",
     "status": "observing",
-    "nextReviewDate": "2026-10-08",
+    "nextReviewDate": "2026-11-07",
     "actions": [
       {
         "date": "2026-10-01",
         "rankAtAction": null,
         "needs": "『角屋 小牧』で検索する人は、公式店舗かを確認し、住所・アクセス・電話・料理ジャンルなどの基本情報をすぐ確かめたい。現在の上位結果は店舗情報を明示する外部ページが中心だったため、公式サイトと実店舗の対応関係をGoogleにより明確に伝える必要がある。",
         "done": "トップページにRestaurantのJSON-LD構造化データを追加し、店名『角屋』、公式URL、店舗画像、電話番号、小牧市久保一色の住所、提供料理、公式Instagramを明示した。表示デザインは変更していない。WebSearchでは公式サイトの正確な順位を確定できなかったため、rankAtActionはnullとした。"
+      },
+      {
+        "date": "2026-10-11T00:33:44+09:00",
+        "commit": "99a2712e25260d6f1443a08275986d7ada232b1f",
+        "files": [
+          "index.html",
+          "media-loading.js",
+          "menu-pages.css",
+          "style.css"
+        ],
+        "rankAtAction": null,
+        "baseline": null,
+        "done": "feat(seo): add intent pages, finalized GSC reporting and monthly performance review",
+        "needs": "検索意図別の料理案内・表示性能の改善。効果は確定GSCデータで観察する。"
       }
     ]
+  },
+  {
+    "keyword": "小牧 きしめん",
+    "targetPath": "/kishimen/",
+    "actions": [
+      {
+        "date": "2026-10-11T00:33:44+09:00",
+        "commit": "99a2712e25260d6f1443a08275986d7ada232b1f",
+        "files": [
+          "index.html",
+          "kishimen/index.html",
+          "media-loading.js",
+          "menu-pages.css",
+          "style.css"
+        ],
+        "rankAtAction": null,
+        "baseline": null,
+        "done": "feat(seo): add intent pages, finalized GSC reporting and monthly performance review",
+        "needs": "検索意図別の料理案内・表示性能の改善。効果は確定GSCデータで観察する。"
+      }
+    ],
+    "status": "observing",
+    "nextReviewDate": "2026-11-07"
+  },
+  {
+    "keyword": "小牧 定食",
+    "targetPath": "/teishoku/",
+    "actions": [
+      {
+        "date": "2026-10-11T00:33:44+09:00",
+        "commit": "99a2712e25260d6f1443a08275986d7ada232b1f",
+        "files": [
+          "index.html",
+          "media-loading.js",
+          "menu-pages.css",
+          "style.css",
+          "teishoku/index.html"
+        ],
+        "rankAtAction": null,
+        "baseline": null,
+        "done": "feat(seo): add intent pages, finalized GSC reporting and monthly performance review",
+        "needs": "検索意図別の料理案内・表示性能の改善。効果は確定GSCデータで観察する。"
+      }
+    ],
+    "status": "observing",
+    "nextReviewDate": "2026-11-07"
+  },
+  {
+    "keyword": "小牧 モーニング",
+    "targetPath": "/morning/",
+    "actions": [
+      {
+        "date": "2026-10-11T00:33:44+09:00",
+        "commit": "99a2712e25260d6f1443a08275986d7ada232b1f",
+        "files": [
+          "index.html",
+          "media-loading.js",
+          "menu-pages.css",
+          "morning/index.html",
+          "style.css"
+        ],
+        "rankAtAction": null,
+        "baseline": null,
+        "done": "feat(seo): add intent pages, finalized GSC reporting and monthly performance review",
+        "needs": "検索意図別の料理案内・表示性能の改善。効果は確定GSCデータで観察する。"
+      }
+    ],
+    "status": "observing",
+    "nextReviewDate": "2026-11-07"
+  },
+  {
+    "keyword": "小牧 味噌煮込み",
+    "targetPath": "/misonikomi/",
+    "actions": [
+      {
+        "date": "2026-10-11T00:33:44+09:00",
+        "commit": "99a2712e25260d6f1443a08275986d7ada232b1f",
+        "files": [
+          "index.html",
+          "media-loading.js",
+          "menu-pages.css",
+          "misonikomi/index.html",
+          "style.css"
+        ],
+        "rankAtAction": null,
+        "baseline": null,
+        "done": "feat(seo): add intent pages, finalized GSC reporting and monthly performance review",
+        "needs": "検索意図別の料理案内・表示性能の改善。効果は確定GSCデータで観察する。"
+      }
+    ],
+    "status": "observing",
+    "nextReviewDate": "2026-11-07"
+  },
+  {
+    "keyword": "小牧 味噌煮込みきしめん",
+    "targetPath": "/misonikomi/",
+    "actions": [
+      {
+        "date": "2026-10-11T00:33:44+09:00",
+        "commit": "99a2712e25260d6f1443a08275986d7ada232b1f",
+        "files": [
+          "index.html",
+          "media-loading.js",
+          "menu-pages.css",
+          "misonikomi/index.html",
+          "style.css"
+        ],
+        "rankAtAction": null,
+        "baseline": null,
+        "done": "feat(seo): add intent pages, finalized GSC reporting and monthly performance review",
+        "needs": "検索意図別の料理案内・表示性能の改善。効果は確定GSCデータで観察する。"
+      }
+    ],
+    "status": "observing",
+    "nextReviewDate": "2026-11-07"
+  },
+  {
+    "keyword": "小牧 味噌カツ",
+    "targetPath": "/misokatsu/",
+    "actions": [
+      {
+        "date": "2026-10-11T00:33:44+09:00",
+        "commit": "99a2712e25260d6f1443a08275986d7ada232b1f",
+        "files": [
+          "index.html",
+          "media-loading.js",
+          "menu-pages.css",
+          "misokatsu/index.html",
+          "style.css"
+        ],
+        "rankAtAction": null,
+        "baseline": null,
+        "done": "feat(seo): add intent pages, finalized GSC reporting and monthly performance review",
+        "needs": "検索意図別の料理案内・表示性能の改善。効果は確定GSCデータで観察する。"
+      }
+    ],
+    "status": "observing",
+    "nextReviewDate": "2026-11-07"
+  },
+  {
+    "keyword": "小牧 田楽",
+    "targetPath": "/dengaku/",
+    "actions": [
+      {
+        "date": "2026-10-11T00:33:44+09:00",
+        "commit": "99a2712e25260d6f1443a08275986d7ada232b1f",
+        "files": [
+          "dengaku/index.html",
+          "index.html",
+          "media-loading.js",
+          "menu-pages.css",
+          "style.css"
+        ],
+        "rankAtAction": null,
+        "baseline": null,
+        "done": "feat(seo): add intent pages, finalized GSC reporting and monthly performance review",
+        "needs": "検索意図別の料理案内・表示性能の改善。効果は確定GSCデータで観察する。"
+      }
+    ],
+    "status": "observing",
+    "nextReviewDate": "2026-11-07"
   }
 ]

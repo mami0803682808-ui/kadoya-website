@@ -1,0 +1,28 @@
+[
+  {
+    "mode": "mobile",
+    "measuredAt": "2026-10-10T15:34:50.523Z",
+    "url": "http://localhost:8080/",
+    "sourceCommit": "99a2712e25260d6f1443a08275986d7ada232b1f",
+    "performance": null,
+    "accessibility": 0.97,
+    "seo": 0.92,
+    "cls": 0,
+    "transferBytes": 3433145,
+    "limitations": "Local lab measurement of current source, not real-user or production CDN performance."
+  },
+  {
+    "mode": "desktop",
+    "measuredAt": "2026-10-10T15:35:08.583Z",
+    "url": "http://localhost:8080/",
+    "sourceCommit": "99a2712e25260d6f1443a08275986d7ada232b1f",
+    "performance": 0.73,
+    "accessibility": 0.97,
+    "seo": 0.92,
+    "lcpMs": 5876.919100000002,
+    "cls": 0.06832940815822203,
+    "tbtMs": 3,
+    "transferBytes": 3575867,
+    "limitations": "Local lab measurement of current source, not real-user or production CDN performance."
+  }
+]
