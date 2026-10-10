@@ -14,5 +14,2909 @@
         "note": "WebSearch概算。検索結果では小牧ナビ、Yahoo!マップ、食べログ等の店舗情報ページを確認したが、公式サイトの正確な順位は確定できず。GSC接続後はGSCを正とする。"
       }
     ]
+  },
+  {
+    "measuredAt": "2026-10-10T16:17:20.924Z",
+    "source": "gsc",
+    "siteUrl": "sc-domain:komaki-kadoya.com",
+    "days": 28,
+    "searchType": "web",
+    "dataState": "final",
+    "rankDefinition": "Search Console average position",
+    "startDate": "2026-09-09",
+    "endDate": "2026-10-06",
+    "totals": {
+      "rank": 14.559006211180124,
+      "impressions": 1288,
+      "clicks": 43,
+      "ctr": 0.033385093167701864,
+      "status": "measured"
+    },
+    "availableDates": [
+      "2026-09-30",
+      "2026-10-01",
+      "2026-10-02",
+      "2026-10-03",
+      "2026-10-04",
+      "2026-10-05",
+      "2026-10-06"
+    ],
+    "results": [
+      {
+        "keyword": "角屋 小牧",
+        "targetPath": "/",
+        "rank": 6.05,
+        "impressions": 60,
+        "clicks": 2,
+        "ctr": 0.03333333333333333,
+        "status": "measured",
+        "siteMetrics": {
+          "rank": 1.4891304347826086,
+          "impressions": 92,
+          "clicks": 7,
+          "ctr": 0.07608695652173914,
+          "status": "measured"
+        }
+      },
+      {
+        "keyword": "小牧 きしめん",
+        "targetPath": "/kishimen/",
+        "rank": null,
+        "impressions": 0,
+        "clicks": 0,
+        "ctr": null,
+        "status": "no_data",
+        "siteMetrics": {
+          "rank": null,
+          "impressions": 0,
+          "clicks": 0,
+          "ctr": null,
+          "status": "no_data"
+        }
+      },
+      {
+        "keyword": "小牧 定食",
+        "targetPath": "/teishoku/",
+        "rank": null,
+        "impressions": 0,
+        "clicks": 0,
+        "ctr": null,
+        "status": "no_data",
+        "siteMetrics": {
+          "rank": 12.666666666666666,
+          "impressions": 3,
+          "clicks": 0,
+          "ctr": 0,
+          "status": "measured"
+        }
+      },
+      {
+        "keyword": "小牧 モーニング",
+        "targetPath": "/morning/",
+        "rank": null,
+        "impressions": 0,
+        "clicks": 0,
+        "ctr": null,
+        "status": "no_data",
+        "siteMetrics": {
+          "rank": null,
+          "impressions": 0,
+          "clicks": 0,
+          "ctr": null,
+          "status": "no_data"
+        }
+      },
+      {
+        "keyword": "小牧 味噌煮込み",
+        "targetPath": "/misonikomi/",
+        "rank": null,
+        "impressions": 0,
+        "clicks": 0,
+        "ctr": null,
+        "status": "no_data",
+        "siteMetrics": {
+          "rank": null,
+          "impressions": 0,
+          "clicks": 0,
+          "ctr": null,
+          "status": "no_data"
+        }
+      },
+      {
+        "keyword": "小牧 味噌煮込みきしめん",
+        "targetPath": "/misonikomi/",
+        "rank": null,
+        "impressions": 0,
+        "clicks": 0,
+        "ctr": null,
+        "status": "no_data",
+        "siteMetrics": {
+          "rank": null,
+          "impressions": 0,
+          "clicks": 0,
+          "ctr": null,
+          "status": "no_data"
+        }
+      },
+      {
+        "keyword": "小牧 味噌カツ",
+        "targetPath": "/misokatsu/",
+        "rank": null,
+        "impressions": 0,
+        "clicks": 0,
+        "ctr": null,
+        "status": "no_data",
+        "siteMetrics": {
+          "rank": 3,
+          "impressions": 2,
+          "clicks": 0,
+          "ctr": 0,
+          "status": "measured"
+        }
+      },
+      {
+        "keyword": "小牧 田楽",
+        "targetPath": "/dengaku/",
+        "rank": null,
+        "impressions": 0,
+        "clicks": 0,
+        "ctr": null,
+        "status": "no_data",
+        "siteMetrics": {
+          "rank": null,
+          "impressions": 0,
+          "clicks": 0,
+          "ctr": null,
+          "status": "no_data"
+        }
+      }
+    ],
+    "pages": [
+      {
+        "targetPath": "/",
+        "rank": 14.84197924980048,
+        "impressions": 1253,
+        "clicks": 35,
+        "ctr": 0.027932960893854747,
+        "status": "measured"
+      },
+      {
+        "targetPath": "/",
+        "rank": 5.683333333333334,
+        "impressions": 180,
+        "clicks": 8,
+        "ctr": 0.044444444444444446,
+        "status": "measured"
+      }
+    ],
+    "discovery": [
+      {
+        "keyword": "角屋",
+        "targetPath": "/",
+        "rank": 2.111111111111111,
+        "impressions": 36,
+        "clicks": 8,
+        "ctr": 0.2222222222222222,
+        "status": "measured"
+      },
+      {
+        "keyword": "角屋 小牧",
+        "targetPath": "/",
+        "rank": 1.348314606741573,
+        "impressions": 89,
+        "clicks": 5,
+        "ctr": 0.056179775280898875,
+        "status": "measured"
+      },
+      {
+        "keyword": "角屋 小牧市 メニュー",
+        "targetPath": "/",
+        "rank": 1.45,
+        "impressions": 20,
+        "clicks": 3,
+        "ctr": 0.15,
+        "status": "measured"
+      },
+      {
+        "keyword": "角屋 小牧市 メニュー",
+        "targetPath": "/",
+        "rank": 4.904761904761905,
+        "impressions": 21,
+        "clicks": 3,
+        "ctr": 0.14285714285714285,
+        "status": "measured"
+      },
+      {
+        "keyword": "角屋 小牧",
+        "targetPath": "/",
+        "rank": 6.05,
+        "impressions": 60,
+        "clicks": 2,
+        "ctr": 0.03333333333333333,
+        "status": "measured"
+      },
+      {
+        "keyword": "ランチ 近く",
+        "targetPath": "/",
+        "rank": 11.5,
+        "impressions": 6,
+        "clicks": 1,
+        "ctr": 0.16666666666666666,
+        "status": "measured"
+      },
+      {
+        "keyword": "周辺 ご飯 子連れ",
+        "targetPath": "/",
+        "rank": 9,
+        "impressions": 1,
+        "clicks": 1,
+        "ctr": 1,
+        "status": "measured"
+      },
+      {
+        "keyword": "和食",
+        "targetPath": "/",
+        "rank": 6,
+        "impressions": 1,
+        "clicks": 1,
+        "ctr": 1,
+        "status": "measured"
+      },
+      {
+        "keyword": "小牧",
+        "targetPath": "/",
+        "rank": 1,
+        "impressions": 1,
+        "clicks": 1,
+        "ctr": 1,
+        "status": "measured"
+      },
+      {
+        "keyword": "小牧 角屋",
+        "targetPath": "/",
+        "rank": 1.4705882352941178,
+        "impressions": 17,
+        "clicks": 1,
+        "ctr": 0.058823529411764705,
+        "status": "measured"
+      },
+      {
+        "keyword": "小牧市 ランチ",
+        "targetPath": "/",
+        "rank": 27.583333333333332,
+        "impressions": 12,
+        "clicks": 1,
+        "ctr": 0.08333333333333333,
+        "status": "measured"
+      },
+      {
+        "keyword": "小牧角屋",
+        "targetPath": "/",
+        "rank": 1,
+        "impressions": 6,
+        "clicks": 1,
+        "ctr": 0.16666666666666666,
+        "status": "measured"
+      },
+      {
+        "keyword": "角屋",
+        "targetPath": "/",
+        "rank": 6.0625,
+        "impressions": 16,
+        "clicks": 1,
+        "ctr": 0.0625,
+        "status": "measured"
+      },
+      {
+        "keyword": "角屋 小牧市 写真",
+        "targetPath": "/",
+        "rank": 2,
+        "impressions": 2,
+        "clicks": 1,
+        "ctr": 0.5,
+        "status": "measured"
+      },
+      {
+        "keyword": "近くのきしめん",
+        "targetPath": "/",
+        "rank": 23,
+        "impressions": 1,
+        "clicks": 1,
+        "ctr": 1,
+        "status": "measured"
+      },
+      {
+        "keyword": "kadoya",
+        "targetPath": "/",
+        "rank": 2,
+        "impressions": 4,
+        "clicks": 0,
+        "ctr": 0,
+        "status": "measured"
+      },
+      {
+        "keyword": "うどん",
+        "targetPath": "/",
+        "rank": 10.666666666666666,
+        "impressions": 3,
+        "clicks": 0,
+        "ctr": 0,
+        "status": "measured"
+      },
+      {
+        "keyword": "うどん 小牧",
+        "targetPath": "/",
+        "rank": 11.25,
+        "impressions": 4,
+        "clicks": 0,
+        "ctr": 0,
+        "status": "measured"
+      },
+      {
+        "keyword": "うどん屋",
+        "targetPath": "/",
+        "rank": 25,
+        "impressions": 2,
+        "clicks": 0,
+        "ctr": 0,
+        "status": "measured"
+      },
+      {
+        "keyword": "うどん屋 小牧",
+        "targetPath": "/",
+        "rank": 5.5,
+        "impressions": 2,
+        "clicks": 0,
+        "ctr": 0,
+        "status": "measured"
+      },
+      {
+        "keyword": "うどん屋 近く",
+        "targetPath": "/",
+        "rank": 9,
+        "impressions": 2,
+        "clicks": 0,
+        "ctr": 0,
+        "status": "measured"
+      },
+      {
+        "keyword": "お値打ちランチ",
+        "targetPath": "/",
+        "rank": 20,
+        "impressions": 1,
+        "clicks": 0,
+        "ctr": 0,
+        "status": "measured"
+      },
+      {
+        "keyword": "お持ち帰り ご飯",
+        "targetPath": "/",
+        "rank": 1,
+        "impressions": 1,
+        "clicks": 0,
+        "ctr": 0,
+        "status": "measured"
+      },
+      {
+        "keyword": "お昼",
+        "targetPath": "/",
+        "rank": 6,
+        "impressions": 1,
+        "clicks": 0,
+        "ctr": 0,
+        "status": "measured"
+      },
+      {
+        "keyword": "かごや",
+        "targetPath": "/",
+        "rank": 1,
+        "impressions": 1,
+        "clicks": 0,
+        "ctr": 0,
+        "status": "measured"
+      },
+      {
+        "keyword": "かどのや",
+        "targetPath": "/",
+        "rank": 1,
+        "impressions": 1,
+        "clicks": 0,
+        "ctr": 0,
+        "status": "measured"
+      },
+      {
+        "keyword": "かどや",
+        "targetPath": "/",
+        "rank": 2.25,
+        "impressions": 20,
+        "clicks": 0,
+        "ctr": 0,
+        "status": "measured"
+      },
+      {
+        "keyword": "かどや ランチ",
+        "targetPath": "/",
+        "rank": 1,
+        "impressions": 1,
+        "clicks": 0,
+        "ctr": 0,
+        "status": "measured"
+      },
+      {
+        "keyword": "かもん",
+        "targetPath": "/",
+        "rank": 9,
+        "impressions": 1,
+        "clicks": 0,
+        "ctr": 0,
+        "status": "measured"
+      },
+      {
+        "keyword": "きしめん",
+        "targetPath": "/",
+        "rank": 8,
+        "impressions": 1,
+        "clicks": 0,
+        "ctr": 0,
+        "status": "measured"
+      },
+      {
+        "keyword": "きしめん 有名店",
+        "targetPath": "/",
+        "rank": 54,
+        "impressions": 1,
+        "clicks": 0,
+        "ctr": 0,
+        "status": "measured"
+      },
+      {
+        "keyword": "ここからお昼ご飯",
+        "targetPath": "/",
+        "rank": 31,
+        "impressions": 1,
+        "clicks": 0,
+        "ctr": 0,
+        "status": "measured"
+      },
+      {
+        "keyword": "ここから近い 夜ご飯",
+        "targetPath": "/",
+        "rank": 4,
+        "impressions": 1,
+        "clicks": 0,
+        "ctr": 0,
+        "status": "measured"
+      },
+      {
+        "keyword": "ここから近い夜ご飯屋さん",
+        "targetPath": "/",
+        "rank": 4,
+        "impressions": 1,
+        "clicks": 0,
+        "ctr": 0,
+        "status": "measured"
+      },
+      {
+        "keyword": "この辺 夜ご飯 おすすめ",
+        "targetPath": "/",
+        "rank": 42,
+        "impressions": 1,
+        "clicks": 0,
+        "ctr": 0,
+        "status": "measured"
+      },
+      {
+        "keyword": "この近くのランチ",
+        "targetPath": "/",
+        "rank": 3,
+        "impressions": 1,
+        "clicks": 0,
+        "ctr": 0,
+        "status": "measured"
+      },
+      {
+        "keyword": "この近くのランチの店",
+        "targetPath": "/",
+        "rank": 1,
+        "impressions": 1,
+        "clicks": 0,
+        "ctr": 0,
+        "status": "measured"
+      },
+      {
+        "keyword": "ごはん",
+        "targetPath": "/",
+        "rank": 18,
+        "impressions": 1,
+        "clicks": 0,
+        "ctr": 0,
+        "status": "measured"
+      },
+      {
+        "keyword": "ごはん屋さん",
+        "targetPath": "/",
+        "rank": 2,
+        "impressions": 2,
+        "clicks": 0,
+        "ctr": 0,
+        "status": "measured"
+      },
+      {
+        "keyword": "ご飯",
+        "targetPath": "/",
+        "rank": 16.857142857142858,
+        "impressions": 14,
+        "clicks": 0,
+        "ctr": 0,
+        "status": "measured"
+      },
+      {
+        "keyword": "ご飯 やってるところ",
+        "targetPath": "/",
+        "rank": 3,
+        "impressions": 2,
+        "clicks": 0,
+        "ctr": 0,
+        "status": "measured"
+      },
+      {
+        "keyword": "ご飯 定食",
+        "targetPath": "/",
+        "rank": 27,
+        "impressions": 1,
+        "clicks": 0,
+        "ctr": 0,
+        "status": "measured"
+      },
+      {
+        "keyword": "ご飯 小牧",
+        "targetPath": "/",
+        "rank": 52,
+        "impressions": 3,
+        "clicks": 0,
+        "ctr": 0,
+        "status": "measured"
+      },
+      {
+        "keyword": "ご飯 近く",
+        "targetPath": "/",
+        "rank": 17.09090909090909,
+        "impressions": 11,
+        "clicks": 0,
+        "ctr": 0,
+        "status": "measured"
+      },
+      {
+        "keyword": "ご飯 近く 1.6 km 以内",
+        "targetPath": "/",
+        "rank": 2,
+        "impressions": 1,
+        "clicks": 0,
+        "ctr": 0,
+        "status": "measured"
+      },
+      {
+        "keyword": "ご飯 近く 800m 以内",
+        "targetPath": "/",
+        "rank": 25,
+        "impressions": 1,
+        "clicks": 0,
+        "ctr": 0,
+        "status": "measured"
+      },
+      {
+        "keyword": "ご飯 近く 現在営業中",
+        "targetPath": "/",
+        "rank": 13.5,
+        "impressions": 2,
+        "clicks": 0,
+        "ctr": 0,
+        "status": "measured"
+      },
+      {
+        "keyword": "ご飯や",
+        "targetPath": "/",
+        "rank": 76,
+        "impressions": 2,
+        "clicks": 0,
+        "ctr": 0,
+        "status": "measured"
+      },
+      {
+        "keyword": "ご飯やさん",
+        "targetPath": "/",
+        "rank": 4,
+        "impressions": 1,
+        "clicks": 0,
+        "ctr": 0,
+        "status": "measured"
+      },
+      {
+        "keyword": "ご飯やさん近く",
+        "targetPath": "/",
+        "rank": 8,
+        "impressions": 2,
+        "clicks": 0,
+        "ctr": 0,
+        "status": "measured"
+      },
+      {
+        "keyword": "ご飯や営業中",
+        "targetPath": "/",
+        "rank": 8,
+        "impressions": 1,
+        "clicks": 0,
+        "ctr": 0,
+        "status": "measured"
+      },
+      {
+        "keyword": "ご飯ランチ",
+        "targetPath": "/",
+        "rank": 39,
+        "impressions": 1,
+        "clicks": 0,
+        "ctr": 0,
+        "status": "measured"
+      },
+      {
+        "keyword": "ご飯屋",
+        "targetPath": "/",
+        "rank": 31.5,
+        "impressions": 4,
+        "clicks": 0,
+        "ctr": 0,
+        "status": "measured"
+      },
+      {
+        "keyword": "ご飯屋さん",
+        "targetPath": "/",
+        "rank": 35,
+        "impressions": 7,
+        "clicks": 0,
+        "ctr": 0,
+        "status": "measured"
+      },
+      {
+        "keyword": "ご飯屋さん 現在営業中",
+        "targetPath": "/",
+        "rank": 12,
+        "impressions": 1,
+        "clicks": 0,
+        "ctr": 0,
+        "status": "measured"
+      },
+      {
+        "keyword": "ご飯屋さん 近く",
+        "targetPath": "/",
+        "rank": 1,
+        "impressions": 1,
+        "clicks": 0,
+        "ctr": 0,
+        "status": "measured"
+      },
+      {
+        "keyword": "ご飯屋さん近く",
+        "targetPath": "/",
+        "rank": 10,
+        "impressions": 1,
+        "clicks": 0,
+        "ctr": 0,
+        "status": "measured"
+      },
+      {
+        "keyword": "ご飯現在地",
+        "targetPath": "/",
+        "rank": 1,
+        "impressions": 1,
+        "clicks": 0,
+        "ctr": 0,
+        "status": "measured"
+      },
+      {
+        "keyword": "ご飯近く チェーン店",
+        "targetPath": "/",
+        "rank": 27,
+        "impressions": 1,
+        "clicks": 0,
+        "ctr": 0,
+        "status": "measured"
+      },
+      {
+        "keyword": "さん",
+        "targetPath": "/",
+        "rank": 8,
+        "impressions": 1,
+        "clicks": 0,
+        "ctr": 0,
+        "status": "measured"
+      },
+      {
+        "keyword": "どや",
+        "targetPath": "/",
+        "rank": 2,
+        "impressions": 1,
+        "clicks": 0,
+        "ctr": 0,
+        "status": "measured"
+      },
+      {
+        "keyword": "らんち",
+        "targetPath": "/",
+        "rank": 10,
+        "impressions": 1,
+        "clicks": 0,
+        "ctr": 0,
+        "status": "measured"
+      },
+      {
+        "keyword": "アジフライ定食",
+        "targetPath": "/",
+        "rank": 4,
+        "impressions": 1,
+        "clicks": 0,
+        "ctr": 0,
+        "status": "measured"
+      },
+      {
+        "keyword": "エビフライ弁当 テイクアウト",
+        "targetPath": "/",
+        "rank": 50,
+        "impressions": 1,
+        "clicks": 0,
+        "ctr": 0,
+        "status": "measured"
+      },
+      {
+        "keyword": "カツ丼",
+        "targetPath": "/",
+        "rank": 30.5,
+        "impressions": 6,
+        "clicks": 0,
+        "ctr": 0,
+        "status": "measured"
+      },
+      {
+        "keyword": "カドヤ",
+        "targetPath": "/",
+        "rank": 2,
+        "impressions": 27,
+        "clicks": 0,
+        "ctr": 0,
+        "status": "measured"
+      },
+      {
+        "keyword": "カドヤ食堂",
+        "targetPath": "/",
+        "rank": 3.5,
+        "impressions": 6,
+        "clicks": 0,
+        "ctr": 0,
+        "status": "measured"
+      },
+      {
+        "keyword": "テイクアウト 近く",
+        "targetPath": "/",
+        "rank": 19.5,
+        "impressions": 2,
+        "clicks": 0,
+        "ctr": 0,
+        "status": "measured"
+      },
+      {
+        "keyword": "ランチ",
+        "targetPath": "/",
+        "rank": 29.944444444444443,
+        "impressions": 18,
+        "clicks": 0,
+        "ctr": 0,
+        "status": "measured"
+      },
+      {
+        "keyword": "ランチ 小牧",
+        "targetPath": "/",
+        "rank": 58.75,
+        "impressions": 4,
+        "clicks": 0,
+        "ctr": 0,
+        "status": "measured"
+      },
+      {
+        "keyword": "ランチ 現在地周辺",
+        "targetPath": "/",
+        "rank": 18,
+        "impressions": 1,
+        "clicks": 0,
+        "ctr": 0,
+        "status": "measured"
+      },
+      {
+        "keyword": "ランチ 近く 安い",
+        "targetPath": "/",
+        "rank": 8,
+        "impressions": 1,
+        "clicks": 0,
+        "ctr": 0,
+        "status": "measured"
+      },
+      {
+        "keyword": "ランチ 高評価",
+        "targetPath": "/",
+        "rank": 2,
+        "impressions": 1,
+        "clicks": 0,
+        "ctr": 0,
+        "status": "measured"
+      },
+      {
+        "keyword": "レストラン",
+        "targetPath": "/",
+        "rank": 3,
+        "impressions": 1,
+        "clicks": 0,
+        "ctr": 0,
+        "status": "measured"
+      },
+      {
+        "keyword": "今やってる飲食店",
+        "targetPath": "/",
+        "rank": 9,
+        "impressions": 1,
+        "clicks": 0,
+        "ctr": 0,
+        "status": "measured"
+      },
+      {
+        "keyword": "付近のランチ",
+        "targetPath": "/",
+        "rank": 22,
+        "impressions": 2,
+        "clicks": 0,
+        "ctr": 0,
+        "status": "measured"
+      },
+      {
+        "keyword": "付近飯屋",
+        "targetPath": "/",
+        "rank": 1,
+        "impressions": 1,
+        "clicks": 0,
+        "ctr": 0,
+        "status": "measured"
+      },
+      {
+        "keyword": "伊勢角",
+        "targetPath": "/",
+        "rank": 4,
+        "impressions": 1,
+        "clicks": 0,
+        "ctr": 0,
+        "status": "measured"
+      },
+      {
+        "keyword": "刺身定食",
+        "targetPath": "/",
+        "rank": 10,
+        "impressions": 1,
+        "clicks": 0,
+        "ctr": 0,
+        "status": "measured"
+      },
+      {
+        "keyword": "加賀屋",
+        "targetPath": "/",
+        "rank": 1,
+        "impressions": 1,
+        "clicks": 0,
+        "ctr": 0,
+        "status": "measured"
+      },
+      {
+        "keyword": "周辺 ご飯",
+        "targetPath": "/",
+        "rank": 2.5,
+        "impressions": 2,
+        "clicks": 0,
+        "ctr": 0,
+        "status": "measured"
+      },
+      {
+        "keyword": "周辺 ランチ",
+        "targetPath": "/",
+        "rank": 22,
+        "impressions": 2,
+        "clicks": 0,
+        "ctr": 0,
+        "status": "measured"
+      },
+      {
+        "keyword": "周辺のご飯屋さん",
+        "targetPath": "/",
+        "rank": 9,
+        "impressions": 1,
+        "clicks": 0,
+        "ctr": 0,
+        "status": "measured"
+      },
+      {
+        "keyword": "周辺の美味しいお店",
+        "targetPath": "/",
+        "rank": 2,
+        "impressions": 1,
+        "clicks": 0,
+        "ctr": 0,
+        "status": "measured"
+      },
+      {
+        "keyword": "周辺の飲食店",
+        "targetPath": "/",
+        "rank": 1,
+        "impressions": 1,
+        "clicks": 0,
+        "ctr": 0,
+        "status": "measured"
+      },
+      {
+        "keyword": "味噌かつ",
+        "targetPath": "/",
+        "rank": 72,
+        "impressions": 1,
+        "clicks": 0,
+        "ctr": 0,
+        "status": "measured"
+      },
+      {
+        "keyword": "味噌カツ",
+        "targetPath": "/",
+        "rank": 5.666666666666667,
+        "impressions": 3,
+        "clicks": 0,
+        "ctr": 0,
+        "status": "measured"
+      },
+      {
+        "keyword": "味噌カツ 小牧",
+        "targetPath": "/",
+        "rank": 5,
+        "impressions": 2,
+        "clicks": 0,
+        "ctr": 0,
+        "status": "measured"
+      },
+      {
+        "keyword": "味噌カツ 犬山",
+        "targetPath": "/",
+        "rank": 7,
+        "impressions": 2,
+        "clicks": 0,
+        "ctr": 0,
+        "status": "measured"
+      },
+      {
+        "keyword": "味噌煮込み",
+        "targetPath": "/",
+        "rank": 15,
+        "impressions": 1,
+        "clicks": 0,
+        "ctr": 0,
+        "status": "measured"
+      },
+      {
+        "keyword": "味噌煮込みうどん",
+        "targetPath": "/",
+        "rank": 7.857142857142857,
+        "impressions": 7,
+        "clicks": 0,
+        "ctr": 0,
+        "status": "measured"
+      },
+      {
+        "keyword": "和食 座敷",
+        "targetPath": "/",
+        "rank": 5,
+        "impressions": 2,
+        "clicks": 0,
+        "ctr": 0,
+        "status": "measured"
+      },
+      {
+        "keyword": "和食チェーン",
+        "targetPath": "/",
+        "rank": 18,
+        "impressions": 1,
+        "clicks": 0,
+        "ctr": 0,
+        "status": "measured"
+      },
+      {
+        "keyword": "和食レストラン",
+        "targetPath": "/",
+        "rank": 25.5,
+        "impressions": 2,
+        "clicks": 0,
+        "ctr": 0,
+        "status": "measured"
+      },
+      {
+        "keyword": "和食屋",
+        "targetPath": "/",
+        "rank": 2,
+        "impressions": 2,
+        "clicks": 0,
+        "ctr": 0,
+        "status": "measured"
+      },
+      {
+        "keyword": "和食系",
+        "targetPath": "/",
+        "rank": 8,
+        "impressions": 1,
+        "clicks": 0,
+        "ctr": 0,
+        "status": "measured"
+      },
+      {
+        "keyword": "夕ご飯",
+        "targetPath": "/",
+        "rank": 7,
+        "impressions": 1,
+        "clicks": 0,
+        "ctr": 0,
+        "status": "measured"
+      },
+      {
+        "keyword": "夕食 近所",
+        "targetPath": "/",
+        "rank": 1,
+        "impressions": 1,
+        "clicks": 0,
+        "ctr": 0,
+        "status": "measured"
+      },
+      {
+        "keyword": "夕飯",
+        "targetPath": "/",
+        "rank": 3.6666666666666665,
+        "impressions": 3,
+        "clicks": 0,
+        "ctr": 0,
+        "status": "measured"
+      },
+      {
+        "keyword": "夕飯 現在営業中",
+        "targetPath": "/",
+        "rank": 64,
+        "impressions": 1,
+        "clicks": 0,
+        "ctr": 0,
+        "status": "measured"
+      },
+      {
+        "keyword": "外で食べれるご飯屋さん",
+        "targetPath": "/",
+        "rank": 1,
+        "impressions": 1,
+        "clicks": 0,
+        "ctr": 0,
+        "status": "measured"
+      },
+      {
+        "keyword": "外食",
+        "targetPath": "/",
+        "rank": 16,
+        "impressions": 1,
+        "clicks": 0,
+        "ctr": 0,
+        "status": "measured"
+      },
+      {
+        "keyword": "夜 ご飯 安い",
+        "targetPath": "/",
+        "rank": 11,
+        "impressions": 1,
+        "clicks": 0,
+        "ctr": 0,
+        "status": "measured"
+      },
+      {
+        "keyword": "夜ご飯",
+        "targetPath": "/",
+        "rank": 35.6,
+        "impressions": 5,
+        "clicks": 0,
+        "ctr": 0,
+        "status": "measured"
+      },
+      {
+        "keyword": "天とじ丼",
+        "targetPath": "/",
+        "rank": 13,
+        "impressions": 1,
+        "clicks": 0,
+        "ctr": 0,
+        "status": "measured"
+      },
+      {
+        "keyword": "天丼 小牧",
+        "targetPath": "/",
+        "rank": 8,
+        "impressions": 2,
+        "clicks": 0,
+        "ctr": 0,
+        "status": "measured"
+      },
+      {
+        "keyword": "安い ご飯屋",
+        "targetPath": "/",
+        "rank": 18,
+        "impressions": 1,
+        "clicks": 0,
+        "ctr": 0,
+        "status": "measured"
+      },
+      {
+        "keyword": "安いランチ",
+        "targetPath": "/",
+        "rank": 2.5,
+        "impressions": 2,
+        "clicks": 0,
+        "ctr": 0,
+        "status": "measured"
+      },
+      {
+        "keyword": "安いランチ 近く",
+        "targetPath": "/",
+        "rank": 1,
+        "impressions": 1,
+        "clicks": 0,
+        "ctr": 0,
+        "status": "measured"
+      },
+      {
+        "keyword": "安くてボリュームのある店",
+        "targetPath": "/",
+        "rank": 1,
+        "impressions": 1,
+        "clicks": 0,
+        "ctr": 0,
+        "status": "measured"
+      },
+      {
+        "keyword": "安めがいい",
+        "targetPath": "/",
+        "rank": 2,
+        "impressions": 1,
+        "clicks": 0,
+        "ctr": 0,
+        "status": "measured"
+      },
+      {
+        "keyword": "定食",
+        "targetPath": "/",
+        "rank": 69.5,
+        "impressions": 2,
+        "clicks": 0,
+        "ctr": 0,
+        "status": "measured"
+      },
+      {
+        "keyword": "定食屋",
+        "targetPath": "/",
+        "rank": 15.4,
+        "impressions": 5,
+        "clicks": 0,
+        "ctr": 0,
+        "status": "measured"
+      },
+      {
+        "keyword": "定食屋 小牧",
+        "targetPath": "/",
+        "rank": 13.333333333333334,
+        "impressions": 3,
+        "clicks": 0,
+        "ctr": 0,
+        "status": "measured"
+      },
+      {
+        "keyword": "定食屋 近く",
+        "targetPath": "/",
+        "rank": 2,
+        "impressions": 2,
+        "clicks": 0,
+        "ctr": 0,
+        "status": "measured"
+      },
+      {
+        "keyword": "小牧 うどん",
+        "targetPath": "/",
+        "rank": 9.166666666666666,
+        "impressions": 12,
+        "clicks": 0,
+        "ctr": 0,
+        "status": "measured"
+      },
+      {
+        "keyword": "小牧 うどん屋",
+        "targetPath": "/",
+        "rank": 10.5,
+        "impressions": 2,
+        "clicks": 0,
+        "ctr": 0,
+        "status": "measured"
+      },
+      {
+        "keyword": "小牧 お好み焼き",
+        "targetPath": "/",
+        "rank": 23,
+        "impressions": 1,
+        "clicks": 0,
+        "ctr": 0,
+        "status": "measured"
+      },
+      {
+        "keyword": "小牧 お昼ご飯",
+        "targetPath": "/",
+        "rank": 26.5,
+        "impressions": 2,
+        "clicks": 0,
+        "ctr": 0,
+        "status": "measured"
+      },
+      {
+        "keyword": "小牧 ごはん",
+        "targetPath": "/",
+        "rank": 25.5,
+        "impressions": 2,
+        "clicks": 0,
+        "ctr": 0,
+        "status": "measured"
+      },
+      {
+        "keyword": "小牧 ご飯",
+        "targetPath": "/",
+        "rank": 34.2,
+        "impressions": 5,
+        "clicks": 0,
+        "ctr": 0,
+        "status": "measured"
+      },
+      {
+        "keyword": "小牧 ご飯 おすすめ",
+        "targetPath": "/",
+        "rank": 42.5,
+        "impressions": 2,
+        "clicks": 0,
+        "ctr": 0,
+        "status": "measured"
+      },
+      {
+        "keyword": "小牧 ご飯屋さん",
+        "targetPath": "/",
+        "rank": 2,
+        "impressions": 1,
+        "clicks": 0,
+        "ctr": 0,
+        "status": "measured"
+      },
+      {
+        "keyword": "小牧 そば",
+        "targetPath": "/",
+        "rank": 5,
+        "impressions": 1,
+        "clicks": 0,
+        "ctr": 0,
+        "status": "measured"
+      },
+      {
+        "keyword": "小牧 カツ丼",
+        "targetPath": "/",
+        "rank": 3,
+        "impressions": 1,
+        "clicks": 0,
+        "ctr": 0,
+        "status": "measured"
+      },
+      {
+        "keyword": "小牧 グルメ",
+        "targetPath": "/",
+        "rank": 16,
+        "impressions": 1,
+        "clicks": 0,
+        "ctr": 0,
+        "status": "measured"
+      },
+      {
+        "keyword": "小牧 チェーン店",
+        "targetPath": "/",
+        "rank": 70,
+        "impressions": 1,
+        "clicks": 0,
+        "ctr": 0,
+        "status": "measured"
+      },
+      {
+        "keyword": "小牧 ランチ",
+        "targetPath": "/",
+        "rank": 50.38461538461539,
+        "impressions": 13,
+        "clicks": 0,
+        "ctr": 0,
+        "status": "measured"
+      },
+      {
+        "keyword": "小牧 ランチ おすすめ",
+        "targetPath": "/",
+        "rank": 48,
+        "impressions": 1,
+        "clicks": 0,
+        "ctr": 0,
+        "status": "measured"
+      },
+      {
+        "keyword": "小牧 ランチ ボリューム",
+        "targetPath": "/",
+        "rank": 21.666666666666668,
+        "impressions": 3,
+        "clicks": 0,
+        "ctr": 0,
+        "status": "measured"
+      },
+      {
+        "keyword": "小牧 ランチ 人気",
+        "targetPath": "/",
+        "rank": 49,
+        "impressions": 1,
+        "clicks": 0,
+        "ctr": 0,
+        "status": "measured"
+      },
+      {
+        "keyword": "小牧 ランチ 土日",
+        "targetPath": "/",
+        "rank": 34,
+        "impressions": 2,
+        "clicks": 0,
+        "ctr": 0,
+        "status": "measured"
+      },
+      {
+        "keyword": "小牧 ランチ 土日 安い",
+        "targetPath": "/",
+        "rank": 18.5,
+        "impressions": 2,
+        "clicks": 0,
+        "ctr": 0,
+        "status": "measured"
+      },
+      {
+        "keyword": "小牧 ランチ 安い",
+        "targetPath": "/",
+        "rank": 8.875,
+        "impressions": 8,
+        "clicks": 0,
+        "ctr": 0,
+        "status": "measured"
+      },
+      {
+        "keyword": "小牧 ランチ 定食",
+        "targetPath": "/",
+        "rank": 10,
+        "impressions": 1,
+        "clicks": 0,
+        "ctr": 0,
+        "status": "measured"
+      },
+      {
+        "keyword": "小牧 串カツ",
+        "targetPath": "/",
+        "rank": 26,
+        "impressions": 1,
+        "clicks": 0,
+        "ctr": 0,
+        "status": "measured"
+      },
+      {
+        "keyword": "小牧 味噌カツ",
+        "targetPath": "/",
+        "rank": 3,
+        "impressions": 2,
+        "clicks": 0,
+        "ctr": 0,
+        "status": "measured"
+      },
+      {
+        "keyword": "小牧 味噌煮込みうどん",
+        "targetPath": "/",
+        "rank": 5.666666666666667,
+        "impressions": 3,
+        "clicks": 0,
+        "ctr": 0,
+        "status": "measured"
+      },
+      {
+        "keyword": "小牧 味岡 ランチ",
+        "targetPath": "/",
+        "rank": 16,
+        "impressions": 1,
+        "clicks": 0,
+        "ctr": 0,
+        "status": "measured"
+      },
+      {
+        "keyword": "小牧 和食",
+        "targetPath": "/",
+        "rank": 27.5,
+        "impressions": 4,
+        "clicks": 0,
+        "ctr": 0,
+        "status": "measured"
+      },
+      {
+        "keyword": "小牧 和食 ディナー",
+        "targetPath": "/",
+        "rank": 54,
+        "impressions": 1,
+        "clicks": 0,
+        "ctr": 0,
+        "status": "measured"
+      },
+      {
+        "keyword": "小牧 和食 ランチ",
+        "targetPath": "/",
+        "rank": 17,
+        "impressions": 1,
+        "clicks": 0,
+        "ctr": 0,
+        "status": "measured"
+      },
+      {
+        "keyword": "小牧 夜 ご飯 おすすめ",
+        "targetPath": "/",
+        "rank": 35,
+        "impressions": 2,
+        "clicks": 0,
+        "ctr": 0,
+        "status": "measured"
+      },
+      {
+        "keyword": "小牧 夜 ご飯 安い",
+        "targetPath": "/",
+        "rank": 40.5,
+        "impressions": 2,
+        "clicks": 0,
+        "ctr": 0,
+        "status": "measured"
+      },
+      {
+        "keyword": "小牧 夜ご飯 おすすめ",
+        "targetPath": "/",
+        "rank": 65,
+        "impressions": 2,
+        "clicks": 0,
+        "ctr": 0,
+        "status": "measured"
+      },
+      {
+        "keyword": "小牧 天丼",
+        "targetPath": "/",
+        "rank": 10,
+        "impressions": 1,
+        "clicks": 0,
+        "ctr": 0,
+        "status": "measured"
+      },
+      {
+        "keyword": "小牧 定食",
+        "targetPath": "/",
+        "rank": 12.666666666666666,
+        "impressions": 3,
+        "clicks": 0,
+        "ctr": 0,
+        "status": "measured"
+      },
+      {
+        "keyword": "小牧 定食 ランチ",
+        "targetPath": "/",
+        "rank": 13,
+        "impressions": 2,
+        "clicks": 0,
+        "ctr": 0,
+        "status": "measured"
+      },
+      {
+        "keyword": "小牧 定食 屋",
+        "targetPath": "/",
+        "rank": 13,
+        "impressions": 1,
+        "clicks": 0,
+        "ctr": 0,
+        "status": "measured"
+      },
+      {
+        "keyword": "小牧 定食 激安",
+        "targetPath": "/",
+        "rank": 6,
+        "impressions": 3,
+        "clicks": 0,
+        "ctr": 0,
+        "status": "measured"
+      },
+      {
+        "keyword": "小牧 定食屋",
+        "targetPath": "/",
+        "rank": 19,
+        "impressions": 1,
+        "clicks": 0,
+        "ctr": 0,
+        "status": "measured"
+      },
+      {
+        "keyword": "小牧 懐石料理",
+        "targetPath": "/",
+        "rank": 16,
+        "impressions": 1,
+        "clicks": 0,
+        "ctr": 0,
+        "status": "measured"
+      },
+      {
+        "keyword": "小牧 晩御飯",
+        "targetPath": "/",
+        "rank": 51,
+        "impressions": 1,
+        "clicks": 0,
+        "ctr": 0,
+        "status": "measured"
+      },
+      {
+        "keyword": "小牧 朝ごはん",
+        "targetPath": "/",
+        "rank": 57,
+        "impressions": 1,
+        "clicks": 0,
+        "ctr": 0,
+        "status": "measured"
+      },
+      {
+        "keyword": "小牧 海鮮丼",
+        "targetPath": "/",
+        "rank": 39,
+        "impressions": 1,
+        "clicks": 0,
+        "ctr": 0,
+        "status": "measured"
+      },
+      {
+        "keyword": "小牧 美味しいお店",
+        "targetPath": "/",
+        "rank": 40,
+        "impressions": 1,
+        "clicks": 0,
+        "ctr": 0,
+        "status": "measured"
+      },
+      {
+        "keyword": "小牧 美味しい店",
+        "targetPath": "/",
+        "rank": 25,
+        "impressions": 1,
+        "clicks": 0,
+        "ctr": 0,
+        "status": "measured"
+      },
+      {
+        "keyword": "小牧 蕎麦 ランキング",
+        "targetPath": "/",
+        "rank": 5,
+        "impressions": 1,
+        "clicks": 0,
+        "ctr": 0,
+        "status": "measured"
+      },
+      {
+        "keyword": "小牧 蕎麦屋",
+        "targetPath": "/",
+        "rank": 9.8,
+        "impressions": 10,
+        "clicks": 0,
+        "ctr": 0,
+        "status": "measured"
+      },
+      {
+        "keyword": "小牧 角屋",
+        "targetPath": "/",
+        "rank": 6.2,
+        "impressions": 5,
+        "clicks": 0,
+        "ctr": 0,
+        "status": "measured"
+      },
+      {
+        "keyword": "小牧 食事 おすすめ",
+        "targetPath": "/",
+        "rank": 36,
+        "impressions": 1,
+        "clicks": 0,
+        "ctr": 0,
+        "status": "measured"
+      },
+      {
+        "keyword": "小牧 飯屋",
+        "targetPath": "/",
+        "rank": 15,
+        "impressions": 1,
+        "clicks": 0,
+        "ctr": 0,
+        "status": "measured"
+      },
+      {
+        "keyword": "小牧 飲み放題",
+        "targetPath": "/",
+        "rank": 68,
+        "impressions": 1,
+        "clicks": 0,
+        "ctr": 0,
+        "status": "measured"
+      },
+      {
+        "keyword": "小牧 飲食店",
+        "targetPath": "/",
+        "rank": 39.333333333333336,
+        "impressions": 6,
+        "clicks": 0,
+        "ctr": 0,
+        "status": "measured"
+      },
+      {
+        "keyword": "小牧うどん",
+        "targetPath": "/",
+        "rank": 10.5,
+        "impressions": 2,
+        "clicks": 0,
+        "ctr": 0,
+        "status": "measured"
+      },
+      {
+        "keyword": "小牧ごはん",
+        "targetPath": "/",
+        "rank": 36,
+        "impressions": 2,
+        "clicks": 0,
+        "ctr": 0,
+        "status": "measured"
+      },
+      {
+        "keyword": "小牧ご飯",
+        "targetPath": "/",
+        "rank": 21.625,
+        "impressions": 8,
+        "clicks": 0,
+        "ctr": 0,
+        "status": "measured"
+      },
+      {
+        "keyword": "小牧ご飯や",
+        "targetPath": "/",
+        "rank": 15.5,
+        "impressions": 2,
+        "clicks": 0,
+        "ctr": 0,
+        "status": "measured"
+      },
+      {
+        "keyword": "小牧ご飯屋さん",
+        "targetPath": "/",
+        "rank": 19,
+        "impressions": 1,
+        "clicks": 0,
+        "ctr": 0,
+        "status": "measured"
+      },
+      {
+        "keyword": "小牧ランチ",
+        "targetPath": "/",
+        "rank": 54.23076923076923,
+        "impressions": 13,
+        "clicks": 0,
+        "ctr": 0,
+        "status": "measured"
+      },
+      {
+        "keyword": "小牧ランチ人気",
+        "targetPath": "/",
+        "rank": 58,
+        "impressions": 1,
+        "clicks": 0,
+        "ctr": 0,
+        "status": "measured"
+      },
+      {
+        "keyword": "小牧ランチ和食",
+        "targetPath": "/",
+        "rank": 18,
+        "impressions": 1,
+        "clicks": 0,
+        "ctr": 0,
+        "status": "measured"
+      },
+      {
+        "keyword": "小牧和食",
+        "targetPath": "/",
+        "rank": 31.5,
+        "impressions": 2,
+        "clicks": 0,
+        "ctr": 0,
+        "status": "measured"
+      },
+      {
+        "keyword": "小牧和食ランチ",
+        "targetPath": "/",
+        "rank": 21,
+        "impressions": 1,
+        "clicks": 0,
+        "ctr": 0,
+        "status": "measured"
+      },
+      {
+        "keyword": "小牧定食屋",
+        "targetPath": "/",
+        "rank": 20,
+        "impressions": 1,
+        "clicks": 0,
+        "ctr": 0,
+        "status": "measured"
+      },
+      {
+        "keyword": "小牧市 うどん",
+        "targetPath": "/",
+        "rank": 4,
+        "impressions": 1,
+        "clicks": 0,
+        "ctr": 0,
+        "status": "measured"
+      },
+      {
+        "keyword": "小牧市 きしめん",
+        "targetPath": "/",
+        "rank": 6.4,
+        "impressions": 5,
+        "clicks": 0,
+        "ctr": 0,
+        "status": "measured"
+      },
+      {
+        "keyword": "小牧市 きしめん",
+        "targetPath": "/",
+        "rank": 8,
+        "impressions": 2,
+        "clicks": 0,
+        "ctr": 0,
+        "status": "measured"
+      },
+      {
+        "keyword": "小牧市 ご飯",
+        "targetPath": "/",
+        "rank": 16,
+        "impressions": 4,
+        "clicks": 0,
+        "ctr": 0,
+        "status": "measured"
+      },
+      {
+        "keyword": "小牧市 ランチ おすすめ",
+        "targetPath": "/",
+        "rank": 52,
+        "impressions": 1,
+        "clicks": 0,
+        "ctr": 0,
+        "status": "measured"
+      },
+      {
+        "keyword": "小牧市 ランチ 個室",
+        "targetPath": "/",
+        "rank": 52,
+        "impressions": 1,
+        "clicks": 0,
+        "ctr": 0,
+        "status": "measured"
+      },
+      {
+        "keyword": "小牧市 ランチ 安い",
+        "targetPath": "/",
+        "rank": 4.5,
+        "impressions": 2,
+        "clicks": 0,
+        "ctr": 0,
+        "status": "measured"
+      },
+      {
+        "keyword": "小牧市 味噌カツ",
+        "targetPath": "/",
+        "rank": 5.333333333333333,
+        "impressions": 3,
+        "clicks": 0,
+        "ctr": 0,
+        "status": "measured"
+      },
+      {
+        "keyword": "小牧市 味噌煮込みうどん",
+        "targetPath": "/",
+        "rank": 5,
+        "impressions": 1,
+        "clicks": 0,
+        "ctr": 0,
+        "status": "measured"
+      },
+      {
+        "keyword": "小牧市 和食",
+        "targetPath": "/",
+        "rank": 19,
+        "impressions": 2,
+        "clicks": 0,
+        "ctr": 0,
+        "status": "measured"
+      },
+      {
+        "keyword": "小牧市 定食屋",
+        "targetPath": "/",
+        "rank": 8.5,
+        "impressions": 2,
+        "clicks": 0,
+        "ctr": 0,
+        "status": "measured"
+      },
+      {
+        "keyword": "小牧市 焼肉 ランチ",
+        "targetPath": "/",
+        "rank": 64,
+        "impressions": 1,
+        "clicks": 0,
+        "ctr": 0,
+        "status": "measured"
+      },
+      {
+        "keyword": "小牧市 角屋",
+        "targetPath": "/",
+        "rank": 1,
+        "impressions": 2,
+        "clicks": 0,
+        "ctr": 0,
+        "status": "measured"
+      },
+      {
+        "keyword": "小牧市 角屋",
+        "targetPath": "/",
+        "rank": 4,
+        "impressions": 1,
+        "clicks": 0,
+        "ctr": 0,
+        "status": "measured"
+      },
+      {
+        "keyword": "小牧市 食事",
+        "targetPath": "/",
+        "rank": 58,
+        "impressions": 1,
+        "clicks": 0,
+        "ctr": 0,
+        "status": "measured"
+      },
+      {
+        "keyword": "小牧市 飲食店",
+        "targetPath": "/",
+        "rank": 19,
+        "impressions": 1,
+        "clicks": 0,
+        "ctr": 0,
+        "status": "measured"
+      },
+      {
+        "keyword": "小牧市ご飯",
+        "targetPath": "/",
+        "rank": 20,
+        "impressions": 1,
+        "clicks": 0,
+        "ctr": 0,
+        "status": "measured"
+      },
+      {
+        "keyword": "小牧市グルメ",
+        "targetPath": "/",
+        "rank": 23,
+        "impressions": 2,
+        "clicks": 0,
+        "ctr": 0,
+        "status": "measured"
+      },
+      {
+        "keyword": "小牧市ランチ",
+        "targetPath": "/",
+        "rank": 60.75,
+        "impressions": 4,
+        "clicks": 0,
+        "ctr": 0,
+        "status": "measured"
+      },
+      {
+        "keyword": "小牧市ランチおすすめ",
+        "targetPath": "/",
+        "rank": 56,
+        "impressions": 2,
+        "clicks": 0,
+        "ctr": 0,
+        "status": "measured"
+      },
+      {
+        "keyword": "小牧市ランチランキング",
+        "targetPath": "/",
+        "rank": 23,
+        "impressions": 1,
+        "clicks": 0,
+        "ctr": 0,
+        "status": "measured"
+      },
+      {
+        "keyword": "小牧市喫茶店",
+        "targetPath": "/",
+        "rank": 1,
+        "impressions": 1,
+        "clicks": 0,
+        "ctr": 0,
+        "status": "measured"
+      },
+      {
+        "keyword": "小牧市蕎麦屋",
+        "targetPath": "/",
+        "rank": 6,
+        "impressions": 1,
+        "clicks": 0,
+        "ctr": 0,
+        "status": "measured"
+      },
+      {
+        "keyword": "小牧市角屋",
+        "targetPath": "/",
+        "rank": 1,
+        "impressions": 3,
+        "clicks": 0,
+        "ctr": 0,
+        "status": "measured"
+      },
+      {
+        "keyword": "小牧市角屋",
+        "targetPath": "/",
+        "rank": 5,
+        "impressions": 1,
+        "clicks": 0,
+        "ctr": 0,
+        "status": "measured"
+      },
+      {
+        "keyword": "小牧市飲食店",
+        "targetPath": "/",
+        "rank": 47.5,
+        "impressions": 2,
+        "clicks": 0,
+        "ctr": 0,
+        "status": "measured"
+      },
+      {
+        "keyword": "小牧焼肉屋",
+        "targetPath": "/",
+        "rank": 42,
+        "impressions": 1,
+        "clicks": 0,
+        "ctr": 0,
+        "status": "measured"
+      },
+      {
+        "keyword": "小牧角屋",
+        "targetPath": "/",
+        "rank": 7.75,
+        "impressions": 4,
+        "clicks": 0,
+        "ctr": 0,
+        "status": "measured"
+      },
+      {
+        "keyword": "小牧飲食店",
+        "targetPath": "/",
+        "rank": 16,
+        "impressions": 1,
+        "clicks": 0,
+        "ctr": 0,
+        "status": "measured"
+      },
+      {
+        "keyword": "居酒屋 近く 飲み放題",
+        "targetPath": "/",
+        "rank": 9,
+        "impressions": 1,
+        "clicks": 0,
+        "ctr": 0,
+        "status": "measured"
+      },
+      {
+        "keyword": "平日ランチ 安い",
+        "targetPath": "/",
+        "rank": 5,
+        "impressions": 1,
+        "clicks": 0,
+        "ctr": 0,
+        "status": "measured"
+      },
+      {
+        "keyword": "昼ごはん",
+        "targetPath": "/",
+        "rank": 15.5,
+        "impressions": 2,
+        "clicks": 0,
+        "ctr": 0,
+        "status": "measured"
+      },
+      {
+        "keyword": "昼飯",
+        "targetPath": "/",
+        "rank": 88,
+        "impressions": 1,
+        "clicks": 0,
+        "ctr": 0,
+        "status": "measured"
+      },
+      {
+        "keyword": "晩御飯",
+        "targetPath": "/",
+        "rank": 45.5,
+        "impressions": 4,
+        "clicks": 0,
+        "ctr": 0,
+        "status": "measured"
+      },
+      {
+        "keyword": "最寄りのご飯やさん",
+        "targetPath": "/",
+        "rank": 4,
+        "impressions": 2,
+        "clicks": 0,
+        "ctr": 0,
+        "status": "measured"
+      },
+      {
+        "keyword": "最寄りランチ",
+        "targetPath": "/",
+        "rank": 8,
+        "impressions": 1,
+        "clicks": 0,
+        "ctr": 0,
+        "status": "measured"
+      },
+      {
+        "keyword": "朝 蕎麦",
+        "targetPath": "/",
+        "rank": 9,
+        "impressions": 1,
+        "clicks": 0,
+        "ctr": 0,
+        "status": "measured"
+      },
+      {
+        "keyword": "朝から開いてる飲食店",
+        "targetPath": "/",
+        "rank": 21,
+        "impressions": 1,
+        "clicks": 0,
+        "ctr": 0,
+        "status": "measured"
+      },
+      {
+        "keyword": "朝ランチ",
+        "targetPath": "/",
+        "rank": 31,
+        "impressions": 1,
+        "clicks": 0,
+        "ctr": 0,
+        "status": "measured"
+      },
+      {
+        "keyword": "朝定食",
+        "targetPath": "/",
+        "rank": 20,
+        "impressions": 1,
+        "clicks": 0,
+        "ctr": 0,
+        "status": "measured"
+      },
+      {
+        "keyword": "朝定食 最強",
+        "targetPath": "/",
+        "rank": 14,
+        "impressions": 2,
+        "clicks": 0,
+        "ctr": 0,
+        "status": "measured"
+      },
+      {
+        "keyword": "朝定食安い店",
+        "targetPath": "/",
+        "rank": 2,
+        "impressions": 1,
+        "clicks": 0,
+        "ctr": 0,
+        "status": "measured"
+      },
+      {
+        "keyword": "朝食 和食",
+        "targetPath": "/",
+        "rank": 19,
+        "impressions": 1,
+        "clicks": 0,
+        "ctr": 0,
+        "status": "measured"
+      },
+      {
+        "keyword": "朝食 安い 近く",
+        "targetPath": "/",
+        "rank": 2,
+        "impressions": 1,
+        "clicks": 0,
+        "ctr": 0,
+        "status": "measured"
+      },
+      {
+        "keyword": "朝飯",
+        "targetPath": "/",
+        "rank": 13,
+        "impressions": 1,
+        "clicks": 0,
+        "ctr": 0,
+        "status": "measured"
+      },
+      {
+        "keyword": "深夜ご飯 現在営業中",
+        "targetPath": "/",
+        "rank": 37,
+        "impressions": 1,
+        "clicks": 0,
+        "ctr": 0,
+        "status": "measured"
+      },
+      {
+        "keyword": "焼肉かどや",
+        "targetPath": "/",
+        "rank": 1,
+        "impressions": 1,
+        "clicks": 0,
+        "ctr": 0,
+        "status": "measured"
+      },
+      {
+        "keyword": "犬山 味噌カツ",
+        "targetPath": "/",
+        "rank": 8.5,
+        "impressions": 4,
+        "clicks": 0,
+        "ctr": 0,
+        "status": "measured"
+      },
+      {
+        "keyword": "皿うどん店",
+        "targetPath": "/",
+        "rank": 26,
+        "impressions": 1,
+        "clicks": 0,
+        "ctr": 0,
+        "status": "measured"
+      },
+      {
+        "keyword": "美味しいご飯",
+        "targetPath": "/",
+        "rank": 10,
+        "impressions": 1,
+        "clicks": 0,
+        "ctr": 0,
+        "status": "measured"
+      },
+      {
+        "keyword": "美味しいご飯やさん",
+        "targetPath": "/",
+        "rank": 1,
+        "impressions": 1,
+        "clicks": 0,
+        "ctr": 0,
+        "status": "measured"
+      },
+      {
+        "keyword": "美味しいランチ 近く",
+        "targetPath": "/",
+        "rank": 42,
+        "impressions": 1,
+        "clicks": 0,
+        "ctr": 0,
+        "status": "measured"
+      },
+      {
+        "keyword": "菜飯田楽",
+        "targetPath": "/",
+        "rank": 3,
+        "impressions": 1,
+        "clicks": 0,
+        "ctr": 0,
+        "status": "measured"
+      },
+      {
+        "keyword": "親子丼食べれる店",
+        "targetPath": "/",
+        "rank": 5,
+        "impressions": 1,
+        "clicks": 0,
+        "ctr": 0,
+        "status": "measured"
+      },
+      {
+        "keyword": "角や",
+        "targetPath": "/",
+        "rank": 5.5,
+        "impressions": 2,
+        "clicks": 0,
+        "ctr": 0,
+        "status": "measured"
+      },
+      {
+        "keyword": "角家",
+        "targetPath": "/",
+        "rank": 1,
+        "impressions": 2,
+        "clicks": 0,
+        "ctr": 0,
+        "status": "measured"
+      },
+      {
+        "keyword": "角家",
+        "targetPath": "/",
+        "rank": 4,
+        "impressions": 2,
+        "clicks": 0,
+        "ctr": 0,
+        "status": "measured"
+      },
+      {
+        "keyword": "角屋 メニュー",
+        "targetPath": "/",
+        "rank": 4.666666666666666,
+        "impressions": 3,
+        "clicks": 0,
+        "ctr": 0,
+        "status": "measured"
+      },
+      {
+        "keyword": "角屋 メニュー",
+        "targetPath": "/",
+        "rank": 4.666666666666666,
+        "impressions": 3,
+        "clicks": 0,
+        "ctr": 0,
+        "status": "measured"
+      },
+      {
+        "keyword": "角屋 モーニング",
+        "targetPath": "/",
+        "rank": 1,
+        "impressions": 3,
+        "clicks": 0,
+        "ctr": 0,
+        "status": "measured"
+      },
+      {
+        "keyword": "角屋 モーニング",
+        "targetPath": "/",
+        "rank": 6.333333333333333,
+        "impressions": 3,
+        "clicks": 0,
+        "ctr": 0,
+        "status": "measured"
+      },
+      {
+        "keyword": "角屋 写真",
+        "targetPath": "/",
+        "rank": 1,
+        "impressions": 1,
+        "clicks": 0,
+        "ctr": 0,
+        "status": "measured"
+      },
+      {
+        "keyword": "角屋 小牧 モーニング",
+        "targetPath": "/",
+        "rank": 4.285714285714286,
+        "impressions": 7,
+        "clicks": 0,
+        "ctr": 0,
+        "status": "measured"
+      },
+      {
+        "keyword": "角屋 小牧 モーニング",
+        "targetPath": "/",
+        "rank": 6.5,
+        "impressions": 8,
+        "clicks": 0,
+        "ctr": 0,
+        "status": "measured"
+      },
+      {
+        "keyword": "角屋 小牧市",
+        "targetPath": "/",
+        "rank": 1,
+        "impressions": 10,
+        "clicks": 0,
+        "ctr": 0,
+        "status": "measured"
+      },
+      {
+        "keyword": "角屋 小牧市",
+        "targetPath": "/",
+        "rank": 6.857142857142857,
+        "impressions": 7,
+        "clicks": 0,
+        "ctr": 0,
+        "status": "measured"
+      },
+      {
+        "keyword": "角屋 小牧市 レビュー",
+        "targetPath": "/",
+        "rank": 1.6,
+        "impressions": 5,
+        "clicks": 0,
+        "ctr": 0,
+        "status": "measured"
+      },
+      {
+        "keyword": "角屋 田県神社前",
+        "targetPath": "/",
+        "rank": 1,
+        "impressions": 3,
+        "clicks": 0,
+        "ctr": 0,
+        "status": "measured"
+      },
+      {
+        "keyword": "角屋 田県神社前",
+        "targetPath": "/",
+        "rank": 8,
+        "impressions": 1,
+        "clicks": 0,
+        "ctr": 0,
+        "status": "measured"
+      },
+      {
+        "keyword": "角屋市役所前店",
+        "targetPath": "/",
+        "rank": 1,
+        "impressions": 1,
+        "clicks": 0,
+        "ctr": 0,
+        "status": "measured"
+      },
+      {
+        "keyword": "角谷",
+        "targetPath": "/",
+        "rank": 4.4,
+        "impressions": 5,
+        "clicks": 0,
+        "ctr": 0,
+        "status": "measured"
+      },
+      {
+        "keyword": "近く ご飯",
+        "targetPath": "/",
+        "rank": 10,
+        "impressions": 1,
+        "clicks": 0,
+        "ctr": 0,
+        "status": "measured"
+      },
+      {
+        "keyword": "近く ご飯 ランキング",
+        "targetPath": "/",
+        "rank": 77,
+        "impressions": 1,
+        "clicks": 0,
+        "ctr": 0,
+        "status": "measured"
+      },
+      {
+        "keyword": "近く ランチ",
+        "targetPath": "/",
+        "rank": 15,
+        "impressions": 1,
+        "clicks": 0,
+        "ctr": 0,
+        "status": "measured"
+      },
+      {
+        "keyword": "近く 夜ご飯",
+        "targetPath": "/",
+        "rank": 16,
+        "impressions": 2,
+        "clicks": 0,
+        "ctr": 0,
+        "status": "measured"
+      },
+      {
+        "keyword": "近く 定食屋",
+        "targetPath": "/",
+        "rank": 25,
+        "impressions": 1,
+        "clicks": 0,
+        "ctr": 0,
+        "status": "measured"
+      },
+      {
+        "keyword": "近く 飲食店",
+        "targetPath": "/",
+        "rank": 10,
+        "impressions": 1,
+        "clicks": 0,
+        "ctr": 0,
+        "status": "measured"
+      },
+      {
+        "keyword": "近くご飯",
+        "targetPath": "/",
+        "rank": 93.66666666666667,
+        "impressions": 3,
+        "clicks": 0,
+        "ctr": 0,
+        "status": "measured"
+      },
+      {
+        "keyword": "近くご飯や",
+        "targetPath": "/",
+        "rank": 20,
+        "impressions": 1,
+        "clicks": 0,
+        "ctr": 0,
+        "status": "measured"
+      },
+      {
+        "keyword": "近くご飯屋",
+        "targetPath": "/",
+        "rank": 2,
+        "impressions": 1,
+        "clicks": 0,
+        "ctr": 0,
+        "status": "measured"
+      },
+      {
+        "keyword": "近くでご飯",
+        "targetPath": "/",
+        "rank": 1,
+        "impressions": 1,
+        "clicks": 0,
+        "ctr": 0,
+        "status": "measured"
+      },
+      {
+        "keyword": "近くでランチ",
+        "targetPath": "/",
+        "rank": 3,
+        "impressions": 1,
+        "clicks": 0,
+        "ctr": 0,
+        "status": "measured"
+      },
+      {
+        "keyword": "近くのうどん",
+        "targetPath": "/",
+        "rank": 4,
+        "impressions": 1,
+        "clicks": 0,
+        "ctr": 0,
+        "status": "measured"
+      },
+      {
+        "keyword": "近くのうどんや",
+        "targetPath": "/",
+        "rank": 16,
+        "impressions": 1,
+        "clicks": 0,
+        "ctr": 0,
+        "status": "measured"
+      },
+      {
+        "keyword": "近くのうどん屋",
+        "targetPath": "/",
+        "rank": 14.333333333333334,
+        "impressions": 3,
+        "clicks": 0,
+        "ctr": 0,
+        "status": "measured"
+      },
+      {
+        "keyword": "近くのうどん屋 人気",
+        "targetPath": "/",
+        "rank": 8,
+        "impressions": 1,
+        "clicks": 0,
+        "ctr": 0,
+        "status": "measured"
+      },
+      {
+        "keyword": "近くのお食事処",
+        "targetPath": "/",
+        "rank": 3,
+        "impressions": 2,
+        "clicks": 0,
+        "ctr": 0,
+        "status": "measured"
+      },
+      {
+        "keyword": "近くのご飯",
+        "targetPath": "/",
+        "rank": 20.2,
+        "impressions": 5,
+        "clicks": 0,
+        "ctr": 0,
+        "status": "measured"
+      },
+      {
+        "keyword": "近くのご飯やさん",
+        "targetPath": "/",
+        "rank": 3.75,
+        "impressions": 4,
+        "clicks": 0,
+        "ctr": 0,
+        "status": "measured"
+      },
+      {
+        "keyword": "近くのご飯屋さん",
+        "targetPath": "/",
+        "rank": 39,
+        "impressions": 2,
+        "clicks": 0,
+        "ctr": 0,
+        "status": "measured"
+      },
+      {
+        "keyword": "近くのグルメ",
+        "targetPath": "/",
+        "rank": 21,
+        "impressions": 2,
+        "clicks": 0,
+        "ctr": 0,
+        "status": "measured"
+      },
+      {
+        "keyword": "近くのランチ",
+        "targetPath": "/",
+        "rank": 6.833333333333333,
+        "impressions": 6,
+        "clicks": 0,
+        "ctr": 0,
+        "status": "measured"
+      },
+      {
+        "keyword": "近くのランチ 人気",
+        "targetPath": "/",
+        "rank": 36,
+        "impressions": 1,
+        "clicks": 0,
+        "ctr": 0,
+        "status": "measured"
+      },
+      {
+        "keyword": "近くのランチ 現在営業中 400m 以内",
+        "targetPath": "/",
+        "rank": 7,
+        "impressions": 1,
+        "clicks": 0,
+        "ctr": 0,
+        "status": "measured"
+      },
+      {
+        "keyword": "近くの味噌カツ",
+        "targetPath": "/",
+        "rank": 4,
+        "impressions": 1,
+        "clicks": 0,
+        "ctr": 0,
+        "status": "measured"
+      },
+      {
+        "keyword": "近くの味噌煮込みうどん",
+        "targetPath": "/",
+        "rank": 10.5,
+        "impressions": 2,
+        "clicks": 0,
+        "ctr": 0,
+        "status": "measured"
+      },
+      {
+        "keyword": "近くの定食屋",
+        "targetPath": "/",
+        "rank": 6,
+        "impressions": 1,
+        "clicks": 0,
+        "ctr": 0,
+        "status": "measured"
+      },
+      {
+        "keyword": "近くの定食屋さ",
+        "targetPath": "/",
+        "rank": 3,
+        "impressions": 1,
+        "clicks": 0,
+        "ctr": 0,
+        "status": "measured"
+      },
+      {
+        "keyword": "近くの昼ごはん",
+        "targetPath": "/",
+        "rank": 9.666666666666666,
+        "impressions": 3,
+        "clicks": 0,
+        "ctr": 0,
+        "status": "measured"
+      },
+      {
+        "keyword": "近くの昼ご飯",
+        "targetPath": "/",
+        "rank": 47,
+        "impressions": 1,
+        "clicks": 0,
+        "ctr": 0,
+        "status": "measured"
+      },
+      {
+        "keyword": "近くの朝ごはん",
+        "targetPath": "/",
+        "rank": 19,
+        "impressions": 1,
+        "clicks": 0,
+        "ctr": 0,
+        "status": "measured"
+      },
+      {
+        "keyword": "近くの美味しいご飯屋さん",
+        "targetPath": "/",
+        "rank": 8,
+        "impressions": 1,
+        "clicks": 0,
+        "ctr": 0,
+        "status": "measured"
+      },
+      {
+        "keyword": "近くの蕎麦屋",
+        "targetPath": "/",
+        "rank": 11.5,
+        "impressions": 2,
+        "clicks": 0,
+        "ctr": 0,
+        "status": "measured"
+      },
+      {
+        "keyword": "近くの遅くまでやってる飲食店",
+        "targetPath": "/",
+        "rank": 26,
+        "impressions": 1,
+        "clicks": 0,
+        "ctr": 0,
+        "status": "measured"
+      },
+      {
+        "keyword": "近くの食べ物",
+        "targetPath": "/",
+        "rank": 4,
+        "impressions": 1,
+        "clicks": 0,
+        "ctr": 0,
+        "status": "measured"
+      },
+      {
+        "keyword": "近くの食べ物屋さん",
+        "targetPath": "/",
+        "rank": 1,
+        "impressions": 1,
+        "clicks": 0,
+        "ctr": 0,
+        "status": "measured"
+      },
+      {
+        "keyword": "近くの食事処",
+        "targetPath": "/",
+        "rank": 10,
+        "impressions": 1,
+        "clicks": 0,
+        "ctr": 0,
+        "status": "measured"
+      },
+      {
+        "keyword": "近くの飯屋",
+        "targetPath": "/",
+        "rank": 3.5,
+        "impressions": 2,
+        "clicks": 0,
+        "ctr": 0,
+        "status": "measured"
+      },
+      {
+        "keyword": "近くの飲食店",
+        "targetPath": "/",
+        "rank": 38.61538461538461,
+        "impressions": 13,
+        "clicks": 0,
+        "ctr": 0,
+        "status": "measured"
+      },
+      {
+        "keyword": "近くの飲食店 和食",
+        "targetPath": "/",
+        "rank": 6,
+        "impressions": 1,
+        "clicks": 0,
+        "ctr": 0,
+        "status": "measured"
+      },
+      {
+        "keyword": "近くの飲食店 現在営業中",
+        "targetPath": "/",
+        "rank": 6,
+        "impressions": 1,
+        "clicks": 0,
+        "ctr": 0,
+        "status": "measured"
+      },
+      {
+        "keyword": "近くランチ",
+        "targetPath": "/",
+        "rank": 11,
+        "impressions": 1,
+        "clicks": 0,
+        "ctr": 0,
+        "status": "measured"
+      },
+      {
+        "keyword": "近く定食屋さん",
+        "targetPath": "/",
+        "rank": 55,
+        "impressions": 1,
+        "clicks": 0,
+        "ctr": 0,
+        "status": "measured"
+      },
+      {
+        "keyword": "近く朝食",
+        "targetPath": "/",
+        "rank": 47,
+        "impressions": 1,
+        "clicks": 0,
+        "ctr": 0,
+        "status": "measured"
+      },
+      {
+        "keyword": "近く蕎麦屋",
+        "targetPath": "/",
+        "rank": 4,
+        "impressions": 2,
+        "clicks": 0,
+        "ctr": 0,
+        "status": "measured"
+      },
+      {
+        "keyword": "近く食べ物屋",
+        "targetPath": "/",
+        "rank": 1,
+        "impressions": 1,
+        "clicks": 0,
+        "ctr": 0,
+        "status": "measured"
+      },
+      {
+        "keyword": "近く飯屋",
+        "targetPath": "/",
+        "rank": 1,
+        "impressions": 1,
+        "clicks": 0,
+        "ctr": 0,
+        "status": "measured"
+      },
+      {
+        "keyword": "近隣のランチ",
+        "targetPath": "/",
+        "rank": 9,
+        "impressions": 1,
+        "clicks": 0,
+        "ctr": 0,
+        "status": "measured"
+      },
+      {
+        "keyword": "食べ物や",
+        "targetPath": "/",
+        "rank": 2,
+        "impressions": 1,
+        "clicks": 0,
+        "ctr": 0,
+        "status": "measured"
+      },
+      {
+        "keyword": "食べ物やさん",
+        "targetPath": "/",
+        "rank": 107,
+        "impressions": 1,
+        "clicks": 0,
+        "ctr": 0,
+        "status": "measured"
+      },
+      {
+        "keyword": "食べ物屋",
+        "targetPath": "/",
+        "rank": 1,
+        "impressions": 1,
+        "clicks": 0,
+        "ctr": 0,
+        "status": "measured"
+      },
+      {
+        "keyword": "食べ物屋さん",
+        "targetPath": "/",
+        "rank": 10,
+        "impressions": 2,
+        "clicks": 0,
+        "ctr": 0,
+        "status": "measured"
+      },
+      {
+        "keyword": "食べ物屋さん近く",
+        "targetPath": "/",
+        "rank": 3,
+        "impressions": 2,
+        "clicks": 0,
+        "ctr": 0,
+        "status": "measured"
+      },
+      {
+        "keyword": "飯屋",
+        "targetPath": "/",
+        "rank": 38,
+        "impressions": 2,
+        "clicks": 0,
+        "ctr": 0,
+        "status": "measured"
+      },
+      {
+        "keyword": "飯屋 周辺",
+        "targetPath": "/",
+        "rank": 3,
+        "impressions": 1,
+        "clicks": 0,
+        "ctr": 0,
+        "status": "measured"
+      },
+      {
+        "keyword": "飯屋 近く",
+        "targetPath": "/",
+        "rank": 74,
+        "impressions": 1,
+        "clicks": 0,
+        "ctr": 0,
+        "status": "measured"
+      },
+      {
+        "keyword": "飲食店",
+        "targetPath": "/",
+        "rank": 4.5,
+        "impressions": 4,
+        "clicks": 0,
+        "ctr": 0,
+        "status": "measured"
+      },
+      {
+        "keyword": "飲食店 現在営業中",
+        "targetPath": "/",
+        "rank": 9,
+        "impressions": 1,
+        "clicks": 0,
+        "ctr": 0,
+        "status": "measured"
+      }
+    ]
   }
 ]
