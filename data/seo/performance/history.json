@@ -52,5 +52,124 @@
     "tbtMs": 1,
     "transferBytes": 3575383,
     "limitations": "Local lab measurement of current source, not real-user or production CDN performance."
+  },
+  {
+    "mode": "mobile",
+    "measuredAt": "2026-10-10T15:39:44.055Z",
+    "url": "http://localhost:8080/",
+    "sourceCommit": "f15baaec5caa7b3858fc40907bb1e7c5a55acf67",
+    "status": "incomplete",
+    "measurementErrors": [
+      {
+        "audit": "largest-contentful-paint",
+        "error": "NO_LCP"
+      },
+      {
+        "audit": "total-blocking-time",
+        "error": "NO_LCP"
+      },
+      {
+        "audit": "interactive",
+        "error": "NO_LCP"
+      },
+      {
+        "audit": "redirects",
+        "error": "NO_LCP"
+      },
+      {
+        "audit": "uses-rel-preconnect",
+        "error": "NO_LCP"
+      },
+      {
+        "audit": "third-party-summary",
+        "error": "NO_LCP"
+      },
+      {
+        "audit": "third-party-facades",
+        "error": "NO_LCP"
+      },
+      {
+        "audit": "long-tasks",
+        "error": "NO_LCP"
+      },
+      {
+        "audit": "offscreen-images",
+        "error": "NO_LCP"
+      },
+      {
+        "audit": "render-blocking-resources",
+        "error": "The page did not display content that qualifies as a Largest Contentful Paint (LCP). Ensure the page has a valid LCP element and then try again. (NO_LCP)"
+      },
+      {
+        "audit": "unminified-css",
+        "error": "NO_LCP"
+      },
+      {
+        "audit": "unminified-javascript",
+        "error": "NO_LCP"
+      },
+      {
+        "audit": "unused-css-rules",
+        "error": "NO_LCP"
+      },
+      {
+        "audit": "unused-javascript",
+        "error": "NO_LCP"
+      },
+      {
+        "audit": "modern-image-formats",
+        "error": "NO_LCP"
+      },
+      {
+        "audit": "uses-optimized-images",
+        "error": "NO_LCP"
+      },
+      {
+        "audit": "uses-text-compression",
+        "error": "NO_LCP"
+      },
+      {
+        "audit": "uses-responsive-images",
+        "error": "NO_LCP"
+      },
+      {
+        "audit": "efficient-animated-content",
+        "error": "NO_LCP"
+      },
+      {
+        "audit": "duplicated-javascript",
+        "error": "NO_LCP"
+      },
+      {
+        "audit": "legacy-javascript",
+        "error": "NO_LCP"
+      },
+      {
+        "audit": "uses-http2",
+        "error": "NO_LCP"
+      }
+    ],
+    "performance": null,
+    "accessibility": 0.97,
+    "seo": 0.92,
+    "cls": 0,
+    "transferBytes": 3433061,
+    "limitations": "Local lab measurement of current source, not real-user or production CDN performance."
+  },
+  {
+    "mode": "desktop",
+    "measuredAt": "2026-10-10T15:40:02.240Z",
+    "url": "http://localhost:8080/",
+    "sourceCommit": "f15baaec5caa7b3858fc40907bb1e7c5a55acf67",
+    "status": "measured",
+    "measurementErrors": [],
+    "performance": 0.74,
+    "accessibility": 0.97,
+    "seo": 0.92,
+    "lcpMs": 5568.918700000004,
+    "cls": 0.06832940815822203,
+    "tbtMs": 22,
+    "transferBytes": 3575722,
+    "limitations": "Local lab measurement of current source, not real-user or production CDN performance."
   }
 ]
