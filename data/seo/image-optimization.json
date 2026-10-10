@@ -1,0 +1,530 @@
+[
+  {
+    "original": "images/IMG_3132.jpg",
+    "originalBytes": 369233,
+    "variants": [
+      {
+        "path": "images/optimized/IMG_3132-640.webp",
+        "width": 640,
+        "bytes": 57016
+      },
+      {
+        "path": "images/optimized/IMG_3132-1200.webp",
+        "width": 1200,
+        "bytes": 154586
+      }
+    ]
+  },
+  {
+    "original": "images/autumn-matsutake-gozen.jpg",
+    "originalBytes": 2508187,
+    "variants": [
+      {
+        "path": "images/optimized/autumn-matsutake-gozen-640.webp",
+        "width": 640,
+        "bytes": 44604
+      },
+      {
+        "path": "images/optimized/autumn-matsutake-gozen-1200.webp",
+        "width": 1200,
+        "bytes": 109196
+      }
+    ]
+  },
+  {
+    "original": "images/autumn-kaki-nikomi.jpg",
+    "originalBytes": 2252646,
+    "variants": [
+      {
+        "path": "images/optimized/autumn-kaki-nikomi-640.webp",
+        "width": 640,
+        "bytes": 49626
+      },
+      {
+        "path": "images/optimized/autumn-kaki-nikomi-1200.webp",
+        "width": 1200,
+        "bytes": 122198
+      }
+    ]
+  },
+  {
+    "original": "images/autumn-cheese-katsu-curry.png",
+    "originalBytes": 631314,
+    "variants": [
+      {
+        "path": "images/optimized/autumn-cheese-katsu-curry-640.webp",
+        "width": 640,
+        "bytes": 29146
+      },
+      {
+        "path": "images/optimized/autumn-cheese-katsu-curry-1200.webp",
+        "width": 751,
+        "bytes": 35352
+      }
+    ]
+  },
+  {
+    "original": "images/autumn-age-gyoza.jpg",
+    "originalBytes": 1350246,
+    "variants": [
+      {
+        "path": "images/optimized/autumn-age-gyoza-640.webp",
+        "width": 640,
+        "bytes": 30456
+      },
+      {
+        "path": "images/optimized/autumn-age-gyoza-1200.webp",
+        "width": 1200,
+        "bytes": 75376
+      }
+    ]
+  },
+  {
+    "original": "images/dengaku-teishoku.jpg",
+    "originalBytes": 401082,
+    "variants": [
+      {
+        "path": "images/optimized/dengaku-teishoku-640.webp",
+        "width": 640,
+        "bytes": 46618
+      },
+      {
+        "path": "images/optimized/dengaku-teishoku-1200.webp",
+        "width": 1200,
+        "bytes": 106068
+      }
+    ]
+  },
+  {
+    "original": "images/miso-kishimen.jpg",
+    "originalBytes": 454930,
+    "variants": [
+      {
+        "path": "images/optimized/miso-kishimen-640.webp",
+        "width": 640,
+        "bytes": 33676
+      },
+      {
+        "path": "images/optimized/miso-kishimen-1200.webp",
+        "width": 1200,
+        "bytes": 78354
+      }
+    ]
+  },
+  {
+    "original": "images/miso-ebiten.jpg",
+    "originalBytes": 458777,
+    "variants": [
+      {
+        "path": "images/optimized/miso-ebiten-640.webp",
+        "width": 640,
+        "bytes": 35112
+      },
+      {
+        "path": "images/optimized/miso-ebiten-1200.webp",
+        "width": 1200,
+        "bytes": 83834
+      }
+    ]
+  },
+  {
+    "original": "images/miso-deluxe.jpg",
+    "originalBytes": 496902,
+    "variants": [
+      {
+        "path": "images/optimized/miso-deluxe-640.webp",
+        "width": 640,
+        "bytes": 38278
+      },
+      {
+        "path": "images/optimized/miso-deluxe-1200.webp",
+        "width": 1200,
+        "bytes": 95736
+      }
+    ]
+  },
+  {
+    "original": "images/tenzaru-kishimen.jpg",
+    "originalBytes": 486951,
+    "variants": [
+      {
+        "path": "images/optimized/tenzaru-kishimen-640.webp",
+        "width": 640,
+        "bytes": 39578
+      },
+      {
+        "path": "images/optimized/tenzaru-kishimen-1200.webp",
+        "width": 1200,
+        "bytes": 91268
+      }
+    ]
+  },
+  {
+    "original": "images/tendon.jpg",
+    "originalBytes": 412593,
+    "variants": [
+      {
+        "path": "images/optimized/tendon-640.webp",
+        "width": 640,
+        "bytes": 31210
+      },
+      {
+        "path": "images/optimized/tendon-1200.webp",
+        "width": 1200,
+        "bytes": 70990
+      }
+    ]
+  },
+  {
+    "original": "images/miso-katsudon.jpg",
+    "originalBytes": 457494,
+    "variants": [
+      {
+        "path": "images/optimized/miso-katsudon-640.webp",
+        "width": 640,
+        "bytes": 37110
+      },
+      {
+        "path": "images/optimized/miso-katsudon-1200.webp",
+        "width": 1200,
+        "bytes": 83862
+      }
+    ]
+  },
+  {
+    "original": "images/dengaku-single.jpg",
+    "originalBytes": 473856,
+    "variants": [
+      {
+        "path": "images/optimized/dengaku-single-640.webp",
+        "width": 640,
+        "bytes": 77676
+      },
+      {
+        "path": "images/optimized/dengaku-single-1200.webp",
+        "width": 1200,
+        "bytes": 223196
+      }
+    ]
+  },
+  {
+    "original": "images/side-miso-kushikatsu.jpg",
+    "originalBytes": 495947,
+    "variants": [
+      {
+        "path": "images/optimized/side-miso-kushikatsu-640.webp",
+        "width": 640,
+        "bytes": 37378
+      },
+      {
+        "path": "images/optimized/side-miso-kushikatsu-1200.webp",
+        "width": 1200,
+        "bytes": 94284
+      }
+    ]
+  },
+  {
+    "original": "images/side-tako-karaage.jpg",
+    "originalBytes": 508911,
+    "variants": [
+      {
+        "path": "images/optimized/side-tako-karaage-640.webp",
+        "width": 640,
+        "bytes": 38830
+      },
+      {
+        "path": "images/optimized/side-tako-karaage-1200.webp",
+        "width": 1200,
+        "bytes": 99136
+      }
+    ]
+  },
+  {
+    "original": "images/side-tebasaki.jpg",
+    "originalBytes": 558831,
+    "variants": [
+      {
+        "path": "images/optimized/side-tebasaki-640.webp",
+        "width": 640,
+        "bytes": 43954
+      },
+      {
+        "path": "images/optimized/side-tebasaki-1200.webp",
+        "width": 1200,
+        "bytes": 115946
+      }
+    ]
+  },
+  {
+    "original": "images/side-tori-karaage.jpg",
+    "originalBytes": 520714,
+    "variants": [
+      {
+        "path": "images/optimized/side-tori-karaage-640.webp",
+        "width": 640,
+        "bytes": 39578
+      },
+      {
+        "path": "images/optimized/side-tori-karaage-1200.webp",
+        "width": 1200,
+        "bytes": 97122
+      }
+    ]
+  },
+  {
+    "original": "images/meat-kishimen.jpg",
+    "originalBytes": 2279842,
+    "variants": [
+      {
+        "path": "images/optimized/meat-kishimen-640.webp",
+        "width": 640,
+        "bytes": 44550
+      },
+      {
+        "path": "images/optimized/meat-kishimen-1200.webp",
+        "width": 1200,
+        "bytes": 122926
+      }
+    ]
+  },
+  {
+    "original": "images/ume-oroshi-kishimen.jpg",
+    "originalBytes": 2037760,
+    "variants": [
+      {
+        "path": "images/optimized/ume-oroshi-kishimen-640.webp",
+        "width": 640,
+        "bytes": 48974
+      },
+      {
+        "path": "images/optimized/ume-oroshi-kishimen-1200.webp",
+        "width": 1200,
+        "bytes": 128914
+      }
+    ]
+  },
+  {
+    "original": "images/neba-toro-soba.jpg",
+    "originalBytes": 2711936,
+    "variants": [
+      {
+        "path": "images/optimized/neba-toro-soba-640.webp",
+        "width": 640,
+        "bytes": 52164
+      },
+      {
+        "path": "images/optimized/neba-toro-soba-1200.webp",
+        "width": 1200,
+        "bytes": 140928
+      }
+    ]
+  },
+  {
+    "original": "images/neba-toro-don.jpg",
+    "originalBytes": 2584231,
+    "variants": [
+      {
+        "path": "images/optimized/neba-toro-don-640.webp",
+        "width": 640,
+        "bytes": 50238
+      },
+      {
+        "path": "images/optimized/neba-toro-don-1200.webp",
+        "width": 1200,
+        "bytes": 131834
+      }
+    ]
+  },
+  {
+    "original": "images/IMG_6279.jpeg",
+    "originalBytes": 2896183,
+    "variants": [
+      {
+        "path": "images/optimized/IMG_6279-640.webp",
+        "width": 640,
+        "bytes": 28564
+      },
+      {
+        "path": "images/optimized/IMG_6279-1200.webp",
+        "width": 1200,
+        "bytes": 77430
+      }
+    ]
+  },
+  {
+    "original": "images/morning-a.jpg",
+    "originalBytes": 632582,
+    "variants": [
+      {
+        "path": "images/optimized/morning-a-640.webp",
+        "width": 640,
+        "bytes": 51682
+      },
+      {
+        "path": "images/optimized/morning-a-1200.webp",
+        "width": 1200,
+        "bytes": 141264
+      }
+    ]
+  },
+  {
+    "original": "images/morning-b.jpg",
+    "originalBytes": 571852,
+    "variants": [
+      {
+        "path": "images/optimized/morning-b-640.webp",
+        "width": 640,
+        "bytes": 45072
+      },
+      {
+        "path": "images/optimized/morning-b-1200.webp",
+        "width": 1200,
+        "bytes": 121676
+      }
+    ]
+  },
+  {
+    "original": "images/morning-c.jpg",
+    "originalBytes": 492814,
+    "variants": [
+      {
+        "path": "images/optimized/morning-c-640.webp",
+        "width": 640,
+        "bytes": 37950
+      },
+      {
+        "path": "images/optimized/morning-c-1200.webp",
+        "width": 1200,
+        "bytes": 96790
+      }
+    ]
+  },
+  {
+    "original": "images/morning-d.jpg",
+    "originalBytes": 590143,
+    "variants": [
+      {
+        "path": "images/optimized/morning-d-640.webp",
+        "width": 640,
+        "bytes": 51784
+      },
+      {
+        "path": "images/optimized/morning-d-1200.webp",
+        "width": 1200,
+        "bytes": 128244
+      }
+    ]
+  },
+  {
+    "original": "images/morning-e.jpg",
+    "originalBytes": 552151,
+    "variants": [
+      {
+        "path": "images/optimized/morning-e-640.webp",
+        "width": 640,
+        "bytes": 47070
+      },
+      {
+        "path": "images/optimized/morning-e-1200.webp",
+        "width": 1200,
+        "bytes": 120270
+      }
+    ]
+  },
+  {
+    "original": "images/shop-zashiki.jpg",
+    "originalBytes": 511764,
+    "variants": [
+      {
+        "path": "images/optimized/shop-zashiki-640.webp",
+        "width": 640,
+        "bytes": 37332
+      },
+      {
+        "path": "images/optimized/shop-zashiki-1200.webp",
+        "width": 1200,
+        "bytes": 97084
+      }
+    ]
+  },
+  {
+    "original": "images/shop-table.jpg",
+    "originalBytes": 460656,
+    "variants": [
+      {
+        "path": "images/optimized/shop-table-640.webp",
+        "width": 640,
+        "bytes": 25740
+      },
+      {
+        "path": "images/optimized/shop-table-1200.webp",
+        "width": 1200,
+        "bytes": 74332
+      }
+    ]
+  },
+  {
+    "original": "images/shop-counter.jpg",
+    "originalBytes": 594671,
+    "variants": [
+      {
+        "path": "images/optimized/shop-counter-640.webp",
+        "width": 640,
+        "bytes": 40594
+      },
+      {
+        "path": "images/optimized/shop-counter-1200.webp",
+        "width": 1200,
+        "bytes": 112812
+      }
+    ]
+  },
+  {
+    "original": "images/IMG_3133.jpeg",
+    "originalBytes": 5139037,
+    "variants": [
+      {
+        "path": "images/optimized/IMG_3133-640.webp",
+        "width": 640,
+        "bytes": 47588
+      },
+      {
+        "path": "images/optimized/IMG_3133-1200.webp",
+        "width": 1200,
+        "bytes": 144772
+      }
+    ]
+  },
+  {
+    "original": "images/IMG_3138.jpeg",
+    "originalBytes": 5072678,
+    "variants": [
+      {
+        "path": "images/optimized/IMG_3138-640.webp",
+        "width": 640,
+        "bytes": 45970
+      },
+      {
+        "path": "images/optimized/IMG_3138-1200.webp",
+        "width": 1200,
+        "bytes": 128724
+      }
+    ]
+  },
+  {
+    "original": "images/IMG_3143.jpeg",
+    "originalBytes": 3909868,
+    "variants": [
+      {
+        "path": "images/optimized/IMG_3143-640.webp",
+        "width": 640,
+        "bytes": 32412
+      },
+      {
+        "path": "images/optimized/IMG_3143-1200.webp",
+        "width": 1200,
+        "bytes": 92328
+      }
+    ]
+  }
+]

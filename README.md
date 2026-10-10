@@ -167,3 +167,7 @@ GitHubの `main` を本番の基準として扱う。変更後は「GitHubに入
 
 細かな経緯・過去の修正は **`CHANGELOG.md`** を参照。  
 今後も大きなUI変更、メニュー変更、公開設定変更、SEO変更を行った場合はCHANGELOGを更新する。
+
+## 15. SEO運用（2026-10-11）
+
+料理別6ページ、GSC日次・月次分析、画像軽量化、表示性能の継続測定を追加。運用確認画面は https://komaki-kadoya.com/seo/ 。認証修復・測定定義・各Actionsの手順は `docs/SEO-OPERATIONS.md` を参照。GSC実データ取得は元サービスアカウントJSONをActions Secretに再登録し、成功履歴が保存されるまで未完成。

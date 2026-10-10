@@ -1,72 +1,66 @@
 name: SEO Rank Watch
-
 on:
   push:
     branches: [main]
-    paths:
-      - '.github/workflows/seo-rank-watch.yml'
-      - '.claude/skills/seo-rank-watch/scripts/fetch_gsc_ranks.mjs'
+    paths: ['scripts/seo/**', '.github/workflows/seo-rank-watch.yml', 'data/seo/watchwords.json', '.claude/skills/seo-rank-watch/scripts/fetch_gsc_ranks.mjs']
   workflow_dispatch:
     inputs:
       days:
-        description: "GSC lookback days"
-        required: false
-        default: "28"
+        description: 'GSC lookback days (1–90)'
+        default: '28'
+      monthly:
+        description: 'Also collect finalized monthly comparison'
+        type: boolean
+        default: false
   schedule:
-    - cron: "15 22 * * *" # 07:15 JST daily
-
+    - cron: '15 22 * * *' # 07:15 JST daily
+    - cron: '15 23 5 * *' # 08:15 JST on the 6th, after GSC finalization
 permissions:
   contents: write
-
+concurrency:
+  group: seo-data
+  cancel-in-progress: false
 jobs:
   measure:
     runs-on: ubuntu-latest
+    timeout-minutes: 15
     steps:
-      - name: Checkout
-        uses: actions/checkout@v4
-
-      - name: Setup Node
-        uses: actions/setup-node@v4
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
         with:
-          node-version: "20"
-
-      - name: Check GSC credentials
-        id: gsc
-        shell: bash
+          node-version: '22'
+      - name: Verify calculations
+        run: node --test tests/seo.test.mjs
+      - name: Fetch finalized GSC data
         env:
+          GSC_SERVICE_ACCOUNT_JSON: ${{ secrets.GSC_SERVICE_ACCOUNT_JSON }}
           GSC_CLIENT_EMAIL: ${{ secrets.GSC_CLIENT_EMAIL }}
           GSC_PRIVATE_KEY: ${{ secrets.GSC_PRIVATE_KEY }}
+          GSC_SITE_URL: ${{ vars.GSC_SITE_URL || 'sc-domain:komaki-kadoya.com' }}
+          DAYS: ${{ inputs.days || '28' }}
+          MONTHLY: ${{ inputs.monthly || github.event.schedule == '15 23 5 * *' }}
         run: |
-          if [ -z "$GSC_CLIENT_EMAIL" ] || [ -z "$GSC_PRIVATE_KEY" ]; then
-            echo "ready=false" >> "$GITHUB_OUTPUT"
-            echo "::error::Google Search Console credentials are missing. Configure GSC_CLIENT_EMAIL and GSC_PRIVATE_KEY in repository Actions secrets."
-            echo "### 順位取得は未実行" >> "$GITHUB_STEP_SUMMARY"
-            echo "GSC_CLIENT_EMAIL または GSC_PRIVATE_KEY が未設定です。GitHub Actions Secrets を設定してください。" >> "$GITHUB_STEP_SUMMARY"
-            exit 1
-          else
-            echo "ready=true" >> "$GITHUB_OUTPUT"
-          fi
-
-      - name: Fetch GSC ranks
-        if: steps.gsc.outputs.ready == 'true'
+          args=(--repo "$GITHUB_WORKSPACE" --days "$DAYS" --append)
+          if [ "$MONTHLY" = "true" ]; then args+=(--monthly); fi
+          node scripts/seo/collect.mjs "${args[@]}"
+      - name: Generate monthly candidates and effects
         env:
-          GSC_CLIENT_EMAIL: ${{ secrets.GSC_CLIENT_EMAIL }}
-          GSC_PRIVATE_KEY: ${{ secrets.GSC_PRIVATE_KEY }}
-          GSC_SITE_URL: "sc-domain:komaki-kadoya.com"
+          MONTHLY: ${{ inputs.monthly || github.event.schedule == '15 23 5 * *' }}
+        if: inputs.monthly || github.event.schedule == '15 23 5 * *'
+        run: node scripts/seo/analyze.mjs
+      - name: Save measured history
         run: |
-          DAYS="${{ github.event.inputs.days || '28' }}"
-          node .claude/skills/seo-rank-watch/scripts/fetch_gsc_ranks.mjs \
-            --repo "$GITHUB_WORKSPACE" --days "$DAYS" --append
-
-      - name: Commit rank history
-        if: steps.gsc.outputs.ready == 'true'
-        run: |
-          if git diff --quiet -- data/seo/rank-history.json; then
-            echo "No rank-history change"
-            exit 0
-          fi
-          git config user.name "github-actions[bot]"
-          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add data/seo/rank-history.json
-          git commit -m "chore(seo): append GSC rank snapshot"
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add data/seo/rank-history.json data/seo/monthly-input data/seo/monthly 2>/dev/null || git add data/seo/rank-history.json
+          if git diff --cached --quiet; then exit 0; fi
+          git commit -m 'chore(seo): record finalized search metrics and monthly review'
+          git pull --rebase origin main
           git push
+      - name: Report outcome
+        if: always()
+        env:
+          RESULT: ${{ job.status }}
+        run: |
+          echo "### GSC収集: $RESULT" >> "$GITHUB_STEP_SUMMARY"
+          echo '成功時は data/seo/rank-history.json、月次は data/seo/monthly/ に実測値を保存。失敗時は認証・APIアクセスを確認してください。' >> "$GITHUB_STEP_SUMMARY"

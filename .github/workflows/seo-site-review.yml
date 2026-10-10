@@ -1,0 +1,64 @@
+name: SEO Site Review
+on:
+  push:
+    branches: [main]
+    paths: ['index.html', 'style*.css', 'script*.js', 'menu-pages.css', 'media-loading.js', 'images/**', 'scripts/build-menu-pages.py', 'scripts/optimize-images.py', '.github/workflows/seo-site-review.yml']
+  workflow_dispatch:
+  schedule:
+    - cron: '30 23 5 * *' # 08:30 JST on the 6th
+permissions:
+  contents: write
+concurrency:
+  group: seo-data
+  cancel-in-progress: false
+jobs:
+  review:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Generate responsive WebP photos
+        run: |
+          python -m pip install Pillow==11.3.0
+          python scripts/optimize-images.py
+      - name: Regenerate intent pages from current menu
+        run: python scripts/build-menu-pages.py
+      - name: Record homepage and menu changes
+        if: github.event_name == 'push'
+        env:
+          CHANGE_SHA: ${{ github.sha }}
+        run: node scripts/seo/record-change.mjs
+      - name: Inspect media budget
+        run: python scripts/seo/audit-media.py
+      - name: Measure mobile and desktop performance
+        run: |
+          mkdir -p data/seo/performance
+          npm install --no-save --package-lock=false lighthouse@12.8.2
+          python -m http.server 8080 >/tmp/seo-preview.log 2>&1 &
+          for attempt in {1..20}; do
+            if curl --silent --fail http://localhost:8080/ >/dev/null; then break; fi
+            sleep 1
+          done
+          ./node_modules/.bin/lighthouse http://localhost:8080/ --chrome-flags='--headless --no-sandbox' --output=json --output-path=data/seo/performance/mobile.json --only-categories=performance,accessibility,seo
+          ./node_modules/.bin/lighthouse http://localhost:8080/ --chrome-flags='--headless --no-sandbox' --preset=desktop --output=json --output-path=data/seo/performance/desktop.json --only-categories=performance,accessibility,seo
+          node scripts/seo/summarize-performance.mjs
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: seo-performance-${{ github.run_id }}
+          path: data/seo/performance/
+      - name: Save pages, changes and measured performance
+        if: always()
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add images/optimized data/seo/image-optimization.json index.html sitemap.xml kishimen morning misonikomi teishoku misokatsu dengaku data/seo/improvement-log.json data/seo/media-audit.json data/seo/performance
+          if git diff --cached --quiet; then exit 0; fi
+          git commit -m 'chore(seo): synchronize pages and save performance review'
+          git pull --rebase origin main
+          git push

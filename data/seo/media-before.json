@@ -1,0 +1,186 @@
+{
+  "measurement": "Referenced local asset bytes; not LCP or transfer bytes. Hidden and lazy assets may not load on first view.",
+  "totalReferencedBytes": 66284010,
+  "imageBytes": 53179229,
+  "videoBytes": 13104781,
+  "over500KB": [
+    {
+      "path": "videos/kadoya-tour.mp4",
+      "bytes": 10966689
+    },
+    {
+      "path": "images/IMG_3133.jpeg",
+      "bytes": 5139037
+    },
+    {
+      "path": "images/IMG_3138.jpeg",
+      "bytes": 5072678
+    },
+    {
+      "path": "images/IMG_3143.jpeg",
+      "bytes": 3909868
+    },
+    {
+      "path": "images/IMG_6279.jpeg",
+      "bytes": 2896183
+    },
+    {
+      "path": "images/neba-toro-soba.jpg",
+      "bytes": 2711936
+    },
+    {
+      "path": "images/neba-toro-don.jpg",
+      "bytes": 2584231
+    },
+    {
+      "path": "images/autumn-matsutake-gozen.jpg",
+      "bytes": 2508187
+    },
+    {
+      "path": "images/meat-kishimen.jpg",
+      "bytes": 2279842
+    },
+    {
+      "path": "images/autumn-kaki-nikomi.jpg",
+      "bytes": 2252646
+    },
+    {
+      "path": "videos/kadoya-dengaku.mp4",
+      "bytes": 2138092
+    },
+    {
+      "path": "images/ume-oroshi-kishimen.jpg",
+      "bytes": 2037760
+    },
+    {
+      "path": "images/autumn-age-gyoza.jpg",
+      "bytes": 1350246
+    },
+    {
+      "path": "images/morning-a.jpg",
+      "bytes": 632582
+    },
+    {
+      "path": "images/autumn-cheese-katsu-curry.png",
+      "bytes": 631314
+    },
+    {
+      "path": "images/shop-counter.jpg",
+      "bytes": 594671
+    },
+    {
+      "path": "images/morning-d.jpg",
+      "bytes": 590143
+    },
+    {
+      "path": "images/morning-b.jpg",
+      "bytes": 571852
+    },
+    {
+      "path": "images/side-tebasaki.jpg",
+      "bytes": 558831
+    },
+    {
+      "path": "images/morning-e.jpg",
+      "bytes": 552151
+    },
+    {
+      "path": "images/side-tori-karaage.jpg",
+      "bytes": 520714
+    },
+    {
+      "path": "images/shop-zashiki.jpg",
+      "bytes": 511764
+    },
+    {
+      "path": "images/side-tako-karaage.jpg",
+      "bytes": 508911
+    }
+  ],
+  "assets": {
+    "images/kadoya-hands.jpg": 234548,
+    "images/kadoya-logo.png": 322292,
+    "images/video-dengaku.jpg": 56771,
+    "videos/kadoya-dengaku.mp4": 2138092,
+    "images/IMG_3132.jpg": 369233,
+    "images/autumn-matsutake-gozen.jpg": 2508187,
+    "images/autumn-kaki-nikomi.jpg": 2252646,
+    "images/autumn-kakifurai-teishoku.jpg": 293063,
+    "images/autumn-cheese-katsu-curry.png": 631314,
+    "images/autumn-age-gyoza.jpg": 1350246,
+    "images/menu-06-sakana.jpg": 193425,
+    "images/IMG_6848.jpg": 215937,
+    "images/dengaku-teishoku.jpg": 401082,
+    "images/IMG_6851.jpg": 177251,
+    "images/IMG_6850.jpg": 197991,
+    "images/IMG_6849.jpg": 189331,
+    "images/hirekatsu-teishoku.jpg": 329797,
+    "images/miso-kishimen.jpg": 454930,
+    "images/miso-ebiten.jpg": 458777,
+    "images/miso-deluxe.jpg": 496902,
+    "images/menu-15-tanagata-tanuki.jpg": 76498,
+    "images/menu-16-tempura-kishimen.jpg": 88750,
+    "images/menu-17-toriten-kishimen.jpg": 55278,
+    "images/menu-19-curry-kishimen.jpg": 60831,
+    "images/menu-20-ankake-tamago.jpg": 74568,
+    "images/menu-22-sansai-kishimen.jpg": 75077,
+    "images/tenzaru-kishimen.jpg": 486951,
+    "images/IMG_6721.jpg": 211849,
+    "images/IMG_6643.jpg": 205303,
+    "images/tendon.jpg": 412593,
+    "images/miso-katsudon.jpg": 457494,
+    "images/menu-08-mini-hirekatsu.jpg": 152667,
+    "images/menu-12-mini-misohire.jpg": 164299,
+    "images/menu-09-mini-tendon.jpg": 156678,
+    "images/menu-13-mini-negitoro.jpg": 159135,
+    "images/menu-10-mini-dote.jpg": 148342,
+    "images/menu-14-mini-yamakake.jpg": 122666,
+    "images/menu-11-mini-salad.jpg": 102044,
+    "images/dengaku-single.jpg": 473856,
+    "images/side-miso-kushikatsu.jpg": 495947,
+    "images/side-tako-karaage.jpg": 508911,
+    "images/side-dashimaki.jpg": 348502,
+    "images/side-tebasaki.jpg": 558831,
+    "images/side-tori-karaage.jpg": 520714,
+    "images/cola-frozen-cocktail.jpg": 161390,
+    "images/orange-frozen-cocktail.jpg": 119434,
+    "images/annin-vanilla-cocktail.jpg": 104015,
+    "images/cola-float.jpg": 193772,
+    "images/melon-float.jpg": 205139,
+    "images/shiso-float.jpg": 160401,
+    "images/coffee-float.jpg": 189155,
+    "images/matcha-frappe.jpg": 188151,
+    "images/meat-kishimen.jpg": 2279842,
+    "images/ume-oroshi-kishimen.jpg": 2037760,
+    "images/tempura-hiyamugi.jpg": 276436,
+    "images/oroshi-katsu-teishoku.jpg": 258093,
+    "images/ume-oroshi-katsu-teishoku.jpg": 275503,
+    "images/katsu-oroshi-kishimen.jpg": 323860,
+    "images/ume-katsu-oroshi-kishimen.jpg": 272714,
+    "images/neba-toro-soba.jpg": 2711936,
+    "images/neba-toro-don.jpg": 2584231,
+    "images/toriten.jpg": 284785,
+    "images/kinoko-tempura.jpg": 310003,
+    "images/IMG_6279.jpeg": 2896183,
+    "images/morning-a.jpg": 632582,
+    "images/morning-b.jpg": 571852,
+    "images/morning-c.jpg": 492814,
+    "images/morning-d.jpg": 590143,
+    "images/morning-e.jpg": 552151,
+    "images/IMG_3122.jpg": 346092,
+    "images/shop-zashiki.jpg": 511764,
+    "images/shop-table.jpg": 460656,
+    "images/shop-counter.jpg": 594671,
+    "images/IMG_3149.jpg": 335339,
+    "images/IMG_3147.jpg": 294879,
+    "images/IMG_3133.jpeg": 5139037,
+    "images/IMG_3138.jpeg": 5072678,
+    "images/IMG_3143.jpeg": 3909868,
+    "images/video-tour.jpg": 55321,
+    "videos/kadoya-tour.mp4": 10966689,
+    "images/kadoya-vertical.png": 496864,
+    "images/craft-sprite.webp": 11488,
+    "images/menu-tanagata-tanuki-new.jpg": 13153,
+    "images/menu-oebi-single.jpg": 13567
+  }
+}

@@ -7,43 +7,43 @@
   },
   {
     "keyword": "小牧 きしめん",
-    "targetPath": "/",
+    "targetPath": "/kishimen/",
     "priority": "high",
     "status": "active"
   },
   {
     "keyword": "小牧 定食",
-    "targetPath": "/",
+    "targetPath": "/teishoku/",
     "priority": "medium",
     "status": "active"
   },
   {
     "keyword": "小牧 モーニング",
-    "targetPath": "/",
+    "targetPath": "/morning/",
     "priority": "medium",
     "status": "active"
   },
   {
     "keyword": "小牧 味噌煮込み",
-    "targetPath": "/",
+    "targetPath": "/misonikomi/",
     "priority": "high",
     "status": "active"
   },
   {
     "keyword": "小牧 味噌煮込みきしめん",
-    "targetPath": "/",
+    "targetPath": "/misonikomi/",
     "priority": "high",
     "status": "active"
   },
   {
     "keyword": "小牧 味噌カツ",
-    "targetPath": "/",
+    "targetPath": "/misokatsu/",
     "priority": "high",
     "status": "active"
   },
   {
     "keyword": "小牧 田楽",
-    "targetPath": "/",
+    "targetPath": "/dengaku/",
     "priority": "high",
     "status": "active"
   }
