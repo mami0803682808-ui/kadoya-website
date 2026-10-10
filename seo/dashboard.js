@@ -20,6 +20,6 @@
     if(!r.candidates.length)text('#candidates','改善候補なし。');
     for(const e of r.effects){const p=document.createElement('p');p.textContent=`変更の観察：${e.keyword}／${e.status}${e.change?`／平均順位差 ${fmt(e.change.rank)}、クリック差 ${fmt(e.change.clicks)}`:''}`;document.querySelector('#candidates').append(p);}
   }catch{text('#monthly',`${month}のレポートはまだありません。毎月6日の取得後に作成します。`);}
-  try {for(const r of await read('/data/seo/performance/latest.json')){const p=document.createElement('p');p.textContent=`${r.mode}／${r.measuredAt}：性能 ${fmt(r.performance*100)}、LCP ${fmt(r.lcpMs/1000)}秒、CLS ${fmt(r.cls)}。現行ソースのラボ測定で、実ユーザーの体感速度とは異なります。`;document.querySelector('#performance').append(p);}}
+  try {for(const r of await read('/data/seo/performance/latest.json')){const p=document.createElement('p');p.textContent=`${r.mode}／${r.measuredAt}：性能 ${fmt(r.performance==null?null:r.performance*100)}、LCP ${fmt(Number.isFinite(r.lcpMs)?r.lcpMs/1000:null)}秒、CLS ${fmt(r.cls)}。${r.performance==null?'LCP対象が検出されず、一部指標は未計測です。':''}現行ソースのラボ測定で、実ユーザーの体感速度とは異なります。`;document.querySelector('#performance').append(p);}}
   catch{text('#performance','Lighthouseの実測結果はまだありません。計測ワークフローの実行履歴を確認してください。');}
 })();

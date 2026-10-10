@@ -1,4 +1,5 @@
 import fs from 'node:fs';
+import {shift} from './gsc.mjs';
 import {execFileSync} from 'node:child_process';
 const commit=process.env.CHANGE_SHA;
 if(!/^[a-f0-9]{40}$/.test(commit||'')) throw new Error('CHANGE_SHA must be a full Git commit SHA');
@@ -15,7 +16,7 @@ for(const word of JSON.parse(fs.readFileSync(data+'watchwords.json'))) {
   if(!entry){entry={keyword:word.keyword,targetPath:word.targetPath,actions:[]};log.push(entry);}
   if(entry.actions.some(a=>a.commit===commit))continue;
   const baseline=latest?.results.find(r=>r.keyword===word.keyword&&r.targetPath===word.targetPath);
-  entry.status='observing';const next=new Date(date);next.setUTCDate(next.getUTCDate()+28);entry.nextReviewDate=next.toISOString().slice(0,10);
+  entry.status='observing';entry.nextReviewDate=shift(date.slice(0,10),28);
   entry.actions.push({date,commit,files:affected,rankAtAction:baseline?.rank??null,baseline:baseline||null,done:message,needs:'検索意図別の料理案内・表示性能の改善。効果は確定GSCデータで観察する。'});
 }
 fs.writeFileSync(data+'improvement-log.json',JSON.stringify(log,null,2)+'\n');

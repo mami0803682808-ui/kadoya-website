@@ -2,7 +2,7 @@ name: SEO Site Review
 on:
   push:
     branches: [main]
-    paths: ['index.html', 'style*.css', 'script*.js', 'menu-pages.css', 'media-loading.js', 'images/**', 'scripts/build-menu-pages.py', 'scripts/optimize-images.py', '.github/workflows/seo-site-review.yml']
+    paths: ['index.html', 'style*.css', 'script*.js', 'menu-pages.css', 'media-loading.js', 'images/**', 'scripts/build-menu-pages.py', 'scripts/optimize-images.py', 'scripts/seo/summarize-performance.mjs', 'scripts/seo/check-layout.mjs', 'scripts/seo/record-change.mjs', '.github/workflows/seo-site-review.yml']
   workflow_dispatch:
   schedule:
     - cron: '30 23 5 * *' # 08:30 JST on the 6th
@@ -38,7 +38,7 @@ jobs:
       - name: Measure mobile and desktop performance
         run: |
           mkdir -p data/seo/performance
-          npm install --no-save --package-lock=false lighthouse@12.8.2
+          npm install --no-save --package-lock=false lighthouse@12.8.2 puppeteer-core@24.15.0
           python -m http.server 8080 >/tmp/seo-preview.log 2>&1 &
           for attempt in {1..20}; do
             if curl --silent --fail http://localhost:8080/ >/dev/null; then break; fi
@@ -46,6 +46,7 @@ jobs:
           done
           ./node_modules/.bin/lighthouse http://localhost:8080/ --chrome-flags='--headless --no-sandbox' --output=json --output-path=data/seo/performance/mobile.json --only-categories=performance,accessibility,seo
           ./node_modules/.bin/lighthouse http://localhost:8080/ --chrome-flags='--headless --no-sandbox' --preset=desktop --output=json --output-path=data/seo/performance/desktop.json --only-categories=performance,accessibility,seo
+          node scripts/seo/check-layout.mjs
           node scripts/seo/summarize-performance.mjs
       - uses: actions/upload-artifact@v4
         if: always()
