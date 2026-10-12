@@ -1,6 +1,6 @@
 (() => {
   const core = document.createElement('script');
-  core.src = 'script-base.js?v=20261009-oshogatsu';
+  core.src = 'script-base.js?v=20261012-mobile';
   core.async = false;
 
   core.onload = () => {
@@ -20,7 +20,7 @@
         const headerOffset = isDesktop ? 24 : (header?.getBoundingClientRect().height || 64) + 16;
         const targetTop = hoursTarget.getBoundingClientRect().top + window.scrollY - headerOffset;
         history.replaceState(null, '', '#hours');
-        window.scrollTo({ top: Math.max(0, targetTop), behavior: 'smooth' });
+        window.scrollTo({ top: Math.max(0, targetTop), behavior: window.matchMedia('(prefers-reduced-motion: reduce)').matches ? 'auto' : 'smooth' });
       });
     }
 
@@ -632,7 +632,7 @@
         const items = getItems();
         if (!items.length) return;
         const safeIndex = Math.max(0, Math.min(index, items.length - 1));
-        gallery.scrollTo({ left: getItemLeft(items[safeIndex]), behavior: 'smooth' });
+        gallery.scrollTo({ left: getItemLeft(items[safeIndex]), behavior: window.matchMedia('(prefers-reduced-motion: reduce)').matches ? 'auto' : 'smooth' });
       };
       prev.addEventListener('click', () => scrollToItem(getCurrentIndex() - 1));
       next.addEventListener('click', () => scrollToItem(getCurrentIndex() + 1));

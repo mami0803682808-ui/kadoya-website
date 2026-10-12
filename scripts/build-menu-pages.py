@@ -39,7 +39,7 @@ for slug,title,headline,intro,names,note in pages:
     desc=title+'。'+intro
     schema={'@context':'https://schema.org','@graph':[{'@type':'WebPage','@id':f'https://komaki-kadoya.com/{slug}/','name':title+'｜角屋','description':desc,'about':{'@id':'https://komaki-kadoya.com/#restaurant'}},{'@type':'BreadcrumbList','itemListElement':[{'@type':'ListItem','position':1,'name':'角屋','item':'https://komaki-kadoya.com/'},{'@type':'ListItem','position':2,'name':title,'item':f'https://komaki-kadoya.com/{slug}/'}]}]}
     output=f'''<!doctype html>
-<html lang="ja"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<html lang="ja"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
 <title>{title}｜角屋・田県神社前駅から徒歩1分</title><meta name="description" content="{html.escape(desc,quote=True)}">
 <link rel="canonical" href="https://komaki-kadoya.com/{slug}/"><meta name="robots" content="index,follow,max-image-preview:large">
 <meta property="og:type" content="website"><meta property="og:locale" content="ja_JP"><meta property="og:title" content="{title}｜角屋"><meta property="og:description" content="{html.escape(desc,quote=True)}"><meta property="og:url" content="https://komaki-kadoya.com/{slug}/"><meta property="og:image" content="https://komaki-kadoya.com{photo}"><meta name="twitter:card" content="summary_large_image">

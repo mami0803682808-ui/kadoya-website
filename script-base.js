@@ -2,6 +2,7 @@ const button = document.querySelector('.menu-btn');
 const nav = document.querySelector('.nav');
 function setMenu(open) {
  nav.classList.toggle('open', open);
+ document.querySelector('.header').classList.toggle('menu-open', open);
  button.setAttribute('aria-expanded', String(open));
  button.setAttribute('aria-label', open ? 'メニューを閉じる' : 'メニューを開く');
 }
@@ -11,13 +12,8 @@ document.addEventListener('keydown', event => {
  if (event.key === 'Escape' && nav.classList.contains('open')) { setMenu(false); button.focus(); }
 });
 
-/* Always open the site from the very top instead of restoring a menu anchor/scroll position. */
-if ('scrollRestoration' in history) history.scrollRestoration = 'manual';
-function resetInitialView() {
- if (location.hash) history.replaceState(null, '', location.pathname + location.search);
- requestAnimationFrame(() => window.scrollTo({ top: 0, left: 0, behavior: 'auto' }));
-}
-addEventListener('pageshow', resetInitialView);
+/* Keep explicit section links and the browser's native Back/Forward position. */
+if ('scrollRestoration' in history) history.scrollRestoration = 'auto';
 
 const opening = document.querySelector('.opening');
 const header = document.querySelector('.header');
@@ -338,7 +334,7 @@ document.querySelectorAll('.craft-art').forEach(element => element.remove());
        const tabsBar=menu.querySelector('.menu-tabs');
        const offset=(tabsBar?.offsetHeight||0)+18;
        const y=activePanel.getBoundingClientRect().top+window.scrollY-offset;
-       window.scrollTo({top:y,behavior:'smooth'});
+       window.scrollTo({top:y,behavior:reduceMotion.matches?'auto':'smooth'});
      });
    }
  }
@@ -379,10 +375,10 @@ document.querySelectorAll('#menu details.menu-group').forEach(item=>item.open=fa
 document.querySelector('.header .logo')?.addEventListener('click', event => {
   event.preventDefault();
   if (location.hash) history.replaceState(null, '', location.pathname + location.search);
-  window.scrollTo({ top: 0, left: 0, behavior: 'smooth' });
+  window.scrollTo({ top: 0, left: 0, behavior: reduceMotion.matches ? 'auto' : 'smooth' });
 });
 
-/* Mobile-style auto-hiding header: upward page movement hides it; downward page movement shows it. */
+/* Keep navigation reachable while open; show the header when scrolling upward. */
 (() => {
   const siteHeader = document.querySelector('.header');
   if (!siteHeader) return;
@@ -390,7 +386,7 @@ document.querySelector('.header .logo')?.addEventListener('click', event => {
   const updateHeaderDirection = () => {
     const y = Math.max(0, window.scrollY);
     const delta = y - lastY;
-    if (y <= 8) {
+    if (nav.classList.contains('open') || y <= 8) {
       siteHeader.classList.remove('header-hidden');
       siteHeader.classList.add('header-visible');
     } else if (delta < -4) {

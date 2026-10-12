@@ -1,4 +1,4 @@
-@import url('./style-base.css');
+@import url('./style-base.css?v=20261012-mobile');
 
 /* 2026-10-01 pre-release consistency pass
    Keep one canonical visual rule for every menu photo card. */
@@ -131,7 +131,7 @@
   scroll-behavior:smooth!important;
   scroll-snap-type:x mandatory!important;
   -webkit-overflow-scrolling:touch!important;
-  touch-action:pan-x!important;
+  touch-action:auto!important;
 }
 #shop .shop-gallery-scroll>figure{
   scroll-snap-align:start!important;
@@ -183,3 +183,58 @@
 
 /* Intent pages: text links keep the existing dish cards unchanged. */
 .menu-intent-links{display:flex;justify-content:center;gap:12px 24px;flex-wrap:wrap;margin:24px 0;color:#cbb88b;font-size:14px}.menu-intent-links a{color:inherit;text-underline-offset:.3em}
+
+/* Shared Safari/Chrome behavior; keep pinch zoom available. */
+html{-webkit-text-size-adjust:100%;text-size-adjust:100%}
+button{font-family:inherit;touch-action:manipulation}
+#shop .shop-gallery-arrow{min-width:44px!important;min-height:44px!important}
+#menu .menu-list>div,#menu .menu-list dt,.info dd{min-width:0;overflow-wrap:anywhere}
+
+@media(max-width:760px){
+  .header{
+    height:calc(64px + env(safe-area-inset-top,0px))!important;
+    padding-top:env(safe-area-inset-top,0px)!important;
+    padding-left:max(5vw,env(safe-area-inset-left,0px))!important;
+    padding-right:max(5vw,env(safe-area-inset-right,0px))!important;
+  }
+  .header .nav{
+    max-height:calc(100vh - 64px - env(safe-area-inset-top,0px) - 80px - env(safe-area-inset-bottom,0px));
+    max-height:calc(100dvh - 64px - env(safe-area-inset-top,0px) - 80px - env(safe-area-inset-bottom,0px));
+    overflow-y:auto!important;
+    overscroll-behavior-y:contain;
+    -webkit-overflow-scrolling:touch;
+    gap:4px!important;
+    padding:12px max(7vw,env(safe-area-inset-right,0px)) 12px max(7vw,env(safe-area-inset-left,0px))!important;
+  }
+  .header .nav a{display:flex;align-items:center;min-height:44px;flex-shrink:0}
+  html.opening-copy-visible .header.menu-open{transform:none!important}
+  .mobile-dock{
+    padding-left:max(4px,env(safe-area-inset-left,0px))!important;
+    padding-right:max(4px,env(safe-area-inset-right,0px))!important;
+  }
+  footer{padding-bottom:calc(105px + env(safe-area-inset-bottom,0px))!important}
+  section[id]{scroll-margin-top:calc(80px + env(safe-area-inset-top,0px))}
+  .opening-new.scroll-ready .opening-copy h1{font-size:clamp(18px,5.5vw,32px)!important;white-space:normal!important}
+  #menu .menu-tab{height:auto!important;min-height:54px;white-space:normal!important}
+  #menu .menu-list{grid-template-columns:minmax(0,1fr)}
+  #menu .menu-list dd{flex-shrink:0}
+  .menu-intent-links a{display:inline-flex;align-items:center;min-height:44px}
+}
+
+/* Wide phones in landscape also need every rail link to remain reachable. */
+@media(min-width:761px) and (max-height:600px){
+  .header{height:100vh!important;height:100dvh!important;padding-top:max(12px,env(safe-area-inset-top,0px))!important}
+  .header .desktop-vertical-logo,.header .header-vertical-mark{width:36px!important;height:108px!important}
+  .mobile-dock{
+    top:132px!important;
+    max-height:calc(100vh - 144px - env(safe-area-inset-bottom,0px));
+    max-height:calc(100dvh - 144px - env(safe-area-inset-bottom,0px));
+    overflow-y:auto!important;
+    padding-left:max(16px,env(safe-area-inset-left,0px))!important;
+    align-items:start!important;
+  }
+  .mobile-dock a{min-height:150px!important}
+}
+@media(prefers-reduced-motion:reduce){
+  #shop .shop-gallery-scroll{scroll-behavior:auto!important}
+}
