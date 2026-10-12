@@ -3,7 +3,7 @@
     "keyword": "角屋 小牧",
     "targetPath": "/",
     "status": "observing",
-    "nextReviewDate": "2026-11-07",
+    "nextReviewDate": "2026-11-09",
     "actions": [
       {
         "date": "2026-10-01",
@@ -34,6 +34,36 @@
         "rankAtAction": null,
         "baseline": null,
         "done": "fix(menu): keep the original logo visible on dark intent pages",
+        "needs": "検索意図別の料理案内・表示性能の改善。効果は確定GSCデータで観察する。"
+      },
+      {
+        "date": "2026-10-12T19:07:40+09:00",
+        "commit": "03e45af1751f503e0589f9aa895b1b04a5f1626b",
+        "files": [
+          "index.html",
+          "menu-pages.css",
+          "script-base.js",
+          "script.js",
+          "style.css"
+        ],
+        "rankAtAction": 6.044943820224719,
+        "baseline": {
+          "keyword": "角屋 小牧",
+          "targetPath": "/",
+          "rank": 6.044943820224719,
+          "impressions": 89,
+          "clicks": 5,
+          "ctr": 0.056179775280898875,
+          "status": "measured",
+          "siteMetrics": {
+            "rank": 1.456,
+            "impressions": 125,
+            "clicks": 13,
+            "ctr": 0.104,
+            "status": "measured"
+          }
+        },
+        "done": "fix: improve mobile navigation and remove opening scroll cue",
         "needs": "検索意図別の料理案内・表示性能の改善。効果は確定GSCデータで観察する。"
       }
     ]
@@ -67,10 +97,41 @@
         "baseline": null,
         "done": "fix(menu): keep the original logo visible on dark intent pages",
         "needs": "検索意図別の料理案内・表示性能の改善。効果は確定GSCデータで観察する。"
+      },
+      {
+        "date": "2026-10-12T19:07:40+09:00",
+        "commit": "03e45af1751f503e0589f9aa895b1b04a5f1626b",
+        "files": [
+          "index.html",
+          "kishimen/index.html",
+          "menu-pages.css",
+          "script-base.js",
+          "script.js",
+          "style.css"
+        ],
+        "rankAtAction": null,
+        "baseline": {
+          "keyword": "小牧 きしめん",
+          "targetPath": "/kishimen/",
+          "rank": null,
+          "impressions": 0,
+          "clicks": 0,
+          "ctr": null,
+          "status": "no_data",
+          "siteMetrics": {
+            "rank": null,
+            "impressions": 0,
+            "clicks": 0,
+            "ctr": null,
+            "status": "no_data"
+          }
+        },
+        "done": "fix: improve mobile navigation and remove opening scroll cue",
+        "needs": "検索意図別の料理案内・表示性能の改善。効果は確定GSCデータで観察する。"
       }
     ],
     "status": "observing",
-    "nextReviewDate": "2026-11-07"
+    "nextReviewDate": "2026-11-09"
   },
   {
     "keyword": "小牧 定食",
@@ -101,10 +162,41 @@
         "baseline": null,
         "done": "fix(menu): keep the original logo visible on dark intent pages",
         "needs": "検索意図別の料理案内・表示性能の改善。効果は確定GSCデータで観察する。"
+      },
+      {
+        "date": "2026-10-12T19:07:40+09:00",
+        "commit": "03e45af1751f503e0589f9aa895b1b04a5f1626b",
+        "files": [
+          "index.html",
+          "menu-pages.css",
+          "script-base.js",
+          "script.js",
+          "style.css",
+          "teishoku/index.html"
+        ],
+        "rankAtAction": null,
+        "baseline": {
+          "keyword": "小牧 定食",
+          "targetPath": "/teishoku/",
+          "rank": null,
+          "impressions": 0,
+          "clicks": 0,
+          "ctr": null,
+          "status": "no_data",
+          "siteMetrics": {
+            "rank": 12.666666666666666,
+            "impressions": 3,
+            "clicks": 0,
+            "ctr": 0,
+            "status": "measured"
+          }
+        },
+        "done": "fix: improve mobile navigation and remove opening scroll cue",
+        "needs": "検索意図別の料理案内・表示性能の改善。効果は確定GSCデータで観察する。"
       }
     ],
     "status": "observing",
-    "nextReviewDate": "2026-11-07"
+    "nextReviewDate": "2026-11-09"
   },
   {
     "keyword": "小牧 モーニング",
@@ -135,10 +227,41 @@
         "baseline": null,
         "done": "fix(menu): keep the original logo visible on dark intent pages",
         "needs": "検索意図別の料理案内・表示性能の改善。効果は確定GSCデータで観察する。"
+      },
+      {
+        "date": "2026-10-12T19:07:40+09:00",
+        "commit": "03e45af1751f503e0589f9aa895b1b04a5f1626b",
+        "files": [
+          "index.html",
+          "menu-pages.css",
+          "morning/index.html",
+          "script-base.js",
+          "script.js",
+          "style.css"
+        ],
+        "rankAtAction": null,
+        "baseline": {
+          "keyword": "小牧 モーニング",
+          "targetPath": "/morning/",
+          "rank": null,
+          "impressions": 0,
+          "clicks": 0,
+          "ctr": null,
+          "status": "no_data",
+          "siteMetrics": {
+            "rank": null,
+            "impressions": 0,
+            "clicks": 0,
+            "ctr": null,
+            "status": "no_data"
+          }
+        },
+        "done": "fix: improve mobile navigation and remove opening scroll cue",
+        "needs": "検索意図別の料理案内・表示性能の改善。効果は確定GSCデータで観察する。"
       }
     ],
     "status": "observing",
-    "nextReviewDate": "2026-11-07"
+    "nextReviewDate": "2026-11-09"
   },
   {
     "keyword": "小牧 味噌煮込み",
@@ -169,10 +292,41 @@
         "baseline": null,
         "done": "fix(menu): keep the original logo visible on dark intent pages",
         "needs": "検索意図別の料理案内・表示性能の改善。効果は確定GSCデータで観察する。"
+      },
+      {
+        "date": "2026-10-12T19:07:40+09:00",
+        "commit": "03e45af1751f503e0589f9aa895b1b04a5f1626b",
+        "files": [
+          "index.html",
+          "menu-pages.css",
+          "misonikomi/index.html",
+          "script-base.js",
+          "script.js",
+          "style.css"
+        ],
+        "rankAtAction": null,
+        "baseline": {
+          "keyword": "小牧 味噌煮込み",
+          "targetPath": "/misonikomi/",
+          "rank": null,
+          "impressions": 0,
+          "clicks": 0,
+          "ctr": null,
+          "status": "no_data",
+          "siteMetrics": {
+            "rank": null,
+            "impressions": 0,
+            "clicks": 0,
+            "ctr": null,
+            "status": "no_data"
+          }
+        },
+        "done": "fix: improve mobile navigation and remove opening scroll cue",
+        "needs": "検索意図別の料理案内・表示性能の改善。効果は確定GSCデータで観察する。"
       }
     ],
     "status": "observing",
-    "nextReviewDate": "2026-11-07"
+    "nextReviewDate": "2026-11-09"
   },
   {
     "keyword": "小牧 味噌煮込みきしめん",
@@ -203,10 +357,41 @@
         "baseline": null,
         "done": "fix(menu): keep the original logo visible on dark intent pages",
         "needs": "検索意図別の料理案内・表示性能の改善。効果は確定GSCデータで観察する。"
+      },
+      {
+        "date": "2026-10-12T19:07:40+09:00",
+        "commit": "03e45af1751f503e0589f9aa895b1b04a5f1626b",
+        "files": [
+          "index.html",
+          "menu-pages.css",
+          "misonikomi/index.html",
+          "script-base.js",
+          "script.js",
+          "style.css"
+        ],
+        "rankAtAction": null,
+        "baseline": {
+          "keyword": "小牧 味噌煮込みきしめん",
+          "targetPath": "/misonikomi/",
+          "rank": null,
+          "impressions": 0,
+          "clicks": 0,
+          "ctr": null,
+          "status": "no_data",
+          "siteMetrics": {
+            "rank": null,
+            "impressions": 0,
+            "clicks": 0,
+            "ctr": null,
+            "status": "no_data"
+          }
+        },
+        "done": "fix: improve mobile navigation and remove opening scroll cue",
+        "needs": "検索意図別の料理案内・表示性能の改善。効果は確定GSCデータで観察する。"
       }
     ],
     "status": "observing",
-    "nextReviewDate": "2026-11-07"
+    "nextReviewDate": "2026-11-09"
   },
   {
     "keyword": "小牧 味噌カツ",
@@ -237,10 +422,41 @@
         "baseline": null,
         "done": "fix(menu): keep the original logo visible on dark intent pages",
         "needs": "検索意図別の料理案内・表示性能の改善。効果は確定GSCデータで観察する。"
+      },
+      {
+        "date": "2026-10-12T19:07:40+09:00",
+        "commit": "03e45af1751f503e0589f9aa895b1b04a5f1626b",
+        "files": [
+          "index.html",
+          "menu-pages.css",
+          "misokatsu/index.html",
+          "script-base.js",
+          "script.js",
+          "style.css"
+        ],
+        "rankAtAction": null,
+        "baseline": {
+          "keyword": "小牧 味噌カツ",
+          "targetPath": "/misokatsu/",
+          "rank": null,
+          "impressions": 0,
+          "clicks": 0,
+          "ctr": null,
+          "status": "no_data",
+          "siteMetrics": {
+            "rank": 3,
+            "impressions": 2,
+            "clicks": 0,
+            "ctr": 0,
+            "status": "measured"
+          }
+        },
+        "done": "fix: improve mobile navigation and remove opening scroll cue",
+        "needs": "検索意図別の料理案内・表示性能の改善。効果は確定GSCデータで観察する。"
       }
     ],
     "status": "observing",
-    "nextReviewDate": "2026-11-07"
+    "nextReviewDate": "2026-11-09"
   },
   {
     "keyword": "小牧 田楽",
@@ -271,9 +487,40 @@
         "baseline": null,
         "done": "fix(menu): keep the original logo visible on dark intent pages",
         "needs": "検索意図別の料理案内・表示性能の改善。効果は確定GSCデータで観察する。"
+      },
+      {
+        "date": "2026-10-12T19:07:40+09:00",
+        "commit": "03e45af1751f503e0589f9aa895b1b04a5f1626b",
+        "files": [
+          "dengaku/index.html",
+          "index.html",
+          "menu-pages.css",
+          "script-base.js",
+          "script.js",
+          "style.css"
+        ],
+        "rankAtAction": null,
+        "baseline": {
+          "keyword": "小牧 田楽",
+          "targetPath": "/dengaku/",
+          "rank": null,
+          "impressions": 0,
+          "clicks": 0,
+          "ctr": null,
+          "status": "no_data",
+          "siteMetrics": {
+            "rank": null,
+            "impressions": 0,
+            "clicks": 0,
+            "ctr": null,
+            "status": "no_data"
+          }
+        },
+        "done": "fix: improve mobile navigation and remove opening scroll cue",
+        "needs": "検索意図別の料理案内・表示性能の改善。効果は確定GSCデータで観察する。"
       }
     ],
     "status": "observing",
-    "nextReviewDate": "2026-11-07"
+    "nextReviewDate": "2026-11-09"
   }
 ]

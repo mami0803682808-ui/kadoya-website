@@ -290,5 +290,37 @@
     "tbtMs": 1,
     "transferBytes": 3575906,
     "limitations": "Local lab measurement of current source, not real-user or production CDN performance."
+  },
+  {
+    "mode": "mobile",
+    "measuredAt": "2026-10-12T10:08:48.343Z",
+    "url": "http://localhost:8080/",
+    "sourceCommit": "03e45af1751f503e0589f9aa895b1b04a5f1626b",
+    "status": "measured",
+    "measurementErrors": [],
+    "performance": 0.48,
+    "accessibility": 0.97,
+    "seo": 0.92,
+    "lcpMs": 9095.9181,
+    "cls": 0.22067894761658544,
+    "tbtMs": 271.5,
+    "transferBytes": 3494359,
+    "limitations": "Local lab measurement of current source, not real-user or production CDN performance."
+  },
+  {
+    "mode": "desktop",
+    "measuredAt": "2026-10-12T10:09:05.515Z",
+    "url": "http://localhost:8080/",
+    "sourceCommit": "03e45af1751f503e0589f9aa895b1b04a5f1626b",
+    "status": "measured",
+    "measurementErrors": [],
+    "performance": 0.74,
+    "accessibility": 0.97,
+    "seo": 0.92,
+    "lcpMs": 5335.362300000002,
+    "cls": 0.06832940815822203,
+    "tbtMs": 0,
+    "transferBytes": 3579847,
+    "limitations": "Local lab measurement of current source, not real-user or production CDN performance."
   }
 ]
