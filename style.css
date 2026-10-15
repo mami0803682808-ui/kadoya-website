@@ -238,3 +238,16 @@ button{font-family:inherit;touch-action:manipulation}
 @media(prefers-reduced-motion:reduce){
   #shop .shop-gallery-scroll{scroll-behavior:auto!important}
 }
+
+/* Keep the homepage canvas and opening black behind mobile browser chrome. */
+html.kadoya-home,html.kadoya-home body{background:#000}
+html.kadoya-home main{background:var(--paper)}
+html.kadoya-home .opening-new,
+html.kadoya-home .opening-new .opening-stage,
+html.kadoya-home .scroll-ready .arrival-signature{background:#000!important}
+@media(max-width:760px){
+  html.kadoya-home .opening-new.scroll-ready .opening-stage{
+    height:100vh!important;
+    height:100dvh!important;
+  }
+}
