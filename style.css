@@ -251,3 +251,15 @@ html.kadoya-home .scroll-ready .arrival-signature{background:#000!important}
     height:100dvh!important;
   }
 }
+
+/* Keep dish introductions secondary to the actual menu categories. */
+#menu .menu-intent-guide{margin:0 0 20px;color:#5d5140;font-size:13px}
+#menu .menu-intent-guide>summary{cursor:pointer;min-height:44px;display:list-item;align-content:center;text-underline-offset:.25em}
+#menu .menu-intent-links{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:4px 12px;margin:8px 0 0;color:#5d5140;font-size:13px}
+#menu .menu-intent-links a{display:flex;align-items:center;min-height:44px;line-height:1.6;text-decoration:underline}
+@media(max-width:760px){
+  #menu>.section-title{margin-bottom:20px}
+  #menu .menu-intent-links{grid-template-columns:repeat(2,minmax(0,1fr))}
+  #menu .menu-tabs{margin-top:12px!important;margin-bottom:24px!important}
+  #menu .menu-tab[data-menu-tab="morning"]{grid-column:1/-1!important}
+}
