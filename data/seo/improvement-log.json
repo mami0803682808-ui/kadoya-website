@@ -3,7 +3,7 @@
     "keyword": "角屋 小牧",
     "targetPath": "/",
     "status": "observing",
-    "nextReviewDate": "2026-11-12",
+    "nextReviewDate": "2026-11-16",
     "actions": [
       {
         "date": "2026-10-01",
@@ -91,6 +91,32 @@
           }
         },
         "done": "Fix black mobile opening canvas and browser theme color",
+        "needs": "検索意図別の料理案内・表示性能の改善。効果は確定GSCデータで観察する。"
+      },
+      {
+        "date": "2026-10-19T22:43:19+09:00",
+        "commit": "2208149225f7138949967bae07d95f713d7d518b",
+        "files": [
+          "style.css"
+        ],
+        "rankAtAction": 5.973856209150327,
+        "baseline": {
+          "keyword": "角屋 小牧",
+          "targetPath": "/",
+          "rank": 5.973856209150327,
+          "impressions": 153,
+          "clicks": 9,
+          "ctr": 0.058823529411764705,
+          "status": "measured",
+          "siteMetrics": {
+            "rank": 1.3558558558558558,
+            "impressions": 222,
+            "clicks": 31,
+            "ctr": 0.13963963963963963,
+            "status": "measured"
+          }
+        },
+        "done": "fix: compact mobile menu navigation",
         "needs": "検索意図別の料理案内・表示性能の改善。効果は確定GSCデータで観察する。"
       }
     ]
@@ -182,10 +208,36 @@
         },
         "done": "Fix black mobile opening canvas and browser theme color",
         "needs": "検索意図別の料理案内・表示性能の改善。効果は確定GSCデータで観察する。"
+      },
+      {
+        "date": "2026-10-19T22:43:19+09:00",
+        "commit": "2208149225f7138949967bae07d95f713d7d518b",
+        "files": [
+          "style.css"
+        ],
+        "rankAtAction": 5.166666666666667,
+        "baseline": {
+          "keyword": "小牧 きしめん",
+          "targetPath": "/kishimen/",
+          "rank": 5.166666666666667,
+          "impressions": 6,
+          "clicks": 0,
+          "ctr": 0,
+          "status": "measured",
+          "siteMetrics": {
+            "rank": 5.545454545454546,
+            "impressions": 11,
+            "clicks": 0,
+            "ctr": 0,
+            "status": "measured"
+          }
+        },
+        "done": "fix: compact mobile menu navigation",
+        "needs": "検索意図別の料理案内・表示性能の改善。効果は確定GSCデータで観察する。"
       }
     ],
     "status": "observing",
-    "nextReviewDate": "2026-11-12"
+    "nextReviewDate": "2026-11-16"
   },
   {
     "keyword": "小牧 定食",
@@ -274,10 +326,36 @@
         },
         "done": "Fix black mobile opening canvas and browser theme color",
         "needs": "検索意図別の料理案内・表示性能の改善。効果は確定GSCデータで観察する。"
+      },
+      {
+        "date": "2026-10-19T22:43:19+09:00",
+        "commit": "2208149225f7138949967bae07d95f713d7d518b",
+        "files": [
+          "style.css"
+        ],
+        "rankAtAction": null,
+        "baseline": {
+          "keyword": "小牧 定食",
+          "targetPath": "/teishoku/",
+          "rank": null,
+          "impressions": 0,
+          "clicks": 0,
+          "ctr": null,
+          "status": "no_data",
+          "siteMetrics": {
+            "rank": 13.833333333333334,
+            "impressions": 6,
+            "clicks": 0,
+            "ctr": 0,
+            "status": "measured"
+          }
+        },
+        "done": "fix: compact mobile menu navigation",
+        "needs": "検索意図別の料理案内・表示性能の改善。効果は確定GSCデータで観察する。"
       }
     ],
     "status": "observing",
-    "nextReviewDate": "2026-11-12"
+    "nextReviewDate": "2026-11-16"
   },
   {
     "keyword": "小牧 モーニング",
@@ -366,10 +444,36 @@
         },
         "done": "Fix black mobile opening canvas and browser theme color",
         "needs": "検索意図別の料理案内・表示性能の改善。効果は確定GSCデータで観察する。"
+      },
+      {
+        "date": "2026-10-19T22:43:19+09:00",
+        "commit": "2208149225f7138949967bae07d95f713d7d518b",
+        "files": [
+          "style.css"
+        ],
+        "rankAtAction": null,
+        "baseline": {
+          "keyword": "小牧 モーニング",
+          "targetPath": "/morning/",
+          "rank": null,
+          "impressions": 0,
+          "clicks": 0,
+          "ctr": null,
+          "status": "no_data",
+          "siteMetrics": {
+            "rank": null,
+            "impressions": 0,
+            "clicks": 0,
+            "ctr": null,
+            "status": "no_data"
+          }
+        },
+        "done": "fix: compact mobile menu navigation",
+        "needs": "検索意図別の料理案内・表示性能の改善。効果は確定GSCデータで観察する。"
       }
     ],
     "status": "observing",
-    "nextReviewDate": "2026-11-12"
+    "nextReviewDate": "2026-11-16"
   },
   {
     "keyword": "小牧 味噌煮込み",
@@ -458,10 +562,36 @@
         },
         "done": "Fix black mobile opening canvas and browser theme color",
         "needs": "検索意図別の料理案内・表示性能の改善。効果は確定GSCデータで観察する。"
+      },
+      {
+        "date": "2026-10-19T22:43:19+09:00",
+        "commit": "2208149225f7138949967bae07d95f713d7d518b",
+        "files": [
+          "style.css"
+        ],
+        "rankAtAction": null,
+        "baseline": {
+          "keyword": "小牧 味噌煮込み",
+          "targetPath": "/misonikomi/",
+          "rank": null,
+          "impressions": 0,
+          "clicks": 0,
+          "ctr": null,
+          "status": "no_data",
+          "siteMetrics": {
+            "rank": null,
+            "impressions": 0,
+            "clicks": 0,
+            "ctr": null,
+            "status": "no_data"
+          }
+        },
+        "done": "fix: compact mobile menu navigation",
+        "needs": "検索意図別の料理案内・表示性能の改善。効果は確定GSCデータで観察する。"
       }
     ],
     "status": "observing",
-    "nextReviewDate": "2026-11-12"
+    "nextReviewDate": "2026-11-16"
   },
   {
     "keyword": "小牧 味噌煮込みきしめん",
@@ -550,10 +680,36 @@
         },
         "done": "Fix black mobile opening canvas and browser theme color",
         "needs": "検索意図別の料理案内・表示性能の改善。効果は確定GSCデータで観察する。"
+      },
+      {
+        "date": "2026-10-19T22:43:19+09:00",
+        "commit": "2208149225f7138949967bae07d95f713d7d518b",
+        "files": [
+          "style.css"
+        ],
+        "rankAtAction": null,
+        "baseline": {
+          "keyword": "小牧 味噌煮込みきしめん",
+          "targetPath": "/misonikomi/",
+          "rank": null,
+          "impressions": 0,
+          "clicks": 0,
+          "ctr": null,
+          "status": "no_data",
+          "siteMetrics": {
+            "rank": null,
+            "impressions": 0,
+            "clicks": 0,
+            "ctr": null,
+            "status": "no_data"
+          }
+        },
+        "done": "fix: compact mobile menu navigation",
+        "needs": "検索意図別の料理案内・表示性能の改善。効果は確定GSCデータで観察する。"
       }
     ],
     "status": "observing",
-    "nextReviewDate": "2026-11-12"
+    "nextReviewDate": "2026-11-16"
   },
   {
     "keyword": "小牧 味噌カツ",
@@ -642,10 +798,36 @@
         },
         "done": "Fix black mobile opening canvas and browser theme color",
         "needs": "検索意図別の料理案内・表示性能の改善。効果は確定GSCデータで観察する。"
+      },
+      {
+        "date": "2026-10-19T22:43:19+09:00",
+        "commit": "2208149225f7138949967bae07d95f713d7d518b",
+        "files": [
+          "style.css"
+        ],
+        "rankAtAction": 5,
+        "baseline": {
+          "keyword": "小牧 味噌カツ",
+          "targetPath": "/misokatsu/",
+          "rank": 5,
+          "impressions": 1,
+          "clicks": 0,
+          "ctr": 0,
+          "status": "measured",
+          "siteMetrics": {
+            "rank": 4,
+            "impressions": 7,
+            "clicks": 0,
+            "ctr": 0,
+            "status": "measured"
+          }
+        },
+        "done": "fix: compact mobile menu navigation",
+        "needs": "検索意図別の料理案内・表示性能の改善。効果は確定GSCデータで観察する。"
       }
     ],
     "status": "observing",
-    "nextReviewDate": "2026-11-12"
+    "nextReviewDate": "2026-11-16"
   },
   {
     "keyword": "小牧 田楽",
@@ -734,9 +916,35 @@
         },
         "done": "Fix black mobile opening canvas and browser theme color",
         "needs": "検索意図別の料理案内・表示性能の改善。効果は確定GSCデータで観察する。"
+      },
+      {
+        "date": "2026-10-19T22:43:19+09:00",
+        "commit": "2208149225f7138949967bae07d95f713d7d518b",
+        "files": [
+          "style.css"
+        ],
+        "rankAtAction": null,
+        "baseline": {
+          "keyword": "小牧 田楽",
+          "targetPath": "/dengaku/",
+          "rank": null,
+          "impressions": 0,
+          "clicks": 0,
+          "ctr": null,
+          "status": "no_data",
+          "siteMetrics": {
+            "rank": null,
+            "impressions": 0,
+            "clicks": 0,
+            "ctr": null,
+            "status": "no_data"
+          }
+        },
+        "done": "fix: compact mobile menu navigation",
+        "needs": "検索意図別の料理案内・表示性能の改善。効果は確定GSCデータで観察する。"
       }
     ],
     "status": "observing",
-    "nextReviewDate": "2026-11-12"
+    "nextReviewDate": "2026-11-16"
   }
 ]
