@@ -7,6 +7,30 @@
     const menu = document.querySelector('#menu');
     if (!menu) return;
 
+    // Account for the fixed mobile header after the opening layout is ready.
+    const scrollToMenu = (behavior = 'smooth') => {
+      const title = menu.querySelector('.section-title') || menu;
+      const siteHeader = document.querySelector('.header');
+      const offset = window.matchMedia('(max-width: 760px)').matches
+        ? (siteHeader?.offsetHeight || 64) + 16 : 24;
+      window.scrollTo({
+        top: Math.max(0, title.getBoundingClientRect().top + window.scrollY - offset),
+        behavior: window.matchMedia('(prefers-reduced-motion: reduce)').matches ? 'instant' : behavior
+      });
+    };
+    document.querySelectorAll('a[href="#menu"]').forEach(link => {
+      link.addEventListener('click', event => {
+        event.preventDefault();
+        if (location.hash !== '#menu') history.pushState(null, '', '#menu');
+        scrollToMenu();
+      });
+    });
+    if (location.hash === '#menu' && performance.getEntriesByType('navigation')[0]?.type !== 'back_forward') {
+      const alignMenu = () => requestAnimationFrame(() => scrollToMenu('instant'));
+      if (document.readyState === 'complete') alignMenu();
+      else window.addEventListener('load', alignMenu, { once: true });
+    }
+
     const hoursTarget = document.querySelector('#hours');
     const hoursDockLink = document.querySelector('.mobile-dock a[href="#hours"]');
     if (hoursTarget) {
