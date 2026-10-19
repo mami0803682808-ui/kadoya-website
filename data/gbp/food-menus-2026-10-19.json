@@ -1,0 +1,2081 @@
+{
+  "name": "accounts/-/locations/5145477646827289054/foodMenus",
+  "menus": [
+    {
+      "labels": [
+        {
+          "displayName": "角屋 お品書き",
+          "languageCode": "ja",
+          "description": "表示価格は税込。最新の価格は店頭・モバイルオーダーをご確認ください。"
+        }
+      ],
+      "sourceUrl": "https://komaki-kadoya.com/#menu",
+      "sections": [
+        {
+          "labels": [
+            {
+              "displayName": "秋季限定",
+              "languageCode": "ja",
+              "description": "秋の味覚を楽しむ、季節限定のお品です。"
+            }
+          ],
+          "items": [
+            {
+              "labels": [
+                {
+                  "displayName": "松茸土瓶蒸しときのこの天ぷら御膳",
+                  "languageCode": "ja",
+                  "description": "ミニきしめんは赤だしに変更できます。"
+                }
+              ],
+              "attributes": {
+                "price": {
+                  "currencyCode": "JPY",
+                  "units": "2380"
+                }
+              }
+            },
+            {
+              "labels": [
+                {
+                  "displayName": "牡蠣入り味噌煮込みきしめん",
+                  "languageCode": "ja",
+                  "description": "10月〜4月限定"
+                }
+              ],
+              "attributes": {
+                "price": {
+                  "currencyCode": "JPY",
+                  "units": "1890"
+                }
+              }
+            },
+            {
+              "labels": [
+                {
+                  "displayName": "カキフライ定食",
+                  "languageCode": "ja",
+                  "description": "10月〜4月限定"
+                }
+              ],
+              "attributes": {
+                "price": {
+                  "currencyCode": "JPY",
+                  "units": "1890"
+                }
+              }
+            },
+            {
+              "labels": [
+                {
+                  "displayName": "チーズカツカレー煮込みきしめん",
+                  "languageCode": "ja",
+                  "description": "トッピング：チーズ ＋150円 ／ 串カツ1本 ＋180円"
+                }
+              ],
+              "attributes": {
+                "price": {
+                  "currencyCode": "JPY",
+                  "units": "1660"
+                }
+              }
+            },
+            {
+              "labels": [
+                {
+                  "displayName": "松茸土瓶蒸し",
+                  "languageCode": "ja"
+                }
+              ],
+              "attributes": {
+                "price": {
+                  "currencyCode": "JPY",
+                  "units": "1320"
+                }
+              }
+            },
+            {
+              "labels": [
+                {
+                  "displayName": "揚げ餃子",
+                  "languageCode": "ja"
+                }
+              ],
+              "attributes": {
+                "price": {
+                  "currencyCode": "JPY",
+                  "units": "480"
+                }
+              }
+            }
+          ]
+        },
+        {
+          "labels": [
+            {
+              "displayName": "定食",
+              "languageCode": "ja",
+              "description": "定食は御飯・きしめん（温・冷）・漬物付です。きしめんをみそ汁に変更できます。麺の種類は変更できません。 本日のお魚定食は日替わりです。きしめんへの変更はできません。小鉢の内容は日によって異なります。 単品に変更 −300円／きしめん大盛り ＋100円／ごはん大盛り ＋100円／菜飯に変更 ＋50円 味噌・ケチャップ・タルタルソース・マヨネーズの追加 各＋100円"
+            }
+          ],
+          "items": [
+            {
+              "labels": [
+                {
+                  "displayName": "平日限定 日替わりランチ",
+                  "languageCode": "ja",
+                  "description": "平日限定。内容は公式Instagramのストーリーでご案内します。"
+                }
+              ],
+              "attributes": {
+                "price": {
+                  "currencyCode": "JPY",
+                  "units": "1080"
+                }
+              }
+            },
+            {
+              "labels": [
+                {
+                  "displayName": "本日のお魚定食",
+                  "languageCode": "ja"
+                }
+              ],
+              "attributes": {
+                "price": {
+                  "currencyCode": "JPY",
+                  "units": "1890"
+                }
+              }
+            },
+            {
+              "labels": [
+                {
+                  "displayName": "みそかつ定食",
+                  "languageCode": "ja",
+                  "description": "みそだれをまとった、とんかつの一皿。"
+                }
+              ],
+              "attributes": {
+                "price": {
+                  "currencyCode": "JPY",
+                  "units": "1550"
+                }
+              }
+            },
+            {
+              "labels": [
+                {
+                  "displayName": "菜めし田楽定食",
+                  "languageCode": "ja"
+                }
+              ],
+              "attributes": {
+                "price": {
+                  "currencyCode": "JPY",
+                  "units": "1350"
+                }
+              }
+            },
+            {
+              "labels": [
+                {
+                  "displayName": "唐揚げ定食",
+                  "languageCode": "ja",
+                  "description": "ごはんと一緒に楽しむ、唐揚げの定食。"
+                }
+              ],
+              "attributes": {
+                "price": {
+                  "currencyCode": "JPY",
+                  "units": "1650"
+                }
+              }
+            },
+            {
+              "labels": [
+                {
+                  "displayName": "天ぷら定食",
+                  "languageCode": "ja",
+                  "description": "海老と野菜の天ぷらを盛り合わせ。"
+                }
+              ],
+              "attributes": {
+                "price": {
+                  "currencyCode": "JPY",
+                  "units": "1550"
+                }
+              }
+            },
+            {
+              "labels": [
+                {
+                  "displayName": "エビフライ定食",
+                  "languageCode": "ja",
+                  "description": "エビフライを主役に、ごはんと麺を添えて。"
+                }
+              ],
+              "attributes": {
+                "price": {
+                  "currencyCode": "JPY",
+                  "units": "1550"
+                }
+              }
+            },
+            {
+              "labels": [
+                {
+                  "displayName": "味噌ヒレカツ定食",
+                  "languageCode": "ja"
+                }
+              ],
+              "attributes": {
+                "price": {
+                  "currencyCode": "JPY",
+                  "units": "1650"
+                }
+              }
+            },
+            {
+              "labels": [
+                {
+                  "displayName": "カキフライ定食",
+                  "languageCode": "ja",
+                  "description": "10月〜4月限定"
+                }
+              ],
+              "attributes": {
+                "price": {
+                  "currencyCode": "JPY",
+                  "units": "1890"
+                }
+              }
+            }
+          ]
+        },
+        {
+          "labels": [
+            {
+              "displayName": "味噌煮込みきしめん",
+              "languageCode": "ja",
+              "description": "味噌煮込みは豚肉・卵入り。うどんに変更できます。煮込み麺の大盛りはできません。 ライスセット（御飯・香の物付）＋330円／小ライスセット ＋220円 追加トッピング：にんにく ＋50円／えび天 ＋250円／豆板醤（四川風）＋50円／お餅 ＋150円"
+            }
+          ],
+          "items": [
+            {
+              "labels": [
+                {
+                  "displayName": "味噌煮込みきしめん",
+                  "languageCode": "ja"
+                }
+              ],
+              "attributes": {
+                "price": {
+                  "currencyCode": "JPY",
+                  "units": "1150"
+                }
+              }
+            },
+            {
+              "labels": [
+                {
+                  "displayName": "海老天入り味噌煮込みきしめん",
+                  "languageCode": "ja"
+                }
+              ],
+              "attributes": {
+                "price": {
+                  "currencyCode": "JPY",
+                  "units": "1400"
+                }
+              }
+            },
+            {
+              "labels": [
+                {
+                  "displayName": "デラックス味噌煮込みきしめん",
+                  "languageCode": "ja"
+                }
+              ],
+              "attributes": {
+                "price": {
+                  "currencyCode": "JPY",
+                  "units": "1550"
+                }
+              }
+            },
+            {
+              "labels": [
+                {
+                  "displayName": "カレー煮込みきしめん",
+                  "languageCode": "ja"
+                }
+              ],
+              "attributes": {
+                "price": {
+                  "currencyCode": "JPY",
+                  "units": "1150"
+                }
+              }
+            },
+            {
+              "labels": [
+                {
+                  "displayName": "にんにく味噌煮込みきしめん",
+                  "languageCode": "ja"
+                }
+              ],
+              "attributes": {
+                "price": {
+                  "currencyCode": "JPY",
+                  "units": "1200"
+                }
+              }
+            },
+            {
+              "labels": [
+                {
+                  "displayName": "四川風味噌煮込みきしめん（豆板醤入り）",
+                  "languageCode": "ja"
+                }
+              ],
+              "attributes": {
+                "price": {
+                  "currencyCode": "JPY",
+                  "units": "1200"
+                }
+              }
+            },
+            {
+              "labels": [
+                {
+                  "displayName": "牡蠣入り味噌煮込みきしめん（10月〜4月限定）",
+                  "languageCode": "ja"
+                }
+              ],
+              "attributes": {
+                "price": {
+                  "currencyCode": "JPY",
+                  "units": "1890"
+                }
+              }
+            }
+          ]
+        },
+        {
+          "labels": [
+            {
+              "displayName": "きしめん",
+              "languageCode": "ja",
+              "description": "きしめんをそばに変更できます。 ライスセット（ご飯・香の物付）＋330円／ざる物の大盛り ＋300円／麺の大盛り ＋250円 ねぎ追加 ＋50円／ざるつゆ追加 ＋150円／生卵 ＋100円"
+            }
+          ],
+          "items": [
+            {
+              "labels": [
+                {
+                  "displayName": "田縣たぬききしめん",
+                  "languageCode": "ja"
+                }
+              ],
+              "attributes": {
+                "price": {
+                  "currencyCode": "JPY",
+                  "units": "1000"
+                }
+              }
+            },
+            {
+              "labels": [
+                {
+                  "displayName": "天ぷらきしめん",
+                  "languageCode": "ja"
+                }
+              ],
+              "attributes": {
+                "price": {
+                  "currencyCode": "JPY",
+                  "units": "1200"
+                }
+              }
+            },
+            {
+              "labels": [
+                {
+                  "displayName": "とり天きしめん",
+                  "languageCode": "ja"
+                }
+              ],
+              "attributes": {
+                "price": {
+                  "currencyCode": "JPY",
+                  "units": "1140"
+                }
+              }
+            },
+            {
+              "labels": [
+                {
+                  "displayName": "カレーきしめん",
+                  "languageCode": "ja"
+                }
+              ],
+              "attributes": {
+                "price": {
+                  "currencyCode": "JPY",
+                  "units": "950"
+                }
+              }
+            },
+            {
+              "labels": [
+                {
+                  "displayName": "あんかけ卵とじきしめん",
+                  "languageCode": "ja"
+                }
+              ],
+              "attributes": {
+                "price": {
+                  "currencyCode": "JPY",
+                  "units": "950"
+                }
+              }
+            },
+            {
+              "labels": [
+                {
+                  "displayName": "山菜きしめん",
+                  "languageCode": "ja"
+                }
+              ],
+              "attributes": {
+                "price": {
+                  "currencyCode": "JPY",
+                  "units": "950"
+                }
+              }
+            },
+            {
+              "labels": [
+                {
+                  "displayName": "天ざるきしめん",
+                  "languageCode": "ja"
+                }
+              ],
+              "attributes": {
+                "price": {
+                  "currencyCode": "JPY",
+                  "units": "1550"
+                }
+              }
+            },
+            {
+              "labels": [
+                {
+                  "displayName": "きしめん",
+                  "languageCode": "ja"
+                }
+              ],
+              "attributes": {
+                "price": {
+                  "currencyCode": "JPY",
+                  "units": "830"
+                }
+              }
+            },
+            {
+              "labels": [
+                {
+                  "displayName": "海老おろしきしめん〈冷〉〈季節限定〉",
+                  "languageCode": "ja"
+                }
+              ],
+              "attributes": {
+                "price": {
+                  "currencyCode": "JPY",
+                  "units": "1500"
+                }
+              }
+            },
+            {
+              "labels": [
+                {
+                  "displayName": "ざるきしめん〈冷〉",
+                  "languageCode": "ja"
+                }
+              ],
+              "attributes": {
+                "price": {
+                  "currencyCode": "JPY",
+                  "units": "950"
+                }
+              }
+            },
+            {
+              "labels": [
+                {
+                  "displayName": "ざるきしめんハーフ〈冷〉",
+                  "languageCode": "ja"
+                }
+              ],
+              "attributes": {
+                "price": {
+                  "currencyCode": "JPY",
+                  "units": "600"
+                }
+              }
+            },
+            {
+              "labels": [
+                {
+                  "displayName": "ミニきしめん〈温・冷〉",
+                  "languageCode": "ja"
+                }
+              ],
+              "attributes": {
+                "price": {
+                  "currencyCode": "JPY",
+                  "units": "600"
+                }
+              }
+            }
+          ]
+        },
+        {
+          "labels": [
+            {
+              "displayName": "丼もの・お子様メニュー",
+              "languageCode": "ja",
+              "description": "丼ものの大盛り ＋150円"
+            }
+          ],
+          "items": [
+            {
+              "labels": [
+                {
+                  "displayName": "かつ丼",
+                  "languageCode": "ja"
+                }
+              ],
+              "attributes": {
+                "price": {
+                  "currencyCode": "JPY",
+                  "units": "1040"
+                }
+              }
+            },
+            {
+              "labels": [
+                {
+                  "displayName": "天丼",
+                  "languageCode": "ja"
+                }
+              ],
+              "attributes": {
+                "price": {
+                  "currencyCode": "JPY",
+                  "units": "1040"
+                }
+              }
+            },
+            {
+              "labels": [
+                {
+                  "displayName": "味噌カツ丼",
+                  "languageCode": "ja"
+                }
+              ],
+              "attributes": {
+                "price": {
+                  "currencyCode": "JPY",
+                  "units": "1040"
+                }
+              }
+            },
+            {
+              "labels": [
+                {
+                  "displayName": "親子丼",
+                  "languageCode": "ja"
+                }
+              ],
+              "attributes": {
+                "price": {
+                  "currencyCode": "JPY",
+                  "units": "1000"
+                }
+              }
+            },
+            {
+              "labels": [
+                {
+                  "displayName": "牛どて丼",
+                  "languageCode": "ja"
+                }
+              ],
+              "attributes": {
+                "price": {
+                  "currencyCode": "JPY",
+                  "units": "1000"
+                }
+              }
+            },
+            {
+              "labels": [
+                {
+                  "displayName": "鉄火丼",
+                  "languageCode": "ja"
+                }
+              ],
+              "attributes": {
+                "price": {
+                  "currencyCode": "JPY",
+                  "units": "1040"
+                }
+              }
+            },
+            {
+              "labels": [
+                {
+                  "displayName": "ネギトロ丼",
+                  "languageCode": "ja"
+                }
+              ],
+              "attributes": {
+                "price": {
+                  "currencyCode": "JPY",
+                  "units": "1040"
+                }
+              }
+            },
+            {
+              "labels": [
+                {
+                  "displayName": "お子様きしめん",
+                  "languageCode": "ja"
+                }
+              ],
+              "attributes": {
+                "price": {
+                  "currencyCode": "JPY",
+                  "units": "650"
+                }
+              }
+            }
+          ]
+        },
+        {
+          "labels": [
+            {
+              "displayName": "ミニ丼セット",
+              "languageCode": "ja",
+              "description": "麺・ごはんの大盛りはできません。ミニサラダの内容は日によって異なります。"
+            }
+          ],
+          "items": [
+            {
+              "labels": [
+                {
+                  "displayName": "ミニ丼きしめんセット（温・冷）",
+                  "languageCode": "ja"
+                }
+              ],
+              "attributes": {
+                "price": {
+                  "currencyCode": "JPY",
+                  "units": "1330"
+                }
+              }
+            },
+            {
+              "labels": [
+                {
+                  "displayName": "ミニ丼 赤だし付",
+                  "languageCode": "ja"
+                }
+              ],
+              "attributes": {
+                "price": {
+                  "currencyCode": "JPY",
+                  "units": "930"
+                }
+              }
+            },
+            {
+              "labels": [
+                {
+                  "displayName": "ミニ丼 単品",
+                  "languageCode": "ja"
+                }
+              ],
+              "attributes": {
+                "price": {
+                  "currencyCode": "JPY",
+                  "units": "830"
+                }
+              }
+            },
+            {
+              "labels": [
+                {
+                  "displayName": "ミニサラダ",
+                  "languageCode": "ja"
+                }
+              ],
+              "attributes": {
+                "price": {
+                  "currencyCode": "JPY",
+                  "units": "380"
+                }
+              }
+            }
+          ]
+        },
+        {
+          "labels": [
+            {
+              "displayName": "一品料理・ご飯",
+              "languageCode": "ja"
+            }
+          ],
+          "items": [
+            {
+              "labels": [
+                {
+                  "displayName": "揚げ出し豆腐",
+                  "languageCode": "ja"
+                }
+              ],
+              "attributes": {
+                "price": {
+                  "currencyCode": "JPY",
+                  "units": "480"
+                }
+              }
+            },
+            {
+              "labels": [
+                {
+                  "displayName": "大きな茶碗蒸し",
+                  "languageCode": "ja"
+                }
+              ],
+              "attributes": {
+                "price": {
+                  "currencyCode": "JPY",
+                  "units": "500"
+                }
+              }
+            },
+            {
+              "labels": [
+                {
+                  "displayName": "豆腐どてかつ串",
+                  "languageCode": "ja"
+                }
+              ],
+              "attributes": {
+                "price": {
+                  "currencyCode": "JPY",
+                  "units": "180"
+                }
+              }
+            },
+            {
+              "labels": [
+                {
+                  "displayName": "串カツ1本（味噌・ソース）",
+                  "languageCode": "ja"
+                }
+              ],
+              "attributes": {
+                "price": {
+                  "currencyCode": "JPY",
+                  "units": "180"
+                }
+              }
+            },
+            {
+              "labels": [
+                {
+                  "displayName": "タコ唐揚げ",
+                  "languageCode": "ja"
+                }
+              ],
+              "attributes": {
+                "price": {
+                  "currencyCode": "JPY",
+                  "units": "550"
+                }
+              }
+            },
+            {
+              "labels": [
+                {
+                  "displayName": "だし巻き玉子",
+                  "languageCode": "ja"
+                }
+              ],
+              "attributes": {
+                "price": {
+                  "currencyCode": "JPY",
+                  "units": "350"
+                }
+              }
+            },
+            {
+              "labels": [
+                {
+                  "displayName": "手羽先唐揚げ（3本）",
+                  "languageCode": "ja"
+                }
+              ],
+              "attributes": {
+                "price": {
+                  "currencyCode": "JPY",
+                  "units": "580"
+                }
+              }
+            },
+            {
+              "labels": [
+                {
+                  "displayName": "とり唐揚げ（3個）",
+                  "languageCode": "ja"
+                }
+              ],
+              "attributes": {
+                "price": {
+                  "currencyCode": "JPY",
+                  "units": "580"
+                }
+              }
+            },
+            {
+              "labels": [
+                {
+                  "displayName": "豆腐田楽",
+                  "languageCode": "ja"
+                }
+              ],
+              "attributes": {
+                "price": {
+                  "currencyCode": "JPY",
+                  "units": "650"
+                }
+              }
+            },
+            {
+              "labels": [
+                {
+                  "displayName": "大エビフライ（一本）〈季節限定〉",
+                  "languageCode": "ja"
+                }
+              ],
+              "attributes": {
+                "price": {
+                  "currencyCode": "JPY",
+                  "units": "880"
+                }
+              }
+            },
+            {
+              "labels": [
+                {
+                  "displayName": "とり天（3個）〈季節限定〉",
+                  "languageCode": "ja"
+                }
+              ],
+              "attributes": {
+                "price": {
+                  "currencyCode": "JPY",
+                  "units": "530"
+                }
+              }
+            },
+            {
+              "labels": [
+                {
+                  "displayName": "梅くらげ",
+                  "languageCode": "ja"
+                }
+              ],
+              "attributes": {
+                "price": {
+                  "currencyCode": "JPY",
+                  "units": "350"
+                }
+              }
+            },
+            {
+              "labels": [
+                {
+                  "displayName": "牛すじどて煮",
+                  "languageCode": "ja"
+                }
+              ],
+              "attributes": {
+                "price": {
+                  "currencyCode": "JPY",
+                  "units": "530"
+                }
+              }
+            },
+            {
+              "labels": [
+                {
+                  "displayName": "フライドポテト",
+                  "languageCode": "ja"
+                }
+              ],
+              "attributes": {
+                "price": {
+                  "currencyCode": "JPY",
+                  "units": "480"
+                }
+              }
+            },
+            {
+              "labels": [
+                {
+                  "displayName": "焼きナス",
+                  "languageCode": "ja"
+                }
+              ],
+              "attributes": {
+                "price": {
+                  "currencyCode": "JPY",
+                  "units": "480"
+                }
+              }
+            },
+            {
+              "labels": [
+                {
+                  "displayName": "ちくわ磯部揚げ",
+                  "languageCode": "ja"
+                }
+              ],
+              "attributes": {
+                "price": {
+                  "currencyCode": "JPY",
+                  "units": "480"
+                }
+              }
+            },
+            {
+              "labels": [
+                {
+                  "displayName": "枝豆",
+                  "languageCode": "ja"
+                }
+              ],
+              "attributes": {
+                "price": {
+                  "currencyCode": "JPY",
+                  "units": "380"
+                }
+              }
+            },
+            {
+              "labels": [
+                {
+                  "displayName": "冷奴",
+                  "languageCode": "ja"
+                }
+              ],
+              "attributes": {
+                "price": {
+                  "currencyCode": "JPY",
+                  "units": "380"
+                }
+              }
+            },
+            {
+              "labels": [
+                {
+                  "displayName": "キムチ",
+                  "languageCode": "ja"
+                }
+              ],
+              "attributes": {
+                "price": {
+                  "currencyCode": "JPY",
+                  "units": "380"
+                }
+              }
+            },
+            {
+              "labels": [
+                {
+                  "displayName": "焼きそば",
+                  "languageCode": "ja"
+                }
+              ],
+              "attributes": {
+                "price": {
+                  "currencyCode": "JPY",
+                  "units": "900"
+                }
+              }
+            },
+            {
+              "labels": [
+                {
+                  "displayName": "イカ焼き",
+                  "languageCode": "ja"
+                }
+              ],
+              "attributes": {
+                "price": {
+                  "currencyCode": "JPY",
+                  "units": "800"
+                }
+              }
+            },
+            {
+              "labels": [
+                {
+                  "displayName": "塩焼き鳥（2本）",
+                  "languageCode": "ja"
+                }
+              ],
+              "attributes": {
+                "price": {
+                  "currencyCode": "JPY",
+                  "units": "480"
+                }
+              }
+            },
+            {
+              "labels": [
+                {
+                  "displayName": "カツとじ鍋",
+                  "languageCode": "ja"
+                }
+              ],
+              "attributes": {
+                "price": {
+                  "currencyCode": "JPY",
+                  "units": "900"
+                }
+              }
+            },
+            {
+              "labels": [
+                {
+                  "displayName": "まぐろ山かけ",
+                  "languageCode": "ja"
+                }
+              ],
+              "attributes": {
+                "price": {
+                  "currencyCode": "JPY",
+                  "units": "680"
+                }
+              }
+            },
+            {
+              "labels": [
+                {
+                  "displayName": "もずく酢",
+                  "languageCode": "ja"
+                }
+              ],
+              "attributes": {
+                "price": {
+                  "currencyCode": "JPY",
+                  "units": "350"
+                }
+              }
+            },
+            {
+              "labels": [
+                {
+                  "displayName": "おにぎり（梅・昆布・しぐれ・塩）",
+                  "languageCode": "ja"
+                }
+              ],
+              "attributes": {
+                "price": {
+                  "currencyCode": "JPY",
+                  "units": "250"
+                }
+              }
+            },
+            {
+              "labels": [
+                {
+                  "displayName": "赤だし",
+                  "languageCode": "ja"
+                }
+              ],
+              "attributes": {
+                "price": {
+                  "currencyCode": "JPY",
+                  "units": "200"
+                }
+              }
+            },
+            {
+              "labels": [
+                {
+                  "displayName": "ライス",
+                  "languageCode": "ja"
+                }
+              ],
+              "attributes": {
+                "price": {
+                  "currencyCode": "JPY",
+                  "units": "330"
+                }
+              }
+            },
+            {
+              "labels": [
+                {
+                  "displayName": "小ライス",
+                  "languageCode": "ja"
+                }
+              ],
+              "attributes": {
+                "price": {
+                  "currencyCode": "JPY",
+                  "units": "220"
+                }
+              }
+            },
+            {
+              "labels": [
+                {
+                  "displayName": "菜めしご飯",
+                  "languageCode": "ja"
+                }
+              ],
+              "attributes": {
+                "price": {
+                  "currencyCode": "JPY",
+                  "units": "380"
+                }
+              }
+            },
+            {
+              "labels": [
+                {
+                  "displayName": "ミニサラダ",
+                  "languageCode": "ja"
+                }
+              ],
+              "attributes": {
+                "price": {
+                  "currencyCode": "JPY",
+                  "units": "380"
+                }
+              }
+            }
+          ]
+        },
+        {
+          "labels": [
+            {
+              "displayName": "お飲み物・デザート",
+              "languageCode": "ja",
+              "description": "焼酎のボトルキープは6か月です。モーニングのお飲み物は、モーニング専用メニューをご覧ください。"
+            }
+          ],
+          "items": [
+            {
+              "labels": [
+                {
+                  "displayName": "コーラフローズン レモンサワークーリッ酒〈お酒〉",
+                  "languageCode": "ja"
+                }
+              ],
+              "attributes": {
+                "price": {
+                  "currencyCode": "JPY",
+                  "units": "690"
+                }
+              }
+            },
+            {
+              "labels": [
+                {
+                  "displayName": "オレンジフローズン グレフルサワークーリッ酒〈お酒〉",
+                  "languageCode": "ja"
+                }
+              ],
+              "attributes": {
+                "price": {
+                  "currencyCode": "JPY",
+                  "units": "690"
+                }
+              }
+            },
+            {
+              "labels": [
+                {
+                  "displayName": "杏仁バニラクーリッ酒〈お酒〉",
+                  "languageCode": "ja"
+                }
+              ],
+              "attributes": {
+                "price": {
+                  "currencyCode": "JPY",
+                  "units": "690"
+                }
+              }
+            },
+            {
+              "labels": [
+                {
+                  "displayName": "コーラフロート",
+                  "languageCode": "ja"
+                }
+              ],
+              "attributes": {
+                "price": {
+                  "currencyCode": "JPY",
+                  "units": "650"
+                }
+              }
+            },
+            {
+              "labels": [
+                {
+                  "displayName": "メロンフロート",
+                  "languageCode": "ja"
+                }
+              ],
+              "attributes": {
+                "price": {
+                  "currencyCode": "JPY",
+                  "units": "650"
+                }
+              }
+            },
+            {
+              "labels": [
+                {
+                  "displayName": "自家製赤しそフロート",
+                  "languageCode": "ja"
+                }
+              ],
+              "attributes": {
+                "price": {
+                  "currencyCode": "JPY",
+                  "units": "650"
+                }
+              }
+            },
+            {
+              "labels": [
+                {
+                  "displayName": "コーヒーフロート",
+                  "languageCode": "ja"
+                }
+              ],
+              "attributes": {
+                "price": {
+                  "currencyCode": "JPY",
+                  "units": "650"
+                }
+              }
+            },
+            {
+              "labels": [
+                {
+                  "displayName": "リッチ抹茶フラッペ",
+                  "languageCode": "ja"
+                }
+              ],
+              "attributes": {
+                "price": {
+                  "currencyCode": "JPY",
+                  "units": "650"
+                }
+              }
+            },
+            {
+              "labels": [
+                {
+                  "displayName": "瓶ビール（大瓶） アサヒ・キリン・赤星",
+                  "languageCode": "ja"
+                }
+              ],
+              "attributes": {
+                "price": {
+                  "currencyCode": "JPY",
+                  "units": "830"
+                }
+              }
+            },
+            {
+              "labels": [
+                {
+                  "displayName": "生ビール（大）",
+                  "languageCode": "ja"
+                }
+              ],
+              "attributes": {
+                "price": {
+                  "currencyCode": "JPY",
+                  "units": "950"
+                }
+              }
+            },
+            {
+              "labels": [
+                {
+                  "displayName": "生ビール（中）",
+                  "languageCode": "ja"
+                }
+              ],
+              "attributes": {
+                "price": {
+                  "currencyCode": "JPY",
+                  "units": "650"
+                }
+              }
+            },
+            {
+              "labels": [
+                {
+                  "displayName": "ノンアルコールビール",
+                  "languageCode": "ja"
+                }
+              ],
+              "attributes": {
+                "price": {
+                  "currencyCode": "JPY",
+                  "units": "500"
+                }
+              }
+            },
+            {
+              "labels": [
+                {
+                  "displayName": "焼酎 麦・芋 グラス（水割り・湯割り・ロック）",
+                  "languageCode": "ja"
+                }
+              ],
+              "attributes": {
+                "price": {
+                  "currencyCode": "JPY",
+                  "units": "500"
+                }
+              }
+            },
+            {
+              "labels": [
+                {
+                  "displayName": "焼酎 麦・芋 ボトル（900ml）",
+                  "languageCode": "ja"
+                }
+              ],
+              "attributes": {
+                "price": {
+                  "currencyCode": "JPY",
+                  "units": "2800"
+                }
+              }
+            },
+            {
+              "labels": [
+                {
+                  "displayName": "ハイボール（麦・芋・ウイスキー）",
+                  "languageCode": "ja"
+                }
+              ],
+              "attributes": {
+                "price": {
+                  "currencyCode": "JPY",
+                  "units": "500"
+                }
+              }
+            },
+            {
+              "labels": [
+                {
+                  "displayName": "レモンサワー",
+                  "languageCode": "ja"
+                }
+              ],
+              "attributes": {
+                "price": {
+                  "currencyCode": "JPY",
+                  "units": "500"
+                }
+              }
+            },
+            {
+              "labels": [
+                {
+                  "displayName": "ウーロンハイ",
+                  "languageCode": "ja"
+                }
+              ],
+              "attributes": {
+                "price": {
+                  "currencyCode": "JPY",
+                  "units": "500"
+                }
+              }
+            },
+            {
+              "labels": [
+                {
+                  "displayName": "メガハイボール",
+                  "languageCode": "ja"
+                }
+              ],
+              "attributes": {
+                "price": {
+                  "currencyCode": "JPY",
+                  "units": "850"
+                }
+              }
+            },
+            {
+              "labels": [
+                {
+                  "displayName": "日本酒 熱燗（一合）",
+                  "languageCode": "ja"
+                }
+              ],
+              "attributes": {
+                "price": {
+                  "currencyCode": "JPY",
+                  "units": "580"
+                }
+              }
+            },
+            {
+              "labels": [
+                {
+                  "displayName": "日本酒 熱燗（二合）",
+                  "languageCode": "ja"
+                }
+              ],
+              "attributes": {
+                "price": {
+                  "currencyCode": "JPY",
+                  "units": "880"
+                }
+              }
+            },
+            {
+              "labels": [
+                {
+                  "displayName": "日本酒 冷酒",
+                  "languageCode": "ja"
+                }
+              ],
+              "attributes": {
+                "price": {
+                  "currencyCode": "JPY",
+                  "units": "770"
+                }
+              }
+            },
+            {
+              "labels": [
+                {
+                  "displayName": "ウーロン茶",
+                  "languageCode": "ja"
+                }
+              ],
+              "attributes": {
+                "price": {
+                  "currencyCode": "JPY",
+                  "units": "350"
+                }
+              }
+            },
+            {
+              "labels": [
+                {
+                  "displayName": "コーラ",
+                  "languageCode": "ja"
+                }
+              ],
+              "attributes": {
+                "price": {
+                  "currencyCode": "JPY",
+                  "units": "350"
+                }
+              }
+            },
+            {
+              "labels": [
+                {
+                  "displayName": "オレンジジュース",
+                  "languageCode": "ja"
+                }
+              ],
+              "attributes": {
+                "price": {
+                  "currencyCode": "JPY",
+                  "units": "350"
+                }
+              }
+            },
+            {
+              "labels": [
+                {
+                  "displayName": "本日のアイスクリーム",
+                  "languageCode": "ja"
+                }
+              ],
+              "attributes": {
+                "price": {
+                  "currencyCode": "JPY",
+                  "units": "280"
+                }
+              }
+            }
+          ]
+        },
+        {
+          "labels": [
+            {
+              "displayName": "モーニングのお飲み物",
+              "languageCode": "ja",
+              "description": "コーヒーチケット：11枚綴り 5,000円（税込）"
+            }
+          ],
+          "items": [
+            {
+              "labels": [
+                {
+                  "displayName": "ブレンドコーヒー（HOT・ICE）",
+                  "languageCode": "ja"
+                }
+              ],
+              "attributes": {
+                "price": {
+                  "currencyCode": "JPY",
+                  "units": "500"
+                }
+              }
+            },
+            {
+              "labels": [
+                {
+                  "displayName": "アメリカンコーヒー（HOTのみ）",
+                  "languageCode": "ja"
+                }
+              ],
+              "attributes": {
+                "price": {
+                  "currencyCode": "JPY",
+                  "units": "500"
+                }
+              }
+            },
+            {
+              "labels": [
+                {
+                  "displayName": "カフェオーレ（HOT・ICE）",
+                  "languageCode": "ja"
+                }
+              ],
+              "attributes": {
+                "price": {
+                  "currencyCode": "JPY",
+                  "units": "580"
+                }
+              }
+            },
+            {
+              "labels": [
+                {
+                  "displayName": "ウィンナーコーヒー（HOT・ICE）",
+                  "languageCode": "ja"
+                }
+              ],
+              "attributes": {
+                "price": {
+                  "currencyCode": "JPY",
+                  "units": "580"
+                }
+              }
+            },
+            {
+              "labels": [
+                {
+                  "displayName": "ストレートティー（HOT・ICE）",
+                  "languageCode": "ja"
+                }
+              ],
+              "attributes": {
+                "price": {
+                  "currencyCode": "JPY",
+                  "units": "500"
+                }
+              }
+            },
+            {
+              "labels": [
+                {
+                  "displayName": "レモンティー（HOT・ICE）",
+                  "languageCode": "ja"
+                }
+              ],
+              "attributes": {
+                "price": {
+                  "currencyCode": "JPY",
+                  "units": "500"
+                }
+              }
+            },
+            {
+              "labels": [
+                {
+                  "displayName": "ミルクティー（HOT・ICE）",
+                  "languageCode": "ja"
+                }
+              ],
+              "attributes": {
+                "price": {
+                  "currencyCode": "JPY",
+                  "units": "500"
+                }
+              }
+            },
+            {
+              "labels": [
+                {
+                  "displayName": "ミルク（HOT・ICE）",
+                  "languageCode": "ja"
+                }
+              ],
+              "attributes": {
+                "price": {
+                  "currencyCode": "JPY",
+                  "units": "500"
+                }
+              }
+            },
+            {
+              "labels": [
+                {
+                  "displayName": "ココア〈ホイップ付き〉（HOT・ICE）",
+                  "languageCode": "ja"
+                }
+              ],
+              "attributes": {
+                "price": {
+                  "currencyCode": "JPY",
+                  "units": "580"
+                }
+              }
+            },
+            {
+              "labels": [
+                {
+                  "displayName": "クリームソーダ（メロンフロート）",
+                  "languageCode": "ja"
+                }
+              ],
+              "attributes": {
+                "price": {
+                  "currencyCode": "JPY",
+                  "units": "650"
+                }
+              }
+            },
+            {
+              "labels": [
+                {
+                  "displayName": "コーラフロート",
+                  "languageCode": "ja"
+                }
+              ],
+              "attributes": {
+                "price": {
+                  "currencyCode": "JPY",
+                  "units": "650"
+                }
+              }
+            },
+            {
+              "labels": [
+                {
+                  "displayName": "自家製赤しそフロート",
+                  "languageCode": "ja"
+                }
+              ],
+              "attributes": {
+                "price": {
+                  "currencyCode": "JPY",
+                  "units": "650"
+                }
+              }
+            },
+            {
+              "labels": [
+                {
+                  "displayName": "コーヒーフロート",
+                  "languageCode": "ja"
+                }
+              ],
+              "attributes": {
+                "price": {
+                  "currencyCode": "JPY",
+                  "units": "650"
+                }
+              }
+            },
+            {
+              "labels": [
+                {
+                  "displayName": "リッチ抹茶フラッペ",
+                  "languageCode": "ja"
+                }
+              ],
+              "attributes": {
+                "price": {
+                  "currencyCode": "JPY",
+                  "units": "680"
+                }
+              }
+            },
+            {
+              "labels": [
+                {
+                  "displayName": "バナナジュース",
+                  "languageCode": "ja"
+                }
+              ],
+              "attributes": {
+                "price": {
+                  "currencyCode": "JPY",
+                  "units": "650"
+                }
+              }
+            },
+            {
+              "labels": [
+                {
+                  "displayName": "オレンジジュース",
+                  "languageCode": "ja"
+                }
+              ],
+              "attributes": {
+                "price": {
+                  "currencyCode": "JPY",
+                  "units": "600"
+                }
+              }
+            },
+            {
+              "labels": [
+                {
+                  "displayName": "コーラ",
+                  "languageCode": "ja"
+                }
+              ],
+              "attributes": {
+                "price": {
+                  "currencyCode": "JPY",
+                  "units": "500"
+                }
+              }
+            },
+            {
+              "labels": [
+                {
+                  "displayName": "ソーダ水",
+                  "languageCode": "ja"
+                }
+              ],
+              "attributes": {
+                "price": {
+                  "currencyCode": "JPY",
+                  "units": "500"
+                }
+              }
+            },
+            {
+              "labels": [
+                {
+                  "displayName": "自家製赤しそジュース",
+                  "languageCode": "ja"
+                }
+              ],
+              "attributes": {
+                "price": {
+                  "currencyCode": "JPY",
+                  "units": "500"
+                }
+              }
+            }
+          ]
+        },
+        {
+          "labels": [
+            {
+              "displayName": "モーニングの追加メニュー",
+              "languageCode": "ja",
+              "description": "モーニングをご注文の方のみ追加できます。単独注文の価格ではありません。"
+            }
+          ],
+          "items": [
+            {
+              "labels": [
+                {
+                  "displayName": "コーヒー（HOT・ICE）",
+                  "languageCode": "ja"
+                }
+              ],
+              "attributes": {
+                "price": {
+                  "currencyCode": "JPY",
+                  "units": "250"
+                }
+              }
+            },
+            {
+              "labels": [
+                {
+                  "displayName": "紅茶（HOT・ICE）",
+                  "languageCode": "ja"
+                }
+              ],
+              "attributes": {
+                "price": {
+                  "currencyCode": "JPY",
+                  "units": "250"
+                }
+              }
+            },
+            {
+              "labels": [
+                {
+                  "displayName": "厚切りトースト",
+                  "languageCode": "ja"
+                }
+              ],
+              "attributes": {
+                "price": {
+                  "currencyCode": "JPY",
+                  "units": "250"
+                }
+              }
+            },
+            {
+              "labels": [
+                {
+                  "displayName": "茶碗蒸し",
+                  "languageCode": "ja"
+                }
+              ],
+              "attributes": {
+                "price": {
+                  "currencyCode": "JPY",
+                  "units": "300"
+                }
+              }
+            },
+            {
+              "labels": [
+                {
+                  "displayName": "ミニサラダ",
+                  "languageCode": "ja"
+                }
+              ],
+              "attributes": {
+                "price": {
+                  "currencyCode": "JPY",
+                  "units": "250"
+                }
+              }
+            },
+            {
+              "labels": [
+                {
+                  "displayName": "小倉ホイップ",
+                  "languageCode": "ja"
+                }
+              ],
+              "attributes": {
+                "price": {
+                  "currencyCode": "JPY",
+                  "units": "100"
+                }
+              }
+            }
+          ]
+        },
+        {
+          "labels": [
+            {
+              "displayName": "朝のお食事・軽食（単品）",
+              "languageCode": "ja",
+              "description": "モーニングセットとは別の単品メニューです。"
+            }
+          ],
+          "items": [
+            {
+              "labels": [
+                {
+                  "displayName": "バタートースト",
+                  "languageCode": "ja"
+                }
+              ],
+              "attributes": {
+                "price": {
+                  "currencyCode": "JPY",
+                  "units": "500"
+                }
+              }
+            },
+            {
+              "labels": [
+                {
+                  "displayName": "小倉トースト",
+                  "languageCode": "ja"
+                }
+              ],
+              "attributes": {
+                "price": {
+                  "currencyCode": "JPY",
+                  "units": "650"
+                }
+              }
+            },
+            {
+              "labels": [
+                {
+                  "displayName": "ハムトースト",
+                  "languageCode": "ja"
+                }
+              ],
+              "attributes": {
+                "price": {
+                  "currencyCode": "JPY",
+                  "units": "800"
+                }
+              }
+            },
+            {
+              "labels": [
+                {
+                  "displayName": "サンドイッチ（ハム・卵・ミックス）",
+                  "languageCode": "ja"
+                }
+              ],
+              "attributes": {
+                "price": {
+                  "currencyCode": "JPY",
+                  "units": "750"
+                }
+              }
+            },
+            {
+              "labels": [
+                {
+                  "displayName": "ホットドッグ",
+                  "languageCode": "ja"
+                }
+              ],
+              "attributes": {
+                "price": {
+                  "currencyCode": "JPY",
+                  "units": "480"
+                }
+              }
+            }
+          ]
+        },
+        {
+          "labels": [
+            {
+              "displayName": "モーニングセット",
+              "languageCode": "ja",
+              "description": "7:30〜10:30。ご注文・お席のご利用とも10:30まで。ドリンクの種類によって合計価格が変わります。"
+            }
+          ],
+          "items": [
+            {
+              "labels": [
+                {
+                  "displayName": "Aセット 厚切りトースト",
+                  "languageCode": "ja",
+                  "description": "茶碗蒸し・デザート付。ドリンクの注文が必要。ドリンク代に＋0円。表示価格は500円のドリンクを選んだ場合の合計です。"
+                }
+              ],
+              "attributes": {
+                "price": {
+                  "currencyCode": "JPY",
+                  "units": "500"
+                }
+              }
+            },
+            {
+              "labels": [
+                {
+                  "displayName": "Bセット ホットドッグ",
+                  "languageCode": "ja",
+                  "description": "茶碗蒸し・デザート付。ドリンクの注文が必要。ドリンク代に＋250円。表示価格は500円のドリンクを選んだ場合の合計です。"
+                }
+              ],
+              "attributes": {
+                "price": {
+                  "currencyCode": "JPY",
+                  "units": "750"
+                }
+              }
+            },
+            {
+              "labels": [
+                {
+                  "displayName": "Cセット サンドイッチ",
+                  "languageCode": "ja",
+                  "description": "茶碗蒸し・デザート付。ドリンクの注文が必要。ドリンク代に＋250円。表示価格は500円のドリンクを選んだ場合の合計です。"
+                }
+              ],
+              "attributes": {
+                "price": {
+                  "currencyCode": "JPY",
+                  "units": "750"
+                }
+              }
+            },
+            {
+              "labels": [
+                {
+                  "displayName": "Dセット カレー",
+                  "languageCode": "ja",
+                  "description": "ミニサラダ・デザート付。ドリンクの注文が必要。ドリンク代に＋300円。表示価格は500円のドリンクを選んだ場合の合計です。"
+                }
+              ],
+              "attributes": {
+                "price": {
+                  "currencyCode": "JPY",
+                  "units": "800"
+                }
+              }
+            },
+            {
+              "labels": [
+                {
+                  "displayName": "Eセット きしめん",
+                  "languageCode": "ja",
+                  "description": "茶碗蒸し・デザート付。ドリンクの注文が必要。ドリンク代に＋350円。表示価格は500円のドリンクを選んだ場合の合計です。"
+                }
+              ],
+              "attributes": {
+                "price": {
+                  "currencyCode": "JPY",
+                  "units": "850"
+                }
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
