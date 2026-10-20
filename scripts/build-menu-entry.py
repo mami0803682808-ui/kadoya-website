@@ -40,7 +40,8 @@ def build(source):
 <meta property="og:url" content="https://komaki-kadoya.com/menu/">
 <meta property="og:image" content="https://komaki-kadoya.com/images/kadoya-hands.jpg">
 <link rel="icon" href="/favicon.png"><link rel="stylesheet" href="/{css}">
-<link rel="stylesheet" href="/menu-entry.css?v=20261020">
+<link rel="stylesheet" href="/menu-entry.css?v=20261020-2">
+<script defer src="/menu-entry.js?v=20261020"></script>
 <script defer src="/{js}"></script></head>
 <body class="desktop-rail-ready opening-ready">
 <header class="header menu-entry-header">

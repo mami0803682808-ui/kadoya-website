@@ -13,7 +13,8 @@ html.kadoya-menu .menu-home-link img{display:block;width:120px;height:auto;max-w
 html.kadoya-menu .menu-entry-header .menu-btn{display:flex!important;min-height:44px;align-items:center;pointer-events:auto!important}
 html.kadoya-menu .menu-entry-header .nav{display:none!important;pointer-events:auto!important}
 html.kadoya-menu .menu-entry-header .nav.open{display:flex!important;top:100%!important;left:0!important;right:0!important;z-index:100!important}
-html.kadoya-menu #menu{padding-top:32px!important}
+html.kadoya-menu #menu{width:100%!important;max-width:1120px!important;margin:0 auto!important;padding:32px clamp(20px,5vw,64px) 64px!important}
+html.kadoya-menu #morning-menu{width:100%!important;max-width:100%!important;margin:0!important;padding-left:0!important;padding-right:0!important}
 html.kadoya-menu #menu>.section-title{margin-top:0!important}
 html.kadoya-menu #menu>.section-title h2{font-size:clamp(28px,5vw,42px)}
 html.kadoya-menu footer{padding-bottom:max(32px,env(safe-area-inset-bottom))!important}
