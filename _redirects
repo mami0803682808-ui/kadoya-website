@@ -1,0 +1,4 @@
+# Menu links enter the original homepage at its menu section.
+/menu /#menu 302
+/menu/ /#menu 302
+/menu/index.html /#menu 302

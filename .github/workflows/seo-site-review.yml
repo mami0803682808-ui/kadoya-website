@@ -28,9 +28,7 @@ jobs:
           python -m pip install Pillow==11.3.0
           python scripts/optimize-images.py
       - name: Regenerate intent pages from current menu
-        run: |
-          python scripts/build-menu-pages.py
-          python scripts/build-menu-entry.py
+        run: python scripts/build-menu-pages.py
       - name: Record homepage and menu changes
         if: github.event_name == 'push'
         env:
@@ -61,9 +59,8 @@ jobs:
         run: |
           git config user.name 'github-actions[bot]'
           git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
-          git add images/optimized data/seo/image-optimization.json index.html sitemap.xml menu kishimen morning misonikomi teishoku misokatsu dengaku data/seo/improvement-log.json data/seo/media-audit.json data/seo/performance
+          git add images/optimized data/seo/image-optimization.json index.html sitemap.xml kishimen morning misonikomi teishoku misokatsu dengaku data/seo/improvement-log.json data/seo/media-audit.json data/seo/performance
           if git diff --cached --quiet; then exit 0; fi
           git commit -m 'chore(seo): synchronize pages and save performance review'
           git pull --rebase origin main
           git push
-
