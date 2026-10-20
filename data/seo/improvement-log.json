@@ -3,7 +3,7 @@
     "keyword": "角屋 小牧",
     "targetPath": "/",
     "status": "observing",
-    "nextReviewDate": "2026-11-16",
+    "nextReviewDate": "2026-11-17",
     "actions": [
       {
         "date": "2026-10-01",
@@ -143,6 +143,32 @@
           }
         },
         "done": "fix: mobile menu layout and fixed-header navigation",
+        "needs": "検索意図別の料理案内・表示性能の改善。効果は確定GSCデータで観察する。"
+      },
+      {
+        "date": "2026-10-20T10:30:12+09:00",
+        "commit": "c81260acd8c46d2782d2df18159f929fc5eeee25",
+        "files": [
+          "index.html"
+        ],
+        "rankAtAction": 6.04375,
+        "baseline": {
+          "keyword": "角屋 小牧",
+          "targetPath": "/",
+          "rank": 6.04375,
+          "impressions": 160,
+          "clicks": 9,
+          "ctr": 0.05625,
+          "status": "measured",
+          "siteMetrics": {
+            "rank": 1.3598326359832635,
+            "impressions": 239,
+            "clicks": 33,
+            "ctr": 0.13807531380753138,
+            "status": "measured"
+          }
+        },
+        "done": "feat(menu): add direct menu landing page generated from homepage",
         "needs": "検索意図別の料理案内・表示性能の改善。効果は確定GSCデータで観察する。"
       }
     ]
@@ -286,10 +312,36 @@
         },
         "done": "fix: mobile menu layout and fixed-header navigation",
         "needs": "検索意図別の料理案内・表示性能の改善。効果は確定GSCデータで観察する。"
+      },
+      {
+        "date": "2026-10-20T10:30:12+09:00",
+        "commit": "c81260acd8c46d2782d2df18159f929fc5eeee25",
+        "files": [
+          "index.html"
+        ],
+        "rankAtAction": 5.166666666666667,
+        "baseline": {
+          "keyword": "小牧 きしめん",
+          "targetPath": "/kishimen/",
+          "rank": 5.166666666666667,
+          "impressions": 6,
+          "clicks": 0,
+          "ctr": 0,
+          "status": "measured",
+          "siteMetrics": {
+            "rank": 5.545454545454546,
+            "impressions": 11,
+            "clicks": 0,
+            "ctr": 0,
+            "status": "measured"
+          }
+        },
+        "done": "feat(menu): add direct menu landing page generated from homepage",
+        "needs": "検索意図別の料理案内・表示性能の改善。効果は確定GSCデータで観察する。"
       }
     ],
     "status": "observing",
-    "nextReviewDate": "2026-11-16"
+    "nextReviewDate": "2026-11-17"
   },
   {
     "keyword": "小牧 定食",
@@ -430,10 +482,36 @@
         },
         "done": "fix: mobile menu layout and fixed-header navigation",
         "needs": "検索意図別の料理案内・表示性能の改善。効果は確定GSCデータで観察する。"
+      },
+      {
+        "date": "2026-10-20T10:30:12+09:00",
+        "commit": "c81260acd8c46d2782d2df18159f929fc5eeee25",
+        "files": [
+          "index.html"
+        ],
+        "rankAtAction": null,
+        "baseline": {
+          "keyword": "小牧 定食",
+          "targetPath": "/teishoku/",
+          "rank": null,
+          "impressions": 0,
+          "clicks": 0,
+          "ctr": null,
+          "status": "no_data",
+          "siteMetrics": {
+            "rank": 12.25,
+            "impressions": 8,
+            "clicks": 0,
+            "ctr": 0,
+            "status": "measured"
+          }
+        },
+        "done": "feat(menu): add direct menu landing page generated from homepage",
+        "needs": "検索意図別の料理案内・表示性能の改善。効果は確定GSCデータで観察する。"
       }
     ],
     "status": "observing",
-    "nextReviewDate": "2026-11-16"
+    "nextReviewDate": "2026-11-17"
   },
   {
     "keyword": "小牧 モーニング",
@@ -574,10 +652,36 @@
         },
         "done": "fix: mobile menu layout and fixed-header navigation",
         "needs": "検索意図別の料理案内・表示性能の改善。効果は確定GSCデータで観察する。"
+      },
+      {
+        "date": "2026-10-20T10:30:12+09:00",
+        "commit": "c81260acd8c46d2782d2df18159f929fc5eeee25",
+        "files": [
+          "index.html"
+        ],
+        "rankAtAction": null,
+        "baseline": {
+          "keyword": "小牧 モーニング",
+          "targetPath": "/morning/",
+          "rank": null,
+          "impressions": 0,
+          "clicks": 0,
+          "ctr": null,
+          "status": "no_data",
+          "siteMetrics": {
+            "rank": null,
+            "impressions": 0,
+            "clicks": 0,
+            "ctr": null,
+            "status": "no_data"
+          }
+        },
+        "done": "feat(menu): add direct menu landing page generated from homepage",
+        "needs": "検索意図別の料理案内・表示性能の改善。効果は確定GSCデータで観察する。"
       }
     ],
     "status": "observing",
-    "nextReviewDate": "2026-11-16"
+    "nextReviewDate": "2026-11-17"
   },
   {
     "keyword": "小牧 味噌煮込み",
@@ -718,10 +822,36 @@
         },
         "done": "fix: mobile menu layout and fixed-header navigation",
         "needs": "検索意図別の料理案内・表示性能の改善。効果は確定GSCデータで観察する。"
+      },
+      {
+        "date": "2026-10-20T10:30:12+09:00",
+        "commit": "c81260acd8c46d2782d2df18159f929fc5eeee25",
+        "files": [
+          "index.html"
+        ],
+        "rankAtAction": null,
+        "baseline": {
+          "keyword": "小牧 味噌煮込み",
+          "targetPath": "/misonikomi/",
+          "rank": null,
+          "impressions": 0,
+          "clicks": 0,
+          "ctr": null,
+          "status": "no_data",
+          "siteMetrics": {
+            "rank": null,
+            "impressions": 0,
+            "clicks": 0,
+            "ctr": null,
+            "status": "no_data"
+          }
+        },
+        "done": "feat(menu): add direct menu landing page generated from homepage",
+        "needs": "検索意図別の料理案内・表示性能の改善。効果は確定GSCデータで観察する。"
       }
     ],
     "status": "observing",
-    "nextReviewDate": "2026-11-16"
+    "nextReviewDate": "2026-11-17"
   },
   {
     "keyword": "小牧 味噌煮込みきしめん",
@@ -862,10 +992,36 @@
         },
         "done": "fix: mobile menu layout and fixed-header navigation",
         "needs": "検索意図別の料理案内・表示性能の改善。効果は確定GSCデータで観察する。"
+      },
+      {
+        "date": "2026-10-20T10:30:12+09:00",
+        "commit": "c81260acd8c46d2782d2df18159f929fc5eeee25",
+        "files": [
+          "index.html"
+        ],
+        "rankAtAction": null,
+        "baseline": {
+          "keyword": "小牧 味噌煮込みきしめん",
+          "targetPath": "/misonikomi/",
+          "rank": null,
+          "impressions": 0,
+          "clicks": 0,
+          "ctr": null,
+          "status": "no_data",
+          "siteMetrics": {
+            "rank": null,
+            "impressions": 0,
+            "clicks": 0,
+            "ctr": null,
+            "status": "no_data"
+          }
+        },
+        "done": "feat(menu): add direct menu landing page generated from homepage",
+        "needs": "検索意図別の料理案内・表示性能の改善。効果は確定GSCデータで観察する。"
       }
     ],
     "status": "observing",
-    "nextReviewDate": "2026-11-16"
+    "nextReviewDate": "2026-11-17"
   },
   {
     "keyword": "小牧 味噌カツ",
@@ -1006,10 +1162,36 @@
         },
         "done": "fix: mobile menu layout and fixed-header navigation",
         "needs": "検索意図別の料理案内・表示性能の改善。効果は確定GSCデータで観察する。"
+      },
+      {
+        "date": "2026-10-20T10:30:12+09:00",
+        "commit": "c81260acd8c46d2782d2df18159f929fc5eeee25",
+        "files": [
+          "index.html"
+        ],
+        "rankAtAction": 5,
+        "baseline": {
+          "keyword": "小牧 味噌カツ",
+          "targetPath": "/misokatsu/",
+          "rank": 5,
+          "impressions": 1,
+          "clicks": 0,
+          "ctr": 0,
+          "status": "measured",
+          "siteMetrics": {
+            "rank": 4,
+            "impressions": 7,
+            "clicks": 0,
+            "ctr": 0,
+            "status": "measured"
+          }
+        },
+        "done": "feat(menu): add direct menu landing page generated from homepage",
+        "needs": "検索意図別の料理案内・表示性能の改善。効果は確定GSCデータで観察する。"
       }
     ],
     "status": "observing",
-    "nextReviewDate": "2026-11-16"
+    "nextReviewDate": "2026-11-17"
   },
   {
     "keyword": "小牧 田楽",
@@ -1150,9 +1332,35 @@
         },
         "done": "fix: mobile menu layout and fixed-header navigation",
         "needs": "検索意図別の料理案内・表示性能の改善。効果は確定GSCデータで観察する。"
+      },
+      {
+        "date": "2026-10-20T10:30:12+09:00",
+        "commit": "c81260acd8c46d2782d2df18159f929fc5eeee25",
+        "files": [
+          "index.html"
+        ],
+        "rankAtAction": null,
+        "baseline": {
+          "keyword": "小牧 田楽",
+          "targetPath": "/dengaku/",
+          "rank": null,
+          "impressions": 0,
+          "clicks": 0,
+          "ctr": null,
+          "status": "no_data",
+          "siteMetrics": {
+            "rank": null,
+            "impressions": 0,
+            "clicks": 0,
+            "ctr": null,
+            "status": "no_data"
+          }
+        },
+        "done": "feat(menu): add direct menu landing page generated from homepage",
+        "needs": "検索意図別の料理案内・表示性能の改善。効果は確定GSCデータで観察する。"
       }
     ],
     "status": "observing",
-    "nextReviewDate": "2026-11-16"
+    "nextReviewDate": "2026-11-17"
   }
 ]
