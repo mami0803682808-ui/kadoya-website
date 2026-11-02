@@ -3,7 +3,7 @@
     "keyword": "角屋 小牧",
     "targetPath": "/",
     "status": "observing",
-    "nextReviewDate": "2026-11-17",
+    "nextReviewDate": "2026-11-30",
     "actions": [
       {
         "date": "2026-10-01",
@@ -195,6 +195,32 @@
           }
         },
         "done": "fix(menu): replace separate landing page with redirect to homepage menu",
+        "needs": "検索意図別の料理案内・表示性能の改善。効果は確定GSCデータで観察する。"
+      },
+      {
+        "date": "2026-11-02T23:56:09+09:00",
+        "commit": "f222ca54d4f2796341a6aae4339c0c0949253592",
+        "files": [
+          "index.html"
+        ],
+        "rankAtAction": 4.943262411347518,
+        "baseline": {
+          "keyword": "角屋 小牧",
+          "targetPath": "/",
+          "rank": 4.943262411347518,
+          "impressions": 282,
+          "clicks": 23,
+          "ctr": 0.08156028368794327,
+          "status": "measured",
+          "siteMetrics": {
+            "rank": 1.2779369627507164,
+            "impressions": 349,
+            "clicks": 66,
+            "ctr": 0.18911174785100288,
+            "status": "measured"
+          }
+        },
+        "done": "Remove dated misokatsu blurb from homepage menu",
         "needs": "検索意図別の料理案内・表示性能の改善。効果は確定GSCデータで観察する。"
       }
     ]
@@ -390,10 +416,36 @@
         },
         "done": "fix(menu): replace separate landing page with redirect to homepage menu",
         "needs": "検索意図別の料理案内・表示性能の改善。効果は確定GSCデータで観察する。"
+      },
+      {
+        "date": "2026-11-02T23:56:09+09:00",
+        "commit": "f222ca54d4f2796341a6aae4339c0c0949253592",
+        "files": [
+          "index.html"
+        ],
+        "rankAtAction": 6.4,
+        "baseline": {
+          "keyword": "小牧 きしめん",
+          "targetPath": "/kishimen/",
+          "rank": 6.4,
+          "impressions": 10,
+          "clicks": 0,
+          "ctr": 0,
+          "status": "measured",
+          "siteMetrics": {
+            "rank": 5.25,
+            "impressions": 20,
+            "clicks": 0,
+            "ctr": 0,
+            "status": "measured"
+          }
+        },
+        "done": "Remove dated misokatsu blurb from homepage menu",
+        "needs": "検索意図別の料理案内・表示性能の改善。効果は確定GSCデータで観察する。"
       }
     ],
     "status": "observing",
-    "nextReviewDate": "2026-11-17"
+    "nextReviewDate": "2026-11-30"
   },
   {
     "keyword": "小牧 定食",
@@ -586,10 +638,36 @@
         },
         "done": "fix(menu): replace separate landing page with redirect to homepage menu",
         "needs": "検索意図別の料理案内・表示性能の改善。効果は確定GSCデータで観察する。"
+      },
+      {
+        "date": "2026-11-02T23:56:09+09:00",
+        "commit": "f222ca54d4f2796341a6aae4339c0c0949253592",
+        "files": [
+          "index.html"
+        ],
+        "rankAtAction": null,
+        "baseline": {
+          "keyword": "小牧 定食",
+          "targetPath": "/teishoku/",
+          "rank": null,
+          "impressions": 0,
+          "clicks": 0,
+          "ctr": null,
+          "status": "no_data",
+          "siteMetrics": {
+            "rank": 12.1,
+            "impressions": 10,
+            "clicks": 0,
+            "ctr": 0,
+            "status": "measured"
+          }
+        },
+        "done": "Remove dated misokatsu blurb from homepage menu",
+        "needs": "検索意図別の料理案内・表示性能の改善。効果は確定GSCデータで観察する。"
       }
     ],
     "status": "observing",
-    "nextReviewDate": "2026-11-17"
+    "nextReviewDate": "2026-11-30"
   },
   {
     "keyword": "小牧 モーニング",
@@ -782,10 +860,36 @@
         },
         "done": "fix(menu): replace separate landing page with redirect to homepage menu",
         "needs": "検索意図別の料理案内・表示性能の改善。効果は確定GSCデータで観察する。"
+      },
+      {
+        "date": "2026-11-02T23:56:09+09:00",
+        "commit": "f222ca54d4f2796341a6aae4339c0c0949253592",
+        "files": [
+          "index.html"
+        ],
+        "rankAtAction": 19,
+        "baseline": {
+          "keyword": "小牧 モーニング",
+          "targetPath": "/morning/",
+          "rank": 19,
+          "impressions": 1,
+          "clicks": 0,
+          "ctr": 0,
+          "status": "measured",
+          "siteMetrics": {
+            "rank": 19,
+            "impressions": 1,
+            "clicks": 0,
+            "ctr": 0,
+            "status": "measured"
+          }
+        },
+        "done": "Remove dated misokatsu blurb from homepage menu",
+        "needs": "検索意図別の料理案内・表示性能の改善。効果は確定GSCデータで観察する。"
       }
     ],
     "status": "observing",
-    "nextReviewDate": "2026-11-17"
+    "nextReviewDate": "2026-11-30"
   },
   {
     "keyword": "小牧 味噌煮込み",
@@ -978,10 +1082,36 @@
         },
         "done": "fix(menu): replace separate landing page with redirect to homepage menu",
         "needs": "検索意図別の料理案内・表示性能の改善。効果は確定GSCデータで観察する。"
+      },
+      {
+        "date": "2026-11-02T23:56:09+09:00",
+        "commit": "f222ca54d4f2796341a6aae4339c0c0949253592",
+        "files": [
+          "index.html"
+        ],
+        "rankAtAction": null,
+        "baseline": {
+          "keyword": "小牧 味噌煮込み",
+          "targetPath": "/misonikomi/",
+          "rank": null,
+          "impressions": 0,
+          "clicks": 0,
+          "ctr": null,
+          "status": "no_data",
+          "siteMetrics": {
+            "rank": null,
+            "impressions": 0,
+            "clicks": 0,
+            "ctr": null,
+            "status": "no_data"
+          }
+        },
+        "done": "Remove dated misokatsu blurb from homepage menu",
+        "needs": "検索意図別の料理案内・表示性能の改善。効果は確定GSCデータで観察する。"
       }
     ],
     "status": "observing",
-    "nextReviewDate": "2026-11-17"
+    "nextReviewDate": "2026-11-30"
   },
   {
     "keyword": "小牧 味噌煮込みきしめん",
@@ -1174,10 +1304,36 @@
         },
         "done": "fix(menu): replace separate landing page with redirect to homepage menu",
         "needs": "検索意図別の料理案内・表示性能の改善。効果は確定GSCデータで観察する。"
+      },
+      {
+        "date": "2026-11-02T23:56:09+09:00",
+        "commit": "f222ca54d4f2796341a6aae4339c0c0949253592",
+        "files": [
+          "index.html"
+        ],
+        "rankAtAction": null,
+        "baseline": {
+          "keyword": "小牧 味噌煮込みきしめん",
+          "targetPath": "/misonikomi/",
+          "rank": null,
+          "impressions": 0,
+          "clicks": 0,
+          "ctr": null,
+          "status": "no_data",
+          "siteMetrics": {
+            "rank": null,
+            "impressions": 0,
+            "clicks": 0,
+            "ctr": null,
+            "status": "no_data"
+          }
+        },
+        "done": "Remove dated misokatsu blurb from homepage menu",
+        "needs": "検索意図別の料理案内・表示性能の改善。効果は確定GSCデータで観察する。"
       }
     ],
     "status": "observing",
-    "nextReviewDate": "2026-11-17"
+    "nextReviewDate": "2026-11-30"
   },
   {
     "keyword": "小牧 味噌カツ",
@@ -1370,10 +1526,36 @@
         },
         "done": "fix(menu): replace separate landing page with redirect to homepage menu",
         "needs": "検索意図別の料理案内・表示性能の改善。効果は確定GSCデータで観察する。"
+      },
+      {
+        "date": "2026-11-02T23:56:09+09:00",
+        "commit": "f222ca54d4f2796341a6aae4339c0c0949253592",
+        "files": [
+          "index.html"
+        ],
+        "rankAtAction": 4.714285714285714,
+        "baseline": {
+          "keyword": "小牧 味噌カツ",
+          "targetPath": "/misokatsu/",
+          "rank": 4.714285714285714,
+          "impressions": 14,
+          "clicks": 0,
+          "ctr": 0,
+          "status": "measured",
+          "siteMetrics": {
+            "rank": 4.107142857142858,
+            "impressions": 28,
+            "clicks": 1,
+            "ctr": 0.03571428571428571,
+            "status": "measured"
+          }
+        },
+        "done": "Remove dated misokatsu blurb from homepage menu",
+        "needs": "検索意図別の料理案内・表示性能の改善。効果は確定GSCデータで観察する。"
       }
     ],
     "status": "observing",
-    "nextReviewDate": "2026-11-17"
+    "nextReviewDate": "2026-11-30"
   },
   {
     "keyword": "小牧 田楽",
@@ -1566,9 +1748,35 @@
         },
         "done": "fix(menu): replace separate landing page with redirect to homepage menu",
         "needs": "検索意図別の料理案内・表示性能の改善。効果は確定GSCデータで観察する。"
+      },
+      {
+        "date": "2026-11-02T23:56:09+09:00",
+        "commit": "f222ca54d4f2796341a6aae4339c0c0949253592",
+        "files": [
+          "index.html"
+        ],
+        "rankAtAction": null,
+        "baseline": {
+          "keyword": "小牧 田楽",
+          "targetPath": "/dengaku/",
+          "rank": null,
+          "impressions": 0,
+          "clicks": 0,
+          "ctr": null,
+          "status": "no_data",
+          "siteMetrics": {
+            "rank": null,
+            "impressions": 0,
+            "clicks": 0,
+            "ctr": null,
+            "status": "no_data"
+          }
+        },
+        "done": "Remove dated misokatsu blurb from homepage menu",
+        "needs": "検索意図別の料理案内・表示性能の改善。効果は確定GSCデータで観察する。"
       }
     ],
     "status": "observing",
-    "nextReviewDate": "2026-11-17"
+    "nextReviewDate": "2026-11-30"
   }
 ]
