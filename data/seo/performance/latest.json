@@ -1,9 +1,9 @@
 [
   {
     "mode": "mobile",
-    "measuredAt": "2026-10-20T01:42:26.222Z",
+    "measuredAt": "2026-11-02T14:16:41.610Z",
     "url": "http://localhost:8080/",
-    "sourceCommit": "7140d31035f74a9e4a71d08cc39110d806213522",
+    "sourceCommit": "7d3acfb27f94a38670f17c5e1ae75679677710d5",
     "status": "incomplete",
     "measurementErrors": [
       {
@@ -99,23 +99,23 @@
     "accessibility": 0.97,
     "seo": 0.92,
     "cls": 0,
-    "transferBytes": 3446909,
+    "transferBytes": 3439623,
     "limitations": "Local lab measurement of current source, not real-user or production CDN performance."
   },
   {
     "mode": "desktop",
-    "measuredAt": "2026-10-20T01:42:41.505Z",
+    "measuredAt": "2026-11-02T14:16:57.601Z",
     "url": "http://localhost:8080/",
-    "sourceCommit": "7140d31035f74a9e4a71d08cc39110d806213522",
+    "sourceCommit": "7d3acfb27f94a38670f17c5e1ae75679677710d5",
     "status": "measured",
     "measurementErrors": [],
-    "performance": 0.73,
+    "performance": 0.7,
     "accessibility": 0.97,
     "seo": 0.92,
-    "lcpMs": 6065.071699999998,
+    "lcpMs": 5770.118399999999,
     "cls": 0.06832940815822203,
     "tbtMs": 0,
-    "transferBytes": 3582244,
+    "transferBytes": 3582312,
     "limitations": "Local lab measurement of current source, not real-user or production CDN performance."
   }
 ]
