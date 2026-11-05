@@ -3,7 +3,7 @@
     "keyword": "角屋 小牧",
     "targetPath": "/",
     "status": "observing",
-    "nextReviewDate": "2026-11-30",
+    "nextReviewDate": "2026-12-03",
     "actions": [
       {
         "date": "2026-10-01",
@@ -221,6 +221,38 @@
           }
         },
         "done": "Remove dated misokatsu blurb from homepage menu",
+        "needs": "検索意図別の料理案内・表示性能の改善。効果は確定GSCデータで観察する。"
+      },
+      {
+        "date": "2026-11-05T23:51:10+09:00",
+        "commit": "206982dcd87a2671c318b738978a137cc4bd5701",
+        "files": [
+          "images/optimized/kadoya-hands-display.webp",
+          "images/optimized/kinoko-tempura-display.webp",
+          "images/optimized/toriten-display.webp",
+          "index.html",
+          "script-base.js",
+          "script.js",
+          "style.css"
+        ],
+        "rankAtAction": 4.404605263157895,
+        "baseline": {
+          "keyword": "角屋 小牧",
+          "targetPath": "/",
+          "rank": 4.404605263157895,
+          "impressions": 304,
+          "clicks": 30,
+          "ctr": 0.09868421052631579,
+          "status": "measured",
+          "siteMetrics": {
+            "rank": 1.1805555555555556,
+            "impressions": 360,
+            "clicks": 77,
+            "ctr": 0.21388888888888888,
+            "status": "measured"
+          }
+        },
+        "done": "fix: add opening shortcuts and preserve navigation with smaller photos",
         "needs": "検索意図別の料理案内・表示性能の改善。効果は確定GSCデータで観察する。"
       }
     ]
@@ -442,10 +474,42 @@
         },
         "done": "Remove dated misokatsu blurb from homepage menu",
         "needs": "検索意図別の料理案内・表示性能の改善。効果は確定GSCデータで観察する。"
+      },
+      {
+        "date": "2026-11-05T23:51:10+09:00",
+        "commit": "206982dcd87a2671c318b738978a137cc4bd5701",
+        "files": [
+          "images/optimized/kadoya-hands-display.webp",
+          "images/optimized/kinoko-tempura-display.webp",
+          "images/optimized/toriten-display.webp",
+          "index.html",
+          "script-base.js",
+          "script.js",
+          "style.css"
+        ],
+        "rankAtAction": 6.083333333333333,
+        "baseline": {
+          "keyword": "小牧 きしめん",
+          "targetPath": "/kishimen/",
+          "rank": 6.083333333333333,
+          "impressions": 12,
+          "clicks": 0,
+          "ctr": 0,
+          "status": "measured",
+          "siteMetrics": {
+            "rank": 5.181818181818182,
+            "impressions": 22,
+            "clicks": 0,
+            "ctr": 0,
+            "status": "measured"
+          }
+        },
+        "done": "fix: add opening shortcuts and preserve navigation with smaller photos",
+        "needs": "検索意図別の料理案内・表示性能の改善。効果は確定GSCデータで観察する。"
       }
     ],
     "status": "observing",
-    "nextReviewDate": "2026-11-30"
+    "nextReviewDate": "2026-12-03"
   },
   {
     "keyword": "小牧 定食",
@@ -664,10 +728,42 @@
         },
         "done": "Remove dated misokatsu blurb from homepage menu",
         "needs": "検索意図別の料理案内・表示性能の改善。効果は確定GSCデータで観察する。"
+      },
+      {
+        "date": "2026-11-05T23:51:10+09:00",
+        "commit": "206982dcd87a2671c318b738978a137cc4bd5701",
+        "files": [
+          "images/optimized/kadoya-hands-display.webp",
+          "images/optimized/kinoko-tempura-display.webp",
+          "images/optimized/toriten-display.webp",
+          "index.html",
+          "script-base.js",
+          "script.js",
+          "style.css"
+        ],
+        "rankAtAction": null,
+        "baseline": {
+          "keyword": "小牧 定食",
+          "targetPath": "/teishoku/",
+          "rank": null,
+          "impressions": 0,
+          "clicks": 0,
+          "ctr": null,
+          "status": "no_data",
+          "siteMetrics": {
+            "rank": 10.555555555555555,
+            "impressions": 18,
+            "clicks": 0,
+            "ctr": 0,
+            "status": "measured"
+          }
+        },
+        "done": "fix: add opening shortcuts and preserve navigation with smaller photos",
+        "needs": "検索意図別の料理案内・表示性能の改善。効果は確定GSCデータで観察する。"
       }
     ],
     "status": "observing",
-    "nextReviewDate": "2026-11-30"
+    "nextReviewDate": "2026-12-03"
   },
   {
     "keyword": "小牧 モーニング",
@@ -886,10 +982,42 @@
         },
         "done": "Remove dated misokatsu blurb from homepage menu",
         "needs": "検索意図別の料理案内・表示性能の改善。効果は確定GSCデータで観察する。"
+      },
+      {
+        "date": "2026-11-05T23:51:10+09:00",
+        "commit": "206982dcd87a2671c318b738978a137cc4bd5701",
+        "files": [
+          "images/optimized/kadoya-hands-display.webp",
+          "images/optimized/kinoko-tempura-display.webp",
+          "images/optimized/toriten-display.webp",
+          "index.html",
+          "script-base.js",
+          "script.js",
+          "style.css"
+        ],
+        "rankAtAction": 14.333333333333334,
+        "baseline": {
+          "keyword": "小牧 モーニング",
+          "targetPath": "/morning/",
+          "rank": 14.333333333333334,
+          "impressions": 3,
+          "clicks": 1,
+          "ctr": 0.3333333333333333,
+          "status": "measured",
+          "siteMetrics": {
+            "rank": 14.333333333333334,
+            "impressions": 3,
+            "clicks": 1,
+            "ctr": 0.3333333333333333,
+            "status": "measured"
+          }
+        },
+        "done": "fix: add opening shortcuts and preserve navigation with smaller photos",
+        "needs": "検索意図別の料理案内・表示性能の改善。効果は確定GSCデータで観察する。"
       }
     ],
     "status": "observing",
-    "nextReviewDate": "2026-11-30"
+    "nextReviewDate": "2026-12-03"
   },
   {
     "keyword": "小牧 味噌煮込み",
@@ -1108,10 +1236,42 @@
         },
         "done": "Remove dated misokatsu blurb from homepage menu",
         "needs": "検索意図別の料理案内・表示性能の改善。効果は確定GSCデータで観察する。"
+      },
+      {
+        "date": "2026-11-05T23:51:10+09:00",
+        "commit": "206982dcd87a2671c318b738978a137cc4bd5701",
+        "files": [
+          "images/optimized/kadoya-hands-display.webp",
+          "images/optimized/kinoko-tempura-display.webp",
+          "images/optimized/toriten-display.webp",
+          "index.html",
+          "script-base.js",
+          "script.js",
+          "style.css"
+        ],
+        "rankAtAction": null,
+        "baseline": {
+          "keyword": "小牧 味噌煮込み",
+          "targetPath": "/misonikomi/",
+          "rank": null,
+          "impressions": 0,
+          "clicks": 0,
+          "ctr": null,
+          "status": "no_data",
+          "siteMetrics": {
+            "rank": null,
+            "impressions": 0,
+            "clicks": 0,
+            "ctr": null,
+            "status": "no_data"
+          }
+        },
+        "done": "fix: add opening shortcuts and preserve navigation with smaller photos",
+        "needs": "検索意図別の料理案内・表示性能の改善。効果は確定GSCデータで観察する。"
       }
     ],
     "status": "observing",
-    "nextReviewDate": "2026-11-30"
+    "nextReviewDate": "2026-12-03"
   },
   {
     "keyword": "小牧 味噌煮込みきしめん",
@@ -1330,10 +1490,42 @@
         },
         "done": "Remove dated misokatsu blurb from homepage menu",
         "needs": "検索意図別の料理案内・表示性能の改善。効果は確定GSCデータで観察する。"
+      },
+      {
+        "date": "2026-11-05T23:51:10+09:00",
+        "commit": "206982dcd87a2671c318b738978a137cc4bd5701",
+        "files": [
+          "images/optimized/kadoya-hands-display.webp",
+          "images/optimized/kinoko-tempura-display.webp",
+          "images/optimized/toriten-display.webp",
+          "index.html",
+          "script-base.js",
+          "script.js",
+          "style.css"
+        ],
+        "rankAtAction": null,
+        "baseline": {
+          "keyword": "小牧 味噌煮込みきしめん",
+          "targetPath": "/misonikomi/",
+          "rank": null,
+          "impressions": 0,
+          "clicks": 0,
+          "ctr": null,
+          "status": "no_data",
+          "siteMetrics": {
+            "rank": null,
+            "impressions": 0,
+            "clicks": 0,
+            "ctr": null,
+            "status": "no_data"
+          }
+        },
+        "done": "fix: add opening shortcuts and preserve navigation with smaller photos",
+        "needs": "検索意図別の料理案内・表示性能の改善。効果は確定GSCデータで観察する。"
       }
     ],
     "status": "observing",
-    "nextReviewDate": "2026-11-30"
+    "nextReviewDate": "2026-12-03"
   },
   {
     "keyword": "小牧 味噌カツ",
@@ -1552,10 +1744,42 @@
         },
         "done": "Remove dated misokatsu blurb from homepage menu",
         "needs": "検索意図別の料理案内・表示性能の改善。効果は確定GSCデータで観察する。"
+      },
+      {
+        "date": "2026-11-05T23:51:10+09:00",
+        "commit": "206982dcd87a2671c318b738978a137cc4bd5701",
+        "files": [
+          "images/optimized/kadoya-hands-display.webp",
+          "images/optimized/kinoko-tempura-display.webp",
+          "images/optimized/toriten-display.webp",
+          "index.html",
+          "script-base.js",
+          "script.js",
+          "style.css"
+        ],
+        "rankAtAction": 4.5,
+        "baseline": {
+          "keyword": "小牧 味噌カツ",
+          "targetPath": "/misokatsu/",
+          "rank": 4.5,
+          "impressions": 16,
+          "clicks": 0,
+          "ctr": 0,
+          "status": "measured",
+          "siteMetrics": {
+            "rank": 4.107142857142858,
+            "impressions": 28,
+            "clicks": 1,
+            "ctr": 0.03571428571428571,
+            "status": "measured"
+          }
+        },
+        "done": "fix: add opening shortcuts and preserve navigation with smaller photos",
+        "needs": "検索意図別の料理案内・表示性能の改善。効果は確定GSCデータで観察する。"
       }
     ],
     "status": "observing",
-    "nextReviewDate": "2026-11-30"
+    "nextReviewDate": "2026-12-03"
   },
   {
     "keyword": "小牧 田楽",
@@ -1774,9 +1998,41 @@
         },
         "done": "Remove dated misokatsu blurb from homepage menu",
         "needs": "検索意図別の料理案内・表示性能の改善。効果は確定GSCデータで観察する。"
+      },
+      {
+        "date": "2026-11-05T23:51:10+09:00",
+        "commit": "206982dcd87a2671c318b738978a137cc4bd5701",
+        "files": [
+          "images/optimized/kadoya-hands-display.webp",
+          "images/optimized/kinoko-tempura-display.webp",
+          "images/optimized/toriten-display.webp",
+          "index.html",
+          "script-base.js",
+          "script.js",
+          "style.css"
+        ],
+        "rankAtAction": null,
+        "baseline": {
+          "keyword": "小牧 田楽",
+          "targetPath": "/dengaku/",
+          "rank": null,
+          "impressions": 0,
+          "clicks": 0,
+          "ctr": null,
+          "status": "no_data",
+          "siteMetrics": {
+            "rank": null,
+            "impressions": 0,
+            "clicks": 0,
+            "ctr": null,
+            "status": "no_data"
+          }
+        },
+        "done": "fix: add opening shortcuts and preserve navigation with smaller photos",
+        "needs": "検索意図別の料理案内・表示性能の改善。効果は確定GSCデータで観察する。"
       }
     ],
     "status": "observing",
-    "nextReviewDate": "2026-11-30"
+    "nextReviewDate": "2026-12-03"
   }
 ]

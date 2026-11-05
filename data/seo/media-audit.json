@@ -1,7 +1,7 @@
 {
   "measurement": "Referenced local asset bytes; not LCP or transfer bytes. Hidden and lazy assets may not load on first view.",
-  "totalReferencedBytes": 71278372,
-  "imageBytes": 58173591,
+  "totalReferencedBytes": 71640718,
+  "imageBytes": 58535937,
   "videoBytes": 13104781,
   "over500KB": [
     {
@@ -100,6 +100,7 @@
   "assets": {
     "images/kadoya-hands.jpg": 234548,
     "images/kadoya-logo.png": 322292,
+    "images/optimized/kadoya-hands-display.webp": 140378,
     "images/video-dengaku.jpg": 56771,
     "videos/kadoya-dengaku.mp4": 2138092,
     "images/IMG_3132.jpg": 369233,
@@ -202,7 +203,9 @@
     "images/optimized/neba-toro-don-640.webp": 50238,
     "images/optimized/neba-toro-don-1200.webp": 131834,
     "images/toriten.jpg": 284785,
+    "images/optimized/toriten-display.webp": 105508,
     "images/kinoko-tempura.jpg": 310003,
+    "images/optimized/kinoko-tempura-display.webp": 116460,
     "images/IMG_6279.jpeg": 2896183,
     "images/optimized/IMG_6279-640.webp": 28564,
     "images/optimized/IMG_6279-1200.webp": 77430,
