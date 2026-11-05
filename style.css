@@ -263,3 +263,13 @@ html.kadoya-home .scroll-ready .arrival-signature{background:#000!important}
   #menu .menu-tabs{margin-top:12px!important;margin-bottom:24px!important}
   #menu .menu-tab[data-menu-tab="morning"]{grid-column:1/-1!important}
 }
+
+/* Small opening shortcuts: independent of the existing logo/scroll animation. */
+.opening-shortcuts{position:absolute;z-index:6;left:50%;bottom:max(24px,env(safe-area-inset-bottom,0px));transform:translateX(-50%);display:flex;width:max-content;max-width:calc(100% - 24px);background:rgba(0,0,0,.82);border:1px solid #9d8964;border-radius:4px;color:#f4eddf;font-family:sans-serif}
+.opening-shortcuts a{display:flex;align-items:center;justify-content:center;min-height:48px;padding:10px 18px;font-size:14px;line-height:1.5;white-space:nowrap;text-decoration:none}
+.opening-shortcuts a+a{border-left:1px solid #79684c}
+.opening-shortcuts a:hover{background:#30291e}
+.opening-shortcuts a:focus-visible{outline:2px solid #f4eddf;outline-offset:-4px}
+@media(max-width:760px){.opening-shortcuts a{font-size:12px;padding:10px 9px}}
+/* Keep media dates readable without changing their layout. */
+#media .media-history time{color:#6f5c3e}

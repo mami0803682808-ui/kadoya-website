@@ -207,17 +207,17 @@ craftMobileFix.textContent = `
 `;
 document.head.appendChild(craftMobileFix);
 
-/* Photos are display-only: remove navigation/zoom behavior from every image link. */
+/* Dish photos stay display-only; navigation such as the header logo remains a link. */
 function disableImageLinks() {
- document.querySelectorAll('a').forEach(link => {
+ document.querySelectorAll('#menu a').forEach(link => {
   if (!link.querySelector('img')) return;
-  link.removeAttribute('href');
-  link.removeAttribute('target');
-  link.removeAttribute('rel');
-  link.removeAttribute('aria-label');
-  link.removeAttribute('tabindex');
-  link.style.cursor = 'default';
-  link.addEventListener('click', event => event.preventDefault());
+  const photo = document.createElement('span');
+  for (const {name, value} of [...link.attributes]) {
+   if (!['href', 'target', 'rel', 'aria-label', 'tabindex'].includes(name)) photo.setAttribute(name, value);
+  }
+  photo.style.cursor = 'default';
+  photo.append(...link.childNodes);
+  link.replaceWith(photo);
  });
 }
 disableImageLinks();

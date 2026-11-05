@@ -1,6 +1,6 @@
 (() => {
   const core = document.createElement('script');
-  core.src = 'script-base.js?v=20261012-mobile';
+  core.src = 'script-base.js?v=20261105-small-fixes';
   core.async = false;
 
   core.onload = () => {
@@ -126,7 +126,7 @@
       card.className = 'card';
       card.dataset.kinokoTempuraAutumn = '';
       card.innerHTML = `
-        <span class="card-photo kinoko-tempura-photo"><img src="images/kinoko-tempura.jpg?v=20261001-season" alt="きのこの天ぷら" loading="lazy" decoding="async"></span>
+        <span class="card-photo kinoko-tempura-photo"><img src="images/optimized/kinoko-tempura-display.webp" alt="きのこの天ぷら" loading="lazy" decoding="async"></span>
         <h3>きのこの天ぷら</h3>
         <p class="menu-note">舞茸・椎茸・えのき茸</p>
         <p class="dish-price">680円</p>`;
