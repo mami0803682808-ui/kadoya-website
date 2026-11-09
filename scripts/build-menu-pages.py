@@ -39,19 +39,23 @@ for slug,title,headline,intro,names,note in pages:
     cards[0]=cards[0].replace('loading="lazy"','loading="eager" fetchpriority="high"')
     photo=re.search(r'src="([^"]+)"',cards[0])[1]
     seo_overrides={
-        'teishoku': 'お魚、揚げ物、菜めし田楽など、その日の気分に合わせて選べる定食。平日限定の日替わりランチは税込1,080円で、内容は公式Instagramのストーリーで更新しています。',
+        'teishoku': '愛知県小牧市・角屋の定食メニューと税込価格をご案内。みそかつ、天ぷら、お魚、菜めし田楽などを写真付きで掲載。きしめんや季節限定料理を含む全メニューもご確認いただけます。',
         'misonikomi': '味噌の深いコクと、だしの豊かな旨み。こだわりのきしめんを熱々に煮込み、定番から個性豊かな味わいまでお楽しみいただけます。',
         'misokatsu': '愛知県小牧市・角屋の味噌カツ。香ばしく揚げたカツとコクのある味噌だれを、定食や丼でお楽しみいただけます。田県神社前駅から徒歩1分。',
     }
-    desc=(('小牧・角屋の味噌煮込みきしめん。' if slug=='misonikomi' else '' if slug=='misokatsu' else title+'。')
+    desc=(('小牧・角屋の味噌煮込みきしめん。' if slug=='misonikomi' else '' if slug in ('misokatsu','teishoku') else title+'。')
           +seo_overrides.get(slug,intro))
+    page_title='角屋の定食メニュー・税込価格｜小牧のランチ' if slug=='teishoku' else title+'｜角屋・田県神社前駅から徒歩1分'
+    social_title=page_title if slug=='teishoku' else title+'｜角屋'
     intro_html=f'<h2>{headline}</h2><p>{intro}</p>' if headline or intro else ''
-    schema={'@context':'https://schema.org','@graph':[{'@type':'WebPage','@id':f'https://komaki-kadoya.com/{slug}/','name':title+'｜角屋','description':desc,'about':{'@id':'https://komaki-kadoya.com/#restaurant'}},{'@type':'BreadcrumbList','itemListElement':[{'@type':'ListItem','position':1,'name':'角屋','item':'https://komaki-kadoya.com/'},{'@type':'ListItem','position':2,'name':title,'item':f'https://komaki-kadoya.com/{slug}/'}]}]}
+    if slug=='teishoku':
+        intro_html+='<a class="button" href="/#menu">全メニュー・価格を見る</a>'
+    schema={'@context':'https://schema.org','@graph':[{'@type':'WebPage','@id':f'https://komaki-kadoya.com/{slug}/','name':social_title,'description':desc,'about':{'@id':'https://komaki-kadoya.com/#restaurant'}},{'@type':'BreadcrumbList','itemListElement':[{'@type':'ListItem','position':1,'name':'角屋','item':'https://komaki-kadoya.com/'},{'@type':'ListItem','position':2,'name':title,'item':f'https://komaki-kadoya.com/{slug}/'}]}]}
     output=f'''<!doctype html>
 <html lang="ja"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
-<title>{title}｜角屋・田県神社前駅から徒歩1分</title><meta name="description" content="{html.escape(desc,quote=True)}">
+<title>{page_title}</title><meta name="description" content="{html.escape(desc,quote=True)}">
 <link rel="canonical" href="https://komaki-kadoya.com/{slug}/"><meta name="robots" content="index,follow,max-image-preview:large">
-<meta property="og:type" content="website"><meta property="og:locale" content="ja_JP"><meta property="og:title" content="{title}｜角屋"><meta property="og:description" content="{html.escape(desc,quote=True)}"><meta property="og:url" content="https://komaki-kadoya.com/{slug}/"><meta property="og:image" content="https://komaki-kadoya.com{photo}"><meta name="twitter:card" content="summary_large_image">
+<meta property="og:type" content="website"><meta property="og:locale" content="ja_JP"><meta property="og:title" content="{social_title}"><meta property="og:description" content="{html.escape(desc,quote=True)}"><meta property="og:url" content="https://komaki-kadoya.com/{slug}/"><meta property="og:image" content="https://komaki-kadoya.com{photo}"><meta name="twitter:card" content="summary_large_image">
 <link rel="icon" href="/favicon.png"><link rel="stylesheet" href="/menu-pages.css?v={css_version}">
 <script type="application/ld+json">{json.dumps(schema,ensure_ascii=False)}</script></head>
 <body><header><a href="/" aria-label="角屋 トップへ"><img src="/images/kadoya-logo.png" alt="角屋" width="2086" height="754"></a><a class="phone" href="tel:0568722127">電話で予約</a></header>
@@ -69,3 +73,4 @@ else:s=s.replace('<div class="menu-tabs"',nav+'\n<div class="menu-tabs"',1)
 if nav not in s:s=s.replace('<section id="menu" class="section">','<section id="menu" class="section">'+nav)
 (ROOT/'index.html').write_text(s)
 print('Generated 6 menu pages from homepage prices and shop information.')
+
