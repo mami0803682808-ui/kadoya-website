@@ -760,10 +760,36 @@
         },
         "done": "fix: add opening shortcuts and preserve navigation with smaller photos",
         "needs": "検索意図別の料理案内・表示性能の改善。効果は確定GSCデータで観察する。"
+      },
+      {
+        "date": "2026-11-09T17:18:02+09:00",
+        "commit": "68920bac3d3efbb35c1805416d651b1899605350",
+        "files": [
+          "teishoku/index.html"
+        ],
+        "rankAtAction": null,
+        "baseline": {
+          "keyword": "小牧 定食",
+          "targetPath": "/teishoku/",
+          "rank": null,
+          "impressions": 0,
+          "clicks": 0,
+          "ctr": null,
+          "status": "no_data",
+          "siteMetrics": {
+            "rank": 11.318181818181818,
+            "impressions": 22,
+            "clicks": 0,
+            "ctr": 0,
+            "status": "measured"
+          }
+        },
+        "done": "fix(seo): clarify teishoku menu pricing and add early menu link",
+        "needs": "検索意図別の料理案内・表示性能の改善。効果は確定GSCデータで観察する。"
       }
     ],
     "status": "observing",
-    "nextReviewDate": "2026-12-03"
+    "nextReviewDate": "2026-12-07"
   },
   {
     "keyword": "小牧 モーニング",
