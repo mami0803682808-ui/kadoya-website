@@ -3,7 +3,7 @@
     "keyword": "角屋 小牧",
     "targetPath": "/",
     "status": "observing",
-    "nextReviewDate": "2026-12-13",
+    "nextReviewDate": "2026-12-14",
     "actions": [
       {
         "date": "2026-10-01",
@@ -279,6 +279,32 @@
           }
         },
         "done": "fix: mark part-time staff recruitment as closed",
+        "needs": "検索意図別の料理案内・表示性能の改善。効果は確定GSCデータで観察する。"
+      },
+      {
+        "date": "2026-11-16T00:18:59+09:00",
+        "commit": "0eebf7dd9f6e2a495d981282418d136503d222ef",
+        "files": [
+          "index.html"
+        ],
+        "rankAtAction": 3.46,
+        "baseline": {
+          "keyword": "角屋 小牧",
+          "targetPath": "/",
+          "rank": 3.46,
+          "impressions": 300,
+          "clicks": 30,
+          "ctr": 0.1,
+          "status": "measured",
+          "siteMetrics": {
+            "rank": 1.0911854103343466,
+            "impressions": 329,
+            "clicks": 80,
+            "ctr": 0.24316109422492402,
+            "status": "measured"
+          }
+        },
+        "done": "docs: mention potential future recruitment reopening",
         "needs": "検索意図別の料理案内・表示性能の改善。効果は確定GSCデータで観察する。"
       }
     ]
@@ -558,10 +584,36 @@
         },
         "done": "fix: mark part-time staff recruitment as closed",
         "needs": "検索意図別の料理案内・表示性能の改善。効果は確定GSCデータで観察する。"
+      },
+      {
+        "date": "2026-11-16T00:18:59+09:00",
+        "commit": "0eebf7dd9f6e2a495d981282418d136503d222ef",
+        "files": [
+          "index.html"
+        ],
+        "rankAtAction": 6.777777777777778,
+        "baseline": {
+          "keyword": "小牧 きしめん",
+          "targetPath": "/kishimen/",
+          "rank": 6.777777777777778,
+          "impressions": 9,
+          "clicks": 0,
+          "ctr": 0,
+          "status": "measured",
+          "siteMetrics": {
+            "rank": 4.3,
+            "impressions": 20,
+            "clicks": 0,
+            "ctr": 0,
+            "status": "measured"
+          }
+        },
+        "done": "docs: mention potential future recruitment reopening",
+        "needs": "検索意図別の料理案内・表示性能の改善。効果は確定GSCデータで観察する。"
       }
     ],
     "status": "observing",
-    "nextReviewDate": "2026-12-13"
+    "nextReviewDate": "2026-12-14"
   },
   {
     "keyword": "小牧 定食",
@@ -864,10 +916,36 @@
         },
         "done": "fix: mark part-time staff recruitment as closed",
         "needs": "検索意図別の料理案内・表示性能の改善。効果は確定GSCデータで観察する。"
+      },
+      {
+        "date": "2026-11-16T00:18:59+09:00",
+        "commit": "0eebf7dd9f6e2a495d981282418d136503d222ef",
+        "files": [
+          "index.html"
+        ],
+        "rankAtAction": null,
+        "baseline": {
+          "keyword": "小牧 定食",
+          "targetPath": "/teishoku/",
+          "rank": null,
+          "impressions": 0,
+          "clicks": 0,
+          "ctr": null,
+          "status": "no_data",
+          "siteMetrics": {
+            "rank": 10.863636363636363,
+            "impressions": 22,
+            "clicks": 0,
+            "ctr": 0,
+            "status": "measured"
+          }
+        },
+        "done": "docs: mention potential future recruitment reopening",
+        "needs": "検索意図別の料理案内・表示性能の改善。効果は確定GSCデータで観察する。"
       }
     ],
     "status": "observing",
-    "nextReviewDate": "2026-12-13"
+    "nextReviewDate": "2026-12-14"
   },
   {
     "keyword": "小牧 モーニング",
@@ -1144,10 +1222,36 @@
         },
         "done": "fix: mark part-time staff recruitment as closed",
         "needs": "検索意図別の料理案内・表示性能の改善。効果は確定GSCデータで観察する。"
+      },
+      {
+        "date": "2026-11-16T00:18:59+09:00",
+        "commit": "0eebf7dd9f6e2a495d981282418d136503d222ef",
+        "files": [
+          "index.html"
+        ],
+        "rankAtAction": 12.88888888888889,
+        "baseline": {
+          "keyword": "小牧 モーニング",
+          "targetPath": "/morning/",
+          "rank": 12.88888888888889,
+          "impressions": 9,
+          "clicks": 2,
+          "ctr": 0.2222222222222222,
+          "status": "measured",
+          "siteMetrics": {
+            "rank": 22.6,
+            "impressions": 10,
+            "clicks": 2,
+            "ctr": 0.2,
+            "status": "measured"
+          }
+        },
+        "done": "docs: mention potential future recruitment reopening",
+        "needs": "検索意図別の料理案内・表示性能の改善。効果は確定GSCデータで観察する。"
       }
     ],
     "status": "observing",
-    "nextReviewDate": "2026-12-13"
+    "nextReviewDate": "2026-12-14"
   },
   {
     "keyword": "小牧 味噌煮込み",
@@ -1424,10 +1528,36 @@
         },
         "done": "fix: mark part-time staff recruitment as closed",
         "needs": "検索意図別の料理案内・表示性能の改善。効果は確定GSCデータで観察する。"
+      },
+      {
+        "date": "2026-11-16T00:18:59+09:00",
+        "commit": "0eebf7dd9f6e2a495d981282418d136503d222ef",
+        "files": [
+          "index.html"
+        ],
+        "rankAtAction": null,
+        "baseline": {
+          "keyword": "小牧 味噌煮込み",
+          "targetPath": "/misonikomi/",
+          "rank": null,
+          "impressions": 0,
+          "clicks": 0,
+          "ctr": null,
+          "status": "no_data",
+          "siteMetrics": {
+            "rank": null,
+            "impressions": 0,
+            "clicks": 0,
+            "ctr": null,
+            "status": "no_data"
+          }
+        },
+        "done": "docs: mention potential future recruitment reopening",
+        "needs": "検索意図別の料理案内・表示性能の改善。効果は確定GSCデータで観察する。"
       }
     ],
     "status": "observing",
-    "nextReviewDate": "2026-12-13"
+    "nextReviewDate": "2026-12-14"
   },
   {
     "keyword": "小牧 味噌煮込みきしめん",
@@ -1704,10 +1834,36 @@
         },
         "done": "fix: mark part-time staff recruitment as closed",
         "needs": "検索意図別の料理案内・表示性能の改善。効果は確定GSCデータで観察する。"
+      },
+      {
+        "date": "2026-11-16T00:18:59+09:00",
+        "commit": "0eebf7dd9f6e2a495d981282418d136503d222ef",
+        "files": [
+          "index.html"
+        ],
+        "rankAtAction": null,
+        "baseline": {
+          "keyword": "小牧 味噌煮込みきしめん",
+          "targetPath": "/misonikomi/",
+          "rank": null,
+          "impressions": 0,
+          "clicks": 0,
+          "ctr": null,
+          "status": "no_data",
+          "siteMetrics": {
+            "rank": null,
+            "impressions": 0,
+            "clicks": 0,
+            "ctr": null,
+            "status": "no_data"
+          }
+        },
+        "done": "docs: mention potential future recruitment reopening",
+        "needs": "検索意図別の料理案内・表示性能の改善。効果は確定GSCデータで観察する。"
       }
     ],
     "status": "observing",
-    "nextReviewDate": "2026-12-13"
+    "nextReviewDate": "2026-12-14"
   },
   {
     "keyword": "小牧 味噌カツ",
@@ -1984,10 +2140,36 @@
         },
         "done": "fix: mark part-time staff recruitment as closed",
         "needs": "検索意図別の料理案内・表示性能の改善。効果は確定GSCデータで観察する。"
+      },
+      {
+        "date": "2026-11-16T00:18:59+09:00",
+        "commit": "0eebf7dd9f6e2a495d981282418d136503d222ef",
+        "files": [
+          "index.html"
+        ],
+        "rankAtAction": 4,
+        "baseline": {
+          "keyword": "小牧 味噌カツ",
+          "targetPath": "/misokatsu/",
+          "rank": 4,
+          "impressions": 22,
+          "clicks": 1,
+          "ctr": 0.045454545454545456,
+          "status": "measured",
+          "siteMetrics": {
+            "rank": 3.909090909090909,
+            "impressions": 33,
+            "clicks": 2,
+            "ctr": 0.06060606060606061,
+            "status": "measured"
+          }
+        },
+        "done": "docs: mention potential future recruitment reopening",
+        "needs": "検索意図別の料理案内・表示性能の改善。効果は確定GSCデータで観察する。"
       }
     ],
     "status": "observing",
-    "nextReviewDate": "2026-12-13"
+    "nextReviewDate": "2026-12-14"
   },
   {
     "keyword": "小牧 田楽",
@@ -2264,9 +2446,35 @@
         },
         "done": "fix: mark part-time staff recruitment as closed",
         "needs": "検索意図別の料理案内・表示性能の改善。効果は確定GSCデータで観察する。"
+      },
+      {
+        "date": "2026-11-16T00:18:59+09:00",
+        "commit": "0eebf7dd9f6e2a495d981282418d136503d222ef",
+        "files": [
+          "index.html"
+        ],
+        "rankAtAction": null,
+        "baseline": {
+          "keyword": "小牧 田楽",
+          "targetPath": "/dengaku/",
+          "rank": null,
+          "impressions": 0,
+          "clicks": 0,
+          "ctr": null,
+          "status": "no_data",
+          "siteMetrics": {
+            "rank": null,
+            "impressions": 0,
+            "clicks": 0,
+            "ctr": null,
+            "status": "no_data"
+          }
+        },
+        "done": "docs: mention potential future recruitment reopening",
+        "needs": "検索意図別の料理案内・表示性能の改善。効果は確定GSCデータで観察する。"
       }
     ],
     "status": "observing",
-    "nextReviewDate": "2026-12-13"
+    "nextReviewDate": "2026-12-14"
   }
 ]
