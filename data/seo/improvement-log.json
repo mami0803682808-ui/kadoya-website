@@ -335,6 +335,32 @@
         },
         "done": "fix: stabilize opening layout and remove delayed initial rendering",
         "needs": "検索意図別の料理案内・表示性能の改善。効果は確定GSCデータで観察する。"
+      },
+      {
+        "date": "2026-11-16T12:04:30+09:00",
+        "commit": "ed3d43f0944a9e36cd8674cdc65e7bec3f8a6a60",
+        "files": [
+          "index.html"
+        ],
+        "rankAtAction": 3.3366336633663365,
+        "baseline": {
+          "keyword": "角屋 小牧",
+          "targetPath": "/",
+          "rank": 3.3366336633663365,
+          "impressions": 303,
+          "clicks": 29,
+          "ctr": 0.09570957095709572,
+          "status": "measured",
+          "siteMetrics": {
+            "rank": 1.1055900621118013,
+            "impressions": 322,
+            "clicks": 77,
+            "ctr": 0.2391304347826087,
+            "status": "measured"
+          }
+        },
+        "done": "fix(menu): mark two matsutake dishes as ended for 2026",
+        "needs": "検索意図別の料理案内・表示性能の改善。効果は確定GSCデータで観察する。"
       }
     ]
   },
@@ -667,6 +693,32 @@
           }
         },
         "done": "fix: stabilize opening layout and remove delayed initial rendering",
+        "needs": "検索意図別の料理案内・表示性能の改善。効果は確定GSCデータで観察する。"
+      },
+      {
+        "date": "2026-11-16T12:04:30+09:00",
+        "commit": "ed3d43f0944a9e36cd8674cdc65e7bec3f8a6a60",
+        "files": [
+          "index.html"
+        ],
+        "rankAtAction": 6.555555555555555,
+        "baseline": {
+          "keyword": "小牧 きしめん",
+          "targetPath": "/kishimen/",
+          "rank": 6.555555555555555,
+          "impressions": 9,
+          "clicks": 0,
+          "ctr": 0,
+          "status": "measured",
+          "siteMetrics": {
+            "rank": 4.2,
+            "impressions": 20,
+            "clicks": 0,
+            "ctr": 0,
+            "status": "measured"
+          }
+        },
+        "done": "fix(menu): mark two matsutake dishes as ended for 2026",
         "needs": "検索意図別の料理案内・表示性能の改善。効果は確定GSCデータで観察する。"
       }
     ],
@@ -1029,6 +1081,32 @@
         },
         "done": "fix: stabilize opening layout and remove delayed initial rendering",
         "needs": "検索意図別の料理案内・表示性能の改善。効果は確定GSCデータで観察する。"
+      },
+      {
+        "date": "2026-11-16T12:04:30+09:00",
+        "commit": "ed3d43f0944a9e36cd8674cdc65e7bec3f8a6a60",
+        "files": [
+          "index.html"
+        ],
+        "rankAtAction": null,
+        "baseline": {
+          "keyword": "小牧 定食",
+          "targetPath": "/teishoku/",
+          "rank": null,
+          "impressions": 0,
+          "clicks": 0,
+          "ctr": null,
+          "status": "no_data",
+          "siteMetrics": {
+            "rank": 10.714285714285714,
+            "impressions": 21,
+            "clicks": 0,
+            "ctr": 0,
+            "status": "measured"
+          }
+        },
+        "done": "fix(menu): mark two matsutake dishes as ended for 2026",
+        "needs": "検索意図別の料理案内・表示性能の改善。効果は確定GSCデータで観察する。"
       }
     ],
     "status": "observing",
@@ -1363,6 +1441,32 @@
           }
         },
         "done": "fix: stabilize opening layout and remove delayed initial rendering",
+        "needs": "検索意図別の料理案内・表示性能の改善。効果は確定GSCデータで観察する。"
+      },
+      {
+        "date": "2026-11-16T12:04:30+09:00",
+        "commit": "ed3d43f0944a9e36cd8674cdc65e7bec3f8a6a60",
+        "files": [
+          "index.html"
+        ],
+        "rankAtAction": 12.090909090909092,
+        "baseline": {
+          "keyword": "小牧 モーニング",
+          "targetPath": "/morning/",
+          "rank": 12.090909090909092,
+          "impressions": 11,
+          "clicks": 2,
+          "ctr": 0.18181818181818182,
+          "status": "measured",
+          "siteMetrics": {
+            "rank": 25.692307692307693,
+            "impressions": 13,
+            "clicks": 2,
+            "ctr": 0.15384615384615385,
+            "status": "measured"
+          }
+        },
+        "done": "fix(menu): mark two matsutake dishes as ended for 2026",
         "needs": "検索意図別の料理案内・表示性能の改善。効果は確定GSCデータで観察する。"
       }
     ],
@@ -1699,6 +1803,32 @@
         },
         "done": "fix: stabilize opening layout and remove delayed initial rendering",
         "needs": "検索意図別の料理案内・表示性能の改善。効果は確定GSCデータで観察する。"
+      },
+      {
+        "date": "2026-11-16T12:04:30+09:00",
+        "commit": "ed3d43f0944a9e36cd8674cdc65e7bec3f8a6a60",
+        "files": [
+          "index.html"
+        ],
+        "rankAtAction": null,
+        "baseline": {
+          "keyword": "小牧 味噌煮込み",
+          "targetPath": "/misonikomi/",
+          "rank": null,
+          "impressions": 0,
+          "clicks": 0,
+          "ctr": null,
+          "status": "no_data",
+          "siteMetrics": {
+            "rank": null,
+            "impressions": 0,
+            "clicks": 0,
+            "ctr": null,
+            "status": "no_data"
+          }
+        },
+        "done": "fix(menu): mark two matsutake dishes as ended for 2026",
+        "needs": "検索意図別の料理案内・表示性能の改善。効果は確定GSCデータで観察する。"
       }
     ],
     "status": "observing",
@@ -2033,6 +2163,32 @@
           }
         },
         "done": "fix: stabilize opening layout and remove delayed initial rendering",
+        "needs": "検索意図別の料理案内・表示性能の改善。効果は確定GSCデータで観察する。"
+      },
+      {
+        "date": "2026-11-16T12:04:30+09:00",
+        "commit": "ed3d43f0944a9e36cd8674cdc65e7bec3f8a6a60",
+        "files": [
+          "index.html"
+        ],
+        "rankAtAction": null,
+        "baseline": {
+          "keyword": "小牧 味噌煮込みきしめん",
+          "targetPath": "/misonikomi/",
+          "rank": null,
+          "impressions": 0,
+          "clicks": 0,
+          "ctr": null,
+          "status": "no_data",
+          "siteMetrics": {
+            "rank": null,
+            "impressions": 0,
+            "clicks": 0,
+            "ctr": null,
+            "status": "no_data"
+          }
+        },
+        "done": "fix(menu): mark two matsutake dishes as ended for 2026",
         "needs": "検索意図別の料理案内・表示性能の改善。効果は確定GSCデータで観察する。"
       }
     ],
@@ -2369,6 +2525,32 @@
         },
         "done": "fix: stabilize opening layout and remove delayed initial rendering",
         "needs": "検索意図別の料理案内・表示性能の改善。効果は確定GSCデータで観察する。"
+      },
+      {
+        "date": "2026-11-16T12:04:30+09:00",
+        "commit": "ed3d43f0944a9e36cd8674cdc65e7bec3f8a6a60",
+        "files": [
+          "index.html"
+        ],
+        "rankAtAction": 3.9565217391304346,
+        "baseline": {
+          "keyword": "小牧 味噌カツ",
+          "targetPath": "/misokatsu/",
+          "rank": 3.9565217391304346,
+          "impressions": 23,
+          "clicks": 1,
+          "ctr": 0.043478260869565216,
+          "status": "measured",
+          "siteMetrics": {
+            "rank": 3.7714285714285714,
+            "impressions": 35,
+            "clicks": 2,
+            "ctr": 0.05714285714285714,
+            "status": "measured"
+          }
+        },
+        "done": "fix(menu): mark two matsutake dishes as ended for 2026",
+        "needs": "検索意図別の料理案内・表示性能の改善。効果は確定GSCデータで観察する。"
       }
     ],
     "status": "observing",
@@ -2703,6 +2885,32 @@
           }
         },
         "done": "fix: stabilize opening layout and remove delayed initial rendering",
+        "needs": "検索意図別の料理案内・表示性能の改善。効果は確定GSCデータで観察する。"
+      },
+      {
+        "date": "2026-11-16T12:04:30+09:00",
+        "commit": "ed3d43f0944a9e36cd8674cdc65e7bec3f8a6a60",
+        "files": [
+          "index.html"
+        ],
+        "rankAtAction": null,
+        "baseline": {
+          "keyword": "小牧 田楽",
+          "targetPath": "/dengaku/",
+          "rank": null,
+          "impressions": 0,
+          "clicks": 0,
+          "ctr": null,
+          "status": "no_data",
+          "siteMetrics": {
+            "rank": null,
+            "impressions": 0,
+            "clicks": 0,
+            "ctr": null,
+            "status": "no_data"
+          }
+        },
+        "done": "fix(menu): mark two matsutake dishes as ended for 2026",
         "needs": "検索意図別の料理案内・表示性能の改善。効果は確定GSCデータで観察する。"
       }
     ],
