@@ -348,9 +348,7 @@ document.querySelectorAll('.craft-art').forEach(element => element.remove());
  const opening=document.querySelector('.opening-new');
  const dock=document.querySelector('.mobile-dock');
  if(!opening) return;
- const reduced=window.matchMedia('(prefers-reduced-motion: reduce)').matches;
- const reveal=()=>document.body.classList.add('opening-ready');
- if(reduced) reveal(); else window.setTimeout(reveal,420);
+ // Initial visibility and geometry are already present in the HTML.
 
  if(!dock) return;
  const updateDock=()=>{

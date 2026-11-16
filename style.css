@@ -1,4 +1,4 @@
-@import url('./style-base.css?v=20261012-mobile');
+/* Base styles are linked before this file in index.html. */
 
 /* 2026-10-01 pre-release consistency pass
    Keep one canonical visual rule for every menu photo card. */
@@ -273,3 +273,8 @@ html.kadoya-home .scroll-ready .arrival-signature{background:#000!important}
 @media(max-width:760px){.opening-shortcuts a{font-size:12px;padding:10px 9px}}
 /* Keep media dates readable without changing their layout. */
 #media .media-history time{color:#6f5c3e}
+
+/* Paint the original logo in its final position without a delayed entrance.
+   Scroll-driven opacity/mask variables continue to control the curtain. */
+html.kadoya-home .scroll-ready .arrival-signature{transform:none;transition:none}
+html.kadoya-home .scroll-ready .arrival-mark svg{animation:none}

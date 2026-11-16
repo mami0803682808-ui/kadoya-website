@@ -1,9 +1,6 @@
 (() => {
-  const core = document.createElement('script');
-  core.src = 'script-base.js?v=20261105-small-fixes';
-  core.async = false;
-
-  core.onload = () => {
+  // Deferred scripts run in document order; base initialization is complete.
+  const initializeMenu = () => {
     const menu = document.querySelector('#menu');
     if (!menu) return;
 
@@ -675,6 +672,5 @@
     }
   };
 
-  core.onerror = () => console.error('script-base.js could not be loaded');
-  document.head.appendChild(core);
+  initializeMenu();
 })();
