@@ -387,6 +387,32 @@
         },
         "done": "fix: clarify Komaki store location near access information",
         "needs": "検索意図別の料理案内・表示性能の改善。効果は確定GSCデータで観察する。"
+      },
+      {
+        "date": "2026-11-19T23:44:04+09:00",
+        "commit": "a8a0fa6bcc3a4fb8c5885a9a1652db15efb283c1",
+        "files": [
+          "index.html"
+        ],
+        "rankAtAction": 2.8354430379746836,
+        "baseline": {
+          "keyword": "角屋 小牧",
+          "targetPath": "/",
+          "rank": 2.8354430379746836,
+          "impressions": 316,
+          "clicks": 31,
+          "ctr": 0.0981012658227848,
+          "status": "measured",
+          "siteMetrics": {
+            "rank": 1.084639498432602,
+            "impressions": 319,
+            "clicks": 77,
+            "ctr": 0.2413793103448276,
+            "status": "measured"
+          }
+        },
+        "done": "fix: clarify store location beneath reservation phone number",
+        "needs": "検索意図別の料理案内・表示性能の改善。効果は確定GSCデータで観察する。"
       }
     ]
   },
@@ -771,6 +797,32 @@
           }
         },
         "done": "fix: clarify Komaki store location near access information",
+        "needs": "検索意図別の料理案内・表示性能の改善。効果は確定GSCデータで観察する。"
+      },
+      {
+        "date": "2026-11-19T23:44:04+09:00",
+        "commit": "a8a0fa6bcc3a4fb8c5885a9a1652db15efb283c1",
+        "files": [
+          "index.html"
+        ],
+        "rankAtAction": 7.818181818181818,
+        "baseline": {
+          "keyword": "小牧 きしめん",
+          "targetPath": "/kishimen/",
+          "rank": 7.818181818181818,
+          "impressions": 11,
+          "clicks": 0,
+          "ctr": 0,
+          "status": "measured",
+          "siteMetrics": {
+            "rank": 3.888888888888889,
+            "impressions": 27,
+            "clicks": 1,
+            "ctr": 0.037037037037037035,
+            "status": "measured"
+          }
+        },
+        "done": "fix: clarify store location beneath reservation phone number",
         "needs": "検索意図別の料理案内・表示性能の改善。効果は確定GSCデータで観察する。"
       }
     ],
@@ -1185,6 +1237,32 @@
         },
         "done": "fix: clarify Komaki store location near access information",
         "needs": "検索意図別の料理案内・表示性能の改善。効果は確定GSCデータで観察する。"
+      },
+      {
+        "date": "2026-11-19T23:44:04+09:00",
+        "commit": "a8a0fa6bcc3a4fb8c5885a9a1652db15efb283c1",
+        "files": [
+          "index.html"
+        ],
+        "rankAtAction": null,
+        "baseline": {
+          "keyword": "小牧 定食",
+          "targetPath": "/teishoku/",
+          "rank": null,
+          "impressions": 0,
+          "clicks": 0,
+          "ctr": null,
+          "status": "no_data",
+          "siteMetrics": {
+            "rank": 10.318181818181818,
+            "impressions": 22,
+            "clicks": 0,
+            "ctr": 0,
+            "status": "measured"
+          }
+        },
+        "done": "fix: clarify store location beneath reservation phone number",
+        "needs": "検索意図別の料理案内・表示性能の改善。効果は確定GSCデータで観察する。"
       }
     ],
     "status": "observing",
@@ -1571,6 +1649,32 @@
           }
         },
         "done": "fix: clarify Komaki store location near access information",
+        "needs": "検索意図別の料理案内・表示性能の改善。効果は確定GSCデータで観察する。"
+      },
+      {
+        "date": "2026-11-19T23:44:04+09:00",
+        "commit": "a8a0fa6bcc3a4fb8c5885a9a1652db15efb283c1",
+        "files": [
+          "index.html"
+        ],
+        "rankAtAction": 11.846153846153847,
+        "baseline": {
+          "keyword": "小牧 モーニング",
+          "targetPath": "/morning/",
+          "rank": 11.846153846153847,
+          "impressions": 13,
+          "clicks": 2,
+          "ctr": 0.15384615384615385,
+          "status": "measured",
+          "siteMetrics": {
+            "rank": 23.666666666666668,
+            "impressions": 15,
+            "clicks": 2,
+            "ctr": 0.13333333333333333,
+            "status": "measured"
+          }
+        },
+        "done": "fix: clarify store location beneath reservation phone number",
         "needs": "検索意図別の料理案内・表示性能の改善。効果は確定GSCデータで観察する。"
       }
     ],
@@ -1959,6 +2063,32 @@
         },
         "done": "fix: clarify Komaki store location near access information",
         "needs": "検索意図別の料理案内・表示性能の改善。効果は確定GSCデータで観察する。"
+      },
+      {
+        "date": "2026-11-19T23:44:04+09:00",
+        "commit": "a8a0fa6bcc3a4fb8c5885a9a1652db15efb283c1",
+        "files": [
+          "index.html"
+        ],
+        "rankAtAction": null,
+        "baseline": {
+          "keyword": "小牧 味噌煮込み",
+          "targetPath": "/misonikomi/",
+          "rank": null,
+          "impressions": 0,
+          "clicks": 0,
+          "ctr": null,
+          "status": "no_data",
+          "siteMetrics": {
+            "rank": null,
+            "impressions": 0,
+            "clicks": 0,
+            "ctr": null,
+            "status": "no_data"
+          }
+        },
+        "done": "fix: clarify store location beneath reservation phone number",
+        "needs": "検索意図別の料理案内・表示性能の改善。効果は確定GSCデータで観察する。"
       }
     ],
     "status": "observing",
@@ -2345,6 +2475,32 @@
           }
         },
         "done": "fix: clarify Komaki store location near access information",
+        "needs": "検索意図別の料理案内・表示性能の改善。効果は確定GSCデータで観察する。"
+      },
+      {
+        "date": "2026-11-19T23:44:04+09:00",
+        "commit": "a8a0fa6bcc3a4fb8c5885a9a1652db15efb283c1",
+        "files": [
+          "index.html"
+        ],
+        "rankAtAction": null,
+        "baseline": {
+          "keyword": "小牧 味噌煮込みきしめん",
+          "targetPath": "/misonikomi/",
+          "rank": null,
+          "impressions": 0,
+          "clicks": 0,
+          "ctr": null,
+          "status": "no_data",
+          "siteMetrics": {
+            "rank": null,
+            "impressions": 0,
+            "clicks": 0,
+            "ctr": null,
+            "status": "no_data"
+          }
+        },
+        "done": "fix: clarify store location beneath reservation phone number",
         "needs": "検索意図別の料理案内・表示性能の改善。効果は確定GSCデータで観察する。"
       }
     ],
@@ -2733,6 +2889,32 @@
         },
         "done": "fix: clarify Komaki store location near access information",
         "needs": "検索意図別の料理案内・表示性能の改善。効果は確定GSCデータで観察する。"
+      },
+      {
+        "date": "2026-11-19T23:44:04+09:00",
+        "commit": "a8a0fa6bcc3a4fb8c5885a9a1652db15efb283c1",
+        "files": [
+          "index.html"
+        ],
+        "rankAtAction": 3.5714285714285716,
+        "baseline": {
+          "keyword": "小牧 味噌カツ",
+          "targetPath": "/misokatsu/",
+          "rank": 3.5714285714285716,
+          "impressions": 21,
+          "clicks": 1,
+          "ctr": 0.047619047619047616,
+          "status": "measured",
+          "siteMetrics": {
+            "rank": 3.4838709677419355,
+            "impressions": 31,
+            "clicks": 2,
+            "ctr": 0.06451612903225806,
+            "status": "measured"
+          }
+        },
+        "done": "fix: clarify store location beneath reservation phone number",
+        "needs": "検索意図別の料理案内・表示性能の改善。効果は確定GSCデータで観察する。"
       }
     ],
     "status": "observing",
@@ -3119,6 +3301,32 @@
           }
         },
         "done": "fix: clarify Komaki store location near access information",
+        "needs": "検索意図別の料理案内・表示性能の改善。効果は確定GSCデータで観察する。"
+      },
+      {
+        "date": "2026-11-19T23:44:04+09:00",
+        "commit": "a8a0fa6bcc3a4fb8c5885a9a1652db15efb283c1",
+        "files": [
+          "index.html"
+        ],
+        "rankAtAction": null,
+        "baseline": {
+          "keyword": "小牧 田楽",
+          "targetPath": "/dengaku/",
+          "rank": null,
+          "impressions": 0,
+          "clicks": 0,
+          "ctr": null,
+          "status": "no_data",
+          "siteMetrics": {
+            "rank": null,
+            "impressions": 0,
+            "clicks": 0,
+            "ctr": null,
+            "status": "no_data"
+          }
+        },
+        "done": "fix: clarify store location beneath reservation phone number",
         "needs": "検索意図別の料理案内・表示性能の改善。効果は確定GSCデータで観察する。"
       }
     ],
