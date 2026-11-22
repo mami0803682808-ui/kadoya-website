@@ -1,7 +1,7 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
 import crypto from 'node:crypto';
-import {metrics,parsePrivateKey,pacificDate,collectPeriod,connect} from '../scripts/seo/gsc.mjs';
+import {metrics,parsePrivateKey,pacificDate,collectPeriod,connect,pageFilter} from '../scripts/seo/gsc.mjs';
 import {analyze,delta} from '../scripts/seo/analyze.mjs';
 test('weighted average, missing data and CTR',()=>{
   assert.deepEqual(metrics([]),{rank:null,impressions:null,clicks:null,ctr:null,status:'no_data'});
@@ -21,7 +21,7 @@ test('target and property queries are separate; new page can have no data',async
   const api={query:async body=>{calls.push(body); return body.dimensionFilterGroups?.[0].filters.length===1?[{position:8,impressions:50,clicks:2}]:[];}};
   const r=await collectPeriod(api,[{keyword:'小牧 きしめん',targetPath:'/kishimen/'}],'2026-09-01','2026-09-30');
   assert.equal(r.results[0].rank,null);assert.equal(r.results[0].siteMetrics.rank,8);
-  assert.equal(calls[2].dimensionFilterGroups[0].filters[1].expression,'https://komaki-kadoya.com/kishimen/');
+  assert.deepEqual(calls[2].dimensionFilterGroups[0].filters[1],pageFilter('/kishimen/'));
 });
 test('monthly differences and observation windows do not invent effects',()=>{
   const row={keyword:'test',targetPath:'/',rank:8,impressions:100,clicks:2,ctr:0.02,status:'measured'};
@@ -41,4 +41,23 @@ test('mid-month changes use exact pre/post windows rather than waiting forever f
   const input={current:{startDate:'2026-11-01',endDate:'2026-11-30',totals:row,results:[row],discovery:[]},baseline:{startDate:'2026-10-01',endDate:'2026-10-31',totals:row,results:[row],discovery:[]},actionWindows:[{key:'test\t/\tabc',status:'ready',baseline:{...row,rank:8,siteMetrics:row},current:{...row,siteMetrics:row}}]};
   const r=analyze(input,[{keyword:'test',targetPath:'/',actions:[{date:'2026-10-11',commit:'abc',done:'change'}]}]);
   assert.equal(r.effects[0].status,'measured');assert.equal(r.effects[0].change.rank,-3);
+});
+
+test('page matching tolerates only terminal slash, preserving host and query identity',()=>{
+  const re=new RegExp(pageFilter('/teishoku/').expression);
+  for(const url of ['https://komaki-kadoya.com/teishoku','https://komaki-kadoya.com/teishoku/'])assert.ok(re.test(url));
+  for(const url of ['https://other.example/teishoku','https://komaki-kadoya.com/teishoku?x=1','https://komaki-kadoya.com/teishoku/other','https://komaki-kadoyaXcom/teishoku'])assert.ok(!re.test(url));
+});
+test('raw GSC URLs survive collection even when display paths are identical',async()=>{
+  const urls=['https://komaki-kadoya.com/','https://www.komaki-kadoya.com/'];
+  const api={query:async body=>body.dimensions?.includes('page')?urls.map(url=>({keys:body.dimensions.length===2?['角屋',url]:[url],position:2,impressions:10,clicks:1})):[]};
+  const r=await collectPeriod(api,[],'2026-10-01','2026-10-28');
+  assert.deepEqual(r.pages.map(p=>p.pageUrl),urls);assert.deepEqual(r.discovery.map(p=>p.pageUrl),urls);
+});
+test('ambiguous old URL rows are excluded instead of overwritten in candidate comparisons',()=>{
+  const row={keyword:'角屋',targetPath:'/',rank:3,impressions:100,clicks:1,ctr:0.01,status:'measured'};
+  const period={startDate:'2026-10-01',endDate:'2026-10-28',totals:row,results:[],discovery:[row,{...row,rank:8}]};
+  assert.equal(analyze({current:period,baseline:period}).candidates.length,0);
+  const known={...period,discovery:[{...row,pageUrl:'https://komaki-kadoya.com/'},{...row,pageUrl:'https://www.komaki-kadoya.com/'}]};
+  assert.equal(analyze({current:known,baseline:known}).candidates.length,2);
 });

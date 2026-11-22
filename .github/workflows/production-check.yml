@@ -1,0 +1,42 @@
+name: Verify published site
+on:
+  push:
+    branches: [main]
+    paths: ['*.html', '*.css', '*.js', 'images/**', '*/index.html', 'scripts/seo/check-production.mjs', '.github/workflows/production-check.yml']
+  workflow_run:
+    workflows: ['SEO Site Review']
+    types: [completed]
+  workflow_dispatch:
+permissions:
+  contents: read
+concurrency:
+  group: production-check
+  cancel-in-progress: true
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - run: npm install --no-save --package-lock=false puppeteer-core@24.15.0 lighthouse@12.8.2
+      - name: Check published files and mobile/desktop interactions
+        env:
+          CHECK_OUTPUT: /tmp/production-check/result.json
+        run: node scripts/seo/check-production.mjs
+      - name: Measure production mobile performance
+        run: ./node_modules/.bin/lighthouse https://komaki-kadoya.com/ --chrome-flags='--headless --no-sandbox' --output=json --output-path=/tmp/production-check/mobile.json --only-categories=performance,accessibility,seo
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: production-check-${{ github.run_id }}
+          path: /tmp/production-check/
+      - name: Report verification outcome
+        if: always()
+        env:
+          RESULT: ${{ job.status }}
+        run: echo "Published source, responsive layout and interactions — $RESULT. Production Lighthouse is a lab measurement, not real-user data. See artifacts." >> "$GITHUB_STEP_SUMMARY"

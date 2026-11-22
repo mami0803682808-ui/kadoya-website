@@ -58,7 +58,7 @@ for slug,title,headline,intro,names,note in pages:
 <meta property="og:type" content="website"><meta property="og:locale" content="ja_JP"><meta property="og:title" content="{social_title}"><meta property="og:description" content="{html.escape(desc,quote=True)}"><meta property="og:url" content="https://komaki-kadoya.com/{slug}/"><meta property="og:image" content="https://komaki-kadoya.com{photo}"><meta name="twitter:card" content="summary_large_image">
 <link rel="icon" href="/favicon.png"><link rel="stylesheet" href="/menu-pages.css?v={css_version}">
 <script type="application/ld+json">{json.dumps(schema,ensure_ascii=False)}</script></head>
-<body><header><a href="/" aria-label="角屋 トップへ"><img src="/images/kadoya-logo.png" alt="角屋" width="2086" height="754"></a><a class="phone" href="tel:0568722127">電話で予約</a></header>
+<body><header><a href="/" aria-label="角屋 トップへ"><img src="/images/optimized/kadoya-logo-lossless.webp" alt="角屋" width="2086" height="754"></a><a class="phone" href="tel:0568722127">電話で予約</a></header>
 <main><nav class="breadcrumb" aria-label="パンくず"><a href="/">角屋</a><span>／</span><span>{title}</span></nav>
 <section class="intro"><p class="eyebrow">KADOYA · KOMAKI</p><h1>{title}</h1>{intro_html}</section>
 <section aria-label="料理と料金"><p class="note">表示価格はすべて税込です。最新の価格は店頭・モバイルオーダーでご確認ください。</p><div class="dishes">{''.join(cards)}</div><p class="note">{note}</p><a class="button" href="/#menu">お品書きをすべて見る</a></section>

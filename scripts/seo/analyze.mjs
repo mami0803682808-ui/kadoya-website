@@ -1,20 +1,22 @@
 import fs from 'node:fs';
 import path from 'node:path';
 import {pathToFileURL} from 'node:url';
-import {shift} from './gsc.mjs';
-const key=r=>`${r.keyword}\t${r.targetPath}`;
+import {shift,normalizePath} from './gsc.mjs';
+const key=r=>`${r.keyword}\t${r.pageUrl||normalizePath(r.targetPath)}`;
 export function delta(before,after) {
   if(before?.status!=='measured'||after?.status!=='measured') return null;
   return {rank:after.rank-before.rank,impressions:after.impressions-before.impressions,clicks:after.clicks-before.clicks,ctr:after.ctr-before.ctr};
 }
 export function analyze(input,log=[]) {
   const {current,baseline}=input;
-  const before=new Map(baseline.discovery.map(r=>[key(r),r]));
+  // Old snapshots discarded full URLs. Ambiguous legacy rows must not overwrite one another.
+  const unambiguous=rows=>{const counts=new Map();for(const row of rows)counts.set(key(row),(counts.get(key(row))||0)+1);return rows.filter(row=>counts.get(key(row))===1);};
+  const before=new Map(unambiguous(baseline.discovery).map(r=>[key(r),r]));
   const candidates=[];
-  for(const row of current.discovery) {
+  for(const row of unambiguous(current.discovery)) {
     if(row.impressions<30) continue;
     const old=before.get(key(row)), change=delta(old,row);
-    const observing=log.some(entry=>entry.targetPath===row.targetPath&&entry.actions?.some(action=>shift(action.date.slice(0,10),28)>current.endDate));
+    const observing=log.some(entry=>normalizePath(entry.targetPath)===normalizePath(row.targetPath)&&entry.actions?.some(action=>shift(action.date.slice(0,10),28)>current.endDate));
     if(observing) continue;
     const reasons=[];
     if(change?.rank>=2) reasons.push('平均掲載順位が2以上低下');
@@ -53,13 +55,13 @@ export function analyze(input,log=[]) {
     totals:{current:current.totals,baseline:baseline.totals,change:delta(baseline.totals,current.totals)},
     watchwords:current.results.map(r=>({...r,change:delta(baseline.results.find(b=>key(b)===key(r)),r)})),
     candidates:candidates.slice(0,20),effects,
-    limitations:['順位は固定順位ではなくGSCの平均掲載順位。','検索語の匿名化・API上位行制限により、検索語別の合計はサイト全体と一致しない。','月の日数・季節性・表示機会の変化を考慮する。データなしは0や圏外と断定しない。']};
+    limitations:['旧データで元URLを識別できない重複行は改善候補から除外。新旧でURL識別方式が異なる場合は直接比較しない。','順位は固定順位ではなくGSCの平均掲載順位。','検索語の匿名化・API上位行制限により、検索語別の合計はサイト全体と一致しない。','月の日数・季節性・表示機会の変化を考慮する。データなしは0や圏外と断定しない。']};
 }
 export function markdown(report) {
   const fmt=x=>x==null?'未計測':typeof x==='number'?x.toFixed(2):String(x);
   return `# 角屋 SEO月次レポート ${report.month}\n\n前月と前々月の確定GSCデータを比較。\n\n`+
     `| 指標 | 対象月 | 比較月 |\n|---|---:|---:|\n`+['rank','impressions','clicks','ctr'].map(k=>`| ${k} | ${fmt(report.totals.current[k])} | ${fmt(report.totals.baseline[k])} |`).join('\n')+
-    `\n\n## 改善候補\n\n`+(report.candidates.length?report.candidates.map(r=>`- **${r.keyword}** (${r.targetPath})：${r.reasons.join('、')}。平均順位 ${fmt(r.rank)}、表示 ${r.impressions}、クリック ${r.clicks}。${r.suggestion}`).join('\n'):'実測データに基づく候補なし。')+
+    `\n\n## 改善候補\n\n`+(report.candidates.length?report.candidates.map(r=>`- **${r.keyword}** (${r.pageUrl||r.targetPath})：${r.reasons.join('、')}。平均順位 ${fmt(r.rank)}、表示 ${r.impressions}、クリック ${r.clicks}。${r.suggestion}`).join('\n'):'実測データに基づく候補なし。')+
     `\n\n## 変更の観察\n\n`+(report.effects.map(r=>`- ${r.keyword}：${r.actionDate} ${r.done}／${r.status}${r.change?`、平均順位差 ${fmt(r.change.rank)}、クリック差 ${r.change.clicks}`:''}`).join('\n')||'記録なし')+
     '\n\n'+report.limitations.map(s=>'- '+s).join('\n')+'\n';
 }

@@ -52,6 +52,13 @@ export function pacificDate(now=new Date()) {
   return `${get('year')}-${get('month')}-${get('day')}`;
 }
 export function normalizePath(value) {return new URL(value,'https://komaki-kadoya.com').pathname.replace(/\/+$/,'')||'/';}
+// Keep protocol/host/query identity in records; normalize only for display and grouping.
+export function pageFilter(targetPath) {
+  const url = new URL(targetPath, 'https://komaki-kadoya.com');
+  const base = url.origin + normalizePath(url.href);
+  const escaped = base.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+  return {dimension:'page', operator:'includingRegex', expression:'^'+escaped+(url.pathname==='/'?'':'/?')+'$'};
+}
 export async function connect(env=process.env, request=fetch) {
   let email=env.GSC_CLIENT_EMAIL, raw=env.GSC_SERVICE_ACCOUNT_JSON || env.GSC_PRIVATE_KEY;
   if(env.GSC_SERVICE_ACCOUNT_JSON) {
@@ -93,13 +100,13 @@ export async function collectPeriod(api,watchwords,startDate,endDate) {
   for(const word of watchwords) {
     const queryFilter={dimension:'query',operator:'equals',expression:word.keyword};
     const siteRows=await api.query({startDate,endDate,dimensionFilterGroups:[{filters:[queryFilter]}]});
-    const pageRows=await api.query({startDate,endDate,dimensionFilterGroups:[{filters:[queryFilter,{dimension:'page',operator:'equals',expression:new URL(word.targetPath,'https://komaki-kadoya.com').href}]}]});
+    const pageRows=await api.query({startDate,endDate,dimensionFilterGroups:[{filters:[queryFilter,pageFilter(word.targetPath)]}]});
     results.push({keyword:word.keyword,targetPath:word.targetPath,...metrics(pageRows),siteMetrics:metrics(siteRows)});
   }
   const totals=await api.query({startDate,endDate});
   const pages=await api.query({startDate,endDate,dimensions:['page']});
   const discovery=await api.query({startDate,endDate,dimensions:['query','page']});
   return {startDate,endDate,totals:metrics(totals),availableDates:dates.map(r=>r.keys[0]).sort(),results,
-    pages:pages.map(r=>({targetPath:normalizePath(r.keys[0]),...metrics([r])})),
-    discovery:discovery.map(r=>({keyword:r.keys[0],targetPath:normalizePath(r.keys[1]),...metrics([r])}))};
+    pages:pages.map(r=>({pageUrl:r.keys[0],targetPath:normalizePath(r.keys[0]),...metrics([r])})),
+    discovery:discovery.map(r=>({keyword:r.keys[0],pageUrl:r.keys[1],targetPath:normalizePath(r.keys[1]),...metrics([r])}))};
 }

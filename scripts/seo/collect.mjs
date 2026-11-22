@@ -1,6 +1,6 @@
 import fs from 'node:fs';
 import path from 'node:path';
-import {connect,collectPeriod,pacificDate,shift,metrics} from './gsc.mjs';
+import {connect,collectPeriod,pacificDate,shift,metrics,pageFilter} from './gsc.mjs';
 const get=name=>{const i=process.argv.indexOf(name);return i<0 ? undefined:process.argv[i+1];};
 const repo=path.resolve(get('--repo')||process.cwd()), days=Number(get('--days')||28);
 if(process.argv.includes('--help')) {console.log('Usage: collect.mjs [--repo PATH] [--days 1–90] [--append] [--monthly] [--site PROPERTY]');process.exit(0);}
@@ -15,10 +15,10 @@ try {
   if(!endDate) throw new Error('No finalized Search Console data in the last 14 days. History was not updated.');
   const watchwords=read('watchwords.json');
   const current=await collectPeriod(api,watchwords,shift(endDate,1-days),endDate);
-  const snapshot={measuredAt:new Date().toISOString(),source:'gsc',siteUrl:api.site,days,searchType:'web',dataState:'final',rankDefinition:'Search Console average position',...current};
+  const snapshot={measuredAt:new Date().toISOString(),source:'gsc',siteUrl:api.site,days,searchType:'web',dataState:'final',schemaVersion:2,rankDefinition:'Search Console average position',...current};
   if(process.argv.includes('--append')) {
     const history=read('rank-history.json');
-    if(!history.some(s=>s.source==='gsc'&&s.siteUrl===api.site&&s.startDate===snapshot.startDate&&s.endDate===endDate&&JSON.stringify(s.results)===JSON.stringify(snapshot.results))) {history.push(snapshot);write('rank-history.json',history);}
+    if(!history.some(s=>s.schemaVersion===2&&s.source==='gsc'&&s.siteUrl===api.site&&s.startDate===snapshot.startDate&&s.endDate===endDate&&JSON.stringify(s.results)===JSON.stringify(snapshot.results))) {history.push(snapshot);write('rank-history.json',history);}
   } else console.log(JSON.stringify(snapshot,null,2));
   if(process.argv.includes('--monthly')) {
     const first=today.slice(0,7)+'-01', previousEnd=shift(first,-1), previousStart=previousEnd.slice(0,7)+'-01';
@@ -33,9 +33,9 @@ try {
       const key=`${entry.keyword}\t${entry.targetPath}\t${action.commit||action.date}`;
       if(currentEnd>endDate) {periods.actionWindows.push({key,status:'awaiting_final_data'});continue;}
       const queryFilter={dimension:'query',operator:'equals',expression:entry.keyword};
-      const pageFilter={dimension:'page',operator:'equals',expression:new URL(entry.targetPath,'https://komaki-kadoya.com').href};
+      const targetFilter=pageFilter(entry.targetPath);
       const measure=async(startDate,endDate)=>({startDate,endDate,
-        ...metrics(await api.query({startDate,endDate,dimensionFilterGroups:[{filters:[queryFilter,pageFilter]}]})),
+        ...metrics(await api.query({startDate,endDate,dimensionFilterGroups:[{filters:[queryFilter,targetFilter]}]})),
         siteMetrics:metrics(await api.query({startDate,endDate,dimensionFilterGroups:[{filters:[queryFilter]}]}))});
       periods.actionWindows.push({key,status:'ready',baseline:await measure(shift(actionDate,-28),shift(actionDate,-1)),current:await measure(currentStart,currentEnd)});
     }
