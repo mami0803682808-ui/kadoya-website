@@ -1,7 +1,7 @@
 {
   "measurement": "Referenced local asset bytes; not LCP or transfer bytes. Hidden and lazy assets may not load on first view.",
-  "totalReferencedBytes": 71640718,
-  "imageBytes": 58535937,
+  "totalReferencedBytes": 71482010,
+  "imageBytes": 58377229,
   "videoBytes": 13104781,
   "over500KB": [
     {
@@ -99,7 +99,7 @@
   ],
   "assets": {
     "images/kadoya-hands.jpg": 234548,
-    "images/kadoya-logo.png": 322292,
+    "images/optimized/kadoya-logo-lossless.webp": 163584,
     "images/optimized/kadoya-hands-display.webp": 140378,
     "images/video-dengaku.jpg": 56771,
     "videos/kadoya-dengaku.mp4": 2138092,

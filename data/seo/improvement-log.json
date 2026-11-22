@@ -3,7 +3,7 @@
     "keyword": "角屋 小牧",
     "targetPath": "/",
     "status": "observing",
-    "nextReviewDate": "2026-12-17",
+    "nextReviewDate": "2026-12-20",
     "actions": [
       {
         "date": "2026-10-01",
@@ -412,6 +412,34 @@
           }
         },
         "done": "fix: clarify store location beneath reservation phone number",
+        "needs": "検索意図別の料理案内・表示性能の改善。効果は確定GSCデータで観察する。"
+      },
+      {
+        "date": "2026-11-22T15:35:04+09:00",
+        "commit": "5423d8f6c6a4e6b56f6d899e2da8dcad6fe0ef0a",
+        "files": [
+          "images/optimized/kadoya-logo-lossless.webp",
+          "index.html",
+          "style-base.css"
+        ],
+        "rankAtAction": 2.6529968454258674,
+        "baseline": {
+          "keyword": "角屋 小牧",
+          "targetPath": "/",
+          "rank": 2.6529968454258674,
+          "impressions": 317,
+          "clicks": 35,
+          "ctr": 0.11041009463722397,
+          "status": "measured",
+          "siteMetrics": {
+            "rank": 1.084375,
+            "impressions": 320,
+            "clicks": 83,
+            "ctr": 0.259375,
+            "status": "measured"
+          }
+        },
+        "done": "fix: verify production, reduce logo payload and preserve SEO URL identity",
         "needs": "検索意図別の料理案内・表示性能の改善。効果は確定GSCデータで観察する。"
       }
     ]
@@ -824,10 +852,39 @@
         },
         "done": "fix: clarify store location beneath reservation phone number",
         "needs": "検索意図別の料理案内・表示性能の改善。効果は確定GSCデータで観察する。"
+      },
+      {
+        "date": "2026-11-22T15:35:04+09:00",
+        "commit": "5423d8f6c6a4e6b56f6d899e2da8dcad6fe0ef0a",
+        "files": [
+          "images/optimized/kadoya-logo-lossless.webp",
+          "index.html",
+          "kishimen/index.html",
+          "style-base.css"
+        ],
+        "rankAtAction": 8.916666666666668,
+        "baseline": {
+          "keyword": "小牧 きしめん",
+          "targetPath": "/kishimen/",
+          "rank": 8.916666666666668,
+          "impressions": 12,
+          "clicks": 0,
+          "ctr": 0,
+          "status": "measured",
+          "siteMetrics": {
+            "rank": 3.857142857142857,
+            "impressions": 28,
+            "clicks": 1,
+            "ctr": 0.03571428571428571,
+            "status": "measured"
+          }
+        },
+        "done": "fix: verify production, reduce logo payload and preserve SEO URL identity",
+        "needs": "検索意図別の料理案内・表示性能の改善。効果は確定GSCデータで観察する。"
       }
     ],
     "status": "observing",
-    "nextReviewDate": "2026-12-17"
+    "nextReviewDate": "2026-12-20"
   },
   {
     "keyword": "小牧 定食",
@@ -1263,10 +1320,39 @@
         },
         "done": "fix: clarify store location beneath reservation phone number",
         "needs": "検索意図別の料理案内・表示性能の改善。効果は確定GSCデータで観察する。"
+      },
+      {
+        "date": "2026-11-22T15:35:04+09:00",
+        "commit": "5423d8f6c6a4e6b56f6d899e2da8dcad6fe0ef0a",
+        "files": [
+          "images/optimized/kadoya-logo-lossless.webp",
+          "index.html",
+          "style-base.css",
+          "teishoku/index.html"
+        ],
+        "rankAtAction": 11,
+        "baseline": {
+          "keyword": "小牧 定食",
+          "targetPath": "/teishoku/",
+          "rank": 11,
+          "impressions": 1,
+          "clicks": 0,
+          "ctr": 0,
+          "status": "measured",
+          "siteMetrics": {
+            "rank": 9.857142857142858,
+            "impressions": 21,
+            "clicks": 0,
+            "ctr": 0,
+            "status": "measured"
+          }
+        },
+        "done": "fix: verify production, reduce logo payload and preserve SEO URL identity",
+        "needs": "検索意図別の料理案内・表示性能の改善。効果は確定GSCデータで観察する。"
       }
     ],
     "status": "observing",
-    "nextReviewDate": "2026-12-17"
+    "nextReviewDate": "2026-12-20"
   },
   {
     "keyword": "小牧 モーニング",
@@ -1676,10 +1762,39 @@
         },
         "done": "fix: clarify store location beneath reservation phone number",
         "needs": "検索意図別の料理案内・表示性能の改善。効果は確定GSCデータで観察する。"
+      },
+      {
+        "date": "2026-11-22T15:35:04+09:00",
+        "commit": "5423d8f6c6a4e6b56f6d899e2da8dcad6fe0ef0a",
+        "files": [
+          "images/optimized/kadoya-logo-lossless.webp",
+          "index.html",
+          "morning/index.html",
+          "style-base.css"
+        ],
+        "rankAtAction": 11.6,
+        "baseline": {
+          "keyword": "小牧 モーニング",
+          "targetPath": "/morning/",
+          "rank": 11.6,
+          "impressions": 15,
+          "clicks": 2,
+          "ctr": 0.13333333333333333,
+          "status": "measured",
+          "siteMetrics": {
+            "rank": 22.058823529411764,
+            "impressions": 17,
+            "clicks": 2,
+            "ctr": 0.11764705882352941,
+            "status": "measured"
+          }
+        },
+        "done": "fix: verify production, reduce logo payload and preserve SEO URL identity",
+        "needs": "検索意図別の料理案内・表示性能の改善。効果は確定GSCデータで観察する。"
       }
     ],
     "status": "observing",
-    "nextReviewDate": "2026-12-17"
+    "nextReviewDate": "2026-12-20"
   },
   {
     "keyword": "小牧 味噌煮込み",
@@ -2089,10 +2204,39 @@
         },
         "done": "fix: clarify store location beneath reservation phone number",
         "needs": "検索意図別の料理案内・表示性能の改善。効果は確定GSCデータで観察する。"
+      },
+      {
+        "date": "2026-11-22T15:35:04+09:00",
+        "commit": "5423d8f6c6a4e6b56f6d899e2da8dcad6fe0ef0a",
+        "files": [
+          "images/optimized/kadoya-logo-lossless.webp",
+          "index.html",
+          "misonikomi/index.html",
+          "style-base.css"
+        ],
+        "rankAtAction": null,
+        "baseline": {
+          "keyword": "小牧 味噌煮込み",
+          "targetPath": "/misonikomi/",
+          "rank": null,
+          "impressions": 0,
+          "clicks": 0,
+          "ctr": null,
+          "status": "no_data",
+          "siteMetrics": {
+            "rank": null,
+            "impressions": 0,
+            "clicks": 0,
+            "ctr": null,
+            "status": "no_data"
+          }
+        },
+        "done": "fix: verify production, reduce logo payload and preserve SEO URL identity",
+        "needs": "検索意図別の料理案内・表示性能の改善。効果は確定GSCデータで観察する。"
       }
     ],
     "status": "observing",
-    "nextReviewDate": "2026-12-17"
+    "nextReviewDate": "2026-12-20"
   },
   {
     "keyword": "小牧 味噌煮込みきしめん",
@@ -2502,10 +2646,39 @@
         },
         "done": "fix: clarify store location beneath reservation phone number",
         "needs": "検索意図別の料理案内・表示性能の改善。効果は確定GSCデータで観察する。"
+      },
+      {
+        "date": "2026-11-22T15:35:04+09:00",
+        "commit": "5423d8f6c6a4e6b56f6d899e2da8dcad6fe0ef0a",
+        "files": [
+          "images/optimized/kadoya-logo-lossless.webp",
+          "index.html",
+          "misonikomi/index.html",
+          "style-base.css"
+        ],
+        "rankAtAction": null,
+        "baseline": {
+          "keyword": "小牧 味噌煮込みきしめん",
+          "targetPath": "/misonikomi/",
+          "rank": null,
+          "impressions": 0,
+          "clicks": 0,
+          "ctr": null,
+          "status": "no_data",
+          "siteMetrics": {
+            "rank": null,
+            "impressions": 0,
+            "clicks": 0,
+            "ctr": null,
+            "status": "no_data"
+          }
+        },
+        "done": "fix: verify production, reduce logo payload and preserve SEO URL identity",
+        "needs": "検索意図別の料理案内・表示性能の改善。効果は確定GSCデータで観察する。"
       }
     ],
     "status": "observing",
-    "nextReviewDate": "2026-12-17"
+    "nextReviewDate": "2026-12-20"
   },
   {
     "keyword": "小牧 味噌カツ",
@@ -2915,10 +3088,39 @@
         },
         "done": "fix: clarify store location beneath reservation phone number",
         "needs": "検索意図別の料理案内・表示性能の改善。効果は確定GSCデータで観察する。"
+      },
+      {
+        "date": "2026-11-22T15:35:04+09:00",
+        "commit": "5423d8f6c6a4e6b56f6d899e2da8dcad6fe0ef0a",
+        "files": [
+          "images/optimized/kadoya-logo-lossless.webp",
+          "index.html",
+          "misokatsu/index.html",
+          "style-base.css"
+        ],
+        "rankAtAction": 3.3157894736842106,
+        "baseline": {
+          "keyword": "小牧 味噌カツ",
+          "targetPath": "/misokatsu/",
+          "rank": 3.3157894736842106,
+          "impressions": 19,
+          "clicks": 1,
+          "ctr": 0.05263157894736842,
+          "status": "measured",
+          "siteMetrics": {
+            "rank": 3.3461538461538463,
+            "impressions": 26,
+            "clicks": 2,
+            "ctr": 0.07692307692307693,
+            "status": "measured"
+          }
+        },
+        "done": "fix: verify production, reduce logo payload and preserve SEO URL identity",
+        "needs": "検索意図別の料理案内・表示性能の改善。効果は確定GSCデータで観察する。"
       }
     ],
     "status": "observing",
-    "nextReviewDate": "2026-12-17"
+    "nextReviewDate": "2026-12-20"
   },
   {
     "keyword": "小牧 田楽",
@@ -3328,9 +3530,38 @@
         },
         "done": "fix: clarify store location beneath reservation phone number",
         "needs": "検索意図別の料理案内・表示性能の改善。効果は確定GSCデータで観察する。"
+      },
+      {
+        "date": "2026-11-22T15:35:04+09:00",
+        "commit": "5423d8f6c6a4e6b56f6d899e2da8dcad6fe0ef0a",
+        "files": [
+          "dengaku/index.html",
+          "images/optimized/kadoya-logo-lossless.webp",
+          "index.html",
+          "style-base.css"
+        ],
+        "rankAtAction": null,
+        "baseline": {
+          "keyword": "小牧 田楽",
+          "targetPath": "/dengaku/",
+          "rank": null,
+          "impressions": 0,
+          "clicks": 0,
+          "ctr": null,
+          "status": "no_data",
+          "siteMetrics": {
+            "rank": null,
+            "impressions": 0,
+            "clicks": 0,
+            "ctr": null,
+            "status": "no_data"
+          }
+        },
+        "done": "fix: verify production, reduce logo payload and preserve SEO URL identity",
+        "needs": "検索意図別の料理案内・表示性能の改善。効果は確定GSCデータで観察する。"
       }
     ],
     "status": "observing",
-    "nextReviewDate": "2026-12-17"
+    "nextReviewDate": "2026-12-20"
   }
 ]
