@@ -493,6 +493,32 @@
         },
         "done": "年越し蕎麦は本年より販売終了と明記",
         "needs": "検索意図別の料理案内・表示性能の改善。効果は確定GSCデータで観察する。"
+      },
+      {
+        "date": "2026-11-24T19:13:45+09:00",
+        "commit": "6c55eafb4315958536aa0ecf46e9526cb025f8e9",
+        "files": [
+          "index.html"
+        ],
+        "rankAtAction": 2.483383685800604,
+        "baseline": {
+          "keyword": "角屋 小牧",
+          "targetPath": "/",
+          "rank": 2.483383685800604,
+          "impressions": 331,
+          "clicks": 38,
+          "ctr": 0.1148036253776435,
+          "status": "measured",
+          "siteMetrics": {
+            "rank": 1.0868263473053892,
+            "impressions": 334,
+            "clicks": 86,
+            "ctr": 0.25748502994011974,
+            "status": "measured"
+          }
+        },
+        "done": "年越し蕎麦を本年より当面お休みの案内へ変更",
+        "needs": "検索意図別の料理案内・表示性能の改善。効果は確定GSCデータで観察する。"
       }
     ]
   },
@@ -984,6 +1010,32 @@
           }
         },
         "done": "年越し蕎麦は本年より販売終了と明記",
+        "needs": "検索意図別の料理案内・表示性能の改善。効果は確定GSCデータで観察する。"
+      },
+      {
+        "date": "2026-11-24T19:13:45+09:00",
+        "commit": "6c55eafb4315958536aa0ecf46e9526cb025f8e9",
+        "files": [
+          "index.html"
+        ],
+        "rankAtAction": 8.933333333333334,
+        "baseline": {
+          "keyword": "小牧 きしめん",
+          "targetPath": "/kishimen/",
+          "rank": 8.933333333333334,
+          "impressions": 15,
+          "clicks": 0,
+          "ctr": 0,
+          "status": "measured",
+          "siteMetrics": {
+            "rank": 3.5142857142857142,
+            "impressions": 35,
+            "clicks": 1,
+            "ctr": 0.02857142857142857,
+            "status": "measured"
+          }
+        },
+        "done": "年越し蕎麦を本年より当面お休みの案内へ変更",
         "needs": "検索意図別の料理案内・表示性能の改善。効果は確定GSCデータで観察する。"
       }
     ],
@@ -1505,6 +1557,32 @@
         },
         "done": "年越し蕎麦は本年より販売終了と明記",
         "needs": "検索意図別の料理案内・表示性能の改善。効果は確定GSCデータで観察する。"
+      },
+      {
+        "date": "2026-11-24T19:13:45+09:00",
+        "commit": "6c55eafb4315958536aa0ecf46e9526cb025f8e9",
+        "files": [
+          "index.html"
+        ],
+        "rankAtAction": 11,
+        "baseline": {
+          "keyword": "小牧 定食",
+          "targetPath": "/teishoku/",
+          "rank": 11,
+          "impressions": 1,
+          "clicks": 0,
+          "ctr": 0,
+          "status": "measured",
+          "siteMetrics": {
+            "rank": 9.869565217391305,
+            "impressions": 23,
+            "clicks": 0,
+            "ctr": 0,
+            "status": "measured"
+          }
+        },
+        "done": "年越し蕎麦を本年より当面お休みの案内へ変更",
+        "needs": "検索意図別の料理案内・表示性能の改善。効果は確定GSCデータで観察する。"
       }
     ],
     "status": "observing",
@@ -1998,6 +2076,32 @@
           }
         },
         "done": "年越し蕎麦は本年より販売終了と明記",
+        "needs": "検索意図別の料理案内・表示性能の改善。効果は確定GSCデータで観察する。"
+      },
+      {
+        "date": "2026-11-24T19:13:45+09:00",
+        "commit": "6c55eafb4315958536aa0ecf46e9526cb025f8e9",
+        "files": [
+          "index.html"
+        ],
+        "rankAtAction": 11.411764705882353,
+        "baseline": {
+          "keyword": "小牧 モーニング",
+          "targetPath": "/morning/",
+          "rank": 11.411764705882353,
+          "impressions": 17,
+          "clicks": 2,
+          "ctr": 0.11764705882352941,
+          "status": "measured",
+          "siteMetrics": {
+            "rank": 20.789473684210527,
+            "impressions": 19,
+            "clicks": 2,
+            "ctr": 0.10526315789473684,
+            "status": "measured"
+          }
+        },
+        "done": "年越し蕎麦を本年より当面お休みの案内へ変更",
         "needs": "検索意図別の料理案内・表示性能の改善。効果は確定GSCデータで観察する。"
       }
     ],
@@ -2493,6 +2597,32 @@
         },
         "done": "年越し蕎麦は本年より販売終了と明記",
         "needs": "検索意図別の料理案内・表示性能の改善。効果は確定GSCデータで観察する。"
+      },
+      {
+        "date": "2026-11-24T19:13:45+09:00",
+        "commit": "6c55eafb4315958536aa0ecf46e9526cb025f8e9",
+        "files": [
+          "index.html"
+        ],
+        "rankAtAction": null,
+        "baseline": {
+          "keyword": "小牧 味噌煮込み",
+          "targetPath": "/misonikomi/",
+          "rank": null,
+          "impressions": 0,
+          "clicks": 0,
+          "ctr": null,
+          "status": "no_data",
+          "siteMetrics": {
+            "rank": null,
+            "impressions": 0,
+            "clicks": 0,
+            "ctr": null,
+            "status": "no_data"
+          }
+        },
+        "done": "年越し蕎麦を本年より当面お休みの案内へ変更",
+        "needs": "検索意図別の料理案内・表示性能の改善。効果は確定GSCデータで観察する。"
       }
     ],
     "status": "observing",
@@ -2986,6 +3116,32 @@
           }
         },
         "done": "年越し蕎麦は本年より販売終了と明記",
+        "needs": "検索意図別の料理案内・表示性能の改善。効果は確定GSCデータで観察する。"
+      },
+      {
+        "date": "2026-11-24T19:13:45+09:00",
+        "commit": "6c55eafb4315958536aa0ecf46e9526cb025f8e9",
+        "files": [
+          "index.html"
+        ],
+        "rankAtAction": null,
+        "baseline": {
+          "keyword": "小牧 味噌煮込みきしめん",
+          "targetPath": "/misonikomi/",
+          "rank": null,
+          "impressions": 0,
+          "clicks": 0,
+          "ctr": null,
+          "status": "no_data",
+          "siteMetrics": {
+            "rank": null,
+            "impressions": 0,
+            "clicks": 0,
+            "ctr": null,
+            "status": "no_data"
+          }
+        },
+        "done": "年越し蕎麦を本年より当面お休みの案内へ変更",
         "needs": "検索意図別の料理案内・表示性能の改善。効果は確定GSCデータで観察する。"
       }
     ],
@@ -3481,6 +3637,32 @@
         },
         "done": "年越し蕎麦は本年より販売終了と明記",
         "needs": "検索意図別の料理案内・表示性能の改善。効果は確定GSCデータで観察する。"
+      },
+      {
+        "date": "2026-11-24T19:13:45+09:00",
+        "commit": "6c55eafb4315958536aa0ecf46e9526cb025f8e9",
+        "files": [
+          "index.html"
+        ],
+        "rankAtAction": 3.2777777777777777,
+        "baseline": {
+          "keyword": "小牧 味噌カツ",
+          "targetPath": "/misokatsu/",
+          "rank": 3.2777777777777777,
+          "impressions": 18,
+          "clicks": 1,
+          "ctr": 0.05555555555555555,
+          "status": "measured",
+          "siteMetrics": {
+            "rank": 3.44,
+            "impressions": 25,
+            "clicks": 1,
+            "ctr": 0.04,
+            "status": "measured"
+          }
+        },
+        "done": "年越し蕎麦を本年より当面お休みの案内へ変更",
+        "needs": "検索意図別の料理案内・表示性能の改善。効果は確定GSCデータで観察する。"
       }
     ],
     "status": "observing",
@@ -3974,6 +4156,32 @@
           }
         },
         "done": "年越し蕎麦は本年より販売終了と明記",
+        "needs": "検索意図別の料理案内・表示性能の改善。効果は確定GSCデータで観察する。"
+      },
+      {
+        "date": "2026-11-24T19:13:45+09:00",
+        "commit": "6c55eafb4315958536aa0ecf46e9526cb025f8e9",
+        "files": [
+          "index.html"
+        ],
+        "rankAtAction": null,
+        "baseline": {
+          "keyword": "小牧 田楽",
+          "targetPath": "/dengaku/",
+          "rank": null,
+          "impressions": 0,
+          "clicks": 0,
+          "ctr": null,
+          "status": "no_data",
+          "siteMetrics": {
+            "rank": null,
+            "impressions": 0,
+            "clicks": 0,
+            "ctr": null,
+            "status": "no_data"
+          }
+        },
+        "done": "年越し蕎麦を本年より当面お休みの案内へ変更",
         "needs": "検索意図別の料理案内・表示性能の改善。効果は確定GSCデータで観察する。"
       }
     ],
