@@ -1,7 +1,7 @@
 {
   "measurement": "Referenced local asset bytes; not LCP or transfer bytes. Hidden and lazy assets may not load on first view.",
-  "totalReferencedBytes": 71482010,
-  "imageBytes": 58377229,
+  "totalReferencedBytes": 68479833,
+  "imageBytes": 55375052,
   "videoBytes": 13104781,
   "over500KB": [
     {
@@ -19,10 +19,6 @@
     {
       "path": "images/IMG_3143.jpeg",
       "bytes": 3909868
-    },
-    {
-      "path": "images/IMG_6279.jpeg",
-      "bytes": 2896183
     },
     {
       "path": "images/neba-toro-soba.jpg",
@@ -206,9 +202,6 @@
     "images/optimized/toriten-display.webp": 105508,
     "images/kinoko-tempura.jpg": 310003,
     "images/optimized/kinoko-tempura-display.webp": 116460,
-    "images/IMG_6279.jpeg": 2896183,
-    "images/optimized/IMG_6279-640.webp": 28564,
-    "images/optimized/IMG_6279-1200.webp": 77430,
     "images/morning-a.jpg": 632582,
     "images/optimized/morning-a-640.webp": 51682,
     "images/optimized/morning-a-1200.webp": 141264,

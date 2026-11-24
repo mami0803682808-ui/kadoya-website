@@ -336,22 +336,6 @@
     ]
   },
   {
-    "original": "images/IMG_6279.jpeg",
-    "originalBytes": 2896183,
-    "variants": [
-      {
-        "path": "images/optimized/IMG_6279-640.webp",
-        "width": 640,
-        "bytes": 28564
-      },
-      {
-        "path": "images/optimized/IMG_6279-1200.webp",
-        "width": 1200,
-        "bytes": 77430
-      }
-    ]
-  },
-  {
     "original": "images/morning-a.jpg",
     "originalBytes": 632582,
     "variants": [
